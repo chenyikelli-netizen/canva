@@ -89,7 +89,7 @@ function build_report(date, stats, sentiment_pcts, topic_details, insights) {
 
   // ── 頂部 Logo 與大標題 ──────────────────────────────
   const banner = `<div align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Canva_icon_2021.svg/200px-Canva_icon_2021.svg.png" width="80" alt="Canva Logo">
+  <img src="https://cdn.simpleicons.org/canva/00C4CC" height="60" alt="Canva Logo">
   
   <h1>Brand Sentinel 品牌輿情日報</h1>
   <p><b>${date}</b> ｜ 監控標的：Canva, Figma, Adobe</p>
@@ -235,7 +235,7 @@ ${items}
 // ========================================
 function generate_empty_report(date) {
   return `<div align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Canva_icon_2021.svg/200px-Canva_icon_2021.svg.png" width="80" alt="Canva Logo">
+  <img src="https://cdn.simpleicons.org/canva/00C4CC" height="60" alt="Canva Logo">
   
   <h1>Brand Sentinel 品牌輿情日報</h1>
   <p><b>${date}</b></p>
