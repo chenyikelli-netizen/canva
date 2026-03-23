@@ -1,5 +1,6 @@
 node_modules/
 .env
 data/*.json
+!data/brand_sentinel.json
 data/*.db
 logs/
