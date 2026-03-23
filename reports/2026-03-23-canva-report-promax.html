@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Sentinel - UI/UX Pro Max</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; }
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .aurora-bg {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; overflow: hidden;
+    }
+    .blob {
+      position: absolute; filter: blur(90px); border-radius: 50%; opacity: 0.5; animation: float 10s infinite ease-in-out alternate;
+    }
+    @keyframes float { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(30px, -50px) scale(1.1); } }
+    .blob-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, #8B3CF7 0%, transparent 70%); }
+    .blob-2 { bottom: -20%; right: -10%; width: 60vw; height: 60vw; background: radial-gradient(circle, #00C4CC 0%, transparent 70%); animation-delay: -5s; }
+  </style>
+</head>
+<body class="text-slate-100 min-h-screen selection:bg-[#8B3CF7] selection:text-white pb-20">
+
+  <!-- Aurora Background Effects -->
+  <div class="aurora-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-6 pt-16">
+    <!-- Header -->
+    <header class="flex flex-col md:flex-row items-center justify-between mb-16 gap-6">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel text-xs font-bold tracking-wider text-[#00C4CC] uppercase mb-4">
+          <span class="w-2 h-2 rounded-full bg-[#00C4CC] animate-pulse"></span>
+          Live Monitoring Active
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-500">
+          Brand Sentinel
+        </h1>
+        <p class="text-slate-400 text-lg">Canva 品牌輿情分析戰情室 ｜ <span class="text-white font-medium">2026-03-23</span></p>
+      </div>
+      
+      <div class="glass-panel p-6 rounded-3xl flex items-center gap-6">
+        <div>
+          <p class="text-slate-400 text-sm mb-1">今日總聲量</p>
+          <p class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#8B3CF7] to-[#00C4CC]">57</p>
+        </div>
+        <div class="h-12 w-px bg-white/10"></div>
+        <div>
+          <p class="text-slate-400 text-sm mb-1">品牌健康度</p>
+          <p class="text-2xl font-bold text-emerald-400 flex items-center gap-2">
+            🟢 良好
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Bento Grid Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-6">
+      
+      <!-- Sentiment Overview (Span 8) -->
+      <div class="md:col-span-8 glass-panel rounded-3xl p-8 relative overflow-hidden group">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-[#8B3CF7]/10 rounded-full filter blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+          <span class="bg-white/10 p-2 rounded-xl">📊</span> 情緒健康矩陣
+        </h2>
+        
+        <div class="space-y-6 relative z-10">
+          <!-- Positive -->
+          <div>
+            <div class="flex justify-between text-sm font-semibold mb-2">
+              <span class="text-emerald-400">正向輿情 (Positive)</span>
+              <span class="text-white">40 筆 / 70.2%</span>
+            </div>
+            <div class="h-3 w-full bg-slate-800 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-emerald-500 to-emerald-300 rounded-full" style="width: 70.2%"></div>
+            </div>
+          </div>
+          <!-- Neutral -->
+          <div>
+            <div class="flex justify-between text-sm font-semibold mb-2">
+              <span class="text-amber-400">中立討論 (Neutral)</span>
+              <span class="text-white">14 筆 / 24.6%</span>
+            </div>
+            <div class="h-3 w-full bg-slate-800 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-amber-500 to-amber-300 rounded-full" style="width: 24.6%"></div>
+            </div>
+          </div>
+          <!-- Negative -->
+          <div>
+            <div class="flex justify-between text-sm font-semibold mb-2">
+              <span class="text-rose-400">負向警訊 (Negative)</span>
+              <span class="text-white">3 筆 / 5.3%</span>
+            </div>
+            <div class="h-3 w-full bg-slate-800 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-rose-500 to-rose-300 rounded-full" style="width: 5.3%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sources (Span 4) -->
+      <div class="md:col-span-4 glass-panel rounded-3xl p-8 flex flex-col">
+        <h2 class="text-xl font-bold mb-6 flex items-center gap-3">
+          <span class="bg-white/10 p-2 rounded-xl">🌐</span> 數據來源
+        </h2>
+        <div class="flex-grow flex flex-col justify-center space-y-3">
+          
+    <div class="flex items-center justify-between p-3 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
+      <span class="text-slate-300 font-medium capitalize">threads</span>
+      <span class="text-white font-bold bg-[#8B3CF7]/30 px-3 py-1 rounded-full text-sm">7</span>
+    </div>
+  
+    <div class="flex items-center justify-between p-3 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
+      <span class="text-slate-300 font-medium capitalize">tavily</span>
+      <span class="text-white font-bold bg-[#8B3CF7]/30 px-3 py-1 rounded-full text-sm">50</span>
+    </div>
+  
+        </div>
+      </div>
+    </div>
+
+    <!-- Topics Grid -->
+    <h2 class="text-2xl font-bold mb-6 mt-12 flex items-center gap-3">
+      <span class="bg-gradient-to-br from-[#8B3CF7] to-[#00C4CC] p-2 rounded-xl text-white">🔥</span> 熱議主題風向標
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      
+    <div class="p-5 rounded-3xl bg-gradient-to-br from-white/10 to-transparent border border-white/10 hover:-translate-y-1 transition-transform cursor-pointer">
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <span class="text-2xl">🥇</span> 產品功能
+        </h3>
+        <span class="text-xs font-semibold text-[#00C4CC] bg-[#00C4CC]/20 px-2 py-1 rounded-lg">16 筆</span>
+      </div>
+      <p class="text-slate-300 text-sm mb-3 font-medium leading-relaxed">介紹Canva設計作品如何無縫發布到Dcard。</p>
+      <div class="p-3 bg-black/40 rounded-xl border border-white/5">
+        <p class="text-slate-400 text-xs italic">「# Canva 的設計作品能否直接發布到 Dcard？. Canva 和 Dcard 的完美結合，讓你的創意分享變得更輕鬆！這篇文章詳細介紹了如何將 Canva 設計作品無縫發布到 Dcard，並分享…」</p>
+      </div>
+    </div>
+  
+    <div class="p-5 rounded-3xl bg-gradient-to-br from-white/10 to-transparent border border-white/10 hover:-translate-y-1 transition-transform cursor-pointer">
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <span class="text-2xl">🥈</span> 定價與方案
+        </h3>
+        <span class="text-xs font-semibold text-[#00C4CC] bg-[#00C4CC]/20 px-2 py-1 rounded-lg">16 筆</span>
+      </div>
+      <p class="text-slate-300 text-sm mb-3 font-medium leading-relaxed">徵求Canva Pro方案的團購夥伴。</p>
+      <div class="p-3 bg-black/40 rounded-xl border border-white/5">
+        <p class="text-slate-400 text-xs italic">「請注意，本版不為任何發文者或廠商背書，本文真實性請自行判定(本行不可刪) 1.徵求項目: Canva pro 徵1個夥伴2.需求描述: 方案一年，年費是149.9美金，…」</p>
+      </div>
+    </div>
+  
+    <div class="p-5 rounded-3xl bg-gradient-to-br from-white/10 to-transparent border border-white/10 hover:-translate-y-1 transition-transform cursor-pointer">
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <span class="text-2xl">🥉</span> AI 相關
+        </h3>
+        <span class="text-xs font-semibold text-[#00C4CC] bg-[#00C4CC]/20 px-2 py-1 rounded-lg">13 筆</span>
+      </div>
+      <p class="text-slate-300 text-sm mb-3 font-medium leading-relaxed">Canva AI新功能上線，讓設計更輕鬆。</p>
+      <div class="p-3 bg-black/40 rounded-xl border border-white/5">
+        <p class="text-slate-400 text-xs italic">「... 介紹及解鎖方式： 📽️ 參考影片： 可以觀看此影片來探索Canva AI ... 點擊首頁右上角的「Canva AI」按鈕即可進入新功能界面。 3. 如果未立即看…」</p>
+      </div>
+    </div>
+  
+    </div>
+
+    <!-- AI Insights Bento -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Key Insights -->
+      <div class="glass-panel rounded-3xl p-8">
+        <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-indigo-300">
+          <span class="bg-indigo-500/20 p-2 rounded-xl">🧠</span> AI 深度洞察
+        </h2>
+        <div class="space-y-2">
+          
+    <div class="flex gap-4 p-4 hover:bg-white/5 rounded-2xl transition-colors">
+      <div class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold border border-indigo-500/30">1</div>
+      <p class="text-slate-200 text-sm leading-relaxed">市場聲量與使用者滿意度強勁：Canva在今日輿情資料中佔據所有討論，並獲得壓倒性的正面評價（40/57），顯示其在公開社群中擁有極高的討論熱度與使用者滿意度。尤其在Dcard等社群平台上的高互動與分享，證實了Canva在一般使用者與小型企業間的普及性與實用價值。</p>
+    </div>
+  
+    <div class="flex gap-4 p-4 hover:bg-white/5 rounded-2xl transition-colors">
+      <div class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold border border-indigo-500/30">2</div>
+      <p class="text-slate-200 text-sm leading-relaxed">Pro版價值獲肯定，產品策略奏效：輿情資料中有多筆關於Canva Pro付費方案的正面討論，使用者認可其進階功能及省時優勢。這表明Canva的免費增值（Freemium）模式和Pro版訂閱策略運作良好，成功驅動用戶升級，對營收增長是積極訊號。</p>
+    </div>
+  
+    <div class="flex gap-4 p-4 hover:bg-white/5 rounded-2xl transition-colors">
+      <div class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold border border-indigo-500/30">3</div>
+      <p class="text-slate-200 text-sm leading-relaxed">產品功能持續創新與拓展：『產品功能』與『AI相關』是兩大重要討論主題，儘管具體AI應用未詳述，但高關注度暗示Canva在產品創新與AI技術整合上可能有所進展或被高度期待。此外，Canva在協作、簡報製作方面被認為優於傳統工具（如PPT），顯示其正成功拓展應用場景。</p>
+    </div>
+  
+        </div>
+      </div>
+
+      <!-- Risks & Competitors -->
+      <div class="space-y-6 flex flex-col">
+        <!-- Competitor -->
+        <div class="glass-panel rounded-3xl p-8 flex-1">
+          <h2 class="text-xl font-bold mb-4 flex items-center gap-3 text-cyan-300">
+            <span class="bg-cyan-500/20 p-2 rounded-xl">🔭</span> 競品動態
+          </h2>
+          <div class="text-slate-300 text-sm leading-relaxed space-y-4">
+            <p>✧ Canva在輿情中獨佔鰲頭：今日統計數據中，所有57筆輿情皆指向Canva，而未提及Figma或Adobe Express。這強烈暗示在本次追蹤的公開輿情範圍內，Canva在使用者日常討論中具備壓倒性的品牌聲量與關注度，遠超同類競品，鞏固其在普羅大眾市場的領導地位。</p><p>✧ 超越傳統工具，確立新設計典範：Canva頻繁被拿來與PowerPoint等傳統工具比較，並獲得『功能更佳』、『設計更美觀』、『協作更方便』的正面評價。這表明Canva不僅在特定市場與Figma/Adobe Express競爭，更成功地將自身定位為普羅大眾的現代設計工具首選，取代了部分傳統軟體的使用場景，擴大了潛在用戶基礎。</p>
+          </div>
+        </div>
+        
+        <!-- Risks -->
+        <div class="glass-panel rounded-3xl p-8 flex-1 border-rose-500/20 bg-rose-500/5">
+          <h2 class="text-xl font-bold mb-4 flex items-center gap-3 text-rose-300">
+            <span class="bg-rose-500/20 p-2 rounded-xl">⚠️</span> 風險預警
+          </h2>
+          <div class="text-slate-300 text-sm leading-relaxed space-y-4">
+            <p class="flex gap-2"><span class="text-rose-500">▪</span> 關鍵功能與資安問題仍待關注：儘管整體正面，但有負面輿情指出資安問題、下載故障，以及核心功能（如文字方塊調整）的體驗不佳。這些問題雖數量不多，卻可能影響使用者對Canva可靠性與基礎易用性的認知，若未能及時解決，恐累積成潛在的品牌信任危機。此外，教育版申請問題也暗示特定用戶群的服務流程可能存在摩擦。</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+</html>
+  
