@@ -1,4 +1,5 @@
 @echo off
+cd /d "%~dp0"
 git add .
-git commit -m "feat: complete automated scheduling, LINE push integration, and helper tools"
-git push
+git commit -m "feat: phase2 multi-brand competitor tracking and intl business module"
+git push origin main

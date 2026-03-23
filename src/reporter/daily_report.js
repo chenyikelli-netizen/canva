@@ -1,6 +1,6 @@
 // ========================================
-// 日報生成模組
-// 從分析結果生成 Markdown 格式的每日品牌日報
+// 日報生成模組（Phase 2 多品牌 + 競品對照版）
+// 從分析結果生成含競品比較矩陣的 Markdown 日報
 // ========================================
 
 import { get_analysis_by_date, get_stats, save_report } from '../utils/db.js';
@@ -26,13 +26,15 @@ export async function generate_daily_report(date) {
   }
 
   // 取得 LLM 生成的洞察
-  let insights = { insights: [], risks: [] };
+  let insights = { insights: [], competitor_analysis: [], risks: [] };
   try {
     const top_items = analysis.slice(0, 15); // 取代表性資料
     insights = await call_gemini_json(build_insight_prompt(stats, top_items));
+    // 確保欄位存在
+    if (!insights.competitor_analysis) insights.competitor_analysis = [];
   } catch (error) {
     logger.warn(`LLM 洞察生成失敗: ${error.message}`);
-    insights = { insights: ['（洞察生成失敗，請查看原始資料）'], risks: [] };
+    insights = { insights: ['（洞察生成失敗，請查看原始資料）'], competitor_analysis: [], risks: [] };
   }
 
   // 找出熱門主題 TOP 3
@@ -77,17 +79,12 @@ export async function generate_daily_report(date) {
 }
 
 /**
- * 組裝日報 Markdown
+ * 組裝日報 Markdown（含競品對照矩陣）
  */
 function build_report_markdown(date, stats, sentiment_pcts, topic_details, insights) {
   // 平台分布文字
   const platform_dist = stats.by_platform
     .map(p => `${format_platform_name(p.platform)}: ${p.count} 筆`)
-    .join(' / ');
-
-  // 情緒分布文字
-  const sentiment_dist = sentiment_pcts
-    .map(s => `${s.label} ${s.pct}% (${s.count})`)
     .join(' / ');
 
   // 情緒分布長條圖
@@ -98,6 +95,25 @@ function build_report_markdown(date, stats, sentiment_pcts, topic_details, insig
       return `  ${s.label} ${bar} ${s.pct}%`;
     })
     .join('\n');
+
+  // ===== 競品對照矩陣 =====
+  let competitor_matrix = '';
+  if (stats.by_brand && stats.by_brand.length > 0) {
+    const brand_rows = stats.by_brand.map(b => {
+      const total_b = b.count || 1;
+      const pos_pct = ((b.positive / total_b) * 100).toFixed(0);
+      const neg_pct = ((b.negative / total_b) * 100).toFixed(0);
+      const neu_pct = ((b.neutral / total_b) * 100).toFixed(0);
+      
+      // 正面比例的簡易指標
+      const health = Number(pos_pct) >= 60 ? '🟢' : Number(pos_pct) >= 40 ? '🟡' : '🔴';
+      
+      return `  ${health} ${b.brand}: ${b.count} 筆 | 正面 ${pos_pct}% / 中性 ${neu_pct}% / 負面 ${neg_pct}%`;
+    }).join('\n');
+
+    competitor_matrix = `\n■ ⚔️ 競品對照矩陣
+${brand_rows}\n`;
+  }
 
   // 熱門主題
   const topics_section = topic_details.map((t, i) => {
@@ -110,6 +126,13 @@ function build_report_markdown(date, stats, sentiment_pcts, topic_details, insig
   const insights_section = (insights.insights || [])
     .map((insight, i) => `  ${i + 1}. ${insight}`)
     .join('\n');
+
+  // 競品分析洞察
+  let competitor_insights_section = '';
+  if (insights.competitor_analysis && insights.competitor_analysis.length > 0) {
+    competitor_insights_section = `\n■ 🔍 競品觀察
+${insights.competitor_analysis.map((c, i) => `  ${i + 1}. ${c}`).join('\n')}`;
+  }
 
   // 風險警示
   let risk_section = '';
@@ -124,12 +147,13 @@ function build_report_markdown(date, stats, sentiment_pcts, topic_details, insig
   - 平台分布: ${platform_dist}
   - 情緒分布:
 ${sentiment_bar}
-
+${competitor_matrix}
 ■ 熱門主題 TOP ${topic_details.length}
 ${topics_section}
 
 ■ 關鍵洞察
 ${insights_section}
+${competitor_insights_section}
 ${risk_section}
 
 ---
@@ -156,7 +180,10 @@ function format_platform_name(platform) {
   const names = {
     threads: 'Threads',
     dcard: 'Dcard',
-    google_reviews: 'Google 搜尋'
+    google_reviews: 'Google 搜尋',
+    tavily: 'Tavily 搜尋',
+    linkedin: 'LinkedIn',
+    twitter: 'Twitter/X'
   };
   return names[platform] || platform;
 }

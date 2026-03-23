@@ -88,6 +88,7 @@ async function analyze_batch(items) {
 
     return {
       raw_data_id: original.id,
+      brand: result.brand || 'Canva',
       topic: result.topic,
       sentiment: result.sentiment,
       summary: result.summary

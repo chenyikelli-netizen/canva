@@ -37,7 +37,30 @@ const config = {
 
   // 蒐集器設定
   collector: {
+    // 主要追蹤品牌
+    primary_brand: 'Canva',
     keywords: ['Canva', 'canva.com', 'Canva AI', 'Canva 設計'],
+
+    // 競品追蹤
+    competitors: [
+      { name: 'Figma', keywords: ['Figma', 'Figma AI', 'Figma design'] },
+      { name: 'Adobe Express', keywords: ['Adobe Express', 'Adobe Firefly', 'Adobe Creative Cloud'] }
+    ],
+
+    // 國際商務搜尋（LinkedIn / Twitter）
+    international_queries: [
+      // Canva 國際商務
+      'Canva enterprise teams site:linkedin.com',
+      'Canva business design tool site:twitter.com',
+      'Canva vs Figma site:linkedin.com',
+      // Figma 國際商務
+      'Figma enterprise design site:linkedin.com',
+      'Figma business teams site:twitter.com',
+      // Adobe 國際商務
+      'Adobe Express business site:linkedin.com',
+      'Adobe Creative Cloud teams site:twitter.com'
+    ],
+
     timeout_ms: 30000,       // 單次請求逾時 30 秒
     max_retries: 3,          // 最大重試次數
     retry_delay_ms: 2000,    // 重試間隔 2 秒

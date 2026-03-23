@@ -48,6 +48,9 @@ export async function call_gemini_json(prompt, max_retries = 3) {
         let clean_text = response_text.replace(/```json\s*/gi, '').replace(/```\s*$/g, '').trim();
         // 修復 LLM 可能漏掉的陣列間逗號（例如 } { 變成 }, {）
         clean_text = clean_text.replace(/\}\s*\{/g, '},{');
+        // 修復陣列結尾多出的逗號
+        clean_text = clean_text.replace(/,\s*\]/g, ']');
+        clean_text = clean_text.replace(/,\s*\}/g, '}');
         return JSON.parse(clean_text);
       } catch (parse_error) {
         // 退回正則貪婪表達式提取最外層括號
@@ -56,7 +59,11 @@ export async function call_gemini_json(prompt, max_retries = 3) {
         
         if (json_match) {
           try {
-            return JSON.parse(json_match[0]);
+            let extracted = json_match[0];
+            extracted = extracted.replace(/\}\s*\{/g, '},{');
+            extracted = extracted.replace(/,\s*\]/g, ']');
+            extracted = extracted.replace(/,\s*\}/g, '}');
+            return JSON.parse(extracted);
           } catch(e) {
             throw new Error(`嘗試提取外層 JSON 仍解析失敗: ${e.message}`);
           }

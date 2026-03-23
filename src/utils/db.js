@@ -113,6 +113,7 @@ export function insert_analysis(result) {
   db.analysis_results.push({
     id: new_id,
     raw_data_id: result.raw_data_id,
+    brand: result.brand || 'Canva',
     topic: result.topic,
     sentiment: result.sentiment,
     summary: result.summary || null,
@@ -149,6 +150,7 @@ export function get_analysis_by_date(date) {
       const raw = db.raw_data.find(r => r.id === a.raw_data_id) || {};
       return { 
         ...a, 
+        brand: a.brand || 'Canva',
         platform: raw.platform, 
         url: raw.url, 
         title: raw.title, 
@@ -178,14 +180,25 @@ export function get_stats(start_date, end_date) {
   const platform_counts = {};
   const topic_counts = {};
   const sentiment_counts = {};
+  const brand_data = {}; // 品牌維度統計
 
   in_range.forEach(a => {
     const raw = db.raw_data.find(r => r.id === a.raw_data_id);
     const platform = raw ? raw.platform : 'unknown';
+    const brand = a.brand || 'Canva';
     
     platform_counts[platform] = (platform_counts[platform] || 0) + 1;
     topic_counts[a.topic] = (topic_counts[a.topic] || 0) + 1;
     sentiment_counts[a.sentiment] = (sentiment_counts[a.sentiment] || 0) + 1;
+
+    // 品牌維度統計
+    if (!brand_data[brand]) {
+      brand_data[brand] = { count: 0, positive: 0, neutral: 0, negative: 0 };
+    }
+    brand_data[brand].count++;
+    if (a.sentiment === '正面') brand_data[brand].positive++;
+    else if (a.sentiment === '中性') brand_data[brand].neutral++;
+    else if (a.sentiment === '負面') brand_data[brand].negative++;
   });
 
   const by_platform = Object.entries(platform_counts).map(([platform, count]) => ({ platform, count }));
@@ -193,8 +206,11 @@ export function get_stats(start_date, end_date) {
     .map(([topic, count]) => ({ topic, count }))
     .sort((a, b) => b.count - a.count);
   const by_sentiment = Object.entries(sentiment_counts).map(([sentiment, count]) => ({ sentiment, count }));
+  const by_brand = Object.entries(brand_data)
+    .map(([brand, data]) => ({ brand, ...data }))
+    .sort((a, b) => b.count - a.count);
 
-  return { total, by_platform, by_topic, by_sentiment };
+  return { total, by_platform, by_topic, by_sentiment, by_brand };
 }
 
 /**
