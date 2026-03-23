@@ -87,11 +87,9 @@ function build_report(date, stats, sentiment_pcts, topic_details, insights) {
 
   const health_text = Number(pos.pct) >= 60 ? '🟢 健康狀態良好' : Number(pos.pct) >= 40 ? '🟡 需持續留意' : '🔴 處於警戒狀態';
 
-  // ── 頂部 Logo 與大標題 ──────────────────────────────
+  // ── 頂部大標題 ──────────────────────────────
   const banner = `<div align="center">
-  <img src="https://cdn.simpleicons.org/canva/00C4CC" height="60" alt="Canva Logo">
-  
-  <h1>Brand Sentinel 品牌輿情日報</h1>
+  <h1>✨ Brand Sentinel 品牌輿情日報</h1>
   <p><b>${date}</b> ｜ 監控標的：Canva, Figma, Adobe</p>
   <p>${health_text}</p>
 </div>`;
@@ -235,9 +233,7 @@ ${items}
 // ========================================
 function generate_empty_report(date) {
   return `<div align="center">
-  <img src="https://cdn.simpleicons.org/canva/00C4CC" height="60" alt="Canva Logo">
-  
-  <h1>Brand Sentinel 品牌輿情日報</h1>
+  <h1>✨ Brand Sentinel 品牌輿情日報</h1>
   <p><b>${date}</b></p>
 </div>
 
