@@ -1,0 +1,27 @@
+{
+  "name": "canva-brand-sentinel",
+  "version": "1.0.0",
+  "description": "Canva 品牌輿情監控與分析系統",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "now": "node src/index.js --now",
+    "test:collect": "node src/collectors/test_collectors.js",
+    "test:analyze": "node src/analyzer/analyzer.js --test",
+    "test:report": "node src/reporter/daily_report.js --test",
+    "test:line": "node src/notifier/line_notifier.js --test",
+    "test:telegram": "node src/notifier/telegram_notifier.js --test"
+  },
+  "dependencies": {
+    "@apify/actors-mcp-server": "^0.9.11",
+    "@google/generative-ai": "^0.21.0",
+    "@line/bot-sdk": "^9.0.0",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.0",
+    "node-cron": "^3.0.0",
+    "node-telegram-bot-api": "^0.66.0",
+    "playwright": "^1.49.0",
+    "winston": "^3.14.0"
+  }
+}
