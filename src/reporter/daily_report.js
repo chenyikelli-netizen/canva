@@ -151,11 +151,7 @@ ${rows}
 
   // ── 熱門主題 ─────────────────────────────
   const topic_items = topic_details.map((t, i) => {
-    return `### ${['🥇', '🥈', '🥉'][i] || '📌'} ${t.name} (共 ${t.count} 筆討論)
-
-${t.summary}
-
-> _「${t.sample}…」_`;
+    return `${i + 1}. **${t.name}** (共 ${t.count} 筆討論)  \n   ${t.summary}  \n   > _「${t.sample}…」_`;
   }).join('\n\n');
 
   const topics = `
@@ -167,7 +163,7 @@ ${topic_items}
 `;
 
   // ── 關鍵洞察 ─────────────────────────────
-  const insight_items = (insights.insights || []).map((s, i) => `${i + 1}. ${s}`).join('\n\n');
+  const insight_items = (insights.insights || []).map((s, i) => `${i + 1}. ${s.replace(/^[-*0-9.\\s]+/, '')}`).join('\n\n');
   const insight = `
 ---
 
@@ -182,7 +178,7 @@ ${insight_items}
   // ── 競品觀察 ─────────────────────────────
   let comp_obs = '';
   if (insights.competitor_analysis && insights.competitor_analysis.length > 0) {
-    const items = insights.competitor_analysis.map((c, i) => `${i + 1}. ${c}`).join('\n\n');
+    const items = insights.competitor_analysis.map((c, i) => `${i + 1}. ${c.replace(/^[-*0-9.\\s]+/, '')}`).join('\n\n');
     comp_obs = `
 ---
 
@@ -198,7 +194,7 @@ ${items}
   // ── 風險警示 ─────────────────────────────
   let risk = '';
   if (insights.risks && insights.risks.length > 0) {
-    const items = insights.risks.map(r => `- ${r}`).join('\n');
+    const items = insights.risks.map((r, i) => `${i + 1}. ${r.replace(/^[-*0-9.\\s]+/, '')}`).join('\n\n');
     risk = `
 ---
 
