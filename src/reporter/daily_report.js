@@ -1,7 +1,8 @@
 // ========================================
-// 日報生成模組（UI/UX Pro Max 降維打擊版）
-// 把 UI/UX Pro Max 的「Bento Grid 便當盒佈局」與「資訊層級理論」
-// 移植到原生的 GitHub Markdown 環境
+// 日報生成模組（UI/UX Pro Max 垂直排版精煉版）
+// 徹底捨棄導致視覺疲勞與版面破碎的 HTML <table>
+// 全面採用「垂直降流 (Vertical Rhythm)」與「資訊層級 (Visual Hierarchy)」
+// 確保於 GitHub 環境呈現最高可讀性與現代感。
 // ========================================
 
 import { get_analysis_by_date, get_stats, save_report } from '../utils/db.js';
@@ -77,135 +78,99 @@ function build_report(date, stats, sentiment_pcts, topic_details, insights) {
   const neg = sentiment_pcts.find(s => s.label === '負面') || { pct: '0', count: 0 };
 
   const health_color = Number(pos.pct) >= 60 ? '🟢' : Number(pos.pct) >= 40 ? '🟡' : '🔴';
-  const health_text = Number(pos.pct) >= 60 ? '狀態良好' : Number(pos.pct) >= 40 ? '需持續留意' : '處於警戒狀態';
+  const health_text = Number(pos.pct) >= 60 ? '優良' : Number(pos.pct) >= 40 ? '觀察中' : '警戒';
 
-  // ── 頂部宣告區 (Executive Dashboard) ──────────────────────────────
-  const banner = `<div align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg" height="50" alt="Canva Logo">
-  <br><br>
-  
-  <h1>UI/UX Pro Max 戰情儀表板</h1>
-  <p><b>生成日期：${date}</b> ｜ <b>監控標的</b>：Canva, Figma, Adobe</p>
-</div>`;
+  // 1. Executive Summary ──────────────────────────────
+  const banner = `# 📊 Canva Brand Sentinel 每日戰報
 
-  // ── Bento Grid 模組一：核心數據 ────────────────────────────
-  const bento1 = `
-<table width="100%">
-  <tr>
-    <td width="50%" align="center">
-      <h3>📈 聲量規模</h3>
-      <h1>${stats.total} 筆</h1>
-      <sub>整體品牌健康度 ${health_color} ${health_text}</sub>
-    </td>
-    <td width="50%" align="center">
-      <h3>🌐 資訊覆蓋網</h3>
-      ${stats.by_platform.map(p => `\`${fmt_platform(p.platform)}\` 收集 <b>${p.count}</b> 筆`).join('<br>')}
-    </td>
-  </tr>
-</table>`;
+> **情報更新時間**：${date}
+> **追蹤涵蓋範圍**：Canva, Figma, Adobe
 
-  // ── Bento Grid 模組二：競品與情緒矩陣 ─────────────────────────────
-  let rows = '';
+## 🎯 核心體驗指標 (KPI)
+
+*   **總採樣數據量**：\`${stats.total} 筆\`
+*   **總體品牌防線**：${health_color} **${health_text}**
+*   **資料來源佔比**：${stats.by_platform.map(p => `\`${fmt_platform(p.platform)}\` (${p.count})`).join(', ')}`;
+
+  // 2. Sentiment Engine ──────────────────────────────
+  let comp_rows = '';
   if (stats.by_brand && stats.by_brand.length > 0) {
-    rows = stats.by_brand.map(b => {
+    comp_rows = stats.by_brand.map(b => {
       const t = b.count || 1;
       const pp = ((b.positive / t) * 100).toFixed(0);
-      return `<b>${b.brand}</b> (${b.count}筆) ── 正向比例 ${pp}%`;
-    }).join('<br><br>');
+      return `*   **${b.brand}**（${b.count}筆）：正向情感佔 **${pp}%**`;
+    }).join('\n');
+  } else {
+    comp_rows = '*   本期範圍內無直接競品討論數據。';
   }
 
-  const bento2 = `
-<table width="100%">
-  <tr>
-    <td width="50%">
-      <h3>💬 情緒剖析引擎</h3><br>
-      🟢 <b>正向 (${pos.pct}%)</b> <sup>共 ${pos.count}筆</sup><br>
-      ${bar(pos.pct)}<br><br>
-      🟡 <b>中立 (${neu.pct}%)</b> <sup>共 ${neu.count}筆</sup><br>
-      ${bar(neu.pct)}<br><br>
-      🔴 <b>負向 (${neg.pct}%)</b> <sup>共 ${neg.count}筆</sup><br>
-      ${bar(neg.pct)}
-    </td>
-    <td width="50%">
-      <h3>⚔️ 競品市佔率比較</h3><br>
-      ${rows}
-    </td>
-  </tr>
-</table>`;
+  const sentiment_and_comp = `## 💬 輿情與市場動態 (Sentiment & Market)
 
-  const cleanNum = (str) => str.replace(/^[-*0-9.\\s]+/, '');
+### 口碑情緒雷達
 
-  // ── 熱門主題區塊 ─────────────────────────────
+> 🟢 **正向 (${pos.pct}%)** ｜ 共 ${pos.count} 筆
+> ${bar(pos.pct)}
+> 
+> 🟡 **中立 (${neu.pct}%)** ｜ 共 ${neu.count} 筆
+> ${bar(neu.pct)}
+> 
+> 🔴 **負向 (${neg.pct}%)** ｜ 共 ${neg.count} 筆
+> ${bar(neg.pct)}
+
+### 品牌聲量市佔分析
+
+${comp_rows}`;
+
+  // 3. Hot Topics ──────────────────────────────
   const topic_items = topic_details.map((t, i) => {
-    const medal = ['🥇', '🥈', '🥉'][i] || '📌';
-    return `> **${i + 1}. ${medal} ${t.name} (共 ${t.count} 筆)**  \n> ${t.summary}  \n> _💬「${t.sample}…」_`;
+    return `> **0${i + 1}. ${t.name} (共 ${t.count} 筆)**
+> ▍事件摘要：${t.summary}
+> ▍代表原音：_${t.sample}…_`;
   }).join('\n>\n');
 
-  const topics = `
-## 🔥 熱議風向標 TOP 3
+  const topics = `## 🔥 高熱度風向 (Trending Topics)
 
-${topic_items}
-`;
+${topic_items}`;
 
-  // ── 深度洞察與分析 Bento ─────────────────────────────
-  const insight_content = (insights.insights || []).map((s, i) => `**${i + 1}.** ${cleanNum(s)}`).join('<br><br>');
-  const comp_content = (insights.competitor_analysis || []).map((c, i) => `**${i + 1}.** ${cleanNum(c)}`).join('<br><br>');
-  const risk_content = (insights.risks || []).map((r, i) => `**${i + 1}.** ${cleanNum(r)}`).join('<br><br>');
+  // 4. Deep Insights ──────────────────────────────
+  const cleanNum = (str) => str.replace(/^[-*0-9.\\s]+/, '');
 
-  const analysis_blocks = `
-<table width="100%">
-  <tr>
-    <td>
-      <h3>🧠 AI 決策洞察艙</h3>
-      ${insight_content}
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <h3>🔭 市場動態雷達</h3>
-      ${comp_content}
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <h3>⚠️ 潛在風險預警</h3>
-      ${risk_content}
-    </td>
-  </tr>
-</table>`;
+  const insight_content = (insights.insights || []).map((s, i) => `**0${i + 1}.** ${cleanNum(s)}`).join('\n\n');
+  const comp_content = (insights.competitor_analysis || []).map((c, i) => `**0${i + 1}.** ${cleanNum(c)}`).join('\n\n');
+  const risk_content = (insights.risks || []).map((r, i) => `**0${i + 1}.** ${cleanNum(r)}`).join('\n\n');
 
-  // ── 頁尾 ─────────────────────────────────
-  const footer = `
----
+  const analysis_blocks = `## 🧠 決策洞察艙 (AI Deep Insights)
 
-<div align="center">
-  <p><sub><b>Brand Sentinel 輿情系統</b> ｜ Topology UI/UX Pro Max Pattern ｜ ${new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' })}</sub></p>
-</div>`;
+### 💡 商業與產品洞察
+${insight_content || '* 無重大變動信號。'}
+
+### 🔭 競品戰略分析
+${comp_content || '* 本期未探測到具體戰略信號。'}
+
+### ⚠️ 發展風險預警
+${risk_content || '* 本期未探測到重大危機信號。'}`;
+
+  // 5. Footer ─────────────────────────────────
+  const footer = `---
+*Brand Sentinel 自動化演算法 ｜ 結構化純淨終端模板 UI/UX Pro Max ｜ 產生時間：${new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' })}*`;
 
   return [
     banner,
-    '<br>',
-    bento1,
-    '<br>',
-    bento2,
-    '<br>',
+    sentiment_and_comp,
     topics,
-    '<br>',
     analysis_blocks,
-    '<br>',
     footer
-  ].filter(s => s).join('\n');
+  ].filter(s => s).join('\n\n');
 }
 
 function generate_empty_report(date) {
-  return `<div align="center">
-  <h1>✨ UI/UX Pro Max 戰情儀表板</h1>
-  <p><b>執行日期：${date}</b></p>
-</div>
+  return `# 📊 Brand Sentinel 空白簡報
 
-<table width="100%">
-  <tr><td align="center"><h3>⚪ 今日狀態：無新資料</h3><br><p>系統未發現公開討論，將於明日重試。</p></td></tr>
-</table>`;
+> **情報更新時間**：${date}
+
+## ⚪ 狀態：無新增訊號
+
+系統在所有追蹤的資料來源中，尚未發現指定的品牌討論軌跡。將於下一次排程區間再次執行深度掃描。`;
 }
 
 if (process.argv.includes('--test')) {
