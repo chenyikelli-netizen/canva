@@ -3,6 +3,8 @@
 // 排程器 + 全流程串接
 // ========================================
 
+import fs from 'fs';
+import path from 'path';
 import cron from 'node-cron';
 import config from './config.js';
 import logger from './utils/logger.js';
@@ -100,6 +102,24 @@ async function run_pipeline() {
       logger.error('⚠️ LINE 和 Telegram 推送都失敗！');
     } else {
       logger.info(`📤 推送完成 — LINE: ${line_ok ? '✅' : '❌'} | Telegram: ${telegram_ok ? '✅' : '❌'}`);
+    }
+
+    // ============ Phase 5: Obsidian 本機知識庫備份 ============
+    logger.info('🗂️ Phase 5: Obsidian 本機備份');
+    try {
+      const obsidian_dir = 'C:\\obsidian\\canva';
+      if (!fs.existsSync(obsidian_dir)) {
+        fs.mkdirSync(obsidian_dir, { recursive: true });
+      }
+      const file_name = `${today} Canva輿情監視報告.md`;
+      const file_path = path.join(obsidian_dir, file_name);
+      
+      // 為 Obsidian 加上標準 Metadata 屬性
+      const obsidian_content = `---\ndate: ${today}\ntags: [canva, brand-sentinel, report]\n---\n\n${report}`;
+      fs.writeFileSync(file_path, obsidian_content, 'utf8');
+      logger.info(`✅ 報告已同步寫入 Obsidian: ${file_path}`);
+    } catch (e) {
+      logger.error(`❌ Obsidian 寫入失敗: ${e.message}`);
     }
 
     // ============ 完成 ============
