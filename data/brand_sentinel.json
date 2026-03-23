@@ -1031,467 +1031,524 @@
     {
       "id": 1,
       "raw_data_id": 57,
+      "brand": "Canva",
       "topic": "AI 相關",
       "sentiment": "正面",
-      "summary": "Canva新功能讓AI生成圖可分層編輯，提升效率。",
-      "analyzed_at": "2026-03-19T12:19:59.425Z"
+      "summary": "Canva新AI功能可編輯AI圖像，workflow將改變。",
+      "analyzed_at": "2026-03-23T05:47:06.527Z"
     },
     {
       "id": 2,
       "raw_data_id": 56,
+      "brand": "Canva",
       "topic": "教育與企業",
       "sentiment": "正面",
-      "summary": "幼教老師用Canva做名牌，覺得實用又可愛。",
-      "analyzed_at": "2026-03-19T12:19:59.428Z"
+      "summary": "Canva方便幼教老師製作名牌，功能實用可愛。",
+      "analyzed_at": "2026-03-23T05:47:06.529Z"
     },
     {
       "id": 3,
       "raw_data_id": 55,
-      "topic": "教育與企業",
+      "brand": "Canva",
+      "topic": "產品功能",
       "sentiment": "正面",
-      "summary": "Canva是完成不露臉行銷系統的實用工具。",
-      "analyzed_at": "2026-03-19T12:19:59.430Z"
+      "summary": "Canva助不露臉行銷快速建立系統，創作高效。",
+      "analyzed_at": "2026-03-23T05:47:06.531Z"
     },
     {
       "id": 4,
       "raw_data_id": 53,
+      "brand": "Canva",
       "topic": "AI 相關",
       "sentiment": "正面",
-      "summary": "Canva結合Claude AI，文字轉設計稿功能超強。",
-      "analyzed_at": "2026-03-19T12:19:59.432Z"
+      "summary": "Claude與Canva新功能太強大，AI文字轉設計省時。",
+      "analyzed_at": "2026-03-23T05:47:06.532Z"
     },
     {
       "id": 5,
       "raw_data_id": 54,
+      "brand": "Canva",
       "topic": "品牌形象",
       "sentiment": "中性",
-      "summary": "台灣Canva員工提醒，品牌名是Canva非Canvas。",
-      "analyzed_at": "2026-03-19T12:19:59.435Z"
+      "summary": "Canva員工澄清品牌名，台灣人愛用但常唸錯。",
+      "analyzed_at": "2026-03-23T05:47:06.533Z"
     },
     {
       "id": 6,
       "raw_data_id": 52,
-      "topic": "使用者體驗",
+      "brand": "Canva",
+      "topic": "產品功能",
       "sentiment": "中性",
-      "summary": "許多人不知Canva特殊用法，值得探索。",
-      "analyzed_at": "2026-03-19T12:19:59.438Z"
+      "summary": "許多用戶不知Canva隱藏用法，引發好奇。",
+      "analyzed_at": "2026-03-23T05:47:06.535Z"
     },
     {
       "id": 7,
       "raw_data_id": 51,
+      "brand": "Canva",
       "topic": "AI 相關",
       "sentiment": "正面",
-      "summary": "Canva「問問」AI功能，文字生成設計稿超方便。",
-      "analyzed_at": "2026-03-19T12:19:59.440Z"
+      "summary": "Canva「問問」功能強大，AI自動生成設計稿省時。",
+      "analyzed_at": "2026-03-23T05:47:06.536Z"
     },
     {
       "id": 8,
       "raw_data_id": 50,
-      "topic": "AI 相關",
+      "brand": "Canva",
+      "topic": "競品比較",
       "sentiment": "正面",
-      "summary": "Canva教學文介紹6大AI功能，操作簡單價優。",
-      "analyzed_at": "2026-03-19T12:19:59.444Z"
+      "summary": "Canva操作簡單、AI功能強大，優於Adobe軟體。",
+      "analyzed_at": "2026-03-23T05:47:06.538Z"
     },
     {
       "id": 9,
       "raw_data_id": 49,
-      "topic": "使用者體驗",
+      "brand": "Canva",
+      "topic": "產品功能",
       "sentiment": "正面",
-      "summary": "Canva便利性高功能豐富，但需注意資安。",
-      "analyzed_at": "2026-03-19T12:19:59.446Z"
+      "summary": "Canva功能豐富易用，提升效率，但需注意資安。",
+      "analyzed_at": "2026-03-23T05:47:06.539Z"
     },
     {
       "id": 10,
       "raw_data_id": 47,
+      "brand": "Canva",
       "topic": "AI 相關",
       "sentiment": "中性",
-      "summary": "Canva AI圖像生成器快速實用，但編輯功能有限。",
-      "analyzed_at": "2026-03-19T12:19:59.449Z"
+      "summary": "Canva AI圖像生成器便利，但編輯功能稍嫌不足。",
+      "analyzed_at": "2026-03-23T05:47:06.539Z"
     },
     {
       "id": 11,
       "raw_data_id": 48,
+      "brand": "Canva",
       "topic": "競品比較",
-      "sentiment": "中性",
-      "summary": "內容比較Canva與Adobe工具，肯定Canva簡報功能。",
-      "analyzed_at": "2026-03-19T12:20:34.691Z"
+      "sentiment": "正面",
+      "summary": "Canva簡報好用，Adobe自由度高，各有所長。",
+      "analyzed_at": "2026-03-23T05:47:23.237Z"
     },
     {
       "id": 12,
       "raw_data_id": 46,
+      "brand": "Canva",
       "topic": "AI 相關",
       "sentiment": "正面",
-      "summary": "介紹Canva AI功能與優勢，提及方案與限制。",
-      "analyzed_at": "2026-03-19T12:20:34.693Z"
+      "summary": "Canva AI功能強大，涵蓋圖片簡報影片設計。",
+      "analyzed_at": "2026-03-23T05:47:23.239Z"
     },
     {
       "id": 13,
       "raw_data_id": 44,
+      "brand": "Canva",
       "topic": "定價與方案",
       "sentiment": "中性",
-      "summary": "詳解Canva各版本差異、功能與定價方案。",
-      "analyzed_at": "2026-03-19T12:20:34.695Z"
+      "summary": "比較Canva專業、教育、團隊、企業版方案差異。",
+      "analyzed_at": "2026-03-23T05:47:23.241Z"
     },
     {
       "id": 14,
       "raw_data_id": 45,
+      "brand": "Canva",
       "topic": "定價與方案",
       "sentiment": "中性",
-      "summary": "說明Canva免費版升級Pro/Business方式。",
-      "analyzed_at": "2026-03-19T12:20:34.698Z"
+      "summary": "Canva免費版可升級，團隊版註冊有變動。",
+      "analyzed_at": "2026-03-23T05:47:23.243Z"
     },
     {
       "id": 15,
       "raw_data_id": 43,
-      "topic": "產品功能",
+      "brand": "Canva",
+      "topic": "定價與方案",
       "sentiment": "正面",
-      "summary": "比較Canva Pro與免費版，強調Pro版專業功能。",
-      "analyzed_at": "2026-03-19T12:20:34.700Z"
+      "summary": "比較Canva免費與Pro版差異，Pro版功能更佳。",
+      "analyzed_at": "2026-03-23T05:47:23.245Z"
     },
     {
       "id": 16,
       "raw_data_id": 41,
+      "brand": "Canva",
       "topic": "定價與方案",
       "sentiment": "中性",
-      "summary": "探討Canva Pro省錢方案，提及官方定價較高。",
-      "analyzed_at": "2026-03-19T12:20:34.702Z"
+      "summary": "Canva Pro價格對部分使用者偏高，尋求優惠。",
+      "analyzed_at": "2026-03-23T05:47:23.247Z"
     },
     {
       "id": 17,
       "raw_data_id": 42,
+      "brand": "Canva",
       "topic": "定價與方案",
       "sentiment": "中性",
-      "summary": "深度評測Canva Pro定價，比較各版本與升級價值。",
-      "analyzed_at": "2026-03-19T12:20:34.704Z"
+      "summary": "深入評測Canva Pro各版本價格與升級價值。",
+      "analyzed_at": "2026-03-23T05:47:23.248Z"
     },
     {
       "id": 18,
       "raw_data_id": 39,
+      "brand": "Canva",
       "topic": "定價與方案",
       "sentiment": "正面",
-      "summary": "成功以優惠價格訂閱Canva Pro一年。",
-      "analyzed_at": "2026-03-19T12:20:34.706Z"
+      "summary": "成功以優惠價訂閱Canva Pro，節省可觀。",
+      "analyzed_at": "2026-03-23T05:47:23.250Z"
     },
     {
       "id": 19,
       "raw_data_id": 40,
-      "topic": "產品功能",
+      "brand": "Canva",
+      "topic": "定價與方案",
       "sentiment": "正面",
-      "summary": "深度評測Canva Pro，強調其解決痛點與核心功能。",
-      "analyzed_at": "2026-03-19T12:20:34.708Z"
+      "summary": "深度評測Canva Pro，認為升級能解決痛點。",
+      "analyzed_at": "2026-03-23T05:47:23.252Z"
     },
     {
       "id": 20,
       "raw_data_id": 37,
+      "brand": "Canva",
       "topic": "定價與方案",
       "sentiment": "中性",
-      "summary": "比較Canva免費、專業與團隊版功能與定價。",
-      "analyzed_at": "2026-03-19T12:20:34.710Z"
+      "summary": "比較Canva免費、專業、團隊版功能與價格。",
+      "analyzed_at": "2026-03-23T05:47:23.254Z"
     },
     {
       "id": 21,
       "raw_data_id": 38,
+      "brand": "Canva",
       "topic": "AI 相關",
       "sentiment": "正面",
-      "summary": "Canva Pro 結合 AI 功能，為企業提供高價值設計方案。",
-      "analyzed_at": "2026-03-19T12:21:49.061Z"
+      "summary": "Canva AI功能與Pro方案提供企業轉型解決方案。",
+      "analyzed_at": "2026-03-23T05:48:01.865Z"
     },
     {
       "id": 22,
       "raw_data_id": 36,
+      "brand": "Canva",
       "topic": "定價與方案",
-      "sentiment": "中性",
-      "summary": "詳細說明 Canva 各方案差異，含 AI 及企業功能。",
-      "analyzed_at": "2026-03-19T12:21:49.063Z"
+      "sentiment": "正面",
+      "summary": "詳述Canva各方案功能，包括AI與品牌工具。",
+      "analyzed_at": "2026-03-23T05:48:01.867Z"
     },
     {
       "id": 23,
       "raw_data_id": 34,
+      "brand": "Canva",
       "topic": "定價與方案",
       "sentiment": "正面",
-      "summary": "教導如何以每月低價合法訂閱 Canva Pro。",
-      "analyzed_at": "2026-03-19T12:21:49.064Z"
+      "summary": "教學如何以優惠價格訂閱Canva Pro。",
+      "analyzed_at": "2026-03-23T05:48:01.868Z"
     },
     {
       "id": 24,
       "raw_data_id": 35,
+      "brand": "Canva",
       "topic": "定價與方案",
-      "sentiment": "負面",
-      "summary": "台灣 Canva Pro 價格高昂，導致使用者卻步。",
-      "analyzed_at": "2026-03-19T12:21:49.065Z"
+      "sentiment": "正面",
+      "summary": "台灣Canva Pro價格高，找到合法划算訂閱法。",
+      "analyzed_at": "2026-03-23T05:48:01.870Z"
     },
     {
       "id": 25,
       "raw_data_id": 33,
+      "brand": "Canva",
       "topic": "定價與方案",
       "sentiment": "正面",
-      "summary": "成功以超優惠價格訂閱 Canva Pro。",
-      "analyzed_at": "2026-03-19T12:21:49.065Z"
+      "summary": "成功以極優惠價訂閱Canva Pro一年。",
+      "analyzed_at": "2026-03-23T05:48:01.871Z"
     },
     {
       "id": 26,
       "raw_data_id": 30,
+      "brand": "Canva",
       "topic": "AI 相關",
       "sentiment": "正面",
-      "summary": "Canva 2025 發表多項 AI 大幅功能更新。",
-      "analyzed_at": "2026-03-19T12:21:49.066Z"
+      "summary": "Canva 2025更新導入AI，成全能創意平台。",
+      "analyzed_at": "2026-03-23T05:48:01.874Z"
     },
     {
       "id": 27,
       "raw_data_id": 31,
+      "brand": "Canva",
       "topic": "定價與方案",
       "sentiment": "中性",
-      "summary": "說明 Canva Pro 升級後的功能與定價調整。",
-      "analyzed_at": "2026-03-19T12:21:49.067Z"
+      "summary": "報導Canva Pro方案、價格及功能更新。",
+      "analyzed_at": "2026-03-23T05:48:01.875Z"
     },
     {
       "id": 28,
       "raw_data_id": 32,
+      "brand": "Canva",
       "topic": "定價與方案",
       "sentiment": "正面",
-      "summary": "發現以低價訂閱 Canva Pro 的合法方法。",
-      "analyzed_at": "2026-03-19T12:21:49.068Z"
+      "summary": "揭露Canva Pro台灣高價，分享省錢升級秘訣。",
+      "analyzed_at": "2026-03-23T05:48:01.876Z"
     },
     {
       "id": 29,
       "raw_data_id": 28,
+      "brand": "Canva",
       "topic": "AI 相關",
       "sentiment": "正面",
-      "summary": "Canva AI 提供文案、圖像、品牌管理等多項實用功能。",
-      "analyzed_at": "2026-03-19T12:21:49.069Z"
+      "summary": "實測Canva AI功能，可寫文案、生成圖像。",
+      "analyzed_at": "2026-03-23T05:48:01.878Z"
     },
     {
       "id": 30,
       "raw_data_id": 29,
+      "brand": "Canva",
       "topic": "產品功能",
       "sentiment": "正面",
-      "summary": "Canva 提供文字動畫與照片校正等實用設計工具。",
-      "analyzed_at": "2026-03-19T12:21:49.070Z"
+      "summary": "介紹Canva豐富設計功能，如文字動畫與修圖。",
+      "analyzed_at": "2026-03-23T05:48:01.879Z"
     },
     {
       "id": 31,
       "raw_data_id": 26,
+      "brand": "Canva",
       "topic": "AI 相關",
       "sentiment": "正面",
-      "summary": "詳盡介紹Canva AI 12大功能，強調提升效率與設計品質。",
-      "analyzed_at": "2026-03-19T12:22:06.351Z"
+      "summary": "詳解Canva AI新功能，提升設計效率。",
+      "analyzed_at": "2026-03-23T05:48:17.630Z"
     },
     {
       "id": 32,
       "raw_data_id": 27,
+      "brand": "Canva",
       "topic": "AI 相關",
-      "sentiment": "正面",
-      "summary": "說明Canva AI魔法展開功能，可智能擴圖並填補空白。",
-      "analyzed_at": "2026-03-19T12:22:06.353Z"
+      "sentiment": "中性",
+      "summary": "介紹Canva AI魔法展開功能與操作。",
+      "analyzed_at": "2026-03-23T05:48:17.634Z"
     },
     {
       "id": 33,
       "raw_data_id": 25,
+      "brand": "Canva",
       "topic": "AI 相關",
       "sentiment": "中性",
-      "summary": "介紹Canva AI寫作助手與文字轉圖片功能。",
-      "analyzed_at": "2026-03-19T12:22:06.355Z"
+      "summary": "介紹Canva AI寫作與圖片生成功能。",
+      "analyzed_at": "2026-03-23T05:48:17.637Z"
     },
     {
       "id": 34,
       "raw_data_id": 23,
+      "brand": "Canva",
       "topic": "AI 相關",
       "sentiment": "正面",
-      "summary": "深入解析Canva AI與Magic Studio多項功能，降低設計門檻。",
-      "analyzed_at": "2026-03-19T12:22:06.359Z"
+      "summary": "詳解Canva AI與Magic Studio，降低設計門檻。",
+      "analyzed_at": "2026-03-23T05:48:17.640Z"
     },
     {
       "id": 35,
       "raw_data_id": 24,
+      "brand": "Canva",
       "topic": "產品功能",
       "sentiment": "中性",
-      "summary": "提及Canva Create新功能，並提供通用設計排版建議。",
-      "analyzed_at": "2026-03-19T12:22:06.360Z"
+      "summary": "整理Canva Create新功能，提供設計建議。",
+      "analyzed_at": "2026-03-23T05:48:17.644Z"
     },
     {
       "id": 36,
       "raw_data_id": 20,
+      "brand": "Canva",
       "topic": "AI 相關",
       "sentiment": "正面",
-      "summary": "宣告Canva AI新功能上線，並指導用戶如何使用。",
-      "analyzed_at": "2026-03-19T12:22:06.362Z"
+      "summary": "Canva AI新功能上線，讓設計更輕鬆。",
+      "analyzed_at": "2026-03-23T05:48:17.649Z"
     },
     {
       "id": 37,
       "raw_data_id": 21,
+      "brand": "Canva",
       "topic": "產品功能",
       "sentiment": "正面",
-      "summary": "介紹Canva 7大全新功能，強調設計效率大幅提升。",
-      "analyzed_at": "2026-03-19T12:22:06.363Z"
+      "summary": "Canva 2026七大新功能，設計效率翻倍。",
+      "analyzed_at": "2026-03-23T05:48:17.652Z"
     },
     {
       "id": 38,
       "raw_data_id": 22,
+      "brand": "Canva",
       "topic": "產品功能",
       "sentiment": "正面",
-      "summary": "宣告Canva史上最大升級，新增13項功能強化設計與行銷。",
-      "analyzed_at": "2026-03-19T12:22:06.365Z"
+      "summary": "Canva史上最大升級，13新功能全包。",
+      "analyzed_at": "2026-03-23T05:48:17.656Z"
     },
     {
       "id": 39,
       "raw_data_id": 19,
+      "brand": "Canva",
       "topic": "產品功能",
       "sentiment": "正面",
-      "summary": "Canva更新AI功能、Email設計與新增3D元素。",
-      "analyzed_at": "2026-03-19T12:22:06.367Z"
+      "summary": "Canva全面更新，AI與3D元素功能升級。",
+      "analyzed_at": "2026-03-23T05:48:17.658Z"
     },
     {
       "id": 40,
       "raw_data_id": 18,
-      "topic": "AI 相關",
+      "brand": "Canva",
+      "topic": "產品功能",
       "sentiment": "正面",
-      "summary": "列舉Canva全新功能，特別強調AI設計與個人化應用。",
-      "analyzed_at": "2026-03-19T12:22:06.369Z"
+      "summary": "盤點Canva多項新功能，包含AI應用。",
+      "analyzed_at": "2026-03-23T05:48:17.661Z"
     },
     {
       "id": 41,
       "raw_data_id": 16,
+      "brand": "Canva",
       "topic": "產品功能",
       "sentiment": "正面",
-      "summary": "Canva Create發表12個新功能令人震撼。",
-      "analyzed_at": "2026-03-19T12:22:27.053Z"
+      "summary": "Canva發表多項新功能，使用者反應正面。",
+      "analyzed_at": "2026-03-23T05:48:34.943Z"
     },
     {
       "id": 42,
       "raw_data_id": 17,
-      "topic": "AI 相關",
+      "brand": "Canva",
+      "topic": "產品功能",
       "sentiment": "正面",
-      "summary": "Canva重大更新，7大功能含AI，設計效率大提升。",
-      "analyzed_at": "2026-03-19T12:22:27.055Z"
+      "summary": "Canva推出多項新功能及AI整合，大幅提升設計效率。",
+      "analyzed_at": "2026-03-23T05:48:34.946Z"
     },
     {
       "id": 43,
       "raw_data_id": 15,
+      "brand": "Canva",
       "topic": "教育與企業",
       "sentiment": "負面",
-      "summary": "申請Canva教育版遇到問題，尋求協助。",
-      "analyzed_at": "2026-03-19T12:22:27.057Z"
+      "summary": "使用者申請Canva教育版遇到問題，尋求協助。",
+      "analyzed_at": "2026-03-23T05:48:34.949Z"
     },
     {
       "id": 44,
       "raw_data_id": 12,
+      "brand": "Canva",
       "topic": "競品比較",
       "sentiment": "正面",
-      "summary": "Canva相較PPT在版本與協作上具優勢。",
-      "analyzed_at": "2026-03-19T12:22:27.059Z"
+      "summary": "Canva在協作編輯與避免跑版上優於PPT，討論度高。",
+      "analyzed_at": "2026-03-23T05:48:34.951Z"
     },
     {
       "id": 45,
       "raw_data_id": 13,
-      "topic": "品牌形象",
+      "brand": "Canva",
+      "topic": "產品功能",
       "sentiment": "正面",
-      "summary": "Dcard討論Canva模板助小企業打造品牌形象。",
-      "analyzed_at": "2026-03-19T12:22:27.060Z"
+      "summary": "Canva提供豐富模板，易於小企業使用並提升設計效率。",
+      "analyzed_at": "2026-03-23T05:48:34.953Z"
     },
     {
       "id": 46,
       "raw_data_id": 14,
+      "brand": "Canva",
       "topic": "定價與方案",
-      "sentiment": "正面",
-      "summary": "討論Canva定價、免費版與Pro版差異及適用對象。",
-      "analyzed_at": "2026-03-19T12:22:27.061Z"
+      "sentiment": "中性",
+      "summary": "討論Canva價格、免費版與Pro版差異，並推薦其易用性。",
+      "analyzed_at": "2026-03-23T05:48:34.956Z"
     },
     {
       "id": 47,
       "raw_data_id": 9,
+      "brand": "Canva",
       "topic": "市場動態",
       "sentiment": "正面",
-      "summary": "Canva在Dcard討論度高，因其易用性受歡迎。",
-      "analyzed_at": "2026-03-19T12:22:27.064Z"
+      "summary": "Canva在Dcard討論度高，因其易用性與多功能受歡迎。",
+      "analyzed_at": "2026-03-23T05:48:34.958Z"
     },
     {
       "id": 48,
       "raw_data_id": 10,
+      "brand": "Canva",
       "topic": "產品功能",
       "sentiment": "正面",
-      "summary": "Canva提供豐富模板與免費字體受使用者好評。",
-      "analyzed_at": "2026-03-19T12:22:27.065Z"
+      "summary": "Canva因其免費模板與精美字體受使用者喜愛。",
+      "analyzed_at": "2026-03-23T05:48:34.960Z"
     },
     {
       "id": 49,
       "raw_data_id": 11,
+      "brand": "Canva",
       "topic": "競品比較",
       "sentiment": "正面",
-      "summary": "Canva因易用性與競品相比具優勢受歡迎。",
-      "analyzed_at": "2026-03-19T12:22:27.067Z"
+      "summary": "Canva因易用性、豐富模板及較競品優勢廣受歡迎。",
+      "analyzed_at": "2026-03-23T05:48:34.962Z"
     },
     {
       "id": 50,
       "raw_data_id": 5,
+      "brand": "Canva",
       "topic": "競品比較",
-      "sentiment": "中性",
-      "summary": "使用者發現Canva取代PPT成簡報主流。",
-      "analyzed_at": "2026-03-19T12:22:27.069Z"
+      "sentiment": "正面",
+      "summary": "使用者發現Canva在簡報製作功能與美觀上優於PPT。",
+      "analyzed_at": "2026-03-23T05:48:34.964Z"
     },
     {
       "id": 51,
       "raw_data_id": 6,
+      "brand": "Canva",
       "topic": "產品功能",
       "sentiment": "正面",
-      "summary": "比較Canva免費與付費版功能，Pro版獲好評。",
-      "analyzed_at": "2026-03-19T12:22:41.044Z"
+      "summary": "比較Canva免費版與Pro版功能及付費方案，評價正面。",
+      "analyzed_at": "2026-03-23T05:48:46.830Z"
     },
     {
       "id": 52,
       "raw_data_id": 7,
+      "brand": "Canva",
       "topic": "產品功能",
       "sentiment": "正面",
-      "summary": "強調Canva Pro進階功能價值，助新手省時省錢。",
-      "analyzed_at": "2026-03-19T12:22:41.047Z"
+      "summary": "評估Canva Pro升級價值，強調其進階功能與省時優勢。",
+      "analyzed_at": "2026-03-23T05:48:46.833Z"
     },
     {
       "id": 53,
       "raw_data_id": 8,
+      "brand": "Canva",
       "topic": "使用者體驗",
       "sentiment": "正面",
-      "summary": "Dcard網友用Canva輕鬆設計吸睛圖文。",
-      "analyzed_at": "2026-03-19T12:22:41.048Z"
+      "summary": "網友分享使用Canva在Dcard製作吸睛圖文的技巧。",
+      "analyzed_at": "2026-03-23T05:48:46.836Z"
     },
     {
       "id": 54,
       "raw_data_id": 3,
+      "brand": "Canva",
       "topic": "定價與方案",
       "sentiment": "中性",
-      "summary": "徵求Canva Pro團購夥伴，提及年費。",
-      "analyzed_at": "2026-03-19T12:22:41.049Z"
+      "summary": "徵求Canva Pro方案的團購夥伴。",
+      "analyzed_at": "2026-03-23T05:48:46.838Z"
     },
     {
       "id": 55,
       "raw_data_id": 4,
-      "topic": "競品比較",
+      "brand": "Canva",
+      "topic": "使用者體驗",
       "sentiment": "負面",
-      "summary": "有人不喜歡Canva，認為文字方塊難調，不如PPT。",
-      "analyzed_at": "2026-03-19T12:22:41.050Z"
+      "summary": "網友不滿Canva文字方塊調整不易，認為PPT更好用。",
+      "analyzed_at": "2026-03-23T05:48:46.840Z"
     },
     {
       "id": 56,
       "raw_data_id": 1,
-      "topic": "使用者體驗",
+      "brand": "Canva",
+      "topic": "產品功能",
       "sentiment": "正面",
-      "summary": "教導如何將Canva設計作品發布到Dcard。",
-      "analyzed_at": "2026-03-19T12:22:41.052Z"
+      "summary": "介紹Canva設計作品如何無縫發布到Dcard。",
+      "analyzed_at": "2026-03-23T05:48:46.842Z"
     },
     {
       "id": 57,
       "raw_data_id": 2,
-      "topic": "競品比較",
+      "brand": "Canva",
+      "topic": "品牌形象",
       "sentiment": "負面",
-      "summary": "有人認為Canva不可靠，因個資外洩和下載問題。",
-      "analyzed_at": "2026-03-19T12:22:41.053Z"
+      "summary": "網友因資安問題及下載故障，認為Canva不如PPT可靠。",
+      "analyzed_at": "2026-03-23T05:48:46.844Z"
     }
   ],
   "reports": [
     {
       "id": 1,
-      "report_date": "2026-03-19",
+      "report_date": "2026-03-23",
       "report_type": "daily",
-      "content": "📊 **Canva 品牌日報** — 2026-03-19\n\n■ 今日摘要\n  - 總蒐集筆數: **57** 筆\n  - 平台分布: Threads: 7 筆 / tavily: 50 筆\n  - 情緒分布:\n  正面 █████████████░░░░░░░ 66.7%\n  中性 █████░░░░░░░░░░░░░░░ 26.3%\n  負面 █░░░░░░░░░░░░░░░░░░░ 7.0%\n\n■ 熱門主題 TOP 3\n  1. **AI 相關** (16 筆)\n     Canva重大更新，7大功能含AI，設計效率大提升。\n     > 「【Canva完整教學】設計＋影片剪輯＋AI工具一次搞懂，設計效率提升10倍 ... Canva 新功能直接屌打PPT！現在支援ChatGPT 連動，一鍵生成繁中簡報...」\n\n  2. **定價與方案** (14 筆)\n     徵求Canva Pro團購夥伴，提及年費。\n     > 「請注意，本版不為任何發文者或廠商背書，本文真實性請自行判定(本行不可刪) 1.徵求項目: Canva pro 徵1個夥伴2.需求描述: 方案一年，年費是149.9美金，...」\n\n  3. **產品功能** (11 筆)\n     強調Canva Pro進階功能價值，助新手省時省錢。\n     > 「### Canva Pro值得升級嗎？進階功能讓你的設計更上一層樓！. ##### Canva 免費版的功能有哪些限制？. Canva 免費版雖然功能豐富，但部分高級素材、字體和功能需要訂閱 Canv...」\n\n■ 關鍵洞察\n  1. Canva Pro 的價值主張獲得高度肯定，加上使用者普遍讚揚其易用性與豐富功能，顯示品牌在提升付費訂閱率及市場領導地位方面具備強勁動能與投資效益。\n  2. AI 相關議題成為輿情熱點，這不僅反映市場對創新設計工具的龐大需求，也為 Canva 未來產品發展與鞏固其在設計領域的領先地位提供清晰方向。\n  3. 社群平台（如 Dcard）的活躍討論度與 Canva 對於中小企業（SMBs）品牌塑造的助益，凸顯其在用戶黏著度與拓展新興市場方面的潛力，有助於長期品牌發展與用戶基礎擴大。\n\n■ ⚠️ 風險警示\n  - 個別負面輿情點出個資外洩、下載問題及核心功能（如文字方塊調整）的用戶體驗痛點，這些操作層面的可靠性及設計細節問題，若未妥善處理，恐損害用戶信任度，影響品牌聲譽與長期用戶留存率。\n\n---\n_Brand Sentinel 自動生成 | 2026/3/19 下午8:22:50_",
-      "created_at": "2026-03-19T12:22:50.235Z"
+      "content": "📊 **Canva 品牌日報** — 2026-03-23\n\n■ 今日摘要\n  - 總蒐集筆數: **57** 筆\n  - 平台分布: Threads: 7 筆 / Tavily 搜尋: 50 筆\n  - 情緒分布:\n  正面 ██████████████░░░░░░ 70.2%\n  中性 █████░░░░░░░░░░░░░░░ 24.6%\n  負面 █░░░░░░░░░░░░░░░░░░░ 5.3%\n\n■ ⚔️ 競品對照矩陣\n  🟢 Canva: 57 筆 | 正面 70% / 中性 25% / 負面 5%\n\n■ 熱門主題 TOP 3\n  1. **產品功能** (16 筆)\n     介紹Canva設計作品如何無縫發布到Dcard。\n     > 「# Canva 的設計作品能否直接發布到 Dcard？. Canva 和 Dcard 的完美結合，讓你的創意分享變得更輕鬆！這篇文章詳細介紹了如何將 Canva 設計作品無縫發布到 Dcard，並分享...」\n\n  2. **定價與方案** (16 筆)\n     徵求Canva Pro方案的團購夥伴。\n     > 「請注意，本版不為任何發文者或廠商背書，本文真實性請自行判定(本行不可刪) 1.徵求項目: Canva pro 徵1個夥伴2.需求描述: 方案一年，年費是149.9美金，...」\n\n  3. **AI 相關** (13 筆)\n     Canva AI新功能上線，讓設計更輕鬆。\n     > 「... 介紹及解鎖方式： 📽️ 參考影片： 可以觀看此影片來探索Canva AI ... 點擊首頁右上角的「Canva AI」按鈕即可進入新功能界面。 3. 如果未立即看...」\n\n■ 關鍵洞察\n  1. Canva展現極其強勁的品牌聲量與正面情緒：在本日監測的57筆輿情資料中，所有提及皆指向Canva，且其中高達七成（40筆）為正面評價，顯示其在使用者心中擁有極高的認可度與好感度，為投資效益提供穩固基礎。\n  2. Pro版本價值與易用性受高度肯定：輿情資料頻繁提及Canva Pro的進階功能、省時優勢及其付費方案的價值，同時Canva的易用性、豐富模板和美觀設計是廣受歡迎的關鍵。這為股東描繪了穩健的付費轉化潛力與廣闊的用戶基礎，有助於長期營收增長。\n  3. 產品功能與AI應用持續引領市場關注：產品功能與定價方案各佔16筆討論，AI相關議題也高達13筆，這表明Canva在核心功能創新、定價策略及前瞻性的AI整合上持續吸引市場目光，是驅動品牌成長的重要引擎。\n\n■ 🔍 競品觀察\n  1. 根據今日蒐集的輿情資料，Figma和Adobe Express並未有任何提及，因此無法針對這兩競品進行直接的輿情對照分析。這可能表示Canva在本次監測的輿情來源中，其品牌討論聲量遠超競爭對手，或監測範圍未充分涵蓋競品的主要討論場域。\n  2. 儘管缺乏直接競品數據，Canva在「競品比較」主題中（5筆）被多次提及優於傳統工具如PowerPoint，特別是在協作編輯、避免跑版及整體美觀性上。這強化了Canva作為現代設計工具領導者的形象，並成功將自己定位為傳統方案的優越替代品，進一步鞏固其市場地位。\n\n■ ⚠️ 風險警示\n  - 潛在的資安與穩定性問題：資料中提及有用戶遭遇資安問題及下載故障（代表性資料[1]），這類問題可能動搖用戶對平台可靠性的信任，需警惕並加強相關技術保障，尤其是在拓展企業與教育市場時，資安問題會是重要考量。\n  - 特定功能的使用者體驗痛點：有用戶抱怨文字方塊調整不易（代表性資料[3]）及教育版申請流程不順（代表性資料[15]），這些細節問題若不即時改善，可能影響特定用戶群體的滿意度與留存率，長期可能侵蝕品牌好感度。\n\n---\n_Brand Sentinel 自動生成 | 2026/3/23 下午1:49:12_",
+      "created_at": "2026-03-23T05:49:12.651Z"
     }
   ]
 }
