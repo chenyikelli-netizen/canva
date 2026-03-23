@@ -1,8 +1,7 @@
 // ========================================
-// 日報生成模組（v7 — 強烈區塊與官方圖示版）
-// 徹底移除容易報錯的 shields.io 徽章，改用 GitHub 最佳支援的原生 HTML / Markdown。
-// 頂部替換為 Canva 官方高畫質 Logo。
-// 採用 <h2> 大標籤、 Emoji 與 --- 水平分隔線來創造「極度明顯」的段落感。
+// 日報生成模組（v8 — 原生視覺與極致穩定版）
+// 使用 Shields.io 生成 100% 穩定的標題大色塊，取代任何外部 <img src>
+// 全面統一字體粗細與段落間距，結合 GitHub Native Mardown Render 特性。
 // ========================================
 
 import { get_analysis_by_date, get_stats, save_report } from '../utils/db.js';
@@ -60,17 +59,12 @@ export async function generate_daily_report(date) {
   return report;
 }
 
-// ========================================
-// 工具函式
-// ========================================
-
 // 產生視覺化長條圖
 function bar(pct) {
   const n = Math.round(Number(pct) / 5);
   return '`' + '█'.repeat(n) + '░'.repeat(20 - n) + '`';
 }
 
-// 格式化平台名稱
 function fmt_platform(p) {
   const m = { threads: 'Threads', dcard: 'Dcard', google_reviews: 'Google', tavily: 'Tavily', linkedin: 'LinkedIn', twitter: 'Twitter/X' };
   return m[p] || p;
@@ -87,11 +81,16 @@ function build_report(date, stats, sentiment_pcts, topic_details, insights) {
 
   const health_text = Number(pos.pct) >= 60 ? '🟢 健康狀態良好' : Number(pos.pct) >= 40 ? '🟡 需持續留意' : '🔴 處於警戒狀態';
 
-  // ── 頂部大標題 ──────────────────────────────
+  // ── 頂部大徽章與標題 ──────────────────────────────
   const banner = `<div align="center">
-  <h1>✨ Brand Sentinel 品牌輿情日報</h1>
-  <p><b>${date}</b> ｜ 監控標的：Canva, Figma, Adobe</p>
-  <p>${health_text}</p>
+
+![BRAND SENTINEL](https://img.shields.io/badge/BRAND%20SENTINEL-Canva%20%E5%93%81%E7%89%8C%E8%BC%BF%E6%83%85%E6%97%A5%E5%A0%B1-8B3CF7?style=for-the-badge&labelColor=6E42D3)
+
+<br>
+
+<b>${date}</b> ｜ 監控標的：Canva, Figma, Adobe <br>
+${health_text}
+
 </div>`;
 
   // ── 今日概覽 ────────────────────────────
@@ -147,10 +146,19 @@ ${rows}
 `;
   }
 
+  // 清除 LLM 可能帶有的編號（如 '1. ' 或 '- '），強制統一格式
+  const cleanNum = (str) => str.replace(/^[-*0-9.\\s]+/, '');
+
   // ── 熱門主題 ─────────────────────────────
   const topic_items = topic_details.map((t, i) => {
-    return `${i + 1}. **${t.name}** (共 ${t.count} 筆討論)  \n   ${t.summary}  \n   > _「${t.sample}…」_`;
-  }).join('\n\n');
+    const medal = ['🥇', '🥈', '🥉'][i] || '📌';
+    // 採用粗體標題與區塊引用的統一結構
+    return `**${i + 1}. ${medal} ${t.name} (共 ${t.count} 筆討論)**
+
+> ${t.summary}
+> 
+> _💬「${t.sample}…」_`;
+  }).join('\n\n<br>\n\n');
 
   const topics = `
 ---
@@ -161,7 +169,7 @@ ${topic_items}
 `;
 
   // ── 關鍵洞察 ─────────────────────────────
-  const insight_items = (insights.insights || []).map((s, i) => `${i + 1}. ${s.replace(/^[-*0-9.\\s]+/, '')}`).join('\n\n');
+  const insight_items = (insights.insights || []).map((s, i) => `**${i + 1}. 💡 深度洞察**\n\n> ${cleanNum(s)}`).join('\n\n<br>\n\n');
   const insight = `
 ---
 
@@ -170,20 +178,24 @@ ${topic_items}
 > [!IMPORTANT]
 > 以下洞察由 AI 根據今日輿情資料生成，供投資決策參考。
 
+<br>
+
 ${insight_items}
 `;
 
   // ── 競品觀察 ─────────────────────────────
   let comp_obs = '';
   if (insights.competitor_analysis && insights.competitor_analysis.length > 0) {
-    const items = insights.competitor_analysis.map((c, i) => `${i + 1}. ${c.replace(/^[-*0-9.\\s]+/, '')}`).join('\n\n');
+    const items = insights.competitor_analysis.map((c, i) => `**${i + 1}. 🔭 市場觀察**\n\n> ${cleanNum(c)}`).join('\n\n<br>\n\n');
     comp_obs = `
 ---
 
-<h2>🔭 競品觀察</h2>
+<h2>⚔️ 競品觀察</h2>
 
 > [!TIP]
 > Canva 與 Figma、Adobe Express 在今日輿情市場上的差異解讀。
+
+<br>
 
 ${items}
 `;
@@ -192,14 +204,16 @@ ${items}
   // ── 風險警示 ─────────────────────────────
   let risk = '';
   if (insights.risks && insights.risks.length > 0) {
-    const items = insights.risks.map((r, i) => `${i + 1}. ${r.replace(/^[-*0-9.\\s]+/, '')}`).join('\n\n');
+    const items = insights.risks.map((r, i) => `**${i + 1}. 🚨 警示項目**\n\n> ${cleanNum(r)}`).join('\n\n<br>\n\n');
     risk = `
 ---
 
-<h2>🚨 風險警示</h2>
+<h2>⚠️ 風險警示</h2>
 
 > [!WARNING]
 > 以下議題出現異常輿情訊號，建議密切關注後續發展。
+
+<br>
 
 ${items}
 `;
@@ -233,8 +247,12 @@ ${items}
 // ========================================
 function generate_empty_report(date) {
   return `<div align="center">
-  <h1>✨ Brand Sentinel 品牌輿情日報</h1>
-  <p><b>${date}</b></p>
+
+![BRAND SENTINEL](https://img.shields.io/badge/BRAND%20SENTINEL-Canva%20%E5%93%81%E7%89%8C%E8%BC%BF%E6%83%85%E6%97%A5%E5%A0%B1-8B3CF7?style=for-the-badge&labelColor=6E42D3)
+
+<br>
+
+<b>${date}</b>
 </div>
 
 ---
@@ -251,14 +269,9 @@ function generate_empty_report(date) {
 </div>`;
 }
 
-// ========================================
 // 獨立測試模式
-// ========================================
 if (process.argv.includes('--test')) {
   const today = new Date().toISOString().split('T')[0];
   const test_date = process.argv[process.argv.indexOf('--test') + 1] || today;
-  logger.info(`🧪 日報生成測試：${test_date}`);
-  generate_daily_report(test_date)
-    .then(r => { console.log('\n' + '='.repeat(60) + '\n' + r + '\n' + '='.repeat(60)); process.exit(0); })
-    .catch(e => { console.error('❌ 日報生成失敗:', e.message); process.exit(1); });
+  generate_daily_report(test_date).then(() => process.exit(0));
 }
