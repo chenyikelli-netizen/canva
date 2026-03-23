@@ -1,6 +1,7 @@
 // ========================================
-// 日報生成模組（定案版 - 清爽原生視覺版）
-// 退回使用者最滿意的 V7.2 乾淨排版，做為永久標準模板
+// 日報生成模組（UI/UX Pro Max 降維打擊版）
+// 把 UI/UX Pro Max 的「Bento Grid 便當盒佈局」與「資訊層級理論」
+// 移植到原生的 GitHub Markdown 環境
 // ========================================
 
 import { get_analysis_by_date, get_stats, save_report } from '../utils/db.js';
@@ -69,189 +70,147 @@ function fmt_platform(p) {
   return m[p] || p;
 }
 
-// ========================================
-// 報告組裝
-// ========================================
 function build_report(date, stats, sentiment_pcts, topic_details, insights) {
 
   const pos = sentiment_pcts.find(s => s.label === '正面') || { pct: '0', count: 0 };
   const neu = sentiment_pcts.find(s => s.label === '中性') || { pct: '0', count: 0 };
   const neg = sentiment_pcts.find(s => s.label === '負面') || { pct: '0', count: 0 };
 
-  const health_text = Number(pos.pct) >= 60 ? '🟢 健康狀態良好' : Number(pos.pct) >= 40 ? '🟡 需持續留意' : '🔴 處於警戒狀態';
+  const health_color = Number(pos.pct) >= 60 ? '🟢' : Number(pos.pct) >= 40 ? '🟡' : '🔴';
+  const health_text = Number(pos.pct) >= 60 ? '狀態良好' : Number(pos.pct) >= 40 ? '需持續留意' : '處於警戒狀態';
 
-  // ── 頂部大標題 ──────────────────────────────
+  // ── 頂部宣告區 (Executive Dashboard) ──────────────────────────────
   const banner = `<div align="center">
-  <h1>✨ Brand Sentinel 品牌輿情日報</h1>
-  <p><b>${date}</b> ｜ 監控標的：Canva, Figma, Adobe</p>
-  <p>${health_text}</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg" height="50" alt="Canva Logo">
+  <br><br>
+  
+  <h1>UI/UX Pro Max 戰情儀表板</h1>
+  <p><b>生成日期：${date}</b> ｜ <b>監控標的</b>：Canva, Figma, Adobe</p>
 </div>`;
 
-  // ── 今日概覽 ────────────────────────────
-  const platform_dist = stats.by_platform.map(p => `**${fmt_platform(p.platform)}** (${p.count} 筆)`).join(' 、 ');
-  const overview = `
-<br>
+  // ── Bento Grid 模組一：核心數據 ────────────────────────────
+  const bento1 = `
+<table width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <h3>📈 聲量規模</h3>
+      <h1>${stats.total} 筆</h1>
+      <sub>整體品牌健康度 ${health_color} ${health_text}</sub>
+    </td>
+    <td width="50%" align="center">
+      <h3>🌐 資訊覆蓋網</h3>
+      ${stats.by_platform.map(p => `\`${fmt_platform(p.platform)}\` 收集 <b>${p.count}</b> 筆`).join('<br>')}
+    </td>
+  </tr>
+</table>`;
 
-<h2 align="center">🟣 今日概覽</h2>
-
-<div align="center">
-今日系統共收集並分析了 <b>${stats.total}</b> 筆有效的網路聲量。<br>
-資料來源分布為：${platform_dist}。
-</div>
-
-<br>
-`;
-
-  // ── 情緒分布 ─────────────────────────────
-  const sentiment = `
----
-
-<h2>📊 情緒分布</h2>
-
-| 情感 | 佔比 | 筆數 | 視覺化走勢 |
-|:----:|-----:|-----:|:-----------|
-| 🟢 **正面** | ${pos.pct}% | ${pos.count} 筆 | ${bar(pos.pct)} |
-| 🟡 **中性** | ${neu.pct}% | ${neu.count} 筆 | ${bar(neu.pct)} |
-| 🔴 **負面** | ${neg.pct}% | ${neg.count} 筆 | ${bar(neg.pct)} |
-`;
-
-  // ── 競品矩陣 ─────────────────────────────
-  let competitor = '';
+  // ── Bento Grid 模組二：競品與情緒矩陣 ─────────────────────────────
+  let rows = '';
   if (stats.by_brand && stats.by_brand.length > 0) {
-    const rows = stats.by_brand.map(b => {
+    rows = stats.by_brand.map(b => {
       const t = b.count || 1;
       const pp = ((b.positive / t) * 100).toFixed(0);
-      const np = ((b.negative / t) * 100).toFixed(0);
-      const up = ((b.neutral / t) * 100).toFixed(0);
-      const c  = Number(pp) >= 60 ? '🟢' : Number(pp) >= 40 ? '🟡' : '🔴';
-      return `| **${b.brand}** | ${b.count} 筆 | ${c} ${pp}% | ${up}% | ${np}% |`;
-    }).join('\n');
-
-    competitor = `
----
-
-<h2>⚔️ 競品聲量對照</h2>
-
-| 品牌 | 總聲量 | 正面比例 | 中性比例 | 負面比例 |
-|:-----|:----:|:--------:|:--------:|:--------:|
-${rows}
-
-> 判讀基準：🟢 正面 ≥ 60% 為健康 ｜ 🟡 40~59% 需留意 ｜ 🔴 < 40% 警戒
-`;
+      return `<b>${b.brand}</b> (${b.count}筆) ── 正向比例 ${pp}%`;
+    }).join('<br><br>');
   }
 
-  // ── 熱門主題 ─────────────────────────────
+  const bento2 = `
+<table width="100%">
+  <tr>
+    <td width="50%">
+      <h3>💬 情緒剖析引擎</h3><br>
+      🟢 <b>正向 (${pos.pct}%)</b> <sup>共 ${pos.count}筆</sup><br>
+      ${bar(pos.pct)}<br><br>
+      🟡 <b>中立 (${neu.pct}%)</b> <sup>共 ${neu.count}筆</sup><br>
+      ${bar(neu.pct)}<br><br>
+      🔴 <b>負向 (${neg.pct}%)</b> <sup>共 ${neg.count}筆</sup><br>
+      ${bar(neg.pct)}
+    </td>
+    <td width="50%">
+      <h3>⚔️ 競品市佔率比較</h3><br>
+      ${rows}
+    </td>
+  </tr>
+</table>`;
+
+  const cleanNum = (str) => str.replace(/^[-*0-9.\\s]+/, '');
+
+  // ── 熱門主題區塊 ─────────────────────────────
   const topic_items = topic_details.map((t, i) => {
-    return `${i + 1}. **${t.name}** (共 ${t.count} 筆討論)  \n   ${t.summary}  \n   > _「${t.sample}…」_`;
-  }).join('\n\n');
+    const medal = ['🥇', '🥈', '🥉'][i] || '📌';
+    return `> **${i + 1}. ${medal} ${t.name} (共 ${t.count} 筆)**  \n> ${t.summary}  \n> _💬「${t.sample}…」_`;
+  }).join('\n>\n');
 
   const topics = `
----
-
-<h2>🔥 熱門主題 TOP 3</h2>
+## 🔥 熱議風向標 TOP 3
 
 ${topic_items}
 `;
 
-  // ── 關鍵洞察 ─────────────────────────────
-  const insight_items = (insights.insights || []).map((s, i) => `${i + 1}. ${s.replace(/^[-*0-9.\\s]+/, '')}`).join('\n\n');
-  const insight = `
----
+  // ── 深度洞察與分析 Bento ─────────────────────────────
+  const insight_content = (insights.insights || []).map((s, i) => `**${i + 1}.** ${cleanNum(s)}`).join('<br><br>');
+  const comp_content = (insights.competitor_analysis || []).map((c, i) => `**${i + 1}.** ${cleanNum(c)}`).join('<br><br>');
+  const risk_content = (insights.risks || []).map((r, i) => `**${i + 1}.** ${cleanNum(r)}`).join('<br><br>');
 
-<h2>🧠 關鍵洞察</h2>
-
-> [!IMPORTANT]
-> 以下洞察由 AI 根據今日輿情資料生成，供投資決策參考。
-
-${insight_items}
-`;
-
-  // ── 競品觀察 ─────────────────────────────
-  let comp_obs = '';
-  if (insights.competitor_analysis && insights.competitor_analysis.length > 0) {
-    const items = insights.competitor_analysis.map((c, i) => `${i + 1}. ${c.replace(/^[-*0-9.\\s]+/, '')}`).join('\n\n');
-    comp_obs = `
----
-
-<h2>🔭 競品觀察</h2>
-
-> [!TIP]
-> Canva 與 Figma、Adobe Express 在今日輿情市場上的差異解讀。
-
-${items}
-`;
-  }
-
-  // ── 風險警示 ─────────────────────────────
-  let risk = '';
-  if (insights.risks && insights.risks.length > 0) {
-    const items = insights.risks.map((r, i) => `${i + 1}. ${r.replace(/^[-*0-9.\\s]+/, '')}`).join('\n\n');
-    risk = `
----
-
-<h2>🚨 風險警示</h2>
-
-> [!WARNING]
-> 以下議題出現異常輿情訊號，建議密切關注後續發展。
-
-${items}
-`;
-  }
+  const analysis_blocks = `
+<table width="100%">
+  <tr>
+    <td>
+      <h3>🧠 AI 決策洞察艙</h3>
+      ${insight_content}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h3>🔭 市場動態雷達</h3>
+      ${comp_content}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h3>⚠️ 潛在風險預警</h3>
+      ${risk_content}
+    </td>
+  </tr>
+</table>`;
 
   // ── 頁尾 ─────────────────────────────────
   const footer = `
 ---
 
 <div align="center">
-  <p><b>Brand Sentinel</b> · 專為 Canva 打造的自動輿情追蹤器</p>
-  <p><sub>Powered by Gemini 2.5 Flash ｜ ${new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' })} (UTC+8)</sub></p>
-</div>
-`;
+  <p><sub><b>Brand Sentinel 輿情系統</b> ｜ Topology UI/UX Pro Max Pattern ｜ ${new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' })}</sub></p>
+</div>`;
 
   return [
     banner,
-    overview,
-    sentiment,
-    competitor,
+    '<br>',
+    bento1,
+    '<br>',
+    bento2,
+    '<br>',
     topics,
-    insight,
-    comp_obs,
-    risk,
+    '<br>',
+    analysis_blocks,
+    '<br>',
     footer
   ].filter(s => s).join('\n');
 }
 
-// ========================================
-// 空報告產生器
-// ========================================
 function generate_empty_report(date) {
   return `<div align="center">
-  <h1>✨ Brand Sentinel 品牌輿情日報</h1>
-  <p><b>${date}</b></p>
+  <h1>✨ UI/UX Pro Max 戰情儀表板</h1>
+  <p><b>執行日期：${date}</b></p>
 </div>
 
----
-
-<h2 align="center">⚪ 今日狀態：無新資料</h2>
-
-> [!NOTE]
-> 今日未蒐集到符合條件的公開討論，系統將於明日重新嘗試。
-
----
-
-<div align="center">
-  <p><b>Brand Sentinel</b> · 自動生成</p>
-</div>`;
+<table width="100%">
+  <tr><td align="center"><h3>⚪ 今日狀態：無新資料</h3><br><p>系統未發現公開討論，將於明日重試。</p></td></tr>
+</table>`;
 }
 
-// ========================================
-// 獨立測試模式
-// ========================================
 if (process.argv.includes('--test')) {
   const today = new Date().toISOString().split('T')[0];
   const test_date = process.argv[process.argv.indexOf('--test') + 1] || today;
-  logger.info(`🧪 日報生成測試：${test_date}`);
   generate_daily_report(test_date)
-    .then(r => { console.log('\n' + '='.repeat(60) + '\n' + r + '\n' + '='.repeat(60)); process.exit(0); })
-    .catch(e => { console.error('❌ 日報生成失敗:', e.message); process.exit(1); });
+    .then(r => { console.log('\n'+r+'\n'); process.exit(0); });
 }
