@@ -22,7 +22,15 @@ try {
   const file_path = path.join(obsidian_dir, `${d} Canva輿情監視報告.md`);
   fs.writeFileSync(file_path, content, 'utf8');
 
+  const local_reports_dir = path.resolve('reports');
+  if (!fs.existsSync(local_reports_dir)) {
+    fs.mkdirSync(local_reports_dir, { recursive: true });
+  }
+  const local_file_path = path.join(local_reports_dir, `${d}-canva-report.md`);
+  fs.writeFileSync(local_file_path, content, 'utf8');
+
   console.log(`✅ 已手動匯出今日報告至 Obsidian: ${file_path}`);
+  console.log(`✅ 報告已儲存至專案目錄 (${local_file_path})，準備供 Github 備份`);
 } catch (e) {
   console.error('❌ 匯出失敗:', e.message);
 }

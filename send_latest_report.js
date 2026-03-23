@@ -14,8 +14,16 @@ async function sendLatest() {
             const latestReport = db.reports[db.reports.length - 1];
             console.log(`✅ 找到一份報告 (日期: ${latestReport.report_date})，正在同步透過 Telegram 與 LINE 寄出...`);
             
-            const tgSuccess = await send_telegram_message(latestReport.content);
-            const lineSuccess = await send_line_message(latestReport.content);
+            // 擷取前幾行當摘要引言
+            const preview_lines = latestReport.content.split('\n').filter(line => line.trim().length > 0 && !line.includes('==='));
+            const summary_preview = preview_lines.slice(2, 8).join('\n');
+
+            const github_url = `https://github.com/chenyikelli-netizen/canva/blob/main/reports/${latestReport.report_date}-canva-report.md`;
+            
+            const notification_message = `📊 Canva 品牌戰報補發 (${latestReport.report_date})\n\n為了給您最完美的閱讀體驗（含圖表與粗體排版），完整報告已經上傳到資料庫。\n\n👉 點擊立刻閱讀精美版報告：\n${github_url}\n\n---\n⚡ 速覽摘要：\n${summary_preview}\n\n(點擊上方網址看完整競品對照矩陣與重點)`;
+            
+            const tgSuccess = await send_telegram_message(notification_message);
+            const lineSuccess = await send_line_message(notification_message);
 
             if (tgSuccess && lineSuccess) {
                 console.log('🚀 報告已經雙雙成功發送到你的 Telegram 和 LINE！快去看看吧！');

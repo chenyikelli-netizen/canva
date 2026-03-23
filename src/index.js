@@ -89,23 +89,8 @@ async function run_pipeline() {
     console.log(report);
     console.log('========================================\n');
 
-    // ============ Phase 4: 通知推送 ============
-    logger.info('📤 Phase 4: 通知推送');
-
-    // LINE 推送（主要）
-    const line_ok = await send_line_message(report);
-
-    // Telegram 推送（備援，或同時推送）
-    const telegram_ok = await send_telegram_message(report);
-
-    if (!line_ok && !telegram_ok) {
-      logger.error('⚠️ LINE 和 Telegram 推送都失敗！');
-    } else {
-      logger.info(`📤 推送完成 — LINE: ${line_ok ? '✅' : '❌'} | Telegram: ${telegram_ok ? '✅' : '❌'}`);
-    }
-
-    // ============ Phase 5: Obsidian 本機知識庫備份 ============
-    logger.info('🗂️ Phase 5: Obsidian 本機備份');
+    // ============ Phase 4: 實體檔案備份與雲端上傳 ============
+    logger.info('🗂️ Phase 4: Obsidian 備份與 Github 同步');
     try {
       const obsidian_dir = 'C:\\obsidian\\canva';
       if (!fs.existsSync(obsidian_dir)) {
@@ -118,8 +103,51 @@ async function run_pipeline() {
       const obsidian_content = `---\ndate: ${today}\ntags: [canva, brand-sentinel, report]\n---\n\n${report}`;
       fs.writeFileSync(file_path, obsidian_content, 'utf8');
       logger.info(`✅ 報告已同步寫入 Obsidian: ${file_path}`);
+
+      // 同時寫入專案底下的 reports 資料夾，用於 Github 原生備份
+      const local_reports_dir = path.join(config.project_root, 'reports');
+      if (!fs.existsSync(local_reports_dir)) {
+        fs.mkdirSync(local_reports_dir, { recursive: true });
+      }
+      const gh_file_name = `${today}-canva-report.md`;
+      const local_file_path = path.join(local_reports_dir, gh_file_name);
+      fs.writeFileSync(local_file_path, obsidian_content, 'utf8');
+      logger.info(`✅ 報告已儲存至專案目錄 (${local_file_path})`);
+
+      // 觸發 GitHub 自動備份腳本以即時取得線上網址
+      const { execSync } = await import('child_process');
+      logger.info('🚀 正在將最新報告同步推送到 Github...');
+      try {
+        execSync('cmd.exe /c backup_to_github.bat', { cwd: config.project_root, stdio: 'ignore' });
+        logger.info('✅ Github 發佈成功！');
+      } catch(e) {
+        logger.warn('⚠️ Github 發佈腳本執行失敗，但檔案已儲存。');
+      }
     } catch (e) {
-      logger.error(`❌ Obsidian 寫入失敗: ${e.message}`);
+      logger.error(`❌ Obsidian / Github 檔案寫入失敗: ${e.message}`);
+    }
+
+    // ============ Phase 5: 通知推送 ============
+    logger.info('📤 Phase 5: 通知推送 (短連結模式)');
+
+    const github_url = `https://github.com/chenyikelli-netizen/canva/blob/main/reports/${today}-canva-report.md`;
+    
+    // 擷取報告前300字當作引言
+    const preview_lines = report.split('\n').filter(line => line.trim().length > 0 && !line.includes('==='));
+    const summary_preview = preview_lines.slice(2, 8).join('\n');
+
+    const notification_message = `📊 Canva 品牌戰報出爐 (${today})\n\n為了給您最完美的閱讀體驗（含圖表與粗體排版），今日的完整報告已經上傳到資料庫。\n\n👉 點擊立刻閱讀精美版報告：\n${github_url}\n\n---\n⚡ 今日速覽摘要：\n${summary_preview}\n\n(點擊上方網址看完整競品對照矩陣與重點)`;
+
+    // LINE 推送（主要）
+    const line_ok = await send_line_message(notification_message);
+
+    // Telegram 推送（備援，或同時推送）
+    const telegram_ok = await send_telegram_message(notification_message);
+
+    if (!line_ok && !telegram_ok) {
+      logger.error('⚠️ LINE 和 Telegram 推送都失敗！');
+    } else {
+      logger.info(`📤 推送完成 — LINE: ${line_ok ? '✅' : '❌'} | Telegram: ${telegram_ok ? '✅' : '❌'}`);
     }
 
     // ============ 完成 ============
