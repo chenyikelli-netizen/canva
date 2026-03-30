@@ -28,12 +28,44 @@ import { send_line_message } from './notifier/line_notifier.js';
 import { send_telegram_message } from './notifier/telegram_notifier.js';
 
 /**
+ * 防重複執行鎖定機制
+ * 同一天內只允許執行一次完整流程
+ */
+function acquire_lock(today) {
+  const lock_file = path.join(config.project_root, '.pipeline.lock');
+  try {
+    if (fs.existsSync(lock_file)) {
+      const lock_date = fs.readFileSync(lock_file, 'utf8').trim();
+      if (lock_date === today) {
+        return false; // 今天已執行過
+      }
+    }
+    fs.writeFileSync(lock_file, today, 'utf8');
+    return true;
+  } catch {
+    return true; // 鎖定檔操作失敗時仍允許執行
+  }
+}
+
+function release_lock() {
+  const lock_file = path.join(config.project_root, '.pipeline.lock');
+  try { fs.unlinkSync(lock_file); } catch { /* ignore */ }
+}
+
+/**
  * 執行完整的輿情監控流程
  * 蒐集 → 分析 → 報告 → 通知
  */
 async function run_pipeline() {
   const start_time = Date.now();
   const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' }); // YYYY-MM-DD
+
+  // 防重複執行檢查（手動模式用 --force 可跳過）
+  const force_mode = process.argv.includes('--force');
+  if (!force_mode && !acquire_lock(today)) {
+    logger.info(`⏭️ 今天 (${today}) 的流程已執行過，跳過。使用 --force 可強制再次執行。`);
+    return;
+  }
 
   logger.info('========================================');
   logger.info(`🚀 開始執行品牌輿情監控流程: ${today}`);
@@ -130,7 +162,7 @@ async function run_pipeline() {
     // ============ Phase 5: 通知推送 ============
     logger.info('📤 Phase 5: 通知推送 (短連結模式)');
 
-    const github_url = `https://github.com/chenyikelli-netizen/canva/blob/main/reports/${today}-canva-report.md`;
+    const github_url = `https://github.com/chenyikelli-netizen/canva/blob/main/reports/canva-report-${today}.html`;
     
     // 擷取報告前300字當作引言
     const preview_lines = report.split('\n').filter(line => line.trim().length > 0 && !line.includes('==='));

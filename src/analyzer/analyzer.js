@@ -55,7 +55,7 @@ export async function analyze_pending_data() {
 
     // 批次間隔，避免觸發 API 速率限制
     if (i + BATCH_SIZE < unanalyzed.length) {
-      await new Promise(r => setTimeout(r, 2000));
+      await new Promise(r => setTimeout(r, 3000));
     }
   }
 
