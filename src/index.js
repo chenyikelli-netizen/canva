@@ -13,7 +13,8 @@ import { insert_raw_data_batch, close_db } from './utils/db.js';
 // 蒐集器
 import ThreadsCollector from './collectors/threads_collector.js';
 import DcardCollector from './collectors/dcard_collector.js';
-import GoogleReviewsCollector from './collectors/google_reviews_collector.js';
+// GoogleReviewsCollector 已停用，其搜尋職責由 TavilyCollector 階段 A2 接手
+// import GoogleReviewsCollector from './collectors/google_reviews_collector.js';
 import TavilyCollector from './collectors/tavily_collector.js';
 
 // 分析器
@@ -78,8 +79,8 @@ async function run_pipeline() {
     const collectors = [
       new TavilyCollector(),
       new DcardCollector(),
-      new ThreadsCollector(),
-      new GoogleReviewsCollector()
+      new ThreadsCollector()
+      // GoogleReviewsCollector 已停用，由 Tavily 階段 A2 取代
     ];
 
     let total_collected = 0;

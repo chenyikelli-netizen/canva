@@ -36,6 +36,20 @@ export default class TavilyCollector extends BaseCollector {
       await this.sleep(1500);
     }
 
+    // ============ 階段 A2：Google 評論輿情搜尋（取代 Google Reviews 蒐集器） ============
+    logger.info('[tavily] 🔍 階段 A2：Google 評論輿情搜尋');
+    const google_review_queries = [
+      'Canva 評價 心得 推薦',
+      'Canva Pro 值得嗎 缺點',
+      'Canva AI 設計 使用者評論'
+    ];
+
+    for (const query of google_review_queries) {
+      const items = await this.safe_search(query, 'Canva');
+      all_results.push(...items);
+      await this.sleep(1500);
+    }
+
     // ============ 階段 B：競品本土搜尋 ============
     logger.info('[tavily] ⚔️ 階段 B：競品輿情搜尋');
     for (const competitor of config.collector.competitors) {
