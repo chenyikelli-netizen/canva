@@ -101,7 +101,7 @@ async function run_pipeline() {
     logger.info('🧠 Phase 2: LLM 分析');
 
     const analysis_result = await analyze_pending_data();
-    logger.info(`🧠 分析完成: 成功 ${analysis_result.analyzed}，失敗 ${analysis_result.failed}`);
+    logger.info(`🧠 分析完成: 成功 ${analysis_result.analyzed}，失敗 ${analysis_result.failed}，排入重試 ${analysis_result.retried || 0}`);
 
     // ============ Phase 3: 報告生成 ============
     logger.info('📝 Phase 3: 報告生成');

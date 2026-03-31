@@ -43,12 +43,23 @@ function extract_retry_delay(error_message) {
 /**
  * 將 LLM 回傳的文字清洗為可解析的 JSON
  * 處理常見的 LLM 輸出瑕疵：多餘文字、缺少逗號、尾部逗號等
+ * v3: 增加 BOM 清除、Unicode 零寬字元清除、散落物件自動包裹、逐物件提取模式
  * @param {string} raw_text - 原始 LLM 回應文字
  * @returns {Object} 解析後的 JSON 物件
  */
 function parse_llm_json(raw_text) {
-  // 第一輪：移除 markdown 程式碼區塊標記
-  let text = raw_text.replace(/```json\s*/gi, '').replace(/```\s*$/g, '').trim();
+  // 第零輪：清除 BOM、零寬字元、以及其他隱藏的 Unicode 干擾字元
+  let text = raw_text
+    .replace(/^\uFEFF/, '')                       // BOM
+    .replace(/[\u200B-\u200D\uFEFF\u00A0]/g, '')  // 零寬空格、非斷行空格
+    .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '') // 控制字元（保留 \t \n \r）
+    .trim();
+
+  // 第一輪：移除 markdown 程式碼區塊標記（支援多種變體）
+  text = text
+    .replace(/^```(?:json|JSON|js|javascript)?\s*\n?/gm, '')
+    .replace(/\n?```\s*$/gm, '')
+    .trim();
 
   // 第二輪：嘗試直接解析（最理想情況）
   try {
@@ -58,50 +69,66 @@ function parse_llm_json(raw_text) {
   }
 
   // 第三輪：修復常見 JSON 瑕疵
-  text = text
+  let cleaned = text
     .replace(/}\s*{/g, '},{')       // 修復物件間缺少逗號（} { → },{）
     .replace(/,\s*]/g, ']')          // 修復陣列尾部多餘逗號
     .replace(/,\s*}/g, '}')          // 修復物件尾部多餘逗號
     .replace(/\n/g, ' ')             // 移除換行符
-    .replace(/[\x00-\x1F\x7F]/g, ' '); // 移除控制字元
+    .replace(/\t/g, ' ');            // 移除 Tab 字元
 
   try {
-    return JSON.parse(text);
+    return JSON.parse(cleaned);
   } catch {
     // 繼續下一個策略
   }
 
-  // 第四輪：提取第一個完整的 JSON 陣列 [...]
-  const array_match = text.match(/\[[\s\S]*?\](?=\s*$|\s*[^,\]\}])/);
-  if (array_match) {
+  // 第四輪：如果文字不以 [ 開頭但包含多個 { }，嘗試自動包裹為陣列
+  if (!cleaned.trimStart().startsWith('[') && cleaned.includes('{')) {
+    const wrapped = '[' + cleaned + ']';
     try {
-      let extracted = array_match[0]
-        .replace(/}\s*{/g, '},{')
-        .replace(/,\s*]/g, ']')
-        .replace(/,\s*}/g, '}');
+      return JSON.parse(wrapped);
+    } catch {
+      // 繼續下一個策略
+    }
+  }
+
+  // 第五輪：提取第一個完整的 JSON 陣列 [...]
+  const array_match = text.match(/\[[\s\S]*\]/);
+  if (array_match) {
+    let extracted = array_match[0]
+      .replace(/}\s*{/g, '},{')
+      .replace(/,\s*]/g, ']')
+      .replace(/,\s*}/g, '}');
+    try {
       return JSON.parse(extracted);
     } catch {
       // 繼續下一個策略
     }
   }
 
-  // 第五輪：提取最外層的 [...] 或 {...}（貪婪匹配）
-  let json_match = text.match(/\[[\s\S]*\]/);
-  if (!json_match) json_match = text.match(/\{[\s\S]*\}/);
-
-  if (json_match) {
+  // 第六輪（激進模式）：逐一提取所有 JSON 物件，手動組裝為陣列
+  const object_regex = /\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}/g;
+  const objects = [];
+  let match;
+  while ((match = object_regex.exec(text)) !== null) {
     try {
-      let extracted = json_match[0]
-        .replace(/}\s*{/g, '},{')
-        .replace(/,\s*]/g, ']')
-        .replace(/,\s*}/g, '}');
-      return JSON.parse(extracted);
-    } catch (e) {
-      throw new Error(`嘗試提取外層 JSON 仍解析失敗: ${e.message}`);
+      const obj = JSON.parse(match[0]);
+      // 驗證是否具備預期的分析結果結構
+      if (obj.index !== undefined || obj.brand || obj.topic || obj.sentiment) {
+        objects.push(obj);
+      }
+    } catch {
+      // 跳過無法解析的片段
     }
   }
+  if (objects.length > 0) {
+    logger.warn(`JSON 解析使用激進模式：從散落文字中提取了 ${objects.length} 個有效物件`);
+    return objects;
+  }
 
-  throw new Error(`無法解析 Gemini 回應為 JSON: ${text.substring(0, 200)}`);
+  // 全部策略失敗：記錄原始回應以供後續調試
+  logger.error(`JSON 解析完全失敗，原始回應前 500 字：${raw_text.substring(0, 500)}`);
+  throw new Error(`無法解析 Gemini 回應為 JSON（已嘗試 7 種修復策略）`);
 }
 
 /**

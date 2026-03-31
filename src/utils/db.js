@@ -19,6 +19,7 @@ const DB_PATH = resolve(config.data_dir, 'brand_sentinel.json');
 let db = {
   raw_data: [],
   analysis_results: [],
+  failed_analysis: [],   // 分析失敗記錄（回收機制）
   reports: []
 };
 
@@ -28,6 +29,10 @@ function load_db() {
     if (existsSync(DB_PATH)) {
       const content = readFileSync(DB_PATH, 'utf8');
       db = JSON.parse(content);
+      // 向後相容：舊資料庫可能沒有 failed_analysis 欄位
+      if (!db.failed_analysis) {
+        db.failed_analysis = [];
+      }
       logger.info('資料庫載入完成', { path: DB_PATH });
     } else {
       save_db();
@@ -125,17 +130,75 @@ export function insert_analysis(result) {
 }
 
 /**
- * 取得尚未分析的原始資料
+ * 取得尚未分析的原始資料（含回收重試的失敗資料）
+ * 包含兩類：
+ *   1. 從未被分析過的全新資料
+ *   2. 分析失敗但重試次數 < MAX_RETRY 的資料（回收機制）
  * @param {number} limit 
  * @returns {Object[]}
  */
+const MAX_ANALYSIS_RETRIES = 3;
+
 export function get_unanalyzed_data(limit = 100) {
   const analyzed_ids = new Set(db.analysis_results.map(a => a.raw_data_id));
+  
+  // 找出失敗次數已達上限的資料（這些不再重試）
+  const permanently_failed_ids = new Set(
+    db.failed_analysis
+      .filter(f => f.retry_count >= MAX_ANALYSIS_RETRIES)
+      .map(f => f.raw_data_id)
+  );
+
   const unanalyzed = db.raw_data
-    .filter(r => !analyzed_ids.has(r.id))
+    .filter(r => !analyzed_ids.has(r.id) && !permanently_failed_ids.has(r.id))
     .sort((a, b) => new Date(b.collected_at) - new Date(a.collected_at));
     
   return unanalyzed.slice(0, limit);
+}
+
+/**
+ * 標記某筆原始資料的分析失敗（回收機制核心）
+ * 每次呼叫 retry_count + 1，達到 MAX_ANALYSIS_RETRIES 後不再重試
+ * @param {number} raw_data_id - 原始資料 ID
+ * @param {string} error_message - 失敗原因
+ */
+export function mark_analysis_failed(raw_data_id, error_message) {
+  const existing = db.failed_analysis.find(f => f.raw_data_id === raw_data_id);
+  
+  if (existing) {
+    existing.retry_count += 1;
+    existing.last_error = error_message;
+    existing.last_failed_at = new Date().toISOString();
+  } else {
+    db.failed_analysis.push({
+      raw_data_id,
+      retry_count: 1,
+      last_error: error_message,
+      last_failed_at: new Date().toISOString()
+    });
+  }
+  
+  save_db();
+  
+  const record = existing || db.failed_analysis[db.failed_analysis.length - 1];
+  if (record.retry_count >= MAX_ANALYSIS_RETRIES) {
+    logger.warn(`⛔ 資料 #${raw_data_id} 已連續失敗 ${record.retry_count} 次，不再重試`);
+  } else {
+    logger.info(`♻️ 資料 #${raw_data_id} 分析失敗 (${record.retry_count}/${MAX_ANALYSIS_RETRIES})，已排入下次重試`);
+  }
+}
+
+/**
+ * 分析成功時，清除該筆資料的失敗記錄
+ * @param {number} raw_data_id - 原始資料 ID
+ */
+export function clear_analysis_failure(raw_data_id) {
+  const index = db.failed_analysis.findIndex(f => f.raw_data_id === raw_data_id);
+  if (index >= 0) {
+    const removed = db.failed_analysis.splice(index, 1)[0];
+    save_db();
+    logger.info(`✅ 資料 #${raw_data_id} 重試成功（曾失敗 ${removed.retry_count} 次），已清除失敗記錄`);
+  }
 }
 
 /**
