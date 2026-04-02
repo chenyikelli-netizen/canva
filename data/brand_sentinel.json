@@ -5832,6 +5832,325 @@
       "published_at": "2025-12-03T13:13:26.000Z",
       "collected_at": "2026-04-01T07:54:59.540Z",
       "metadata": "{\"keyword\":\"Canva AI\",\"source\":\"threads_search\"}"
+    },
+    {
+      "id": 495,
+      "platform": "tavily",
+      "url": "https://www.99aicreator.com/blog/ai%E7%86%B1%E8%A9%B1-4/canva-ai-%E6%96%B0%E5%8A%9F%E8%83%BD-139",
+      "title": "Canva AI 新功能全解析：2025 年Visual Suite 2.0 讓設計更簡單",
+      "content": "1. Canva AI 對話式助手：你的全能設計幫手 · 2. Canva Sheets：AI 驅動的視覺化試算表 · 3. Canva Code：無程式碼也能打造互動內容 · 4. 進階影像編輯：媲美專業",
+      "author": "99aicreator.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.136Z",
+      "metadata": "{\"search_query\":\"Canva 新功能 介紹\",\"score\":0.9999069,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 496,
+      "platform": "tavily",
+      "url": "https://www.ampmseo.com/canva-ai-design/",
+      "title": "[設計工具]Canva AI 的強大功能揭秘：讓你從零變成設計高手！",
+      "content": "Canva AI 可以自動完成許多重複性操作，如：調整圖片大小、智能排版、提供設計模板建議等。這意味著你不再需要從零開始構思設計，也不必耗費太多時間在細節",
+      "author": "ampmseo.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.154Z",
+      "metadata": "{\"search_query\":\"Canva AI 使用 心得\",\"score\":0.99984396,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 497,
+      "platform": "tavily",
+      "url": "https://wavespeed.ai/blog/zh-tw/posts/canva-ai-review-2026/",
+      "title": "Canva AI 是為設計師打造的——開發者應該改用這個 - WaveSpeed AI",
+      "content": "# Canva AI 是為設計師打造的——開發者應該改用這個. 我們測試了 Canva AI 的 Magic Studio、Dream Lab 和 2026 年的影片生成功能。雖然適合快速設計，但開發者和企業更需要 WaveSpeedAI 的 API 優先方案。. 然而，易用性往往伴隨著取捨。在測試 Canva AI 的生成能力後，我們發現它非常適合快速製作社群媒體貼文——但用於其他幾乎所有用途時都令人沮喪。以下是我們的誠實評測，以及為何當您需要真正的 AI 生成能力時，WaveSpeedAI 是更好的選擇。. Canva 是一個網頁設計平台，全球有超過 1.9 億人使用。近年來，它積極地將 AI 功能整合在 **Magic Studio** 品牌下：. ## Canva AI 的優勢. Canva 的殺手級功能不是某一項 AI 工具，而是**工作流程整合**。您可以：. ## Canva AI 的不足之處. Canva 的 AI 生成圖像品質明顯低於專用圖像生成器。輸出**解析度低**，解剖結構可能有誤（尤其是手部），而複雜的提示詞往往產生通用結果。它「安全且可預測」——換句話說，就是缺乏 Seedream 4.5、Flux 2 Pro 甚至 Midjourney 等模型的創意深度。. Canva 的 Connect API 用於**設計工作流程整合**（建立設計、同步素材、管理團隊）。**沒有公開 API 可直接呼叫 Canva 的 AI 圖像或影片生成功能**。. ## Canva AI vs WaveSpeedAI：正面比較. * 已在使用 Canva 進行設計工作，並想在此基礎上加入 AI 功能. ### Canva 有 AI 圖像生成 API 嗎？. 沒有。Canva 的 Connect API 用於設計工作流程整合（建立和管理設計），而非 AI 圖像生成。沒有任何方式可以透過程式呼叫 Canva 的 AI 模型。WaveSpeedAI 提供完整的 AI 生成 API，擁有 600+ 個模型。. ### 在 Canva 上可以生成多少張 AI 圖像？. ### Canva 使用哪些 AI 模型？. Canva 使用 Leonardo.ai 的 Phoenix 模型（用於圖像）和 Google Veo 3（用於影片）。使用者無法選擇或切換模型。WaveSpeedAI 讓您從 600+ 個模型中為每次生成自由選擇。. ### Canva AI 可以生成影片嗎？. ### Canva AI 足以用於專業用途嗎？. ### Canva AI 和 WaveSpeedAI 哪個更便宜？. Canva Pro 每月 $12.99，包含 500 個共用 AI 點數。WaveSpeedAI 按用量付費，每張圖像起價 $0.003。如果您每月生成不到約 100 張圖像，Canva 可能更便宜。超過這個數量後，WaveSpeedAI 更具成本效益，且沒有上限。. Canva AI 是一款出色的**附加 AI 功能的設計工具**。對於需要快速製作社群媒體素材的非技術使用者而言，它方便且實惠。可編輯的分層設計輸出確實獨一無二且具有價值。.",
+      "author": "wavespeed.ai",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.168Z",
+      "metadata": "{\"search_query\":\"Canva AI 使用 心得\",\"score\":0.9987453,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 498,
+      "platform": "tavily",
+      "url": "https://www.facebook.com/edreamer.tw/videos/20250319-canva-ai-%E5%B0%88%E9%A1%8C%E6%87%89%E7%94%A8%E5%AF%A6%E6%88%B0%E4%BB%8A%E5%A4%A9%E8%8A%B1%E4%BA%86%E5%A5%BD%E5%A4%9A%E6%99%82%E9%96%93%E5%B8%B6%E9%A0%98%E6%89%80%E6%9C%89%E8%80%81%E5%B8%AB%E7%94%B1%E9%99%8C%E7%94%9F%E5%88%B0%E4%B8%8A%E6%89%8B%E4%B8%A6%E5%9C%A8%E5%B0%88%E9%A1%8C%E4%B9%8B%E4%B8%AD%E5%B0%8E%E5%85%A5%E8%B6%85%E5%A4%9A%E7%9A%84-canva-ai-%E7%9A%84%E5%8A%9F%E8%83%BD%E4%B8%A6%E4%B8%94%E5%B8%B6%E4%BA%86%E5%BE%88%E5%A4%9A%E7%9A%84%E5%B0%8F%E5%AF%86%E6%8A%80%E6%88%91%E6%83%B3/1183677129818922/",
+      "title": "[20250319 Canva AI 專題應用實戰] 今天花了好多時間，帶領所有 ...",
+      "content": "[20250319 Canva AI 專題應用實戰] 今天花了好多時間，帶領所有老師由陌生到上手，並在 專題之中導入超多的Canva AI 的功能，並且帶了很多的小密技，我想",
+      "author": "facebook.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.181Z",
+      "metadata": "{\"search_query\":\"Canva AI 使用 心得\",\"score\":0.9961755,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 499,
+      "platform": "tavily",
+      "url": "https://www.pressplay.cc/project/2667A183130728C4AE30928EF3CFF4DD/articles/4CC0D69D916F05D5A5494701149E6F4F?srsltid=AfmBOoou5gELLUOXrns44TP-jrxn3Mkx-c4pEkL6Qq3rZjWj3QvRzJUq",
+      "title": "Gamma是什麼？跟PPT、Canva誰好用？一次看懂5大功能與收費方式",
+      "content": "1. Gamma 是什麼？一個由 AI 驅動的簡報製作工具. 2. Gamma 的 5 大功能介紹. 3. Gamma 與其他 AI 簡報工具的比較. 5. Gamma 的 5 大使用技巧，學起來馬上成為簡報高手！. ## Gamma 是什麼？一個由 AI 驅動的簡報製作工具. **Gamma 是一個由 AI 驅動的簡報製作工具**。在過去，要製作出好看的簡報、文件或網頁，總要花上大把時間，還得具備專業的設計能力，而 Gamma 正是為了解決這個問題而生，**就算你完全沒有設計背景，也能快速把腦中的想法，變成專業又吸睛的視覺化內容。**. 要使用 Gamma 製作簡報或網頁，只要下個簡單的 PROMPT，例如輸入一個主題或大綱，Gamma AI 就可以在幾秒之內，**自動生成一份完整的簡報、文件或網頁，**裡面包含了標題、內文、排版，甚至還會自動找好相關的圖片。你也可以直接上傳現有的文件或貼上文字，讓 AI 幫你重新美化、排版。. ## Gamma 的 5 大功能介紹. Gamma 之所以能在眾多 AI 簡報工具中脫穎而出，歸功於強大且整合完善的核心功能。以下是 Gamma 的 5 大核心功能：. 這是 Gamma 最核心的功能。你只需要輸入一個簡單的標題或一段文字描述，Gamma 的 AI 系統就能自動生成完整的簡報、文件或網頁草稿。不僅能組織架構、撰寫內容，還能進行重寫、摘要，並智慧地建議搭配的圖片或 GIF。. Gamma 在設計時也考慮了團隊合作的需求，所以他也支援**多人的即時共編**、評論和修改，功能類似於 Google Docs。團隊成員可以無縫地在同一個專案上工作，大幅提升了溝通與工作效率。你也可以用連結分享 Gamma 的簡報作品，或直接把它嵌入到網頁中。同時，也支援將作品匯出為 PDF 或 PowerPoint 檔案。. ## Gamma 與其他 AI 簡報工具的比較. ### Gamma vs. ### Gamma vs. ### Gamma vs. 而 Tome 的 AI 在修改指令時，較傾向於生成一個全新的頁面，而非在原頁面上進行調整。因此 Gamma 更適合那些需要精細打磨簡報內容的人使用。. | Gamma | 強 | 中等 | 非常簡單 | 追求效率、設計新手、需快速產出專業內容者 |. 例如，先用 **Kimi**這類 AI 快速整理好文字大綱，再用 **GPT-4.0**生成風格獨特的圖片，最後才用 **Gamma**一鍵生成精美簡報。想學會這套「AI 工具流」的完整 SOP 嗎？. Gamma 採用**免費增值的模式**，提供彈性的點數（Credits）制度與付費訂閱方案，讓不同需求的人都能找到適合自己的選擇。. ### **Gamma 收費方案比較**. | **Free** | 免費 | 註冊時獲得 400 點 | 基礎 AI 功能、有 Gamma 浮水印、功能與卡片數量有限 |. ## Gamma 的 5 大使用技巧，學起來馬上成為簡報高手！. 試著說清楚一點，例如：「請幫我做一份給大學行銷課用的簡報，10 張卡片就好。主題是 TikTok 怎麼紅的，內容要包含它的發展、主要功能，還有對廣告業的影響。」你給的指令越詳細，AI 就越能精準做出你要的東西。這招也不只 Gamma 能用，其他 AI 工具也同樣很重要！. 如果你是 Gamma 免費版使用者，點數是很珍貴的。所以在按「生成」之前，一定要**仔細檢查 AI 提供的簡報大綱**。在大綱階段修改是不會扣點數的，但如果生成了完整的簡報才發現方向不對，又要重來一次，那就會多扣一倍點數喔！所以，每次生成前都多想一下，這樣才能把你的每分點數都花在刀口上！. 當你把自己的專業知識、說故事的技巧，跟 Gamma 強大的 AI 設計能力結合起來，就能在這個資訊爆炸的時代，做出真正**吸睛**、**有影響力**的簡報，讓你的溝通更有力道！. 恭喜你！讀完這篇文章，你對 AI 簡報神器 Gamma 的了解，已經比 90% 的人都深入了。.",
+      "author": "pressplay.cc",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.191Z",
+      "metadata": "{\"search_query\":\"Canva AI 使用 心得\",\"score\":0.92468774,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 500,
+      "platform": "tavily",
+      "url": "https://www.reddit.com/r/Design/comments/s5rdjt/is_using_canva_considered_graphic_design/?tl=zh-hant",
+      "title": "用Canva 算不算平面設計啊？ : r/Design - Reddit",
+      "content": "Canva 可以用來設計。但它常常被大量依賴於模板。設計師可以用Canva 來設計，但使用Canva 並不能讓你成為設計師。事實上，這種認為它取代了設計專業人士",
+      "author": "reddit.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.198Z",
+      "metadata": "{\"search_query\":\"Canva AI 使用 心得\",\"score\":0.91550726,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 501,
+      "platform": "tavily",
+      "url": "https://www.threads.com/@ring_finger_wu/post/DFk8A_jztP2",
+      "title": "超愛用canva 每天都在用它   - Threads",
+      "content": "Canva 讓一堆人自以為懂設計Canva 出來的東西一眼就知道是canva 做的因為沒什麼專業度跟質感台灣人愛用是因為不想花錢做設計.",
+      "author": "threads.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.205Z",
+      "metadata": "{\"search_query\":\"Canva 評價 心得 推薦\",\"score\":0.96924,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 502,
+      "platform": "tavily",
+      "url": "https://www.reddit.com/r/canva/comments/1hxlh3r/is_the_pro_version_worth_it/?tl=zh-hant",
+      "title": "這個專業版值得嗎？？ : r/canva",
+      "content": "完全同意！但，別像我一樣，註冊了30 天試用，結果忘記是用哪個email 註冊的，因為現在Canva 也不知道，我也不記得是用哪個email 註冊的了！ .",
+      "author": "reddit.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.213Z",
+      "metadata": "{\"search_query\":\"Canva Pro 值得嗎 缺點\",\"score\":0.97101,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 503,
+      "platform": "tavily",
+      "url": "https://vocus.cc/article/68ec7825fd89780001ba5b6a",
+      "title": "免費版夠用了嗎？5 個用了就回不去的Pro 神級功能",
+      "content": "Canva Pro vs 免費版，一張表看懂核心差異 ... 在深入介紹神級功能前，我們先快速看一下Pro 版和免費版最核心的差異。我整理了一張簡單的比較表，讓你一目了然",
+      "author": "vocus.cc",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.219Z",
+      "metadata": "{\"search_query\":\"Canva Pro 值得嗎 缺點\",\"score\":0.95592,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 504,
+      "platform": "tavily",
+      "url": "https://www.threads.com/@xavieryen/post/DAQqAICTh_1",
+      "title": "是用Canva 的人有沒有美感跟設計能力才是問題！ - Threads",
+      "content": "我是在公開課程接觸到canva，以soho文字工作者來講，它門檻低，就算你都不會也有模板可套，對許多要求文字搭圖片，包裹外包的人算是不錯，至於要不要付費就看",
+      "author": "threads.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.226Z",
+      "metadata": "{\"search_query\":\"Canva AI 設計 使用者評論\",\"score\":0.9682,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 505,
+      "platform": "tavily",
+      "url": "https://www.pressplay.cc/project/2667A183130728C4AE30928EF3CFF4DD/articles/13C008B7173C229DBBEBE2E08FCADEB2?srsltid=AfmBOorPmJxtDnoueVdksnGhV9wqh-JjaVi7UcHx5ZMi5oosF4MGu3fB",
+      "title": "Canva AI 全攻略：從圖片、簡報到影片設計，5大功能一次上手",
+      "content": "# Canva AI 全攻略：從圖片、簡報到影片設計，5大功能一次上手. 2. 使用 Canva AI 前必知：方案與用量限制. 3. Canva AI 的 3 大特色：整合、易用與專業. 4. Canva AI 可以做什麼？4 大類應用一次看！. 5. Canva AI 實戰教學：5 步驟生成你的第一個設計. 6. 使用 Canva AI 時的 3 大注意事項. 7. AI 加速的 Canva 實戰課｜效率 × 穩定 × 美感全方位升級指南. ## Canva AI 是什麼？. Canva AI 是直接整合在 Canva 內的一整套 AI 工具，主要用途是讓設計流程變更簡單、更快速。就算你完全沒有學過專業設計軟體，也能靠 Canva AI 輕鬆做出高質感的作品。. 這代表你不需要在好幾個軟體視窗切換，直接在一個頁面上就能從零做到好，大幅縮短工時。目前 Canva 有提供免費額度讓大家試用，但如果你工作上需要更高階的 AI 功能（例如精準去背、畫質修復），建議訂閱 Canva Pro 會更夠用。. ## 使用 Canva AI 前必知：方案與用量限制. Canva AI 的進階功能大多需要付費，而且並非無限吃到飽，使用者得留意每月的使用額度（Credits）。雖然免費版能體驗少部分功能，但如果你需要完整的 Magic Studio 工具箱，建議升級 Canva Pro、團隊版（Teams）或企業版。. ## Canva AI 的 3 大特色：整合、易用與專業. Canva AI 主打**「一站式整合」**，直接解決過去得在不同軟體間頻繁切換的麻煩。. Canva AI 的介面非常直覺，強調**「用對話做設計」**，讓不懂專業軟體的人也能輕鬆上手。. ## Canva AI 可以做什麼？4 大類應用一次看！. Canva AI 能幫你省下從零開始發想與排版的時間，直接將草稿或數據轉變成專業的視覺內容。只要在 **Magic Write**輸入主題，它就能立刻產出大綱、流程表甚至產品文案。. Canva AI 大幅降低影片製作門檻，即使沒有專業器材，也能產出高品質影音。. **Magic Media** 讓你只要有腳本就能生成素材：輸入描述可生成約 4 秒短片，適合做過場或動態底圖；或上傳零散片段，讓 AI 自動挑選精華、配樂並剪輯成 60 秒完整影片，非常適合做活動回顧。. 看完了 Canva AI 的強大功能，是不是覺得工具雖然好用，但自己做出來的圖還是少了點「質感」？或是雖然會用 AI 產圖，但排版時總是覺得卡卡的，只能憑感覺東拼西湊？. ## Canva AI 實戰教學：5 步驟生成你的第一個設計. 要讓 Canva AI 精準工作，第一步就是明確告訴它你要什麼。無論是用首頁搜尋欄還是 Magic Design，Prompt 下得越精準，AI 產出的初稿就越好用。給 AI 的指令不用寫得像論文，但建議包含這三個重點：. 進到編輯器後，雖然 AI 幫你做好了八成，但最後那兩成才是重點。你可以像平常操作 Canva 一樣，自由點擊文字框修改內容或移動圖片。. 這時候，善用 Canva 的 AI 工具箱（Magic Studio）能幫你快速優化細節：. ## 使用 Canva AI 時的 3 大注意事項. ## AI 加速的 Canva 實戰課｜效率 × 穩定 × 美感全方位升級指南. Canva AI 全攻略：從圖片、簡報到影片設計，5大功能一次上手.",
+      "author": "pressplay.cc",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.234Z",
+      "metadata": "{\"search_query\":\"Canva AI 設計 使用者評論\",\"score\":0.95523,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 506,
+      "platform": "tavily",
+      "url": "https://www.youtube.com/watch?v=DVISl-2JWtk",
+      "title": "Canva AI 這新功能竟能取代專業設計師？社群行銷、影片封面製作再 ...",
+      "content": "Canva Magic Design 功能開放試用，社群小編、產品企劃必學必用，快速大量幫你做出專業設計！ // 延伸閱讀// AI讓你省下設計費！用Midjourney + Canva",
+      "author": "youtube.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.241Z",
+      "metadata": "{\"search_query\":\"Canva AI 設計 使用者評論\",\"score\":0.94576,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 507,
+      "platform": "tavily",
+      "url": "https://www.threads.com/@kevin_learn/post/DJa6QUrh6FP/figma-%E5%9B%A0%E7%82%BA%E7%99%BC%E5%B8%83%E6%9C%83%E5%BE%88%E5%8E%B2%E5%AE%B3%E9%80%99%E4%BA%8C%E5%A4%A9%E5%BE%88%E6%9C%89%E7%86%B1%E5%BA%A6%E4%BD%86%E9%82%84%E6%98%AF%E6%9C%89%E4%BA%9B%E6%83%B3%E8%AA%AA%E7%9A%841%E5%8D%B0%E5%88%B7%E5%88%A5%E7%94%A8-figma%E6%9C%89%E5%90%84%E7%A8%AE%E9%BA%BB%E7%85%A9%E7%9A%84%E9%BB%9E%E7%94%A8-illustrator-%E9%82%84%E6%98%AF%E7%9B%AE%E5%89%8D%E6%9C%80%E5%A5%BD%E7%9A%84%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%A1%882%E4%BD%A0%E6%9C%89%E7%94%A8%E9%81%8E-il",
+      "title": "Figma 因為發布會很厲害，這二天很有熱度，但還是有些想 ... - Threads",
+      "content": "Figma 因為發布會很厲害，這二天很有熱度，但還是有些想說的󠀠 1.印刷別用Figma，有各種麻煩的點，用Illustrator 還是目前最好的解決方案󠀠󠀠 2.",
+      "author": "threads.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.249Z",
+      "metadata": "{\"search_query\":\"Figma 評價 使用心得\",\"score\":0.98567,\"brand\":\"Figma\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 508,
+      "platform": "tavily",
+      "url": "https://medium.com/@spidermen.chen/figma-make-%E5%88%B0%E5%BA%95%E5%A4%9A%E5%BC%B7-%E7%9C%9F%E5%AF%A6%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97%E8%88%87%E6%B5%81%E7%A8%8B%E8%AE%8A%E9%9D%A9-d1958c4b67f8",
+      "title": "我們其實都很會畫畫面， 但真正花時間的，往往是把「腦中的想法 ...",
+      "content": "很多人第一次用Figma Make，會把Prompt 當成「對AI 下指令」。 但在實際使用後你會發現，它更像是在逼你把UX 想清楚。 你必須先回答自己幾個問題",
+      "author": "medium.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.257Z",
+      "metadata": "{\"search_query\":\"Figma 評價 使用心得\",\"score\":0.97875,\"brand\":\"Figma\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 509,
+      "platform": "tavily",
+      "url": "https://www.appedu.com.tw/article/detail/id-279",
+      "title": "Figma 教學大補帖：介面、工具、外掛到原型製作，一次全看懂",
+      "content": "Figma 的操作邏輯清楚，大多是利用拖拉元件、調整參數來進行創作，連圖層功能都很簡單好用，新手用來練習原型或是介面設計也完全無壓力。 3. 多人即時協作，",
+      "author": "appedu.com.tw",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.265Z",
+      "metadata": "{\"search_query\":\"Figma 評價 使用心得\",\"score\":0.96589,\"brand\":\"Figma\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 510,
+      "platform": "tavily",
+      "url": "https://www.reddit.com/r/graphic_design/comments/1q441m7/anyone_else_find_figma_a_pain_is_it_still/?tl=zh-hant",
+      "title": "有沒有其他人覺得Figma 很難用？它現在還是業界標準嗎？ - Reddit",
+      "content": "用起來感覺卡卡的，超彆扭。我真的不太確定為什麼會這樣。我不喜歡它不是把滑鼠移到點上面就能選到，而是要移到它附近。我覺得在Illustrator 裡五秒鐘就能",
+      "author": "reddit.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.272Z",
+      "metadata": "{\"search_query\":\"Figma 評價 使用心得\",\"score\":0.96095,\"brand\":\"Figma\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 511,
+      "platform": "tavily",
+      "url": "https://www.sophia-soong.com/post/figma",
+      "title": "Sketch to Figma 新手練功心得",
+      "content": "Figma自動儲存就和Google Doc一樣人性，讓我可以專心設計，作業起來更順暢． 另外Figma還有版本歷史功能(Version History)，可以說是版本控管的簡易版。我之前",
+      "author": "sophia-soong.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.281Z",
+      "metadata": "{\"search_query\":\"Figma 評價 使用心得\",\"score\":0.9554,\"brand\":\"Figma\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 512,
+      "platform": "tavily",
+      "url": "https://great-good.com/zh-tw/insights/figma-complete-guide-2025/",
+      "title": "Figma怎麼用？2025年完整使用指南與實用技巧| 鬼谷網頁設計",
+      "content": "其實用戶介面很簡單，也非常好上手，因為Dylan Field 為了減少在設計工具上的學習曲線，也減少設計苦手的挫折感，讓使用者在製作的時候可以輕易地操作介面，",
+      "author": "great-good.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.289Z",
+      "metadata": "{\"search_query\":\"Figma 評價 使用心得\",\"score\":0.9496,\"brand\":\"Figma\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 513,
+      "platform": "tavily",
+      "url": "https://medium.com/as-a-product-designer/%E6%88%91%E5%BE%9E-sketch-%E8%80%81%E7%B2%89%E8%AE%8A%E6%88%90-figma-%E9%90%B5%E7%B2%89%E7%9A%84-10-%E5%80%8B%E7%90%86%E7%94%B1-4a47a4e394c",
+      "title": "我從Sketch 老粉變成Figma 鐵粉的10 個理由 - Medium",
+      "content": "我記得在兩年前就有嘗試過Figma，但老實說當時沒有很強烈的印象，加上人類是習慣性很強的動物(尤其是設計師)，基本上設計工具只要一用習慣就很難再換，就像要",
+      "author": "medium.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.297Z",
+      "metadata": "{\"search_query\":\"Figma 評價 使用心得\",\"score\":0.94702,\"brand\":\"Figma\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 514,
+      "platform": "tavily",
+      "url": "https://helpx.adobe.com/tw/express/web/get-started/overview.html",
+      "title": "Adobe Express 網頁版概觀",
+      "content": "Adobe Express透過直覺式的拖放功能，提供輕鬆結合視訊片段、圖稿、動畫和音訊的方式。 透過數千個可自訂的範本、內建庫存資產，以及Adobe Firefly 生成式AI",
+      "author": "helpx.adobe.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.305Z",
+      "metadata": "{\"search_query\":\"Adobe Express 評價 使用心得\",\"score\":0.9998273,\"brand\":\"Adobe Express\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 515,
+      "platform": "tavily",
+      "url": "https://twitter.com/canva/with_replies",
+      "title": "Canva (@canva) / Posts and Replies / X - Twitter",
+      "content": "Canva (@canva) - Posts and Replies - Amazingly simple design. Have a ... Creators deserve tools that keep up!. 0. 0. 1. 137 ·. Odogwu! profile.",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.312Z",
+      "metadata": "{\"search_query\":\"Canva business design tool site:twitter.com\",\"score\":0.98328,\"brand\":\"Canva\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 516,
+      "platform": "tavily",
+      "url": "https://twitter.com/goJedaAi",
+      "title": "Visual AI Workspace Canvas — Jeda.ai (@goJedaAi) / Posts / X",
+      "content": "❌ It's not a lack of tools. It's tool sprawl. ❌ You're not teaching. You're app-hopping. ❌ You're building slides, not guiding discovery. Feeling this",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.319Z",
+      "metadata": "{\"search_query\":\"Canva business design tool site:twitter.com\",\"score\":0.98316,\"brand\":\"Canva\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 517,
+      "platform": "tavily",
+      "url": "https://twitter.com/andischuster",
+      "title": "andi schuster (@andischuster) / Posts / X - Twitter",
+      "content": "No DAG orchestration, no competing agent personas. The model receives messages and tools, returns text (loop ends) or tool calls (loop continues). Anthropic",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.327Z",
+      "metadata": "{\"search_query\":\"Canva business design tool site:twitter.com\",\"score\":0.97874,\"brand\":\"Canva\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 518,
+      "platform": "tavily",
+      "url": "https://twitter.com/andrewdshaw",
+      "title": "Andrew Shaw (@andrewdshaw) / Posts / X - Twitter",
+      "content": "Jun 5. Today I decided to use @canva AI coding to create a matching game on canva basics. This test our students knowledge on the tools they are using to design",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.334Z",
+      "metadata": "{\"search_query\":\"Canva business design tool site:twitter.com\",\"score\":0.97266,\"brand\":\"Canva\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 519,
+      "platform": "tavily",
+      "url": "https://www.linkedin.com/posts/shauryasharma3108_%3F%3F%3F-%3F%3F%3F%3F%3F-%3F%3F-%3F%3F%3F-%3F%3F%3F%3F%3F%3F%3F%3F-activity-7329874111067758592-f2AB",
+      "title": "Canva vs Figma: The Battle of Creative Giants - LinkedIn",
+      "content": "The hidden subtext of platform preference for a digital marketing design request: \"Can you make it in Canva\" ➡️ \"We want to make a bunch of changes because our messaging isn't ready or is AI generated and we didn't really audit the output. Where Canva democratized design, Lightbox is trying to automate it end-to-end with AI. YC likes bets where the product reframes the category and Lightbox isn’t just another design tool; it’s positioning itself as the AI designer you can hire instantly. Here’s how AI is reshaping the creative stack, and what to reach for when your favorite app takes a break AI for Design & Branding Adobe Firefly – AI-driven image generation and text-to-template design built right into Adobe Express. Canva Magic Studio AI-powered design suggestions, instant resizing, and smart content generation. Over the past month, I’ve made a big shift in my design workflow – from Adobe software to Canva (with a touch of AI).",
+      "author": "linkedin.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.342Z",
+      "metadata": "{\"search_query\":\"Canva vs Figma site:linkedin.com\",\"score\":0.9996049,\"brand\":\"Figma\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 520,
+      "platform": "tavily",
+      "url": "https://www.linkedin.com/posts/figma_figma-enterprise-building-great-products-activity-7226648798637305856-g4E5",
+      "title": "Figma Enterprise | Building Great Products at Scale - LinkedIn",
+      "content": "Figma Enterprise connects everyone in the product development process so you can build great products at scale.",
+      "author": "linkedin.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.349Z",
+      "metadata": "{\"search_query\":\"Figma enterprise design site:linkedin.com\",\"score\":0.97267,\"brand\":\"Figma\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 521,
+      "platform": "tavily",
+      "url": "https://www.linkedin.com/posts/nathanfirth_servicenow-figma-activity-7396266440338731008-Vnif",
+      "title": "ServiceNow and Figma partner to create enterprise apps - LinkedIn",
+      "content": "# ServiceNow and Figma partner to create enterprise apps. Did you see the new ServiceNow & Figma announcement? ServiceNow is partnering with Figma to let teams turn design concepts directly into functional enterprise apps. Using Figma’s Model Context Protocol, ServiceNow’s Build Agent can now understand layouts, components, and styles to generate secure, production-ready apps in minutes. How will this disrupt the current model of designing and developing apps in ServiceNow? I did a quick write up on the new Awsm LLC blog: https://lnkd.in/gVFHSuzR #ServiceNow #Figma. Bridging design and development like this could completely shrink the gap between concept and production. I think this is a powerful move by ServiceNow and Figma. With this partnership, teams can finally move from design vision → functional app without losing context, clarity, or time. Service Line Manager | 11+ Years Transforming Operations with ServiceNow | AI, GRC, CSM & ITSM Expert. * ### Shopping Cart for ServiceNow Service Portal. ## Sign in to view more content.",
+      "author": "linkedin.com",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:00:57.357Z",
+      "metadata": "{\"search_query\":\"Figma enterprise design site:linkedin.com\",\"score\":0.96721,\"brand\":\"Figma\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 522,
+      "platform": "dcard",
+      "url": null,
+      "title": "大家工作時會很常使用到Canva嗎？",
+      "content": "個人牆可立鹿的小D盤25/1/10大家工作時會很常使用到Canva嗎？去Canva做簡報，發現真的太方便啦~ ... 好奇各位有使用Canva的小夥伴們10561",
+      "author": "匿名",
+      "published_at": null,
+      "collected_at": "2026-04-02T02:01:39.752Z",
+      "metadata": "{\"keyword\":\"Canva\",\"forum\":null,\"like_count\":0,\"comment_count\":0,\"source\":\"dcard_search\"}"
+    },
+    {
+      "id": 523,
+      "platform": "threads",
+      "url": "https://www.threads.net/@angeladigitalmarketing/post/DQFb7ISDAxw",
+      "title": null,
+      "content": "angeladigitalmarketing2025-10-22更多Canva elements to try:  翻譯已靜音已靜音已靜音已靜音已靜音已靜音已靜音讚2,899留言5轉發397分享542",
+      "author": "angeladigitalmarketing",
+      "published_at": "2025-10-21T20:37:12.000Z",
+      "collected_at": "2026-04-02T02:02:35.267Z",
+      "metadata": "{\"keyword\":\"Canva\",\"source\":\"threads_search\"}"
     }
   ],
   "analysis_results": [
@@ -10280,6 +10599,240 @@
       "sentiment": "正面",
       "summary": "Canva AI 全攻略詳述其整合性、易用性及方案。",
       "analyzed_at": "2026-04-01T07:55:41.118Z"
+    },
+    {
+      "id": 495,
+      "raw_data_id": 523,
+      "brand": "Canva",
+      "topic": "產品功能",
+      "sentiment": "正面",
+      "summary": "探索Canva設計元素，獲得高度社群互動。",
+      "analyzed_at": "2026-04-02T02:02:54.796Z"
+    },
+    {
+      "id": 496,
+      "raw_data_id": 522,
+      "brand": "Canva",
+      "topic": "使用者體驗",
+      "sentiment": "正面",
+      "summary": "Canva製作簡報非常方便，提升工作效率。",
+      "analyzed_at": "2026-04-02T02:02:54.810Z"
+    },
+    {
+      "id": 497,
+      "raw_data_id": 521,
+      "brand": "Figma",
+      "topic": "市場動態",
+      "sentiment": "正面",
+      "summary": "Figma與ServiceNow合作，開發企業級應用。",
+      "analyzed_at": "2026-04-02T02:02:54.821Z"
+    },
+    {
+      "id": 498,
+      "raw_data_id": 520,
+      "brand": "Figma",
+      "topic": "產品功能",
+      "sentiment": "正面",
+      "summary": "Figma企業版助團隊大規模開發優質產品。",
+      "analyzed_at": "2026-04-02T02:02:54.830Z"
+    },
+    {
+      "id": 499,
+      "raw_data_id": 519,
+      "brand": "Canva",
+      "topic": "競品比較",
+      "sentiment": "中性",
+      "summary": "比較Canva與Figma，探討設計工具趨勢。",
+      "analyzed_at": "2026-04-02T02:02:54.837Z"
+    },
+    {
+      "id": 500,
+      "raw_data_id": 518,
+      "brand": "Canva",
+      "topic": "AI 相關",
+      "sentiment": "正面",
+      "summary": "使用Canva AI編程製作遊戲，助學生學習。",
+      "analyzed_at": "2026-04-02T02:02:54.844Z"
+    },
+    {
+      "id": 501,
+      "raw_data_id": 517,
+      "brand": "Canva",
+      "topic": "AI 相關",
+      "sentiment": "中性",
+      "summary": "討論AI模型接收訊息並執行工具呼叫。",
+      "analyzed_at": "2026-04-02T02:02:54.853Z"
+    },
+    {
+      "id": 502,
+      "raw_data_id": 513,
+      "brand": "Figma",
+      "topic": "競品比較",
+      "sentiment": "正面",
+      "summary": "用戶從Sketch轉用Figma並成為忠實粉絲。",
+      "analyzed_at": "2026-04-02T02:03:07.482Z"
+    },
+    {
+      "id": 503,
+      "raw_data_id": 512,
+      "brand": "Figma",
+      "topic": "使用者體驗",
+      "sentiment": "正面",
+      "summary": "Figma介面簡單易上手，降低用戶學習曲線。",
+      "analyzed_at": "2026-04-02T02:03:07.493Z"
+    },
+    {
+      "id": 504,
+      "raw_data_id": 511,
+      "brand": "Figma",
+      "topic": "產品功能",
+      "sentiment": "正面",
+      "summary": "Figma的自動儲存與版本歷史功能提升工作效率。",
+      "analyzed_at": "2026-04-02T02:03:07.504Z"
+    },
+    {
+      "id": 505,
+      "raw_data_id": 510,
+      "brand": "Figma",
+      "topic": "使用者體驗",
+      "sentiment": "負面",
+      "summary": "用戶抱怨Figma操作體驗不佳且不習慣其選點方式。",
+      "analyzed_at": "2026-04-02T02:03:07.514Z"
+    },
+    {
+      "id": 506,
+      "raw_data_id": 509,
+      "brand": "Figma",
+      "topic": "產品功能",
+      "sentiment": "正面",
+      "summary": "Figma操作邏輯清晰，功能易用且支援多人協作。",
+      "analyzed_at": "2026-04-02T02:03:07.525Z"
+    },
+    {
+      "id": 507,
+      "raw_data_id": 508,
+      "brand": "Figma",
+      "topic": "AI 相關",
+      "sentiment": "中性",
+      "summary": "Figma Make透過Prompt引導使用者思考UX設計。",
+      "analyzed_at": "2026-04-02T02:03:07.536Z"
+    },
+    {
+      "id": 508,
+      "raw_data_id": 507,
+      "brand": "Figma",
+      "topic": "產品功能",
+      "sentiment": "中性",
+      "summary": "Figma近期受熱議，但不適合印刷，建議改用Illustrator。",
+      "analyzed_at": "2026-04-02T02:03:07.547Z"
+    },
+    {
+      "id": 509,
+      "raw_data_id": 506,
+      "brand": "Canva",
+      "topic": "AI 相關",
+      "sentiment": "正面",
+      "summary": "Canva Magic Design AI功能助用戶快速生成專業設計。",
+      "analyzed_at": "2026-04-02T02:03:07.558Z"
+    },
+    {
+      "id": 510,
+      "raw_data_id": 505,
+      "brand": "Canva",
+      "topic": "AI 相關",
+      "sentiment": "正面",
+      "summary": "Canva AI功能整合、易用且專業，提供多種設計應用。",
+      "analyzed_at": "2026-04-02T02:03:07.566Z"
+    },
+    {
+      "id": 511,
+      "raw_data_id": 504,
+      "brand": "Canva",
+      "topic": "使用者體驗",
+      "sentiment": "正面",
+      "summary": "Canva門檻低且模板豐富，對SOHO文字工作者很實用。",
+      "analyzed_at": "2026-04-02T02:03:07.572Z"
+    },
+    {
+      "id": 512,
+      "raw_data_id": 503,
+      "brand": "Canva",
+      "topic": "定價與方案",
+      "sentiment": "中性",
+      "summary": "比較Canva免費版與Pro版功能，探討升級價值。",
+      "analyzed_at": "2026-04-02T02:03:22.456Z"
+    },
+    {
+      "id": 513,
+      "raw_data_id": 502,
+      "brand": "Canva",
+      "topic": "使用者體驗",
+      "sentiment": "負面",
+      "summary": "用戶因忘記試用帳號資訊而感到困擾。",
+      "analyzed_at": "2026-04-02T02:03:22.462Z"
+    },
+    {
+      "id": 514,
+      "raw_data_id": 501,
+      "brand": "Canva",
+      "topic": "品牌形象",
+      "sentiment": "負面",
+      "summary": "評論指出Canva設計缺乏專業度與質感，影響品牌形象。",
+      "analyzed_at": "2026-04-02T02:03:22.467Z"
+    },
+    {
+      "id": 515,
+      "raw_data_id": 500,
+      "brand": "Canva",
+      "topic": "品牌形象",
+      "sentiment": "中性",
+      "summary": "討論Canva作為設計工具的定位，及其模板依賴性對專業設計的影響。",
+      "analyzed_at": "2026-04-02T02:03:22.470Z"
+    },
+    {
+      "id": 516,
+      "raw_data_id": 499,
+      "brand": "Canva",
+      "topic": "競品比較",
+      "sentiment": "中性",
+      "summary": "介紹AI簡報工具Gamma，並將其功能與Canva進行比較。",
+      "analyzed_at": "2026-04-02T02:03:22.473Z"
+    },
+    {
+      "id": 517,
+      "raw_data_id": 498,
+      "brand": "Canva",
+      "topic": "AI 相關",
+      "sentiment": "正面",
+      "summary": "舉辦Canva AI專題實戰工作坊，成功引導老師們上手。",
+      "analyzed_at": "2026-04-02T02:03:22.477Z"
+    },
+    {
+      "id": 518,
+      "raw_data_id": 497,
+      "brand": "Canva",
+      "topic": "AI 相關",
+      "sentiment": "負面",
+      "summary": "評論指出Canva AI圖像生成品質欠佳，建議開發者選擇其他工具。",
+      "analyzed_at": "2026-04-02T02:03:22.480Z"
+    },
+    {
+      "id": 519,
+      "raw_data_id": 496,
+      "brand": "Canva",
+      "topic": "AI 相關",
+      "sentiment": "正面",
+      "summary": "介紹Canva AI的強大功能，幫助用戶輕鬆完成設計。",
+      "analyzed_at": "2026-04-02T02:03:22.483Z"
+    },
+    {
+      "id": 520,
+      "raw_data_id": 495,
+      "brand": "Canva",
+      "topic": "AI 相關",
+      "sentiment": "正面",
+      "summary": "解析Canva AI新功能，包含對話助手、視覺化試算表及無程式碼內容。",
+      "analyzed_at": "2026-04-02T02:03:22.487Z"
     }
   ],
   "reports": [
@@ -10338,7 +10891,33 @@
       "report_type": "daily",
       "content": "# 📊 Canva Brand Sentinel 每日戰報\n\n> **情報更新時間**：2026-04-01\n> **追蹤涵蓋範圍**：Canva, Figma, Adobe\n\n## 🎯 核心體驗指標 (KPI)\n\n*   **總採樣數據量**：`59 筆`\n*   **總體品牌防線**：🟢 **優良**\n*   **資料來源佔比**：`Threads` (3), `Dcard` (7), `Tavily` (49)\n\n## 💬 輿情與市場動態 (Sentiment & Market)\n\n### 口碑情緒雷達\n\n> 🟢 **正向 (66.1%)** ｜ 共 39 筆\n> `█████████████░░░░░░░`\n> \n> 🟡 **中立 (27.1%)** ｜ 共 16 筆\n> `█████░░░░░░░░░░░░░░░`\n> \n> 🔴 **負向 (6.8%)** ｜ 共 4 筆\n> `█░░░░░░░░░░░░░░░░░░░`\n\n### 品牌聲量市佔分析\n\n*   **Canva**（33筆）：正向情感佔 **70%**\n*   **Figma**（18筆）：正向情感佔 **67%**\n*   **Adobe Express**（8筆）：正向情感佔 **50%**\n\n## 🔥 高熱度風向 (Trending Topics)\n\n> **01. 產品功能 (共 13 筆)**\n> ▍事件摘要：Canva AI 簡報功能設定選項相對有限。\n> ▍代表原音：_在Canva AI中，能設定的選項不多，僅能選擇設計形式（簡報、社群貼文等）、分享對象（休閒、專業、教育）、視覺風格和長度。在本次實測中，選擇了內容專業、視覺…_\n>\n> **02. AI 相關 (共 12 筆)**\n> ▍事件摘要：Canva AI 全攻略詳述其整合性、易用性及方案。\n> ▍代表原音：_# Canva AI 全攻略：從圖片、簡報到影片設計，5大功能一次上手. 2. 使用 Canva AI 前必知：方案與用量限制. 3. Canva AI 的 3 大特色：整合、易用與專業. 4. Canva AI 可以做什麼？4 大類應用一…_\n>\n> **03. 市場動態 (共 8 筆)**\n> ▍事件摘要：Figma透過策略轉型，以團隊協作與免費模式挑戰市場龍頭。\n> ▍代表原音：_During a desperate team meeting, CEO Dylan Field asked a question that changed everything: \"What if the problem isn't ou…_\n\n## 🧠 決策洞察艙 (AI Deep Insights)\n\n### 💡 商業與產品洞察\n**01.** Canva在AI技術整合與易用性方面表現出色，其AI工具被廣泛應用於簡化設計流程、提升效率及產品品質，並積極推動企業級應用，是驅動品牌成長與市場擴張的關鍵動能。\n\n**02.** Canva透過AI策略加速市場擴張並挑戰市場領導者，展現出強勁的創新能力和積極的市場進取心，獲得了廣泛的正面評價，對投資人而言是穩定的成長訊號。\n\n### 🔭 競品戰略分析\n**01.** 相較於Canva的普惠型AI整合與廣泛易用性，Figma在團隊協作、專業簡報工具（如Figma Slides/Buzz）及企業級產品開發方面具有獨特優勢，雖然Canva在多方面取得進步，但Figma在特定專業領域仍展現其深度，可能吸引特定的進階或企業級用戶群。\n\n**02.** Adobe Express雖也提供強大AI工具，但其在輿情中的討論度及品牌差異化程度相對較低，對Canva的直接競爭壓力在目前階段顯得較小。\n\n### ⚠️ 發展風險預警\n**01.** 儘管Canva在AI功能方面獲得高度肯定，但有輿情提及其AI簡報功能設定選項相對有限，這可能暗示在特定進階或高度客製化需求上，仍存在功能深度不足的潛在風險，可能被專業型競品利用，進而影響高階用戶市場的拓展。\n\n---\n*Brand Sentinel 自動化演算法 ｜ 結構化純淨終端模板 UI/UX Pro Max ｜ 產生時間：2026/4/1 下午3:55:53*",
       "created_at": "2026-04-01T07:55:53.125Z"
+    },
+    {
+      "id": 9,
+      "report_date": "2026-04-02",
+      "report_type": "daily",
+      "content": "# 📊 Canva Brand Sentinel 每日戰報\n\n> **情報更新時間**：2026-04-02\n> **追蹤涵蓋範圍**：Canva, Figma, Adobe\n\n## 🎯 核心體驗指標 (KPI)\n\n*   **總採樣數據量**：`26 筆`\n*   **總體品牌防線**：🟡 **觀察中**\n*   **資料來源佔比**：`Threads` (1), `Dcard` (1), `Tavily` (24)\n\n## 💬 輿情與市場動態 (Sentiment & Market)\n\n### 口碑情緒雷達\n\n> 🟢 **正向 (57.7%)** ｜ 共 15 筆\n> `████████████░░░░░░░░`\n> \n> 🟡 **中立 (26.9%)** ｜ 共 7 筆\n> `█████░░░░░░░░░░░░░░░`\n> \n> 🔴 **負向 (15.4%)** ｜ 共 4 筆\n> `███░░░░░░░░░░░░░░░░░`\n\n### 品牌聲量市佔分析\n\n*   **Canva**（17筆）：正向情感佔 **53%**\n*   **Figma**（9筆）：正向情感佔 **67%**\n\n## 🔥 高熱度風向 (Trending Topics)\n\n> **01. AI 相關 (共 9 筆)**\n> ▍事件摘要：解析Canva AI新功能，包含對話助手、視覺化試算表及無程式碼內容。\n> ▍代表原音：_1. Canva AI 對話式助手：你的全能設計幫手 · 2. Canva Sheets：AI 驅動的視覺化試算表 · 3. Canva Code：無程式碼也能打造互動內容 · 4. 進階影像編輯：媲美專業…_\n>\n> **02. 產品功能 (共 5 筆)**\n> ▍事件摘要：Figma近期受熱議，但不適合印刷，建議改用Illustrator。\n> ▍代表原音：_Figma 因為發布會很厲害，這二天很有熱度，但還是有些想說的󠀠 1.印刷別用Figma，有各種麻煩的點，用Illustrator 還是目前最好的解決方案󠀠󠀠 2.…_\n>\n> **03. 使用者體驗 (共 5 筆)**\n> ▍事件摘要：用戶因忘記試用帳號資訊而感到困擾。\n> ▍代表原音：_完全同意！但，別像我一樣，註冊了30 天試用，結果忘記是用哪個email 註冊的，因為現在Canva 也不知道，我也不記得是用哪個email 註冊的了！ .…_\n\n## 🧠 決策洞察艙 (AI Deep Insights)\n\n### 💡 商業與產品洞察\n**01.** Canva在AI功能方面的投入已成為輿情焦點與主要成長引擎，AI相關討論佔總筆數近三分之一，且多為正面，顯示市場對其AI策略的認可與期待。\n\n**02.** Canva持續鞏固其「易用性」與「低門檻」的核心價值，尤其在教育與SOHO市場取得正面回饋，但專業設計品質的負面評論，提示品牌在拓展專業用戶時仍面臨挑戰。\n\n**03.** 品牌透過舉辦AI工作坊與探討Pro版價值等方式，積極進行市場教育與用戶轉化，顯示其在產品功能擴展和用戶基礎深化方面的策略奏效。\n\n### 🔭 競品戰略分析\n**01.** Figma的輿情主要圍繞其在多人協作、UX設計邏輯及專業應用上的優勢，與Canva以AI擴展普惠設計的策略形成區隔，兩者在市場定位上各有所長，並非完全直接的競爭。\n\n**02.** Canva透過AI大力擴展功能廣度，意圖服務更廣泛的內容創作需求；Figma則展現出深耕專業設計應用，尤其在UX流程中導入AI引導，凸顯其在專業領域的深度優勢。\n\n### ⚠️ 發展風險預警\n**01.** Canva的AI圖像生成品質與整體設計專業度的負面評價值得關注，若AI功能未能滿足用戶對品質的期待，恐影響品牌形象，並限制其在高階市場的滲透。\n\n**02.** 有零星用戶抱怨試用帳號管理問題，此類細節性的用戶體驗缺陷若未能妥善解決，長期恐累積負面情緒，影響新用戶的採用與留存率。\n\n---\n*Brand Sentinel 自動化演算法 ｜ 結構化純淨終端模板 UI/UX Pro Max ｜ 產生時間：2026/4/2 上午10:03:34*",
+      "created_at": "2026-04-02T02:03:34.456Z"
     }
   ],
-  "failed_analysis": []
+  "failed_analysis": [
+    {
+      "raw_data_id": 516,
+      "retry_count": 1,
+      "last_error": "LLM 未回傳此項目的分析結果",
+      "last_failed_at": "2026-04-02T02:02:54.860Z"
+    },
+    {
+      "raw_data_id": 515,
+      "retry_count": 1,
+      "last_error": "LLM 未回傳此項目的分析結果",
+      "last_failed_at": "2026-04-02T02:02:54.868Z"
+    },
+    {
+      "raw_data_id": 514,
+      "retry_count": 1,
+      "last_error": "LLM 未回傳此項目的分析結果",
+      "last_failed_at": "2026-04-02T02:02:54.877Z"
+    }
+  ]
 }
