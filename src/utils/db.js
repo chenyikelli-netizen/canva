@@ -304,6 +304,18 @@ export function save_report(report) {
 }
 
 /**
+ * 取得上次週報的發送日期
+ * @returns {string|null} YYYY-MM-DD 或 null
+ */
+export function get_last_weekly_report_date() {
+  const weekly_reports = db.reports
+    .filter(r => r.report_type === 'weekly')
+    .sort((a, b) => new Date(b.report_date) - new Date(a.report_date));
+
+  return weekly_reports.length > 0 ? weekly_reports[0].report_date : null;
+}
+
+/**
  * 關閉資料庫連線 (JSON 版本為空實作)
  */
 export function close_db() {

@@ -23,7 +23,7 @@ import { analyze_pending_data } from './analyzer/analyzer.js';
 // 報告
 import { generate_daily_report } from './reporter/daily_report.js';
 import { generate_promax_report } from './reporter/daily_report_promax.js';
-import { generate_weekly_report, is_monday } from './reporter/weekly_report.js';
+import { generate_weekly_report, is_monday, should_send_weekly } from './reporter/weekly_report.js';
 
 // 通知
 import { send_line_message } from './notifier/line_notifier.js';
@@ -114,10 +114,11 @@ async function run_pipeline() {
     await generate_promax_report(today);
     logger.info('✨ Pro Max 報告生成完成');
 
-    // 若為週一，附加週報
-    if (is_monday(today)) {
-      logger.info('📅 今天是週一，附加週報');
-      const weekly = generate_weekly_report(today);
+    // 判斷是否補償發送週報（補償機制：錯過週一也會在下次開機時補發）
+    const { should, trigger_date } = should_send_weekly(today);
+    if (should) {
+      logger.info('📅 週報機制觸發，開始生成週報...');
+      const weekly = generate_weekly_report(trigger_date);
       report += '\n\n' + weekly;
     }
 

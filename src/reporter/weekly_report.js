@@ -1,26 +1,65 @@
 // ========================================
 // 週報生成模組
-// 每週一附加在日報之後，提供週趨勢對比
+// 支援補償機制：錯過週一也會在下次開機時自動補發
 // ========================================
 
-import { get_stats, save_report } from '../utils/db.js';
+import { get_stats, save_report, get_last_weekly_report_date } from '../utils/db.js';
 import logger from '../utils/logger.js';
 
 /**
+ * 判斷是否應該發送週報（含補償機制）
+ * 邏輯：
+ *   1. 從未發過週報 → 如果現在距上週一已超過7天，補發
+ *   2. 上次週報距今已超過 7 天 → 補發
+ * @param {string} today - YYYY-MM-DD
+ * @returns {{ should: boolean, trigger_date: string|null }}
+ */
+export function should_send_weekly(today) {
+  const last_date = get_last_weekly_report_date(); // 從 DB 取上次週報日期
+
+  const today_dt = new Date(today);
+
+  if (!last_date) {
+    // 從未發過週報，計算「上一個週一」是否至少在 7 天前
+    const day_of_week = today_dt.getDay(); // 0=日, 1=一 ... 6=六
+    const days_since_monday = day_of_week === 0 ? 6 : day_of_week - 1;
+    if (days_since_monday >= 6) {
+      // 至少有完整一週的資料可以做週報
+      return { should: true, trigger_date: today };
+    }
+    return { should: false, trigger_date: null };
+  }
+
+  const last_dt = new Date(last_date);
+  const days_since_last = Math.floor((today_dt - last_dt) / (1000 * 60 * 60 * 24));
+
+  if (days_since_last >= 7) {
+    logger.info(`📅 距上次週報已 ${days_since_last} 天，觸發補償週報`);
+    return { should: true, trigger_date: today };
+  }
+
+  return { should: false, trigger_date: null };
+}
+
+/**
  * 生成週報（本週 vs 上週對比）
- * @param {string} date - 當天日期 (YYYY-MM-DD)，必須是週一
+ * @param {string} date - 觸發日期 (YYYY-MM-DD)，可以是任意日期
  * @returns {string} Markdown 格式的週報內容
  */
 export function generate_weekly_report(date) {
-  logger.info(`開始生成週報: ${date}`);
+  logger.info(`開始生成週報（觸發日: ${date}）`);
 
-  const report_date = new Date(date);
+  const trigger_date = new Date(date);
 
-  // 本週範圍（上週一 ~ 上週日）
-  const this_week_end = new Date(report_date);
-  this_week_end.setDate(this_week_end.getDate() - 1); // 上週日
+  // 找到「上一個完整週」：從觸發日往前找最近的週日作為本週結束
+  const day_of_week = trigger_date.getDay(); // 0=日, 1=一 ... 6=六
+  const days_to_last_sunday = day_of_week === 0 ? 7 : day_of_week;
+
+  const this_week_end = new Date(trigger_date);
+  this_week_end.setDate(this_week_end.getDate() - days_to_last_sunday);
+
   const this_week_start = new Date(this_week_end);
-  this_week_start.setDate(this_week_start.getDate() - 6); // 上週一
+  this_week_start.setDate(this_week_start.getDate() - 6);
 
   // 上上週範圍
   const last_week_end = new Date(this_week_start);
@@ -62,9 +101,9 @@ ${sentiment_compare}
 ${topic_ranking || '  (無資料)'}
 
 ---
-_Brand Sentinel 週報 | ${new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' })}_`;
+_Brand Sentinel 週報 | 補償發送時間: ${new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' })}_`;
 
-  // 儲存週報
+  // 儲存週報，記錄發送日期供下次補償判斷使用
   try {
     save_report({
       report_date: date,
@@ -99,7 +138,7 @@ function build_sentiment_comparison(this_week, last_week) {
 }
 
 /**
- * 判斷是否為週一
+ * 判斷是否為週一（保留向後相容）
  * @param {string} date - YYYY-MM-DD
  * @returns {boolean}
  */
