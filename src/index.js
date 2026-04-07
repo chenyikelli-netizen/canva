@@ -23,7 +23,7 @@ import { analyze_pending_data } from './analyzer/analyzer.js';
 // 報告
 import { generate_daily_report } from './reporter/daily_report.js';
 import { generate_promax_report } from './reporter/daily_report_promax.js';
-import { generate_weekly_report, is_monday, should_send_weekly } from './reporter/weekly_report.js';
+import { generate_weekly_report, should_send_weekly } from './reporter/weekly_report.js';
 
 // 通知
 import { send_line_message } from './notifier/line_notifier.js';
