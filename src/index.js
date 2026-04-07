@@ -22,6 +22,7 @@ import { analyze_pending_data } from './analyzer/analyzer.js';
 
 // 報告
 import { generate_daily_report } from './reporter/daily_report.js';
+import { generate_promax_report } from './reporter/daily_report_promax.js';
 import { generate_weekly_report, is_monday } from './reporter/weekly_report.js';
 
 // 通知
@@ -108,6 +109,11 @@ async function run_pipeline() {
 
     let report = await generate_daily_report(today);
 
+    // 生成 UI/UX Pro Max 版 HTML 報告
+    logger.info('✨ 正在生成 UI/UX Pro Max 戰情面板網頁版...');
+    await generate_promax_report(today);
+    logger.info('✨ Pro Max 報告生成完成');
+
     // 若為週一，附加週報
     if (is_monday(today)) {
       logger.info('📅 今天是週一，附加週報');
@@ -161,15 +167,16 @@ async function run_pipeline() {
     }
 
     // ============ Phase 5: 通知推送 ============
-    logger.info('📤 Phase 5: 通知推送 (短連結模式)');
+    logger.info('📤 Phase 5: 通知推送 (Pro Max 網頁版模式)');
 
-    const github_url = `https://github.com/chenyikelli-netizen/canva/blob/main/reports/canva-report-${today}.html`;
+    // 取得 HTML 預覽的正確網址
+    const github_html_url = `https://htmlpreview.github.io/?https://github.com/chenyikelli-netizen/canva/blob/main/reports/${today}-canva-report-promax.html`;
     
-    // 擷取報告前300字當作引言
+    // 擷取報告前幾行當作引言
     const preview_lines = report.split('\n').filter(line => line.trim().length > 0 && !line.includes('==='));
     const summary_preview = preview_lines.slice(2, 8).join('\n');
 
-    const notification_message = `📊 Canva 品牌戰報出爐 (${today})\n\n為了給您最完美的閱讀體驗（含圖表與粗體排版），今日的完整報告已經上傳到資料庫。\n\n👉 點擊立刻閱讀精美版報告：\n${github_url}\n\n---\n⚡ 今日速覽摘要：\n${summary_preview}\n\n(點擊上方網址看完整競品對照矩陣與重點)`;
+    const notification_message = `✨ 你的 UI/UX Pro Max 戰情面板已上線 (${today})！\n\n通訊軟體本身無法直接顯示華麗的互動網頁，我為你打造了完全獨立的 HTML Dashboard 手機友好網頁版！\n支援玻璃材質 (Glassmorphism)、模塊化佈局與高級數據漸層視覺化。\n\n👉 請點擊下方專屬連結，在手機瀏覽器中開啟這份專屬你的戰情大屏👇\n🌐 ${github_html_url}\n\n---\n⚡ 今日速覽摘要：\n${summary_preview}\n\n(如果網頁一片空白，請多重新整理一兩次讓代理伺服器抓取最新檔案)`;
 
     // LINE 推送（主要）
     const line_ok = await send_line_message(notification_message);
