@@ -10,7 +10,7 @@ import { call_gemini_json } from '../analyzer/llm_client.js';
 import { build_insight_prompt } from '../analyzer/prompt_templates.js';
 import logger from '../utils/logger.js';
 
-export async function generate_promax_report(date) {
+export async function generate_promax_report(date, weekly_data = null) {
   logger.info(`開始生成 ${date} PRO MAX 報告`);
   const stats = get_stats(date, date);
   const analysis = get_analysis_by_date(date);
@@ -163,6 +163,25 @@ export async function generate_promax_report(date) {
     .prose-sm { color: #cbd5e1; font-size: 0.875rem; line-height: 1.7; }
     .prose-sm p + p { margin-top: 1rem; }
     .risk-bullet { color: #f43f5e; margin-right: 0.5rem; }
+    /* ── Weekly Report Section ── */
+    .weekly-section { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
+    .weekly-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+    @media (min-width: 768px) { .weekly-grid { grid-template-columns: 1fr 1fr; } }
+    .weekly-panel { border-radius: 1.5rem; padding: 2rem; }
+    .weekly-panel .panel-title { color: #c4b5fd; margin-bottom: 1.5rem; }
+    .weekly-panel .panel-title .icon { background: rgba(139,92,246,0.2); }
+    .weekly-stat-row { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .weekly-stat-row:last-child { border-bottom: none; }
+    .weekly-stat-label { color: #94a3b8; font-size: 0.875rem; }
+    .weekly-stat-value { font-weight: 700; font-size: 0.875rem; }
+    .weekly-stat-value.up { color: #34d399; }
+    .weekly-stat-value.down { color: #fb7185; }
+    .weekly-stat-value.neutral { color: #fbbf24; }
+    .weekly-topic-list { display: flex; flex-direction: column; gap: 0.5rem; }
+    .weekly-topic-item { display: flex; align-items: center; justify-content: space-between; padding: 0.6rem 0.75rem; border-radius: 0.75rem; background: rgba(255,255,255,0.04); }
+    .weekly-topic-item:hover { background: rgba(255,255,255,0.08); }
+    .weekly-topic-name { color: #cbd5e1; font-size: 0.8rem; font-weight: 500; }
+    .weekly-topic-count { color: #a5b4fc; font-size: 0.75rem; font-weight: 700; background: rgba(99,102,241,0.2); padding: 0.15rem 0.5rem; border-radius: 9999px; }
   `;
 
   const html = `
@@ -264,6 +283,58 @@ export async function generate_promax_report(date) {
         </div>
       </div>
     </div>
+
+    <!-- Weekly Report Section (conditional) -->
+    ${weekly_data ? `
+    <div class="weekly-section">
+      <h2 class="section-title">
+        <span class="icon-grad">📊</span> 本週趨勢週報
+        <span style="font-size:0.85rem;font-weight:500;color:#94a3b8;margin-left:0.5rem;">${weekly_data.range}</span>
+      </h2>
+      <div class="weekly-grid">
+        <!-- 聲量與情緒趨勢 -->
+        <div class="glass-panel weekly-panel">
+          <h3 class="panel-title"><span class="icon">📈</span> 聲量 & 情緒趨勢</h3>
+          <div class="weekly-stat-row">
+            <span class="weekly-stat-label">本週總聲量</span>
+            <span class="weekly-stat-value neutral">${weekly_data.this_total} 筆</span>
+          </div>
+          <div class="weekly-stat-row">
+            <span class="weekly-stat-label">上週總聲量</span>
+            <span class="weekly-stat-value neutral">${weekly_data.last_total} 筆</span>
+          </div>
+          <div class="weekly-stat-row">
+            <span class="weekly-stat-label">聲量變化</span>
+            <span class="weekly-stat-value ${weekly_data.volume_change >= 0 ? 'up' : 'down'}">${weekly_data.volume_change >= 0 ? '+' : ''}${weekly_data.volume_change} (${weekly_data.volume_pct}%)</span>
+          </div>
+          <div class="weekly-stat-row">
+            <span class="weekly-stat-label">正向輿情</span>
+            <span class="weekly-stat-value ${weekly_data.pos_diff >= 0 ? 'up' : 'down'}">${weekly_data.pos_pct}% <small style="opacity:.6">(上週 ${weekly_data.last_pos_pct}%)</small></span>
+          </div>
+          <div class="weekly-stat-row">
+            <span class="weekly-stat-label">中立討論</span>
+            <span class="weekly-stat-value neutral">${weekly_data.neu_pct}% <small style="opacity:.6">(上週 ${weekly_data.last_neu_pct}%)</small></span>
+          </div>
+          <div class="weekly-stat-row">
+            <span class="weekly-stat-label">負向警訊</span>
+            <span class="weekly-stat-value ${weekly_data.neg_diff <= 0 ? 'up' : 'down'}">${weekly_data.neg_pct}% <small style="opacity:.6">(上週 ${weekly_data.last_neg_pct}%)</small></span>
+          </div>
+        </div>
+        <!-- 本週主題排行 -->
+        <div class="glass-panel weekly-panel">
+          <h3 class="panel-title"><span class="icon">🏆</span> 本週主題排行</h3>
+          <div class="weekly-topic-list">
+            ${weekly_data.topics.map((t, i) => `
+              <div class="weekly-topic-item">
+                <span class="weekly-topic-name">${['🥇','🥈','🥉','4️⃣','5️⃣'][i] || (i+1)+'.'} ${t.topic}</span>
+                <span class="weekly-topic-count">${t.count} 筆</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+    </div>
+    ` : ''}
 
   </div>
 </body>

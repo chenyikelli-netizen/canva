@@ -8,7 +8,7 @@ import path from 'path';
 import cron from 'node-cron';
 import config from './config.js';
 import logger from './utils/logger.js';
-import { insert_raw_data_batch, close_db } from './utils/db.js';
+import { insert_raw_data_batch, close_db, get_stats } from './utils/db.js';
 
 // 蒐集器
 import ThreadsCollector from './collectors/threads_collector.js';
@@ -109,20 +109,55 @@ async function run_pipeline() {
 
     let report = await generate_daily_report(today);
 
-    // 生成 UI/UX Pro Max 版 HTML 報告
-    logger.info('✨ 正在生成 UI/UX Pro Max 戰情面板網頁版...');
-    await generate_promax_report(today);
-    logger.info('✨ Pro Max 報告生成完成');
-
     // 判斷是否補償發送週報（補償機制：錯過週一也會在下次開機時補發）
     const { should, trigger_date } = should_send_weekly(today);
+    let weekly_data = null;
     if (should) {
-      logger.info('📅 週報機制觸發，開始生成週報...');
-      const weekly = generate_weekly_report(trigger_date);
-      report += '\n\n' + weekly;
+      logger.info('📅 週報機制觸發，計算週趨勢資料...');
+      const trigger_dt = new Date(trigger_date);
+      const dow = trigger_dt.getDay();
+      const days_to_sunday = dow === 0 ? 7 : dow;
+      const week_end = new Date(trigger_dt);
+      week_end.setDate(week_end.getDate() - days_to_sunday);
+      const week_start = new Date(week_end);
+      week_start.setDate(week_start.getDate() - 6);
+      const last_week_end = new Date(week_start);
+      last_week_end.setDate(last_week_end.getDate() - 1);
+      const last_week_start = new Date(last_week_end);
+      last_week_start.setDate(last_week_start.getDate() - 6);
+      const fmt = d => d.toISOString().split('T')[0];
+      const tw = get_stats(fmt(week_start), fmt(week_end));
+      const lw = get_stats(fmt(last_week_start), fmt(last_week_end));
+      const pct = (count, total) => total > 0 ? ((count / total) * 100).toFixed(1) : '0.0';
+      const tw_pos = tw.by_sentiment.find(s => s.sentiment === '正面')?.count || 0;
+      const tw_neu = tw.by_sentiment.find(s => s.sentiment === '中性')?.count || 0;
+      const tw_neg = tw.by_sentiment.find(s => s.sentiment === '負面')?.count || 0;
+      const lw_pos = lw.by_sentiment.find(s => s.sentiment === '正面')?.count || 0;
+      const lw_neu = lw.by_sentiment.find(s => s.sentiment === '中性')?.count || 0;
+      const lw_neg = lw.by_sentiment.find(s => s.sentiment === '負面')?.count || 0;
+      const vol_change = tw.total - lw.total;
+      weekly_data = {
+        range: `${fmt(week_start)} ~ ${fmt(week_end)}`,
+        this_total: tw.total, last_total: lw.total,
+        volume_change: vol_change,
+        volume_pct: lw.total > 0 ? ((vol_change / lw.total) * 100).toFixed(1) : 'N/A',
+        pos_pct: pct(tw_pos, tw.total), last_pos_pct: pct(lw_pos, lw.total), pos_diff: tw_pos - lw_pos,
+        neu_pct: pct(tw_neu, tw.total), last_neu_pct: pct(lw_neu, lw.total),
+        neg_pct: pct(tw_neg, tw.total), last_neg_pct: pct(lw_neg, lw.total), neg_diff: tw_neg - lw_neg,
+        topics: tw.by_topic.slice(0, 5)
+      };
+      // 存入 DB 以供下次補償判斷
+      generate_weekly_report(trigger_date);
+      logger.info('📅 週報資料已合併入 Pro Max 日報');
     }
 
+    // 生成 UI/UX Pro Max 版 HTML 報告（含週報區塊）
+    logger.info('✨ 正在生成 UI/UX Pro Max 戰情面板網頁版...');
+    await generate_promax_report(today, weekly_data);
+    logger.info('✨ Pro Max 報告生成完成');
+
     logger.info('📝 報告生成完成');
+
 
     // 在終端機畫面上直接印出報告預覽
     console.log('\n========================================');
