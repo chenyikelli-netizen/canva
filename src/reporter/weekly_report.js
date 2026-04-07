@@ -15,16 +15,16 @@ import logger from '../utils/logger.js';
  * @returns {{ should: boolean, trigger_date: string|null }}
  */
 export function should_send_weekly(today) {
-  const last_date = get_last_weekly_report_date(); // 從 DB 取上次週報日期
-
+  const last_date = get_last_weekly_report_date();
   const today_dt = new Date(today);
 
   if (!last_date) {
-    // 從未發過週報，計算「上一個週一」是否至少在 7 天前
+    // 從未發過週報：只要距上週一已超過0天（即今天是週一或之後），就可以觸發
+    // 簡單判斷：今天是週一，或已過了週一（週二~週日且週一沒執行）
     const day_of_week = today_dt.getDay(); // 0=日, 1=一 ... 6=六
-    const days_since_monday = day_of_week === 0 ? 6 : day_of_week - 1;
-    if (days_since_monday >= 6) {
-      // 至少有完整一週的資料可以做週報
+    // 只要今天不是週日（沒有完整上週資料），都允許首次觸發
+    if (day_of_week !== 0) {
+      logger.info('📅 首次週報，觸發發送');
       return { should: true, trigger_date: today };
     }
     return { should: false, trigger_date: null };
