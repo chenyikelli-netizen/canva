@@ -9,8 +9,8 @@ import logger from '../utils/logger.js';
 /**
  * 判斷是否應該發送週報（含補償機制）
  * 邏輯：
- *   1. 從未發過週報 → 如果現在距上週一已超過7天，補發
- *   2. 上次週報距今已超過 7 天 → 補發
+ *   1. 從未發過週報 → 只要今天不是週日（確保有至少幾天資料），立即觸發
+ *   2. 上次週報距今已超過 7 天 → 補償觸發（無論今天是星期幾）
  * @param {string} today - YYYY-MM-DD
  * @returns {{ should: boolean, trigger_date: string|null }}
  */
