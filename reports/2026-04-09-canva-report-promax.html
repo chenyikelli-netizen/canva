@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Sentinel - UI/UX Pro Max</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { background-color: #020617; }
+    body { font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif; background-color: #020617; color: #e2e8f0; min-height: 100vh; padding-bottom: 5rem; }
+    ::selection { background-color: #8B3CF7; color: #fff; }
+    .aurora-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 0; overflow: hidden; pointer-events: none; }
+    .blob { position: absolute; filter: blur(90px); border-radius: 50%; opacity: 0.5; animation: float 10s infinite ease-in-out alternate; }
+    .blob-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, #8B3CF7 0%, transparent 70%); }
+    .blob-2 { bottom: -20%; right: -10%; width: 60vw; height: 60vw; background: radial-gradient(circle, #00C4CC 0%, transparent 70%); animation-delay: -5s; }
+    @keyframes float { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(30px,-50px) scale(1.1); } }
+    .container { position: relative; z-index: 1; max-width: 72rem; margin: 0 auto; padding: 4rem 1.5rem 0; }
+    .glass-panel { background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); }
+    header { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 4rem; }
+    @media (min-width: 768px) { header { flex-direction: row; align-items: center; justify-content: space-between; } }
+    .live-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0.75rem; border-radius: 9999px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; color: #00C4CC; text-transform: uppercase; margin-bottom: 1rem; }
+    .live-dot { width: 0.5rem; height: 0.5rem; border-radius: 50%; background-color: #00C4CC; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+    h1.brand-title { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 0.5rem; background: linear-gradient(to right, #ffffff, #cbd5e1, #64748b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    @media (min-width: 768px) { h1.brand-title { font-size: 3.75rem; } }
+    .subtitle { color: #94a3b8; font-size: 1.125rem; }
+    .subtitle span { color: #fff; font-weight: 500; }
+    .stats-card { display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; border-radius: 1.5rem; flex-shrink: 0; }
+    .stat-label { color: #94a3b8; font-size: 0.875rem; margin-bottom: 0.25rem; }
+    .stat-number { font-size: 2.25rem; font-weight: 700; background: linear-gradient(to right, #8B3CF7, #00C4CC); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .stat-divider { width: 1px; height: 3rem; background: rgba(255,255,255,0.1); }
+    .stat-health-good { font-size: 1.25rem; font-weight: 700; color: #34d399; display: flex; align-items: center; gap: 0.5rem; }
+    .stat-health-warn { font-size: 1.25rem; font-weight: 700; color: #fbbf24; display: flex; align-items: center; gap: 0.5rem; }
+    .bento-top { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .bento-top { grid-template-columns: 2fr 1fr; } }
+    .sentiment-panel { border-radius: 1.5rem; padding: 2rem; position: relative; overflow: hidden; }
+    .sentiment-panel::before { content: ''; position: absolute; top: 0; right: 0; width: 16rem; height: 16rem; background: rgba(139,60,247,0.1); border-radius: 50%; filter: blur(48px); transform: translate(50%,-50%); }
+    .panel-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem; display: flex; align-items: center; gap: 0.75rem; }
+    .panel-title .icon { background: rgba(255,255,255,0.1); padding: 0.5rem; border-radius: 0.75rem; }
+    .bar-group { position: relative; z-index: 1; }
+    .bar-group + .bar-group { margin-top: 1.5rem; }
+    .bar-header { display: flex; justify-content: space-between; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .bar-track { height: 0.75rem; width: 100%; background: #1e293b; border-radius: 9999px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 9999px; }
+    .bar-fill.positive { background: linear-gradient(to right, #10b981, #6ee7b7); }
+    .bar-fill.neutral  { background: linear-gradient(to right, #f59e0b, #fcd34d); }
+    .bar-fill.negative { background: linear-gradient(to right, #f43f5e, #fda4af); }
+    .color-positive { color: #34d399; } .color-neutral  { color: #fbbf24; } .color-negative { color: #fb7185; } .color-white { color: #fff; }
+    .sources-panel { border-radius: 1.5rem; padding: 2rem; display: flex; flex-direction: column; }
+    .sources-panel .panel-title { font-size: 1.25rem; margin-bottom: 1.5rem; }
+    .sources-list { display: flex; flex-direction: column; gap: 0.75rem; flex: 1; justify-content: center; }
+    .source-row { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem; border-radius: 1rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s; }
+    .source-row:hover { background: rgba(255,255,255,0.1); }
+    .source-name { color: #cbd5e1; font-weight: 500; text-transform: capitalize; }
+    .source-badge { color: #fff; font-weight: 700; background: rgba(139,60,247,0.3); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; }
+    .section-title { font-size: 1.5rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+    .section-title .icon-grad { background: linear-gradient(135deg, #8B3CF7, #00C4CC); padding: 0.5rem; border-radius: 0.75rem; color: #fff; }
+    .topics-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 3rem; }
+    @media (min-width: 768px) { .topics-grid { grid-template-columns: repeat(3, 1fr); } }
+    .topic-card { padding: 1.25rem; border-radius: 1.5rem; background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent); border: 1px solid rgba(255,255,255,0.1); transition: transform 0.2s; cursor: pointer; }
+    .topic-card:hover { transform: translateY(-4px); }
+    .topic-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; }
+    .topic-title { font-size: 1.125rem; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 0.5rem; }
+    .topic-medal { font-size: 1.5rem; }
+    .topic-count { font-size: 0.75rem; font-weight: 600; color: #00C4CC; background: rgba(0,196,204,0.2); padding: 0.25rem 0.5rem; border-radius: 0.5rem; }
+    .topic-desc { color: #cbd5e1; font-size: 0.875rem; margin-bottom: 0.75rem; font-weight: 500; line-height: 1.6; }
+    .topic-quote { padding: 0.75rem; background: rgba(0,0,0,0.4); border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.05); }
+    .topic-quote p { color: #94a3b8; font-size: 0.75rem; font-style: italic; }
+    .insights-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .insights-grid { grid-template-columns: 1fr 1fr; } }
+    .insights-panel { border-radius: 1.5rem; padding: 2rem; }
+    .insights-panel .panel-title { color: #a5b4fc; margin-bottom: 1.5rem; font-size: 1.5rem; }
+    .insights-panel .panel-title .icon { background: rgba(99,102,241,0.2); }
+    .insight-item { display: flex; gap: 1rem; padding: 1rem; border-radius: 1rem; transition: background 0.2s; }
+    .insight-item:hover { background: rgba(255,255,255,0.05); }
+    .insight-item + .insight-item { margin-top: 0.5rem; }
+    .insight-num { flex-shrink: 0; width: 2rem; height: 2rem; border-radius: 50%; background: rgba(99,102,241,0.2); color: #a5b4fc; display: flex; align-items: center; justify-content: center; font-weight: 700; border: 1px solid rgba(99,102,241,0.3); font-size: 0.875rem; }
+    .insight-text { color: #e2e8f0; font-size: 0.875rem; line-height: 1.7; }
+    .right-col { display: flex; flex-direction: column; gap: 1.5rem; }
+    .competitor-panel { border-radius: 1.5rem; padding: 2rem; flex: 1; }
+    .competitor-panel .panel-title { color: #67e8f9; margin-bottom: 1rem; font-size: 1.25rem; }
+    .competitor-panel .panel-title .icon { background: rgba(6,182,212,0.2); }
+    .risk-panel { border-radius: 1.5rem; padding: 2rem; flex: 1; border-color: rgba(244,63,94,0.2) !important; background: rgba(244,63,94,0.05) !important; }
+    .risk-panel .panel-title { color: #fda4af; margin-bottom: 1rem; font-size: 1.25rem; }
+    .risk-panel .panel-title .icon { background: rgba(244,63,94,0.2); }
+    .prose-sm { color: #cbd5e1; font-size: 0.875rem; line-height: 1.7; }
+    .prose-sm p + p { margin-top: 1rem; }
+    .risk-bullet { color: #f43f5e; margin-right: 0.5rem; }
+    /* ── Weekly Report Section ── */
+    .weekly-section { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
+    .weekly-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+    @media (min-width: 768px) { .weekly-grid { grid-template-columns: 1fr 1fr; } }
+    .weekly-panel { border-radius: 1.5rem; padding: 2rem; }
+    .weekly-panel .panel-title { color: #c4b5fd; margin-bottom: 1.5rem; }
+    .weekly-panel .panel-title .icon { background: rgba(139,92,246,0.2); }
+    .weekly-stat-row { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .weekly-stat-row:last-child { border-bottom: none; }
+    .weekly-stat-label { color: #94a3b8; font-size: 0.875rem; }
+    .weekly-stat-value { font-weight: 700; font-size: 0.875rem; }
+    .weekly-stat-value.up { color: #34d399; }
+    .weekly-stat-value.down { color: #fb7185; }
+    .weekly-stat-value.neutral { color: #fbbf24; }
+    .weekly-topic-list { display: flex; flex-direction: column; gap: 0.5rem; }
+    .weekly-topic-item { display: flex; align-items: center; justify-content: space-between; padding: 0.6rem 0.75rem; border-radius: 0.75rem; background: rgba(255,255,255,0.04); }
+    .weekly-topic-item:hover { background: rgba(255,255,255,0.08); }
+    .weekly-topic-name { color: #cbd5e1; font-size: 0.8rem; font-weight: 500; }
+    .weekly-topic-count { color: #a5b4fc; font-size: 0.75rem; font-weight: 700; background: rgba(99,102,241,0.2); padding: 0.15rem 0.5rem; border-radius: 9999px; }
+  </style>
+</head>
+<body>
+
+  <!-- Aurora Background Effects -->
+  <div class="aurora-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+  </div>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div>
+        <div class="live-badge">
+          <span class="live-dot"></span>
+          Live Monitoring Active
+        </div>
+        <h1 class="brand-title">Brand Sentinel</h1>
+        <p class="subtitle">Canva 品牌輿情分析戰情室 ｜ <span>2026-04-09</span></p>
+      </div>
+      <div class="glass-panel stats-card">
+        <div>
+          <p class="stat-label">今日總聲量</p>
+          <p class="stat-number">11</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div>
+          <p class="stat-label">品牌健康度</p>
+          <p class="stat-health-good">🟢 良好</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Bento Grid Top -->
+    <div class="bento-top">
+      <!-- Sentiment Overview -->
+      <div class="glass-panel sentiment-panel">
+        <h2 class="panel-title"><span class="icon">📊</span> 情緒健康矩陣</h2>
+        <div class="bar-group">
+          <div class="bar-header">
+            <span class="color-positive">正向輿情 (Positive)</span>
+            <span class="color-white">8 筆 / 72.7%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill positive" style="width:72.7%"></div></div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-header">
+            <span class="color-neutral">中立討論 (Neutral)</span>
+            <span class="color-white">3 筆 / 27.3%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill neutral" style="width:27.3%"></div></div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-header">
+            <span class="color-negative">負向警訊 (Negative)</span>
+            <span class="color-white">0 筆 / 0.0%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill negative" style="width:0.0%"></div></div>
+        </div>
+      </div>
+      <!-- Sources -->
+      <div class="glass-panel sources-panel">
+        <h2 class="panel-title"><span class="icon">🌐</span> 數據來源</h2>
+        <div class="sources-list">
+    <div class="source-row">
+      <span class="source-name">dcard</span>
+      <span class="source-badge">1</span>
+    </div>
+  
+    <div class="source-row">
+      <span class="source-name">tavily</span>
+      <span class="source-badge">10</span>
+    </div>
+  </div>
+      </div>
+    </div>
+
+    <!-- Topics Section -->
+    <h2 class="section-title"><span class="icon-grad">🔥</span> 熱議主題風向標</h2>
+    <div class="topics-grid">
+    <div class="topic-card">
+      <div class="topic-header">
+        <h3 class="topic-title">
+          <span class="topic-medal">🥇</span> 產品功能
+        </h3>
+        <span class="topic-count">3 筆</span>
+      </div>
+      <p class="topic-desc">Adobe Express 提供課程協助使用者設計精美簡報。</p>
+      <div class="topic-quote">
+        <p>「This course helps you turn your ideas into visually stunning, memorable presentations using Adobe Ex…」</p>
+      </div>
+    </div>
+  
+    <div class="topic-card">
+      <div class="topic-header">
+        <h3 class="topic-title">
+          <span class="topic-medal">🥈</span> AI 相關
+        </h3>
+        <span class="topic-count">2 筆</span>
+      </div>
+      <p class="topic-desc">Canva AI 程式碼功能用於創建學習遊戲。</p>
+      <div class="topic-quote">
+        <p>「Today I decided to use @canva AI coding to create a matching game on canva basics. This test our stu…」</p>
+      </div>
+    </div>
+  
+    <div class="topic-card">
+      <div class="topic-header">
+        <h3 class="topic-title">
+          <span class="topic-medal">🥉</span> 市場動態
+        </h3>
+        <span class="topic-count">2 筆</span>
+      </div>
+      <p class="topic-desc">創業家認為當前是建立公司的絕佳時機。</p>
+      <div class="topic-quote">
+        <p>「I've never felt anything like it in my 10+ years in startups (and I once helped scale a company from…」</p>
+      </div>
+    </div>
+  </div>
+
+    <!-- AI Insights Bento -->
+    <div class="insights-grid">
+      <!-- Key Insights -->
+      <div class="glass-panel insights-panel">
+        <h2 class="panel-title"><span class="icon">🧠</span> AI 深度洞察</h2>
+        <div>
+    <div class="insight-item">
+      <div class="insight-num">1</div>
+      <p class="insight-text">Canva 在無程式碼創業家社群中保有強勁的正向品牌形象，顯示其在特定利基市場中的高度價值與用戶黏著度。</p>
+    </div>
+  
+    <div class="insight-item">
+      <div class="insight-num">2</div>
+      <p class="insight-text">Canva 積極佈局 AI 功能（如 AI 程式碼用於學習遊戲），展現其在技術創新方面的投入，有助於鞏固其在設計工具領域的競爭力。</p>
+    </div>
+  
+    <div class="insight-item">
+      <div class="insight-num">3</div>
+      <p class="insight-text">儘管有一則關於字體大小的零星討論，Canva 在今日輿情中並無負面評價，整體情緒偏向正面與中性，品牌發展穩健。</p>
+    </div>
+  </div>
+      </div>
+      <!-- Right Column -->
+      <div class="right-col">
+        <div class="glass-panel competitor-panel">
+          <h2 class="panel-title"><span class="icon">🔭</span> 競品動態</h2>
+          <div class="prose-sm"><p>✧ Canva 與 Figma**：Figma 展現了極其強烈的正面輿情，尤其是在即時協作和前瞻性 AI 功能（如 Code Layers）方面，被視為設計工作流程的革新者。這對投資人意味著 Figma 在高端及專業協作市場的創新領導地位，Canva 需持續強化其協作能力及創新敘事，以避免在專業市場被視為次要選擇。</p><p>✧ Canva 與 Adobe Express**：Canva 持續被拿來與 Adobe Express 在功能、定價及 AI 特性上進行比較，確認其為 Adobe 在大眾化設計工具領域的主要競爭對手。兩者均致力於普及設計，但 Adobe Express 更強調課程教學，而 Canva 則突出其對創業家的賦能，顯示市場區隔與品牌定位的差異。</p></div>
+        </div>
+        <div class="glass-panel risk-panel">
+          <h2 class="panel-title"><span class="icon">⚠️</span> 風險預警</h2>
+          <div class="prose-sm"><p><span class="risk-bullet">▪</span>儘管本次輿情分析未顯示直接的負面趨勢，但樣本數量（總計 11 筆）相對較小，可能無法全面反映市場複雜情緒。未來需持續密切監測，以識別潛在的隱藏風險。</p><p><span class="risk-bullet">▪</span>Figma 在 AI 整合和協作設計流程的創新敘事非常強勁，若 Canva 未能有效傳達其在這些關鍵領域的同等或更具差異化的進展，可能會導致其在投資者和專業用戶心中，被視為追隨者而非領導者，影響長期市場份額與估值。</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Weekly Report Section (conditional) -->
+    
+
+  </div>
+</body>
+</html>
+  

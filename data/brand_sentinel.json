@@ -6690,6 +6690,127 @@
       "published_at": null,
       "collected_at": "2026-04-08T02:01:38.586Z",
       "metadata": "{\"keyword\":\"Canva\",\"forum\":null,\"like_count\":0,\"comment_count\":0,\"source\":\"dcard_search\"}"
+    },
+    {
+      "id": 573,
+      "platform": "tavily",
+      "url": "https://www.canva.com/zh_tw/help/switch-pro-subscription/",
+      "title": "變更方案計費頻率- Canva 說明中心",
+      "content": "將Canva Pro或Canva Business的付款方案從月繳改成年繳，或從年繳改成月繳方案。 此選項只有在從電腦或手機裝置的網頁瀏覽器升級時可使用。",
+      "author": "canva.com",
+      "published_at": null,
+      "collected_at": "2026-04-09T02:00:55.580Z",
+      "metadata": "{\"search_query\":\"Canva pro 升級 費用\",\"score\":0.99968004,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 574,
+      "platform": "tavily",
+      "url": "https://paperlike.com/blogs/paperlikers-insights/adobe-express-vs-canva?srsltid=AfmBOoq71R-CvnbNtWVNR8sU0Kr99nqMh6fRCdt-zoFDFWUeXXEkXY0v",
+      "title": "Adobe Express vs. Canva (2025): Features, Pricing, AI, and Best Use Cases | Paperlike",
+      "content": "Both Express and Canva use a freemium model, offering limited features for free and premium tools if you upgrade. Canva is designed to be all you'll need to create beautiful designs, videos, and more in one experience. Because Canva doesn't have a suite of programs, its consolidation of so many high-value creative tools might be why its pricing is slightly higher than Express. To take advantage of its flagship programs, existing Adobe users in Photoshop and Illustrator can use linked assets to bring their files into Express. Similar to Adobe Express, Canva is a template graphic powerhouse. Both Express and Canva offer this for users, and a few other handy features, making it easy for you to find your files when you need them. Because of its connection with other Adobe programs, you'll also see other folders you've created appear in Express as well. Your Designs are any individual files you've created in Canva. #### How do Express and Canva use AI?",
+      "author": "paperlike.com",
+      "published_at": null,
+      "collected_at": "2026-04-09T02:00:55.595Z",
+      "metadata": "{\"search_query\":\"Adobe Express vs Canva 比較\",\"score\":0.8921218,\"brand\":\"Adobe Express\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 575,
+      "platform": "tavily",
+      "url": "https://mobile.twitter.com/iNotionHQ/status/1618397558988046337",
+      "title": "My no-code entrepreneur stack: Store: @gumroad Designer ... - Twitter",
+      "content": "4 likes 521 views. My no-code entrepreneur stack: Store: @gumroad Designer: @canva ... tools. You can also start a one-person business.",
+      "author": "mobile.twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-09T02:00:55.607Z",
+      "metadata": "{\"search_query\":\"Canva business design tool site:twitter.com\",\"score\":0.996852,\"brand\":\"Canva\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 576,
+      "platform": "tavily",
+      "url": "https://twitter.com/andrewdshaw?lang=ar",
+      "title": "Andrew Shaw (@andrewdshaw) / Posts / X - Twitter",
+      "content": "Today I decided to use @canva AI coding to create a matching game on canva basics. This test our students knowledge on the tools they are using to design.",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-09T02:00:55.620Z",
+      "metadata": "{\"search_query\":\"Canva business design tool site:twitter.com\",\"score\":0.96405166,\"brand\":\"Canva\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 577,
+      "platform": "tavily",
+      "url": "https://twitter.com/m2jr/status/1958580562257748352",
+      "title": "Mike Maples, Jr (@m2jr) on X",
+      "content": "The first time people saw multiple cursors live-editing the same canvas in Figma, their mental model for “how design works” reset instantly.",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-09T02:00:55.629Z",
+      "metadata": "{\"search_query\":\"Figma business teams site:twitter.com\",\"score\":0.98215,\"brand\":\"Figma\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 578,
+      "platform": "tavily",
+      "url": "https://twitter.com/haridigresses/status/1937610262560800873",
+      "title": "It's a truly exceptional time to be building a company. I've never felt ...",
+      "content": "I've never felt anything like it in my 10+ years in startups (and I once helped scale a company from $0 to $30M annualized revenue in 2 years).",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-09T02:00:55.636Z",
+      "metadata": "{\"search_query\":\"Figma business teams site:twitter.com\",\"score\":0.97889,\"brand\":\"Figma\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 579,
+      "platform": "tavily",
+      "url": "https://twitter.com/DannPetty",
+      "title": "DANN© (@DannPetty) / Posts / X - Twitter",
+      "content": "Another says Figma is strongly preferred. They also want you to be knowledgable in Adobe. Same company. Different teams.",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-09T02:00:55.644Z",
+      "metadata": "{\"search_query\":\"Figma business teams site:twitter.com\",\"score\":0.97541,\"brand\":\"Figma\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 580,
+      "platform": "tavily",
+      "url": "https://www.twitter.com/_radnolan/",
+      "title": "Nolan Perkins (@_radnolan) / Posts / X - Twitter",
+      "content": "If you're a ui/ux designer using Figma, code layers needs to be on your radar. Why? It's a window into what our design workflows will look like in the age of AI",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-09T02:00:55.652Z",
+      "metadata": "{\"search_query\":\"Figma business teams site:twitter.com\",\"score\":0.97161,\"brand\":\"Figma\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 581,
+      "platform": "tavily",
+      "url": "https://www.linkedin.com/learning/presentation-design-with-adobe-express-by-adobe",
+      "title": "Presentation Design with Adobe Express by Adobe - LinkedIn",
+      "content": "This course helps you turn your ideas into visually stunning, memorable presentations using Adobe Express. Learn how to shape your story, design",
+      "author": "linkedin.com",
+      "published_at": null,
+      "collected_at": "2026-04-09T02:00:55.659Z",
+      "metadata": "{\"search_query\":\"Adobe Express business site:linkedin.com\",\"score\":0.99964297,\"brand\":\"Adobe Express\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 582,
+      "platform": "tavily",
+      "url": "https://www.linkedin.com/learning/adobe-express-cert-prep/creating-webpages-with-adobe-express",
+      "title": "Creating web pages with Adobe Express - LinkedIn",
+      "content": "Join Jonathan Gordon and Pearson for an in-depth discussion in this video, Creating web pages with Adobe Express, part of Adobe Express Cert",
+      "author": "linkedin.com",
+      "published_at": null,
+      "collected_at": "2026-04-09T02:00:55.666Z",
+      "metadata": "{\"search_query\":\"Adobe Express business site:linkedin.com\",\"score\":0.9995197,\"brand\":\"Adobe Express\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 583,
+      "platform": "dcard",
+      "url": "https://www.dcard.tw/f/freshman/p/261261878",
+      "title": "備審字體大小",
+      "content": "W升大學考試板waynee11 小時備審字體大小但我是用Canva用21 ... 聽說Canva的字體跟word的字體大小不通用12",
+      "author": "匿名",
+      "published_at": null,
+      "collected_at": "2026-04-09T02:01:37.706Z",
+      "metadata": "{\"keyword\":\"Canva\",\"forum\":null,\"like_count\":0,\"comment_count\":0,\"source\":\"dcard_search\"}"
     }
   ],
   "analysis_results": [
@@ -11840,6 +11961,105 @@
       "sentiment": "正面",
       "summary": "分享以低價訂閱Canva Pro年費方案的方法。",
       "analyzed_at": "2026-04-08T02:03:33.006Z"
+    },
+    {
+      "id": 573,
+      "raw_data_id": 583,
+      "brand": "Canva",
+      "topic": "產品功能",
+      "sentiment": "中性",
+      "summary": "使用者討論 Canva 字體大小與 Word 不通用的問題。",
+      "analyzed_at": "2026-04-09T02:04:12.712Z"
+    },
+    {
+      "id": 574,
+      "raw_data_id": 582,
+      "brand": "Adobe Express",
+      "topic": "產品功能",
+      "sentiment": "正面",
+      "summary": "Adobe Express 提供教學課程指導如何建立網頁。",
+      "analyzed_at": "2026-04-09T02:04:12.717Z"
+    },
+    {
+      "id": 575,
+      "raw_data_id": 581,
+      "brand": "Adobe Express",
+      "topic": "產品功能",
+      "sentiment": "正面",
+      "summary": "Adobe Express 提供課程協助使用者設計精美簡報。",
+      "analyzed_at": "2026-04-09T02:04:12.720Z"
+    },
+    {
+      "id": 576,
+      "raw_data_id": 580,
+      "brand": "Figma",
+      "topic": "AI 相關",
+      "sentiment": "正面",
+      "summary": "Figma 的 Code Layers 功能預示 AI 時代設計工作流。",
+      "analyzed_at": "2026-04-09T02:04:12.724Z"
+    },
+    {
+      "id": 577,
+      "raw_data_id": 579,
+      "brand": "Figma",
+      "topic": "市場動態",
+      "sentiment": "正面",
+      "summary": "某公司內部團隊強烈偏好使用 Figma。",
+      "analyzed_at": "2026-04-09T02:04:12.727Z"
+    },
+    {
+      "id": 578,
+      "raw_data_id": 578,
+      "brand": "Figma",
+      "topic": "市場動態",
+      "sentiment": "正面",
+      "summary": "創業家認為當前是建立公司的絕佳時機。",
+      "analyzed_at": "2026-04-09T02:04:12.731Z"
+    },
+    {
+      "id": 579,
+      "raw_data_id": 577,
+      "brand": "Figma",
+      "topic": "使用者體驗",
+      "sentiment": "正面",
+      "summary": "Figma 多人即時編輯功能革新了設計工作模式。",
+      "analyzed_at": "2026-04-09T02:04:12.735Z"
+    },
+    {
+      "id": 580,
+      "raw_data_id": 576,
+      "brand": "Canva",
+      "topic": "AI 相關",
+      "sentiment": "正面",
+      "summary": "Canva AI 程式碼功能用於創建學習遊戲。",
+      "analyzed_at": "2026-04-09T02:04:12.739Z"
+    },
+    {
+      "id": 581,
+      "raw_data_id": 575,
+      "brand": "Canva",
+      "topic": "品牌形象",
+      "sentiment": "正面",
+      "summary": "Canva 是無程式碼創業家工具堆疊的重要設計工具。",
+      "analyzed_at": "2026-04-09T02:04:12.742Z"
+    },
+    {
+      "id": 582,
+      "raw_data_id": 574,
+      "brand": "Canva",
+      "topic": "競品比較",
+      "sentiment": "中性",
+      "summary": "比較 Adobe Express 與 Canva 的功能、定價與 AI 特性。",
+      "analyzed_at": "2026-04-09T02:04:12.746Z"
+    },
+    {
+      "id": 583,
+      "raw_data_id": 573,
+      "brand": "Canva",
+      "topic": "定價與方案",
+      "sentiment": "中性",
+      "summary": "說明Canva Pro/Business用戶如何變更付款頻率。",
+      "analyzed_at": "2026-04-09T02:04:19.614Z"
     }
   ],
   "reports": [
@@ -11926,6 +12146,13 @@
       "report_type": "daily",
       "content": "# 📊 Canva Brand Sentinel 每日戰報\n\n> **情報更新時間**：2026-04-08\n> **追蹤涵蓋範圍**：Canva, Figma, Adobe\n\n## 🎯 核心體驗指標 (KPI)\n\n*   **總採樣數據量**：`20 筆`\n*   **總體品牌防線**：🟢 **優良**\n*   **資料來源佔比**：`Dcard` (6), `Tavily` (14)\n\n## 💬 輿情與市場動態 (Sentiment & Market)\n\n### 口碑情緒雷達\n\n> 🟢 **正向 (60.0%)** ｜ 共 12 筆\n> `████████████░░░░░░░░`\n> \n> 🟡 **中立 (30.0%)** ｜ 共 6 筆\n> `██████░░░░░░░░░░░░░░`\n> \n> 🔴 **負向 (10.0%)** ｜ 共 2 筆\n> `██░░░░░░░░░░░░░░░░░░`\n\n### 品牌聲量市佔分析\n\n*   **Canva**（12筆）：正向情感佔 **50%**\n*   **Figma**（5筆）：正向情感佔 **80%**\n*   **Adobe Express**（3筆）：正向情感佔 **67%**\n\n## 🔥 高熱度風向 (Trending Topics)\n\n> **01. 產品功能 (共 5 筆)**\n> ▍事件摘要：Adobe Express提供AI功能，是適合初學者的免費照片編輯器。\n> ▍代表原音：_人人皆能編輯照片Adobe Express 為適合初學者的頂尖免費照片編輯器，提供直覺式的工具，協助增強您的影像。使用AI 新增或移除物件、套用Photoshop 濾鏡，並透過我們的AI 相片…_\n>\n> **02. 市場動態 (共 5 筆)**\n> ▍事件摘要：Canva被列為建構月入五千美元事業的設計工具。\n> ▍代表原音：_Top 9 tools for building $5000/mo business: 1 Publer - Social Media 2 Canva - Design 3 Airtable - Data Management 4 Webf…_\n>\n> **03. 教育與企業 (共 4 筆)**\n> ▍事件摘要：評估Canva企業版可行性，並介紹Placid輔助工具。\n> ▍代表原音：_With Placid, you can: Build professional templates just like on Canva Use their powerful API to generate images, videos,…_\n\n## 🧠 決策洞察艙 (AI Deep Insights)\n\n### 💡 商業與產品洞察\n**01.** Canva在企業版應用與專業教育訓練方面展現強勁的正面聲量，顯示其正成功地從個人用戶擴展至高價值企業與專業市場，此趨勢有利於提升長期投資效益。\n\n**02.** 低價訂閱模式（如Canva Pro）仍是吸引用戶的關鍵因素，凸顯Canva在成本效益方面的市場競爭力。然而，股東需關注如何在市場擴展的同時，精準管理定價策略以優化平均用戶收益（ARPU）。\n\n**03.** 儘管市場擴展積極，但用戶對Canva在處理關鍵文件時可能遇到的穩定性問題（檔案過大、版面跑掉）存在擔憂，這對Canva深化企業級應用至關重要，需持續關注產品可靠性。\n\n### 🔭 競品戰略分析\n**01.** Figma在輿情中展現出極高的投資吸引力與市場價值認可，特別是在企業級應用及全球市場的強勁表現，且未見負面聲量。這顯示其在專業設計領域的領導地位與投資潛力，對Canva在高端市場的擴張形成間接壓力。\n\n**02.** Adobe Express正透過免費增值模式、AI功能及高效協作能力，積極搶攻初學者及品牌內容製作市場。其與Canva在功能和定價上的直接比較，表明Adobe已將Canva視為主要競爭對手，Canva需警惕其市場份額可能被蠶食的風險。\n\n### ⚠️ 發展風險預警\n**01.** Canva在拓展企業和專業市場的同時，其產品在處理關鍵任務時的穩定性和用戶體驗問題（如檔案過大、版面跑版）需高度關注。若這些問題未能有效解決，可能阻礙Canva向更專業、高價值的應用場景滲透，並損害其品牌信任度。\n\n**02.** 競爭環境日益激烈，Figma在高端專業市場的卓越表現和Adobe Express在入門級市場的積極攻勢，共同對Canva的市場份額和成長空間形成壓力。Canva需持續投資於產品創新和差異化，以應對來自不同維度的競爭挑戰。\n\n---\n*Brand Sentinel 自動化演算法 ｜ 結構化純淨終端模板 UI/UX Pro Max ｜ 產生時間：2026/4/8 上午10:03:50*",
       "created_at": "2026-04-08T02:03:50.561Z"
+    },
+    {
+      "id": 13,
+      "report_date": "2026-04-09",
+      "report_type": "daily",
+      "content": "# 📊 Canva Brand Sentinel 每日戰報\n\n> **情報更新時間**：2026-04-09\n> **追蹤涵蓋範圍**：Canva, Figma, Adobe\n\n## 🎯 核心體驗指標 (KPI)\n\n*   **總採樣數據量**：`11 筆`\n*   **總體品牌防線**：🟢 **優良**\n*   **資料來源佔比**：`Dcard` (1), `Tavily` (10)\n\n## 💬 輿情與市場動態 (Sentiment & Market)\n\n### 口碑情緒雷達\n\n> 🟢 **正向 (72.7%)** ｜ 共 8 筆\n> `███████████████░░░░░`\n> \n> 🟡 **中立 (27.3%)** ｜ 共 3 筆\n> `█████░░░░░░░░░░░░░░░`\n> \n> 🔴 **負向 (0%)** ｜ 共 0 筆\n> `░░░░░░░░░░░░░░░░░░░░`\n\n### 品牌聲量市佔分析\n\n*   **Canva**（5筆）：正向情感佔 **40%**\n*   **Figma**（4筆）：正向情感佔 **100%**\n*   **Adobe Express**（2筆）：正向情感佔 **100%**\n\n## 🔥 高熱度風向 (Trending Topics)\n\n> **01. 產品功能 (共 3 筆)**\n> ▍事件摘要：Adobe Express 提供課程協助使用者設計精美簡報。\n> ▍代表原音：_This course helps you turn your ideas into visually stunning, memorable presentations using Adobe Express. Learn how to …_\n>\n> **02. AI 相關 (共 2 筆)**\n> ▍事件摘要：Canva AI 程式碼功能用於創建學習遊戲。\n> ▍代表原音：_Today I decided to use @canva AI coding to create a matching game on canva basics. This test our students knowledge on t…_\n>\n> **03. 市場動態 (共 2 筆)**\n> ▍事件摘要：創業家認為當前是建立公司的絕佳時機。\n> ▍代表原音：_I've never felt anything like it in my 10+ years in startups (and I once helped scale a company from $0 to $30M annualiz…_\n\n## 🧠 決策洞察艙 (AI Deep Insights)\n\n### 💡 商業與產品洞察\n**01.** AI創新展現多元應用潛力：Canva在AI功能上的投入已獲得正面迴響，例如其AI程式碼功能應用於創建學習遊戲，顯示Canva不僅持續創新，更在拓展產品於教育、娛樂等多元領域的應用潛力，有助於開拓新的成長市場。\n\n**02.** 鞏固非專業設計市場領導地位：Canva被「無程式碼」創業家視為關鍵設計工具，這明確顯示其在非專業設計師社群中的強大滲透力與品牌價值。透過簡化設計流程，Canva有效擴大了用戶基礎，並在普惠設計市場中保持領先地位。\n\n**03.** 品牌聲譽穩健，未見負面輿情：截至目前，Canva的輿情皆為正面或中性，未出現任何負面討論。這反映出穩定的用戶滿意度與正面的品牌形象，為投資人提供穩固的品牌信任度基礎。\n\n### 🔭 競品戰略分析\n**01.** 專業協作與AI未來設計流：Figma的輿情強烈聚焦在其革新的「多人即時編輯」功能以及「Code Layers」對AI時代設計工作流的引領作用，這使其在專業設計師和團隊協作市場中佔據絕對優勢，並被視為引領未來設計趨勢的先行者。這對Canva的啟示是，即便目標市場不同，AI技術和專業工作流的整合趨勢仍需密切關注。\n\n**02.** 市場定位與競爭策略：Adobe Express透過提供豐富的教學課程來吸引新用戶學習設計簡報與網頁，與Canva在易用性和普及性方面形成直接競爭。同時，Canva本身在輿情中被提及與Adobe Express的功能、定價與AI特性進行比較，這突顯了兩者在廣大非專業或半專業用戶市場的競爭激烈，Canva需持續在產品創新和定價策略上維持競爭力。\n\n### ⚠️ 發展風險預警\n**01.** 使用者體驗細節優化：儘管Canva整體輿情良好，仍存在如字體大小與Word不通用等使用者體驗細節上的中性討論。這些非核心但影響體驗的問題，若未能持續優化，長期可能影響用戶滿意度。目前來看，這屬於常規產品改進範疇，尚未構成重大投資風險。\n\n---\n*Brand Sentinel 自動化演算法 ｜ 結構化純淨終端模板 UI/UX Pro Max ｜ 產生時間：2026/4/9 上午10:04:37*",
+      "created_at": "2026-04-09T02:04:37.386Z"
     }
   ],
   "failed_analysis": []
