@@ -7163,6 +7163,215 @@
       "published_at": "2026-04-13T00:25:40.000Z",
       "collected_at": "2026-04-13T01:20:59.762Z",
       "metadata": "{\"keyword\":\"Canva\",\"source\":\"threads_search\"}"
+    },
+    {
+      "id": 616,
+      "platform": "tavily",
+      "url": "https://www.youtube.com/watch?v=p6wfq4KCpRQ",
+      "title": "Canva 教育版解鎖AI 新功能！別再用Magic Grab 了 ... - YouTube",
+      "content": "【Canva AI 教學】Canva 最新的黑科技「Magic Layers (魔法圖層)」，它能把一張扁平的圖片，直接拆解成多個可編輯的圖層！NoteBookLM 多頁簡報PDF 與繁體",
+      "author": "youtube.com",
+      "published_at": null,
+      "collected_at": "2026-04-14T02:01:41.850Z",
+      "metadata": "{\"search_query\":\"Canva 新功能 介紹\",\"score\":0.9998776,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 617,
+      "platform": "tavily",
+      "url": "https://itaiwan.moe.gov.tw/sup/story_info.php?team=4&id=3143",
+      "title": "[溫馨故事]數位設計初體驗：學員紀貞的Canva與AI技術學習心得",
+      "content": "課程中老師還介紹AI小幫手，原來平時一直使用的Line應用中也有AI功能欵，這個小幫手可以進行圖像處理和創作，讓工作變得更加便捷和高效。這是我第一次接觸",
+      "author": "itaiwan.moe.gov.tw",
+      "published_at": null,
+      "collected_at": "2026-04-14T02:01:41.865Z",
+      "metadata": "{\"search_query\":\"Canva AI 使用 心得\",\"score\":0.8127637,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 618,
+      "platform": "tavily",
+      "url": "https://paperlike.com/blogs/paperlikers-insights/adobe-express-vs-canva?srsltid=AfmBOoqd7gNmOkbyhLh6nuKiVvfJw6VsIgi3Y5KvxMZDIcYQ8xH5SUKF",
+      "title": "Adobe Express vs. Canva (2025): Features, Pricing, AI, and Best Use Cases | Paperlike",
+      "content": "Both Express and Canva use a freemium model, offering limited features for free and premium tools if you upgrade. Canva is designed to be all you'll need to create beautiful designs, videos, and more in one experience. Because Canva doesn't have a suite of programs, its consolidation of so many high-value creative tools might be why its pricing is slightly higher than Express. To take advantage of its flagship programs, existing Adobe users in Photoshop and Illustrator can use linked assets to bring their files into Express. Similar to Adobe Express, Canva is a template graphic powerhouse. Both Express and Canva offer this for users, and a few other handy features, making it easy for you to find your files when you need them. Because of its connection with other Adobe programs, you'll also see other folders you've created appear in Express as well. Your Designs are any individual files you've created in Canva. #### How do Express and Canva use AI?",
+      "author": "paperlike.com",
+      "published_at": null,
+      "collected_at": "2026-04-14T02:01:41.874Z",
+      "metadata": "{\"search_query\":\"Adobe Express vs Canva 比較\",\"score\":0.8921218,\"brand\":\"Adobe Express\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 619,
+      "platform": "tavily",
+      "url": "https://www.softwareadvice.com/compare/241577-canva/vs/354910-adobe-express/",
+      "title": "Canva vs Adobe Express - 2026 Comparison - Software Advice",
+      "content": "Canva vs Adobe Express - See how these products stack up against each other with real user reviews, product feature comparisons and screenshots.",
+      "author": "softwareadvice.com",
+      "published_at": null,
+      "collected_at": "2026-04-14T02:01:41.881Z",
+      "metadata": "{\"search_query\":\"Adobe Express vs Canva 比較\",\"score\":0.7763013,\"brand\":\"Adobe Express\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 620,
+      "platform": "tavily",
+      "url": "https://twitter.com/louisagreen123?lang=bg",
+      "title": "Louisa Green (@LouisaGreen123) / Posts / X - Twitter",
+      "content": "Canva designs new AI tools aimed at blue-chip giants — and small charities ... The design software giant made its first Europe acquisition in 2019, followed by",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-14T02:01:41.889Z",
+      "metadata": "{\"search_query\":\"Canva business design tool site:twitter.com\",\"score\":0.54956865,\"brand\":\"Canva\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 621,
+      "platform": "tavily",
+      "url": "https://twitter.com/sideshowjohn?lang=bn",
+      "title": "Mr. Calian (@SideShowJohn) / Posts / X",
+      "content": "Lean Canvas is a 1-page business modeling tool by Ash Maurya designed to validate startup ideas in 30 days versus 6+ months of expensive",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-14T02:01:41.896Z",
+      "metadata": "{\"search_query\":\"Canva business design tool site:twitter.com\",\"score\":0.47592255,\"brand\":\"Canva\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 622,
+      "platform": "tavily",
+      "url": "https://twitter.com/theduncanclark?lang=en",
+      "title": "Duncan Clark (@theduncanclark) / Posts / X - Twitter",
+      "content": "business. Feb 2. Canva, one of the world's most valuable private software companies, has acquired London-based data visualization platform trib.al/CTgczce · 2.",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-14T02:01:41.901Z",
+      "metadata": "{\"search_query\":\"Canva business design tool site:twitter.com\",\"score\":0.4295017,\"brand\":\"Canva\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 623,
+      "platform": "tavily",
+      "url": "https://www.linkedin.com/posts/steve-fred-%F0%9F%87%B3%F0%9F%87%AC-29bb26157_startuptips-uidesign-figmaforstartups-activity-7331343434470899716-RBGQ",
+      "title": "Canva vs Figma: Which for Your Product Design? - LinkedIn",
+      "content": "Canva vs Figma — Which Should You Use for Your Product Design? As someone who teaches design thinking, builds full-stack solutions,",
+      "author": "linkedin.com",
+      "published_at": null,
+      "collected_at": "2026-04-14T02:01:41.906Z",
+      "metadata": "{\"search_query\":\"Canva vs Figma site:linkedin.com\",\"score\":0.99997294,\"brand\":\"Figma\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 624,
+      "platform": "tavily",
+      "url": "https://www.linkedin.com/posts/tpitre_figma-console-mcp-part-4-unlocking-full-activity-7393977050698608640-Awhe",
+      "title": "Figma Console MCP: Accessing Variables Without Enterprise Plan | TJ Pitre posted on the topic | LinkedIn",
+      "content": "🔑 Key takeaways: • Design system as building blocks: Variables, Components, and Styles • Beyond design in Figma: Responsive layouts, naming conventions, and engineering considerations, including data, state, and back-end schemas • Using Dev Mode, MCP (Make-Connect-Prototype) workflows, Code Connect for efficient hand-offs and production-ready components • In-Action Demo: showcasing a simple design system in Figma and its React code representation • Leveraging plugins and code previews: Explore tools like Jira, GitHub-linked snippets, and VS Code Copilot that connect Figma designs to production-ready code, with real-world examples of reusable components • Best practices for teams: bridging design and development, supplying machine-readable patterns, and exploring Figma developer resources Design x Dev Sync’d: The Maker’s Edition 👉 RSVP: Scan QR or visit friends.figma.com/pune 📍 HotCup Design - A Coditas Studio, Viman Nagar 🗓️ 25th October, Saturday 🕙 10:00 a.m.",
+      "author": "linkedin.com",
+      "published_at": null,
+      "collected_at": "2026-04-14T02:01:41.911Z",
+      "metadata": "{\"search_query\":\"Figma enterprise design site:linkedin.com\",\"score\":0.9995122,\"brand\":\"Figma\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 625,
+      "platform": "tavily",
+      "url": "https://www.linkedin.com/posts/ianmonteiro_design-prompt-deploy-with-servicenows-activity-7393734466608775168-9JKv",
+      "title": "ServiceNow and Figma: Turn designs into enterprise apps in minutes",
+      "content": "Design. Prompt. Deploy. With ServiceNow's new Figma integration, developers can turn designs into fully functional enterprise apps in",
+      "author": "linkedin.com",
+      "published_at": null,
+      "collected_at": "2026-04-14T02:01:41.915Z",
+      "metadata": "{\"search_query\":\"Figma enterprise design site:linkedin.com\",\"score\":0.9988028,\"brand\":\"Figma\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 626,
+      "platform": "tavily",
+      "url": "https://twitter.com/alexsberman?lang=cs",
+      "title": "Alex Berman (@alexsberman) / Posts / X",
+      "content": "Figma turned the design canvas into a write API for AI agents this morning. Free! (During beta.) Will be a paid, usage-based API after.",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-14T02:01:41.920Z",
+      "metadata": "{\"search_query\":\"Figma business teams site:twitter.com\",\"score\":0.9845754,\"brand\":\"Figma\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 627,
+      "platform": "tavily",
+      "url": "https://twitter.com/creativecloud/status/278566771752062976",
+      "title": "It's here - #CreativeCloud for Teams! Each team member receives ...",
+      "content": "It's here - #CreativeCloud for Teams! Each team member receives 100GB of storage and direct access to #Adobe support. #CreateNow.",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-14T02:01:41.925Z",
+      "metadata": "{\"search_query\":\"Adobe Creative Cloud teams site:twitter.com\",\"score\":0.7623715,\"brand\":\"Adobe Express\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 628,
+      "platform": "dcard",
+      "url": null,
+      "title": "這一局Canva跟PPT應該算打成平手吧?",
+      "content": "個人牆效率職人25/6/27這一局Canva跟PPT應該算打成平手吧?他用Canva + GPT做出一個超可愛的小遊戲： ... 「既然Canva可以，PPT說不定也行?」109122",
+      "author": "匿名",
+      "published_at": null,
+      "collected_at": "2026-04-14T02:02:23.953Z",
+      "metadata": "{\"keyword\":\"Canva\",\"forum\":null,\"like_count\":0,\"comment_count\":0,\"source\":\"dcard_search\"}"
+    },
+    {
+      "id": 629,
+      "platform": "dcard",
+      "url": "https://www.dcard.tw/f/job/p/242429463",
+      "title": "#閒聊 職場該用PPT還是Canva",
+      "content": "工作板匿名23/6/2#閒聊 職場該用PPT還是Canva製作報告了，反而改用Canva。 ... 但在職場上用Canva是可行的嗎620202",
+      "author": "匿名",
+      "published_at": null,
+      "collected_at": "2026-04-14T02:02:23.961Z",
+      "metadata": "{\"keyword\":\"Canva\",\"forum\":null,\"like_count\":0,\"comment_count\":0,\"source\":\"dcard_search\"}"
+    },
+    {
+      "id": 630,
+      "platform": "dcard",
+      "url": null,
+      "title": "#iPad 用Canva做goodnotes模板",
+      "content": "個人牆碳水化合物👾21/9/24#iPad 用Canva做goodnotes模板今天要分享的是用Canva做出可 ... Canva是一個線上的製圖設計軟體3591890583",
+      "author": "匿名",
+      "published_at": null,
+      "collected_at": "2026-04-14T02:02:23.970Z",
+      "metadata": "{\"keyword\":\"Canva\",\"forum\":null,\"like_count\":0,\"comment_count\":0,\"source\":\"dcard_search\"}"
+    },
+    {
+      "id": 631,
+      "platform": "dcard",
+      "url": "https://www.dcard.tw/f/nccu/p/260080315",
+      "title": "Canva 突然用不了",
+      "content": "政治大學板國立政治大學25/10/20Canva 突然用不了用canva做期中簡報做到一半顯示 ... 難道是大家都在做簡報把canva 用壞了嗎🙃151323",
+      "author": "匿名",
+      "published_at": null,
+      "collected_at": "2026-04-14T02:02:23.978Z",
+      "metadata": "{\"keyword\":\"Canva\",\"forum\":null,\"like_count\":0,\"comment_count\":0,\"source\":\"dcard_search\"}"
+    },
+    {
+      "id": 632,
+      "platform": "threads",
+      "url": "https://www.threads.net/@rui.h_0731/post/DXDT85UD7Fg",
+      "title": null,
+      "content": "rui.h_0731學測1天更多個申仔最崩潰的事：Canva壞了  翻譯已靜音讚567留言16轉發21分享118",
+      "author": "rui.h_0731",
+      "published_at": "2026-04-13T00:29:44.000Z",
+      "collected_at": "2026-04-14T02:03:27.324Z",
+      "metadata": "{\"keyword\":\"Canva\",\"source\":\"threads_search\"}"
+    },
+    {
+      "id": 633,
+      "platform": "threads",
+      "url": "https://www.threads.net/@blesseddaynotes/post/DLZ5lOqzxAF",
+      "title": null,
+      "content": "blesseddaynotes已驗證2025-6-27更多分享我收藏的7款Canva人物素材包！做簡報、圖示、小冊子超好用～  翻譯讚6,384留言17轉發1,344分享3,112",
+      "author": "blesseddaynotes",
+      "published_at": "2025-06-27T12:44:12.000Z",
+      "collected_at": "2026-04-14T02:03:27.331Z",
+      "metadata": "{\"keyword\":\"Canva\",\"source\":\"threads_search\"}"
+    },
+    {
+      "id": 634,
+      "platform": "threads",
+      "url": "https://www.threads.net/@ku1ixz/post/DH3pZ7gB3qO",
+      "title": null,
+      "content": "ku1ixz備審地獄2025-3-31已編輯更多這幾天 整天都泡在Canva裡面東忙西忙\n終於搞出了一點像樣的東西 腦快被榨乾了  翻譯讚7,929留言98轉發822分享4,582",
+      "author": "ku1ixz",
+      "published_at": "2025-03-31T15:54:29.000Z",
+      "collected_at": "2026-04-14T02:03:27.337Z",
+      "metadata": "{\"keyword\":\"Canva\",\"source\":\"threads_search\"}"
     }
   ],
   "analysis_results": [
@@ -12637,6 +12846,132 @@
       "sentiment": "正面",
       "summary": "強調Canva付費版能提升設計效率與可能性。",
       "analyzed_at": "2026-04-13T01:21:56.568Z"
+    },
+    {
+      "id": 609,
+      "raw_data_id": 634,
+      "brand": "Canva",
+      "topic": "產品功能",
+      "sentiment": "正面",
+      "summary": "使用Canva製作備審資料，成果令人滿意。",
+      "analyzed_at": "2026-04-14T02:03:56.045Z"
+    },
+    {
+      "id": 610,
+      "raw_data_id": 633,
+      "brand": "Canva",
+      "topic": "產品功能",
+      "sentiment": "正面",
+      "summary": "分享Canva素材包，稱其對設計非常有幫助。",
+      "analyzed_at": "2026-04-14T02:03:56.056Z"
+    },
+    {
+      "id": 611,
+      "raw_data_id": 632,
+      "brand": "Canva",
+      "topic": "使用者體驗",
+      "sentiment": "負面",
+      "summary": "Canva當機，導致使用者感到崩潰。",
+      "analyzed_at": "2026-04-14T02:03:56.061Z"
+    },
+    {
+      "id": 612,
+      "raw_data_id": 631,
+      "brand": "Canva",
+      "topic": "使用者體驗",
+      "sentiment": "負面",
+      "summary": "Canva無法使用，影響期中簡報製作。",
+      "analyzed_at": "2026-04-14T02:03:56.065Z"
+    },
+    {
+      "id": 613,
+      "raw_data_id": 630,
+      "brand": "Canva",
+      "topic": "產品功能",
+      "sentiment": "正面",
+      "summary": "分享如何利用Canva製作Goodnotes模板。",
+      "analyzed_at": "2026-04-14T02:03:56.069Z"
+    },
+    {
+      "id": 614,
+      "raw_data_id": 629,
+      "brand": "Canva",
+      "topic": "競品比較",
+      "sentiment": "中性",
+      "summary": "討論職場上使用Canva或PPT的適用性。",
+      "analyzed_at": "2026-04-14T02:03:56.072Z"
+    },
+    {
+      "id": 615,
+      "raw_data_id": 628,
+      "brand": "Canva",
+      "topic": "競品比較",
+      "sentiment": "中性",
+      "summary": "比較Canva與PPT在創作功能上的表現。",
+      "analyzed_at": "2026-04-14T02:03:56.076Z"
+    },
+    {
+      "id": 616,
+      "raw_data_id": 627,
+      "brand": "Adobe Express",
+      "topic": "定價與方案",
+      "sentiment": "正面",
+      "summary": "介紹Adobe Creative Cloud團隊方案。",
+      "analyzed_at": "2026-04-14T02:03:56.080Z"
+    },
+    {
+      "id": 617,
+      "raw_data_id": 626,
+      "brand": "Figma",
+      "topic": "AI 相關",
+      "sentiment": "正面",
+      "summary": "Figma推出AI代理API，測試期間免費。",
+      "analyzed_at": "2026-04-14T02:03:56.084Z"
+    },
+    {
+      "id": 618,
+      "raw_data_id": 625,
+      "brand": "Figma",
+      "topic": "產品功能",
+      "sentiment": "正面",
+      "summary": "ServiceNow整合Figma，加速應用開發。",
+      "analyzed_at": "2026-04-14T02:03:56.088Z"
+    },
+    {
+      "id": 619,
+      "raw_data_id": 624,
+      "brand": "Figma",
+      "topic": "產品功能",
+      "sentiment": "中性",
+      "summary": "介紹 Figma 在設計系統、開發模式與程式串接的功能。",
+      "analyzed_at": "2026-04-14T02:04:39.704Z"
+    },
+    {
+      "id": 620,
+      "raw_data_id": 623,
+      "brand": "Figma",
+      "topic": "競品比較",
+      "sentiment": "中性",
+      "summary": "比較 Canva 與 Figma 兩款工具在產品設計的應用。",
+      "analyzed_at": "2026-04-14T02:04:39.714Z"
+    },
+    {
+      "id": 621,
+      "raw_data_id": 601,
+      "brand": "Canva",
+      "topic": "使用者體驗",
+      "sentiment": "負面",
+      "summary": "Canva無法開啟，導致使用者抱怨與不便。",
+      "analyzed_at": "2026-04-14T02:05:03.532Z"
+    },
+    {
+      "id": 622,
+      "raw_data_id": 600,
+      "brand": "Adobe Express",
+      "topic": "市場動態",
+      "sentiment": "正面",
+      "summary": "Adobe Express發現Pinterest對商家參與度高。",
+      "analyzed_at": "2026-04-14T02:05:03.546Z"
     }
   ],
   "reports": [
@@ -12737,50 +13072,94 @@
       "report_type": "daily",
       "content": "# 📊 Canva Brand Sentinel 每日戰報\n\n> **情報更新時間**：2026-04-13\n> **追蹤涵蓋範圍**：Canva, Figma, Adobe\n\n## 🎯 核心體驗指標 (KPI)\n\n*   **總採樣數據量**：`25 筆`\n*   **總體品牌防線**：🔴 **警戒**\n*   **資料來源佔比**：`Threads` (10), `Dcard` (3), `Tavily` (12)\n\n## 💬 輿情與市場動態 (Sentiment & Market)\n\n### 口碑情緒雷達\n\n> 🟢 **正向 (20.0%)** ｜ 共 5 筆\n> `████░░░░░░░░░░░░░░░░`\n> \n> 🟡 **中立 (36.0%)** ｜ 共 9 筆\n> `███████░░░░░░░░░░░░░`\n> \n> 🔴 **負向 (44.0%)** ｜ 共 11 筆\n> `█████████░░░░░░░░░░░`\n\n### 品牌聲量市佔分析\n\n*   **Canva**（21筆）：正向情感佔 **19%**\n*   **Adobe Express**（3筆）：正向情感佔 **33%**\n*   **Figma**（1筆）：正向情感佔 **0%**\n\n## 🔥 高熱度風向 (Trending Topics)\n\n> **01. 產品功能 (共 11 筆)**\n> ▍事件摘要：分享使用Canva製作備審資料的字體選擇。\n> ▍代表原音：_升大學考試板新生季小天使2 天備審資料攻略➋ 字體選擇、PDF 格式、真實範例都在這裡」、「Canva 字體用哪個比較好看 ... ✏️ 學姐分享： 「canva9617623…_\n>\n> **02. 競品比較 (共 4 筆)**\n> ▍事件摘要：比較Canva簡潔性與Figma協作設計能力。\n> ▍代表原音：_While Canva is known for its simplicity and quick design solutions, Figma is a powerhouse for collaborative, high-fideli…_\n>\n> **03. 教育與企業 (共 3 筆)**\n> ▍事件摘要：列舉Canva等設計工具及其學習平台。\n> ▍代表原音：_Design and editing software: Tools like Adobe Photoshop, Canva, or PicMonkey. How to learn these tools, on Udemy, YouTub…_\n\n## 🧠 決策洞察艙 (AI Deep Insights)\n\n### 💡 商業與產品洞察\n**01.** Canva品牌聲量與市場主導地位顯著，但需警惕負面聲量攀升。Canva在今日輿情資料中佔據絕對多數（21/25），顯示其廣泛的市場觸及率和用戶基礎。然而，高達半數的負面評價（21筆中11筆）不容忽視，可能指向用戶體驗或產品策略上的潛在問題。\n\n**02.** AI功能為Canva帶來正面關注，但需持續創新以保持競爭力。Canva的「魔法圖層」等AI新功能獲得正面評價，顯示其在AI整合上的努力受到用戶肯定，有助於提升設計效率與可能性。這是品牌發展的積極信號，但競品也在AI領域積極佈局，Canva需保持領先。\n\n**03.** 多元化產品方案吸引不同用戶群，但定價與價值感知需持續溝通。資料顯示Canva提供免費、專業、商業及教育版等多樣化方案，旨在滿足不同用戶需求。然而，專業版升級價值、教育版登錄等議題仍是用戶關注點，如何清晰傳達各方案價值，並避免與期望產生落差，是未來溝通的重點。\n\n### 🔭 競品戰略分析\n**01.** Adobe Express在AI與資產優勢上對Canva構成直接挑戰。Adobe Express在輿情中直接與Canva進行比較，並被提及在AI功能和資產庫方面具有優勢，這表明Adobe正積極將自身定位為Canva的強力替代品，且在特定功能點上可能具備差異化競爭力。股東應關注Adobe Express的市場策略及其對Canva潛在市佔率的影響。\n\n**02.** Figma以專業協作能力維持市場定位，但輿情聲量極低，短期內非Canva主要大眾市場競爭者。Figma僅有少量提及，重點在於其專業的協作設計能力。這顯示Figma仍鎖定特定專業用戶群，與Canva主要大眾市場的定位有所區隔。短期內，Figma對Canva大眾市場的影響力不大，但其在專業領域的地位仍值得關注。\n\n### ⚠️ 發展風險預警\n**01.** Canva面臨顯著的負面輿情風險，尤其與「模板化」的專業度疑慮有關。在Canva的21筆輿情中，有11筆為負面評價，佔比超過五成，是今日數據中最大的警訊。具體案例指出用戶擔憂Canva模板化設計（如備審資料）可能導致不夠正式或缺乏原創性。這表明品牌在「易用性」與「專業度/獨特性」之間可能存在認知落差，若負面趨勢持續，恐損害Canva在更廣泛或更正式應用場景中的品牌形象與市場擴張。\n\n---\n*Brand Sentinel 自動化演算法 ｜ 結構化純淨終端模板 UI/UX Pro Max ｜ 產生時間：2026/4/13 上午9:22:10*",
       "created_at": "2026-04-13T01:22:10.183Z"
+    },
+    {
+      "id": 15,
+      "report_date": "2026-04-14",
+      "report_type": "daily",
+      "content": "# 📊 Canva Brand Sentinel 每日戰報\n\n> **情報更新時間**：2026-04-14\n> **追蹤涵蓋範圍**：Canva, Figma, Adobe\n\n## 🎯 核心體驗指標 (KPI)\n\n*   **總採樣數據量**：`14 筆`\n*   **總體品牌防線**：🟡 **觀察中**\n*   **資料來源佔比**：`Threads` (3), `Dcard` (5), `Tavily` (6)\n\n## 💬 輿情與市場動態 (Sentiment & Market)\n\n### 口碑情緒雷達\n\n> 🟢 **正向 (50.0%)** ｜ 共 7 筆\n> `██████████░░░░░░░░░░`\n> \n> 🟡 **中立 (28.6%)** ｜ 共 4 筆\n> `██████░░░░░░░░░░░░░░`\n> \n> 🔴 **負向 (21.4%)** ｜ 共 3 筆\n> `████░░░░░░░░░░░░░░░░`\n\n### 品牌聲量市佔分析\n\n*   **Canva**（8筆）：正向情感佔 **38%**\n*   **Figma**（4筆）：正向情感佔 **50%**\n*   **Adobe Express**（2筆）：正向情感佔 **100%**\n\n## 🔥 高熱度風向 (Trending Topics)\n\n> **01. 產品功能 (共 5 筆)**\n> ▍事件摘要：介紹 Figma 在設計系統、開發模式與程式串接的功能。\n> ▍代表原音：_🔑 Key takeaways: • Design system as building blocks: Variables, Components, and Styles • Beyond design in Figma: Respon…_\n>\n> **02. 使用者體驗 (共 3 筆)**\n> ▍事件摘要：Canva無法開啟，導致使用者抱怨與不便。\n> ▍代表原音：_屏東大學板國立屏東大學25/10/20CANVA壞掉啦！！有人的CANVA也打不開嗎，大概3 ... 左右到現在就打不開了8101…_\n>\n> **03. 競品比較 (共 3 筆)**\n> ▍事件摘要：比較 Canva 與 Figma 兩款工具在產品設計的應用。\n> ▍代表原音：_Canva vs Figma — Which Should You Use for Your Product Design? As someone who teaches design thinking, builds full-stack…_\n\n## 🧠 決策洞察艙 (AI Deep Insights)\n\n### 💡 商業與產品洞察\n**01.** Canva在學生族群及一般使用者中擁有高滲透率及黏著度，從製作Goodnotes模板、備審資料和期中簡報等應用可見其在個人與學術領域的關鍵角色，但這也突顯了服務穩定性對其核心用戶群的重要性。\n\n**02.** Canva的市場定位正跨越傳統與專業工具之間，輿情中同時出現與PPT的實用性比較，以及與Figma在產品設計應用上的對照，顯示其正在廣泛的應用場景中尋求定位與擴張。\n\n### 🔭 競品戰略分析\n**01.** Figma在專業化與AI技術整合方面展現領先優勢：其輿情全為正面或中性，聚焦於企業整合（ServiceNow）、高級設計系統與開發模式，並積極推出AI代理API。這表明Figma正持續鞏固其在高端專業市場的地位，並透過技術創新拉開與Canva在特定領域的差距。\n\n**02.** Adobe Express則專注於商業應用與生態系整合：透過發現Pinterest商業參與度高與介紹Creative Cloud團隊方案，其明確鎖定商業用戶並 leverage Adobe龐大的生態系優勢，與Canva普羅大眾市場的策略形成差異化，暗示了不同品牌的成長路徑與潛在價值。\n\n### ⚠️ 發展風險預警\n**01.** 核心服務穩定性問題成為Canva主要風險：今日蒐集的負面輿情（3筆）全部指向Canva服務無法開啟或當機，導致使用者抱怨與不便，甚至影響重要任務（如期中簡報製作）。這直接威脅用戶體驗與信任度，可能導致用戶流失，對Canva的品牌聲譽和長期投資效益構成顯著警示。\n\n---\n*Brand Sentinel 自動化演算法 ｜ 結構化純淨終端模板 UI/UX Pro Max ｜ 產生時間：2026/4/14 上午10:05:13*",
+      "created_at": "2026-04-14T02:05:13.811Z"
+    },
+    {
+      "id": 16,
+      "report_date": "2026-04-14",
+      "report_type": "weekly",
+      "content": "\n📊 **Canva 品牌週報** — 2026-04-06 ~ 2026-04-12\n\n■ 聲量趨勢 📉\n  - 本週: **63** 筆 / 上週: **210** 筆\n  - 變化: -147 (-70.0%)\n\n■ 情緒趨勢\n  正面: 61.9% (上週 55.7%) ↑6.2%\n  中性: 28.6% (上週 29.0%) ↓0.4%\n  負面: 9.5% (上週 14.8%) ↓5.3%\n\n■ 本週主題排行\n  1. 產品功能 (15 筆)\n  2. 競品比較 (9 筆)\n  3. 教育與企業 (8 筆)\n  4. 市場動態 (8 筆)\n  5. 使用者體驗 (6 筆)\n  6. 品牌形象 (6 筆)\n  7. AI 相關 (6 筆)\n  8. 定價與方案 (5 筆)\n\n---\n_Brand Sentinel 週報 | 補償發送時間: 2026/4/14 上午10:05:13_",
+      "created_at": "2026-04-14T02:05:13.829Z"
     }
   ],
   "failed_analysis": [
     {
       "raw_data_id": 602,
-      "retry_count": 1,
+      "retry_count": 2,
       "last_error": "LLM 未回傳此項目的分析結果",
-      "last_failed_at": "2026-04-13T01:21:29.937Z"
-    },
-    {
-      "raw_data_id": 601,
-      "retry_count": 1,
-      "last_error": "LLM 未回傳此項目的分析結果",
-      "last_failed_at": "2026-04-13T01:21:29.947Z"
-    },
-    {
-      "raw_data_id": 600,
-      "retry_count": 1,
-      "last_error": "LLM 未回傳此項目的分析結果",
-      "last_failed_at": "2026-04-13T01:21:29.962Z"
+      "last_failed_at": "2026-04-14T02:04:39.785Z"
     },
     {
       "raw_data_id": 599,
-      "retry_count": 1,
+      "retry_count": 2,
       "last_error": "LLM 未回傳此項目的分析結果",
-      "last_failed_at": "2026-04-13T01:21:29.974Z"
+      "last_failed_at": "2026-04-14T02:05:03.558Z"
     },
     {
       "raw_data_id": 598,
-      "retry_count": 1,
+      "retry_count": 2,
       "last_error": "LLM 未回傳此項目的分析結果",
-      "last_failed_at": "2026-04-13T01:21:29.989Z"
+      "last_failed_at": "2026-04-14T02:05:03.564Z"
     },
     {
       "raw_data_id": 597,
-      "retry_count": 1,
+      "retry_count": 2,
       "last_error": "LLM 未回傳此項目的分析結果",
-      "last_failed_at": "2026-04-13T01:21:30.002Z"
+      "last_failed_at": "2026-04-14T02:05:03.571Z"
     },
     {
       "raw_data_id": 596,
+      "retry_count": 2,
+      "last_error": "LLM 未回傳此項目的分析結果",
+      "last_failed_at": "2026-04-14T02:05:03.578Z"
+    },
+    {
+      "raw_data_id": 622,
       "retry_count": 1,
       "last_error": "LLM 未回傳此項目的分析結果",
-      "last_failed_at": "2026-04-13T01:21:30.013Z"
+      "last_failed_at": "2026-04-14T02:04:39.723Z"
+    },
+    {
+      "raw_data_id": 621,
+      "retry_count": 1,
+      "last_error": "LLM 未回傳此項目的分析結果",
+      "last_failed_at": "2026-04-14T02:04:39.733Z"
+    },
+    {
+      "raw_data_id": 620,
+      "retry_count": 1,
+      "last_error": "LLM 未回傳此項目的分析結果",
+      "last_failed_at": "2026-04-14T02:04:39.742Z"
+    },
+    {
+      "raw_data_id": 619,
+      "retry_count": 1,
+      "last_error": "LLM 未回傳此項目的分析結果",
+      "last_failed_at": "2026-04-14T02:04:39.751Z"
+    },
+    {
+      "raw_data_id": 618,
+      "retry_count": 1,
+      "last_error": "LLM 未回傳此項目的分析結果",
+      "last_failed_at": "2026-04-14T02:04:39.760Z"
+    },
+    {
+      "raw_data_id": 617,
+      "retry_count": 1,
+      "last_error": "LLM 未回傳此項目的分析結果",
+      "last_failed_at": "2026-04-14T02:04:39.768Z"
+    },
+    {
+      "raw_data_id": 616,
+      "retry_count": 1,
+      "last_error": "LLM 未回傳此項目的分析結果",
+      "last_failed_at": "2026-04-14T02:04:39.777Z"
     }
   ]
 }
