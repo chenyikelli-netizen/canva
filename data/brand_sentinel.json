@@ -7372,6 +7372,193 @@
       "published_at": "2025-03-31T15:54:29.000Z",
       "collected_at": "2026-04-14T02:03:27.337Z",
       "metadata": "{\"keyword\":\"Canva\",\"source\":\"threads_search\"}"
+    },
+    {
+      "id": 635,
+      "platform": "tavily",
+      "url": "https://www.canva.com/zh_hk/features/",
+      "title": "使用Canva 的絕佳功能套件，製作令人驚豔的設計",
+      "content": "Canva 讓你可以輕鬆地將對話框拖放至設計中，快捷地新增對話內容。透過數碼對話框功能，你可以隨時編輯對話、變更顏色，或將對話框移動及調整尺寸。靈感任何時刻都有",
+      "author": "canva.com",
+      "published_at": null,
+      "collected_at": "2026-04-15T02:00:54.289Z",
+      "metadata": "{\"search_query\":\"Canva 新功能 介紹\",\"score\":0.9999646,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 636,
+      "platform": "tavily",
+      "url": "https://www.gvm.com.tw/article/125511?srsltid=AfmBOoqcVXk562vIxUIIzX2qQAAyTgcOE8ulFas2-H3LBc-ISU72UdEK",
+      "title": "AI 簡報是趨勢！Gamma 與Canva AI 怎麼用？ - 遠見雜誌",
+      "content": "在Canva AI中，能設定的選項不多，僅能選擇設計形式（簡報、社群貼文等）、分享對象（休閒、專業、教育）、視覺風格和長度。在本次實測中，選擇了內容專業、視覺",
+      "author": "gvm.com.tw",
+      "published_at": null,
+      "collected_at": "2026-04-15T02:00:54.312Z",
+      "metadata": "{\"search_query\":\"Canva AI 使用 心得\",\"score\":0.9999502,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 637,
+      "platform": "tavily",
+      "url": "https://pollo.ai/zh/hub/canva-ai-image-generator-review",
+      "title": "我测试了Canva AI 图像生成器。它简化了图像生成，但感觉有些过时了",
+      "content": "归根结底， Canva感觉就像一个相当基础的AI 图像生成器。它主要只是将文本转换为图像，而文本转视频功能？是的，它仍处于“实验”阶段，还不能真正使用。",
+      "author": "pollo.ai",
+      "published_at": null,
+      "collected_at": "2026-04-15T02:00:54.329Z",
+      "metadata": "{\"search_query\":\"Canva AI 使用 心得\",\"score\":0.99986553,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 638,
+      "platform": "tavily",
+      "url": "https://www.capterra.com/compare/168956-175027/Canva-vs-Figma",
+      "title": "Compare Canva vs Figma 2026 | Capterra",
+      "content": "Unsure of what to choose? Check Capterra to compare Canva and Figma based on pricing, features, product details, and verified reviews.",
+      "author": "capterra.com",
+      "published_at": null,
+      "collected_at": "2026-04-15T02:00:54.341Z",
+      "metadata": "{\"search_query\":\"Figma vs Canva 比較\",\"score\":0.99977833,\"brand\":\"Figma\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 639,
+      "platform": "tavily",
+      "url": "https://www.adobe.com/tw/express/",
+      "title": "可快速輕鬆地創作符合品牌形象之內容的應用程式| Adobe Express",
+      "content": "Adobe Express 是多功能的設計、相片和影片工具，讓您輕鬆完成內容創作。快速輕鬆地製作令人驚豔的社交內容、影片、標誌等，以在社交媒體和其他地方脫穎而出。",
+      "author": "adobe.com",
+      "published_at": null,
+      "collected_at": "2026-04-15T02:00:54.351Z",
+      "metadata": "{\"search_query\":\"Adobe Express 評價 使用心得\",\"score\":0.9994967,\"brand\":\"Adobe Express\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 640,
+      "platform": "tavily",
+      "url": "https://play.google.com/store/apps/details?id=com.adobe.spark.post",
+      "title": "Adobe Express: AI Photo, Video - Apps on Google Play",
+      "content": "# Adobe Express: AI Photo, Video. ## About this app. Adobe Express is the quick and easy app to create on-brand content that helps your business stand out and make an impact. Whether you're a beginner or a seasoned creator, Adobe Express empowers you and your team to make high-quality marketing and business materials while maintaining brand consistency. Adobe Express makes video editing simple. Adobe Express is the best free photo editor for beginners, offering intuitive tools to enhance your images. Adobe Express makes it effortless. Adobe Express is your best QR code generator online, offering customizable styles and colors to match your brand. Your feedback and engagement will help us make Adobe Express better for everyone. Visit Uservoice [https://adobeexpress.uservoice.com/forums/951181-adobe-express] to request new features. · Over 200M royalty-free Adobe Stock photos, videos, music tracks, design elements and fonts. I use this app mostly for removing photo backgrounds, and it’s amazing! google-app-notifs@adobe.com.",
+      "author": "play.google.com",
+      "published_at": null,
+      "collected_at": "2026-04-15T02:00:54.360Z",
+      "metadata": "{\"search_query\":\"Adobe Express 評價 使用心得\",\"score\":0.99933845,\"brand\":\"Adobe Express\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 641,
+      "platform": "tavily",
+      "url": "https://paperlike.com/blogs/paperlikers-insights/adobe-express-vs-canva?srsltid=AfmBOorevuaE-M2Ef_t9--ZaJnJIq0pZ77BhKqcP70IkiUEUjq-7JBcj",
+      "title": "Adobe Express vs. Canva (2025): Features, Pricing, AI, and Best Use Cases | Paperlike",
+      "content": "Both Express and Canva use a freemium model, offering limited features for free and premium tools if you upgrade. Canva is designed to be all you'll need to create beautiful designs, videos, and more in one experience. Because Canva doesn't have a suite of programs, its consolidation of so many high-value creative tools might be why its pricing is slightly higher than Express. To take advantage of its flagship programs, existing Adobe users in Photoshop and Illustrator can use linked assets to bring their files into Express. Similar to Adobe Express, Canva is a template graphic powerhouse. Both Express and Canva offer this for users, and a few other handy features, making it easy for you to find your files when you need them. Because of its connection with other Adobe programs, you'll also see other folders you've created appear in Express as well. Your Designs are any individual files you've created in Canva. #### How do Express and Canva use AI?",
+      "author": "paperlike.com",
+      "published_at": null,
+      "collected_at": "2026-04-15T02:00:54.370Z",
+      "metadata": "{\"search_query\":\"Adobe Express vs Canva 比較\",\"score\":0.8921218,\"brand\":\"Adobe Express\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 642,
+      "platform": "tavily",
+      "url": "https://twitter.com/inchennais/status/1311505028880900096",
+      "title": "I can design Logo Using canva online tool for your business - Twitter",
+      "content": "InChennaiS (@inchennais). I can design Logo Using canva online tool for your business.",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-15T02:00:54.379Z",
+      "metadata": "{\"search_query\":\"Canva business design tool site:twitter.com\",\"score\":0.9999497,\"brand\":\"Canva\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 643,
+      "platform": "tavily",
+      "url": "https://www.linkedin.com/posts/figma_figma-enterprise-building-great-products-activity-7263138681631182849-9qWj",
+      "title": "Figma Enterprise | Building Great Products at Scale - LinkedIn",
+      "content": "Figma Enterprise connects everyone in the product development process so you can build great products at scale.",
+      "author": "linkedin.com",
+      "published_at": null,
+      "collected_at": "2026-04-15T02:00:54.388Z",
+      "metadata": "{\"search_query\":\"Figma enterprise design site:linkedin.com\",\"score\":0.9998795,\"brand\":\"Figma\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 644,
+      "platform": "tavily",
+      "url": "https://mobile.twitter.com/mcolyer?lang=ar",
+      "title": "Matt Colyer (@mcolyer) / Posts / X - Twitter",
+      "content": "Agents, Meet the Figma Canvas | Figma Blog · AI helped these founders fast-track their way to first sale · Computing like a Human – Matt Colyer.",
+      "author": "mobile.twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-15T02:00:54.397Z",
+      "metadata": "{\"search_query\":\"Figma business teams site:twitter.com\",\"score\":0.43323857,\"brand\":\"Figma\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 645,
+      "platform": "tavily",
+      "url": "https://twitter.com/andrew__reed",
+      "title": "Andrew Reed (@andrew__reed) / Posts / X - Twitter",
+      "content": "Designers - say hello to Figma Weave. You're already thinking in layers and systems, Figma Weave brings that same mindset to AI. As we work on bringing Weave to",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-15T02:00:54.406Z",
+      "metadata": "{\"search_query\":\"Figma business teams site:twitter.com\",\"score\":0.43136916,\"brand\":\"Figma\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 646,
+      "platform": "tavily",
+      "url": "https://business.linkedin.com/advertise/partners/adobe-express",
+      "title": "LinkedIn & Adobe Express | LinkedIn Ads",
+      "content": "Use professionally designed, LinkedIn-optimized templates in Adobe Express to create high-impact ads that reflect your brand and grab attention in the feed.",
+      "author": "business.linkedin.com",
+      "published_at": null,
+      "collected_at": "2026-04-15T02:00:54.416Z",
+      "metadata": "{\"search_query\":\"Adobe Express business site:linkedin.com\",\"score\":0.9996898,\"brand\":\"Adobe Express\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 647,
+      "platform": "dcard",
+      "url": null,
+      "title": "#iPad 用Canva做goodnotes模板",
+      "content": "個人牆碳水化合物👾21/9/24#iPad 用Canva做goodnotes模板今天要分享的是用Canva做出可 ... Canva是一個線上的製圖設計軟體3591890583",
+      "author": "匿名",
+      "published_at": null,
+      "collected_at": "2026-04-15T02:01:35.188Z",
+      "metadata": "{\"keyword\":\"Canva\",\"forum\":null,\"like_count\":0,\"comment_count\":0,\"source\":\"dcard_search\"}"
+    },
+    {
+      "id": 648,
+      "platform": "dcard",
+      "url": "https://www.dcard.tw/f/freshman/p/261289998",
+      "title": "自行上傳pdf",
+      "content": "O升大學考試板cyk1 天自行上傳pdfcanva word ppt都有人建議 ... 大家好 我是115學測考生433",
+      "author": "匿名",
+      "published_at": null,
+      "collected_at": "2026-04-15T02:01:35.198Z",
+      "metadata": "{\"keyword\":\"Canva\",\"forum\":null,\"like_count\":0,\"comment_count\":0,\"source\":\"dcard_search\"}"
+    },
+    {
+      "id": 649,
+      "platform": "dcard",
+      "url": "https://www.dcard.tw/f/freshman/p/261301183",
+      "title": "#升學 學習歷程能同時用Canva跟Word嗎",
+      "content": "P升大學考試板patmatkillua8 小時#升學 學習歷程能同時用Canva跟Word嗎而學習歷程自述跟多元表現粽整想用Canva呈現 ... 用Canva怕字數那麼多整個版面會看起來有點凌亂1",
+      "author": "匿名",
+      "published_at": null,
+      "collected_at": "2026-04-15T02:01:35.209Z",
+      "metadata": "{\"keyword\":\"Canva\",\"forum\":null,\"like_count\":0,\"comment_count\":0,\"source\":\"dcard_search\"}"
+    },
+    {
+      "id": 650,
+      "platform": "dcard",
+      "url": "https://www.dcard.tw/f/scu/p/241951350",
+      "title": "Canva",
+      "content": "東吳大學板東吳大學23/5/6Canva請問學校有提供Canva 教育版的服務嗎？ ... 因為功課對於Canva的需求比較大15255418",
+      "author": "匿名",
+      "published_at": null,
+      "collected_at": "2026-04-15T02:01:35.217Z",
+      "metadata": "{\"keyword\":\"Canva\",\"forum\":null,\"like_count\":0,\"comment_count\":0,\"source\":\"dcard_search\"}"
+    },
+    {
+      "id": 651,
+      "platform": "threads",
+      "url": "https://www.threads.net/@freeme.online/post/DMKdYAryzLa",
+      "title": null,
+      "content": "freeme.onlineCanva教學2025-7-16已編輯更多你是不是以為 Canva 就那幾種貼圖？今天讓我來拯救你的設計倦怠💡\n偷偷告訴你 4組 Canva「超萌隱藏貼圖代碼」\n立刻解鎖高質感插畫!!直接複製貼到 Canva 搜尋欄：🔍 set:nAEsM2BBgAA（極簡手繪大人風）🔍 set:nAFU5WnvxKs（粉嫩少女可愛風）🔍 set:nAEwhoe5GTA（美式信件插畫風）🔍 set:nAGmGJo6Io8（藍色海洋生物風）📌建議收藏這篇，不然之後找不到會想哭！\n🔥留言「貼圖包」我幫你再整理更多！\n-\n我是 Kerina，\n我會在IG分享如何經營自媒體，\n也經常分享Canva小技巧或免費指南給大家，\n如果你也想學習這些相關技能，歡迎追蹤我！  翻譯讚1,512留言161轉發154分享1,038",
+      "author": "freeme.online",
+      "published_at": "2025-07-16T09:20:31.000Z",
+      "collected_at": "2026-04-15T02:02:30.001Z",
+      "metadata": "{\"keyword\":\"Canva\",\"source\":\"threads_search\"}"
     }
   ],
   "analysis_results": [
@@ -12972,6 +13159,114 @@
       "sentiment": "正面",
       "summary": "Adobe Express發現Pinterest對商家參與度高。",
       "analyzed_at": "2026-04-14T02:05:03.546Z"
+    },
+    {
+      "id": 623,
+      "raw_data_id": 651,
+      "brand": "Canva",
+      "topic": "產品功能",
+      "sentiment": "正面",
+      "summary": "分享Canva隱藏貼圖代碼，教學用戶解鎖高質感插畫。",
+      "analyzed_at": "2026-04-15T02:02:41.039Z"
+    },
+    {
+      "id": 624,
+      "raw_data_id": 650,
+      "brand": "Canva",
+      "topic": "教育與企業",
+      "sentiment": "中性",
+      "summary": "詢問學校是否提供Canva教育版服務以應付課業需求。",
+      "analyzed_at": "2026-04-15T02:02:41.051Z"
+    },
+    {
+      "id": 625,
+      "raw_data_id": 649,
+      "brand": "Canva",
+      "topic": "使用者體驗",
+      "sentiment": "中性",
+      "summary": "討論Canva在學習歷程中使用時，文字排版可能凌亂的擔憂。",
+      "analyzed_at": "2026-04-15T02:02:41.060Z"
+    },
+    {
+      "id": 626,
+      "raw_data_id": 648,
+      "brand": "Canva",
+      "topic": "競品比較",
+      "sentiment": "中性",
+      "summary": "討論上傳PDF時，Canva與Word、PPT都是常用工具。",
+      "analyzed_at": "2026-04-15T02:02:41.073Z"
+    },
+    {
+      "id": 627,
+      "raw_data_id": 647,
+      "brand": "Canva",
+      "topic": "產品功能",
+      "sentiment": "正面",
+      "summary": "分享如何利用Canva製作Goodnotes模板的實用技巧。",
+      "analyzed_at": "2026-04-15T02:02:41.084Z"
+    },
+    {
+      "id": 628,
+      "raw_data_id": 646,
+      "brand": "Adobe Express",
+      "topic": "產品功能",
+      "sentiment": "正面",
+      "summary": "Adobe Express提供專業模板，助用戶製作高效LinkedIn廣告。",
+      "analyzed_at": "2026-04-15T02:02:41.098Z"
+    },
+    {
+      "id": 629,
+      "raw_data_id": 645,
+      "brand": "Figma",
+      "topic": "AI 相關",
+      "sentiment": "正面",
+      "summary": "Figma推出Figma Weave，將分層思維與AI結合。",
+      "analyzed_at": "2026-04-15T02:02:41.109Z"
+    },
+    {
+      "id": 630,
+      "raw_data_id": 644,
+      "brand": "Figma",
+      "topic": "AI 相關",
+      "sentiment": "正面",
+      "summary": "Figma Canvas與AI結合，協助創始人加速達成銷售。",
+      "analyzed_at": "2026-04-15T02:02:41.120Z"
+    },
+    {
+      "id": 631,
+      "raw_data_id": 643,
+      "brand": "Figma",
+      "topic": "教育與企業",
+      "sentiment": "正面",
+      "summary": "Figma Enterprise促進產品開發協作，助企業規模化生產。",
+      "analyzed_at": "2026-04-15T02:02:41.131Z"
+    },
+    {
+      "id": 632,
+      "raw_data_id": 642,
+      "brand": "Canva",
+      "topic": "產品功能",
+      "sentiment": "正面",
+      "summary": "使用Canva線上工具為企業設計商標。",
+      "analyzed_at": "2026-04-15T02:02:41.144Z"
+    },
+    {
+      "id": 633,
+      "raw_data_id": 619,
+      "brand": "Adobe Express",
+      "topic": "競品比較",
+      "sentiment": "中性",
+      "summary": "比較Canva與Adobe Express的功能與用戶評價。",
+      "analyzed_at": "2026-04-15T02:03:40.758Z"
+    },
+    {
+      "id": 634,
+      "raw_data_id": 618,
+      "brand": "Adobe Express",
+      "topic": "競品比較",
+      "sentiment": "中性",
+      "summary": "比較Adobe Express與Canva的功能、定價與AI應用。",
+      "analyzed_at": "2026-04-15T02:03:40.775Z"
     }
   ],
   "reports": [
@@ -13086,80 +13381,117 @@
       "report_type": "weekly",
       "content": "\n📊 **Canva 品牌週報** — 2026-04-06 ~ 2026-04-12\n\n■ 聲量趨勢 📉\n  - 本週: **63** 筆 / 上週: **210** 筆\n  - 變化: -147 (-70.0%)\n\n■ 情緒趨勢\n  正面: 61.9% (上週 55.7%) ↑6.2%\n  中性: 28.6% (上週 29.0%) ↓0.4%\n  負面: 9.5% (上週 14.8%) ↓5.3%\n\n■ 本週主題排行\n  1. 產品功能 (15 筆)\n  2. 競品比較 (9 筆)\n  3. 教育與企業 (8 筆)\n  4. 市場動態 (8 筆)\n  5. 使用者體驗 (6 筆)\n  6. 品牌形象 (6 筆)\n  7. AI 相關 (6 筆)\n  8. 定價與方案 (5 筆)\n\n---\n_Brand Sentinel 週報 | 補償發送時間: 2026/4/14 上午10:05:13_",
       "created_at": "2026-04-14T02:05:13.829Z"
+    },
+    {
+      "id": 17,
+      "report_date": "2026-04-15",
+      "report_type": "daily",
+      "content": "# 📊 Canva Brand Sentinel 每日戰報\n\n> **情報更新時間**：2026-04-15\n> **追蹤涵蓋範圍**：Canva, Figma, Adobe\n\n## 🎯 核心體驗指標 (KPI)\n\n*   **總採樣數據量**：`12 筆`\n*   **總體品牌防線**：🟡 **觀察中**\n*   **資料來源佔比**：`Threads` (1), `Dcard` (4), `Tavily` (7)\n\n## 💬 輿情與市場動態 (Sentiment & Market)\n\n### 口碑情緒雷達\n\n> 🟢 **正向 (58.3%)** ｜ 共 7 筆\n> `████████████░░░░░░░░`\n> \n> 🟡 **中立 (41.7%)** ｜ 共 5 筆\n> `████████░░░░░░░░░░░░`\n> \n> 🔴 **負向 (0%)** ｜ 共 0 筆\n> `░░░░░░░░░░░░░░░░░░░░`\n\n### 品牌聲量市佔分析\n\n*   **Canva**（6筆）：正向情感佔 **50%**\n*   **Adobe Express**（3筆）：正向情感佔 **33%**\n*   **Figma**（3筆）：正向情感佔 **100%**\n\n## 🔥 高熱度風向 (Trending Topics)\n\n> **01. 產品功能 (共 4 筆)**\n> ▍事件摘要：使用Canva線上工具為企業設計商標。\n> ▍代表原音：_InChennaiS (@inchennais). I can design Logo Using canva online tool for your business.…_\n>\n> **02. 競品比較 (共 3 筆)**\n> ▍事件摘要：比較Adobe Express與Canva的功能、定價與AI應用。\n> ▍代表原音：_Both Express and Canva use a freemium model, offering limited features for free and premium tools if you upgrade. Canva …_\n>\n> **03. 教育與企業 (共 2 筆)**\n> ▍事件摘要：Figma Enterprise促進產品開發協作，助企業規模化生產。\n> ▍代表原音：_Figma Enterprise connects everyone in the product development process so you can build great products at scale.…_\n\n## 🧠 決策洞察艙 (AI Deep Insights)\n\n### 💡 商業與產品洞察\n**01.** （洞察生成失敗）\n\n### 🔭 競品戰略分析\n* 本期未探測到具體戰略信號。\n\n### ⚠️ 發展風險預警\n* 本期未探測到重大危機信號。\n\n---\n*Brand Sentinel 自動化演算法 ｜ 結構化純淨終端模板 UI/UX Pro Max ｜ 產生時間：2026/4/15 上午10:04:51*",
+      "created_at": "2026-04-15T02:04:51.796Z"
     }
   ],
   "failed_analysis": [
     {
       "raw_data_id": 602,
-      "retry_count": 2,
+      "retry_count": 3,
       "last_error": "LLM 未回傳此項目的分析結果",
-      "last_failed_at": "2026-04-14T02:04:39.785Z"
+      "last_failed_at": "2026-04-15T02:03:40.810Z"
     },
     {
       "raw_data_id": 599,
-      "retry_count": 2,
+      "retry_count": 3,
       "last_error": "LLM 未回傳此項目的分析結果",
-      "last_failed_at": "2026-04-14T02:05:03.558Z"
+      "last_failed_at": "2026-04-15T02:03:40.818Z"
     },
     {
       "raw_data_id": 598,
-      "retry_count": 2,
+      "retry_count": 3,
       "last_error": "LLM 未回傳此項目的分析結果",
-      "last_failed_at": "2026-04-14T02:05:03.564Z"
+      "last_failed_at": "2026-04-15T02:03:40.826Z"
     },
     {
       "raw_data_id": 597,
-      "retry_count": 2,
+      "retry_count": 3,
       "last_error": "LLM 未回傳此項目的分析結果",
-      "last_failed_at": "2026-04-14T02:05:03.571Z"
+      "last_failed_at": "2026-04-15T02:03:40.835Z"
     },
     {
       "raw_data_id": 596,
-      "retry_count": 2,
+      "retry_count": 3,
       "last_error": "LLM 未回傳此項目的分析結果",
-      "last_failed_at": "2026-04-14T02:05:03.578Z"
+      "last_failed_at": "2026-04-15T02:03:40.843Z"
     },
     {
       "raw_data_id": 622,
-      "retry_count": 1,
-      "last_error": "LLM 未回傳此項目的分析結果",
-      "last_failed_at": "2026-04-14T02:04:39.723Z"
+      "retry_count": 2,
+      "last_error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "last_failed_at": "2026-04-15T02:03:04.778Z"
     },
     {
       "raw_data_id": 621,
-      "retry_count": 1,
-      "last_error": "LLM 未回傳此項目的分析結果",
-      "last_failed_at": "2026-04-14T02:04:39.733Z"
+      "retry_count": 2,
+      "last_error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "last_failed_at": "2026-04-15T02:03:04.788Z"
     },
     {
       "raw_data_id": 620,
-      "retry_count": 1,
-      "last_error": "LLM 未回傳此項目的分析結果",
-      "last_failed_at": "2026-04-14T02:04:39.742Z"
-    },
-    {
-      "raw_data_id": 619,
-      "retry_count": 1,
-      "last_error": "LLM 未回傳此項目的分析結果",
-      "last_failed_at": "2026-04-14T02:04:39.751Z"
-    },
-    {
-      "raw_data_id": 618,
-      "retry_count": 1,
-      "last_error": "LLM 未回傳此項目的分析結果",
-      "last_failed_at": "2026-04-14T02:04:39.760Z"
+      "retry_count": 2,
+      "last_error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "last_failed_at": "2026-04-15T02:03:04.799Z"
     },
     {
       "raw_data_id": 617,
-      "retry_count": 1,
+      "retry_count": 2,
       "last_error": "LLM 未回傳此項目的分析結果",
-      "last_failed_at": "2026-04-14T02:04:39.768Z"
+      "last_failed_at": "2026-04-15T02:03:40.792Z"
     },
     {
       "raw_data_id": 616,
-      "retry_count": 1,
+      "retry_count": 2,
       "last_error": "LLM 未回傳此項目的分析結果",
-      "last_failed_at": "2026-04-14T02:04:39.777Z"
+      "last_failed_at": "2026-04-15T02:03:40.801Z"
+    },
+    {
+      "raw_data_id": 641,
+      "retry_count": 1,
+      "last_error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "last_failed_at": "2026-04-15T02:03:04.692Z"
+    },
+    {
+      "raw_data_id": 640,
+      "retry_count": 1,
+      "last_error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "last_failed_at": "2026-04-15T02:03:04.703Z"
+    },
+    {
+      "raw_data_id": 639,
+      "retry_count": 1,
+      "last_error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "last_failed_at": "2026-04-15T02:03:04.717Z"
+    },
+    {
+      "raw_data_id": 638,
+      "retry_count": 1,
+      "last_error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "last_failed_at": "2026-04-15T02:03:04.728Z"
+    },
+    {
+      "raw_data_id": 637,
+      "retry_count": 1,
+      "last_error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "last_failed_at": "2026-04-15T02:03:04.739Z"
+    },
+    {
+      "raw_data_id": 636,
+      "retry_count": 1,
+      "last_error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "last_failed_at": "2026-04-15T02:03:04.750Z"
+    },
+    {
+      "raw_data_id": 635,
+      "retry_count": 1,
+      "last_error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "last_failed_at": "2026-04-15T02:03:04.763Z"
     }
   ]
 }
