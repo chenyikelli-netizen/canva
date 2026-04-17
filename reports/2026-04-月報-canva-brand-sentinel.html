@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canva Brand Sentinel｜月報 2026-04</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #090b10;
+    --surface: #111318;
+    --surface2: #181c26;
+    --border: rgba(255,255,255,0.08);
+    --green: #34d399;
+    --green-dim: rgba(52,211,153,0.1);
+    --green-glow: rgba(52,211,153,0.2);
+    --yellow: #fbbf24;
+    --yellow-dim: rgba(251,191,36,0.1);
+    --yellow-glow: rgba(251,191,36,0.2);
+    --red: #f87171;
+    --red-dim: rgba(248,113,113,0.1);
+    --red-glow: rgba(248,113,113,0.2);
+    --blue: #60a5fa;
+    --blue-dim: rgba(96,165,250,0.12);
+    --purple: #c084fc;
+    --purple-dim: rgba(192,132,252,0.12);
+    --text-primary: #eef0f8;
+    --text-secondary: #7e8a9e;
+    --text-muted: #3d4556;
+    --accent: #818cf8;
+    --accent-dim: rgba(129,140,248,0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    background-image:
+      radial-gradient(ellipse 80% 40% at 10% 0%, rgba(99,102,241,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 30% at 90% 100%, rgba(192,132,252,0.06) 0%, transparent 60%);
+    color: var(--text-primary);
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    min-height: 100vh;
+    padding: 40px 20px 80px;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  /* ── Header ── */
+  .report-header {
+    margin-bottom: 48px;
+  }
+
+  .report-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .report-label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+
+  .report-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+    line-height: 1.15;
+  }
+
+  .report-title span {
+    background: linear-gradient(120deg, var(--accent), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .report-meta {
+    font-size: 13px;
+    color: var(--text-secondary);
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .report-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text-muted);
+    display: inline-block;
+  }
+
+  /* ── Section ── */
+  .section {
+    margin-bottom: 40px;
+    animation: fadeUp 0.4s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .section:nth-child(2) { animation-delay: 0.05s; }
+  .section:nth-child(3) { animation-delay: 0.1s; }
+  .section:nth-child(4) { animation-delay: 0.15s; }
+  .section:nth-child(5) { animation-delay: 0.2s; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .section-num {
+    font-size: 10px;
+    font-weight: 800;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent), var(--purple));
+    border-radius: 6px;
+    padding: 3px 10px;
+    letter-spacing: 1.5px;
+    box-shadow: 0 2px 10px rgba(129,140,248,0.35);
+  }
+
+  .section-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -0.2px;
+  }
+
+  /* ── Verdict Card ── */
+  .verdict-card {
+    background: var(--surface);
+    border: 1px solid rgba(129,140,248,0.2);
+    border-radius: 16px;
+    padding: 28px 32px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(129,140,248,0.05), inset 0 1px 0 rgba(255,255,255,0.05);
+  }
+
+  .verdict-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--purple), var(--blue));
+  }
+
+  .verdict-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(129,140,248,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .verdict-statement {
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.65;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .verdict-statement em {
+    font-style: normal;
+    color: var(--yellow);
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(251,191,36,0.4);
+  }
+
+  .kpi-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .kpi-item {
+    border-radius: 12px;
+    padding: 16px 18px;
+    border: 1px solid;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .kpi-item.kpi-yellow {
+    background: linear-gradient(135deg, rgba(251,191,36,0.08) 0%, rgba(251,191,36,0.03) 100%);
+    border-color: rgba(251,191,36,0.2);
+    box-shadow: 0 0 20px rgba(251,191,36,0.06);
+  }
+
+  .kpi-item.kpi-red {
+    background: linear-gradient(135deg, rgba(248,113,113,0.1) 0%, rgba(248,113,113,0.03) 100%);
+    border-color: rgba(248,113,113,0.25);
+    box-shadow: 0 0 20px rgba(248,113,113,0.08);
+  }
+
+  .kpi-item.kpi-green {
+    background: linear-gradient(135deg, rgba(52,211,153,0.08) 0%, rgba(52,211,153,0.03) 100%);
+    border-color: rgba(52,211,153,0.2);
+    box-shadow: 0 0 20px rgba(52,211,153,0.06);
+  }
+
+  .kpi-value {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 6px;
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+
+  .kpi-label {
+    font-size: 11px;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+
+  .kpi-value.green { color: var(--green); text-shadow: 0 0 16px rgba(52,211,153,0.5); }
+  .kpi-value.yellow { color: var(--yellow); text-shadow: 0 0 16px rgba(251,191,36,0.45); }
+  .kpi-value.red { color: var(--red); text-shadow: 0 0 16px rgba(248,113,113,0.5); }
+
+  /* ── Judgment Cards ── */
+  .judgment-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .judgment-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 4px;
+    border-radius: 16px 0 0 16px;
+  }
+
+  .judgment-card.card-red {
+    background: linear-gradient(135deg, rgba(248,113,113,0.07) 0%, var(--surface) 50%);
+    border-color: rgba(248,113,113,0.2);
+  }
+  .judgment-card.card-red::before { background: var(--red); box-shadow: 0 0 12px rgba(248,113,113,0.6); }
+
+  .judgment-card.card-yellow {
+    background: linear-gradient(135deg, rgba(251,191,36,0.07) 0%, var(--surface) 50%);
+    border-color: rgba(251,191,36,0.2);
+  }
+  .judgment-card.card-yellow::before { background: var(--yellow); box-shadow: 0 0 12px rgba(251,191,36,0.6); }
+
+  .judgment-card.card-green {
+    background: linear-gradient(135deg, rgba(52,211,153,0.07) 0%, var(--surface) 50%);
+    border-color: rgba(52,211,153,0.2);
+  }
+  .judgment-card.card-green::before { background: var(--green); box-shadow: 0 0 12px rgba(52,211,153,0.6); }
+
+  .judgment-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  }
+
+  .judgment-index {
+    font-size: 10.5px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .judgment-index::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.15;
+  }
+
+  .judgment-index.red { color: var(--red); }
+  .judgment-index.yellow { color: var(--yellow); }
+  .judgment-index.green { color: var(--green); }
+
+  .judgment-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+  }
+
+  .judgment-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .judgment-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .judgment-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 5px;
+    text-align: center;
+    white-space: nowrap;
+    margin-top: 2px;
+  }
+
+  .tag-event {
+    background: rgba(107,114,128,0.2);
+    color: #9ca3af;
+    border: 1px solid rgba(107,114,128,0.3);
+  }
+
+  .tag-means {
+    background: var(--blue-dim);
+    color: var(--blue);
+    border: 1px solid rgba(96,165,250,0.25);
+  }
+
+  .tag-action {
+    background: var(--green-dim);
+    color: var(--green);
+    border: 1px solid rgba(74,222,128,0.25);
+  }
+
+  .judgment-text {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.75;
+  }
+
+  .judgment-text strong {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  /* ── Competitive Matrix ── */
+  .matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--surface);
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+
+  .matrix-table th {
+    padding: 14px 20px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    background: var(--surface2);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .matrix-table th:first-child {
+    width: 140px;
+  }
+
+  .matrix-table td {
+    padding: 14px 20px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    vertical-align: top;
+    line-height: 1.6;
+  }
+
+  .matrix-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .matrix-table tr:hover td {
+    background: rgba(255,255,255,0.02);
+  }
+
+  .brand-label {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text-primary);
+  }
+
+  .trend-up { color: var(--green); font-weight: 600; }
+  .trend-flat { color: var(--text-muted); }
+  .trend-warn { color: var(--yellow); font-weight: 600; }
+
+  .threat-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 2px 8px;
+  }
+
+  .threat-side {
+    background: var(--yellow-dim);
+    color: var(--yellow);
+    border: 1px solid rgba(251,191,36,0.25);
+  }
+
+  .threat-slow {
+    background: var(--blue-dim);
+    color: var(--blue);
+    border: 1px solid rgba(96,165,250,0.2);
+  }
+
+  .threat-none {
+    background: rgba(107,114,128,0.1);
+    color: var(--text-muted);
+    border: 1px solid rgba(107,114,128,0.2);
+  }
+
+  .matrix-note {
+    margin-top: 12px;
+    padding: 14px 18px;
+    background: var(--accent-dim);
+    border: 1px solid rgba(99,102,241,0.25);
+    border-radius: 10px;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+
+  .matrix-note strong {
+    color: var(--accent);
+  }
+
+  /* ── Anchors ── */
+  .anchor-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 16px;
+    align-items: start;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .anchor-card:hover {
+    border-color: rgba(129,140,248,0.25);
+    background: rgba(129,140,248,0.04);
+  }
+
+  .anchor-num {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid rgba(129,140,248,0.25);
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+  }
+
+  .anchor-text {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.75;
+  }
+
+  .anchor-text strong {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  .anchor-text em {
+    font-style: normal;
+    color: var(--yellow);
+  }
+
+  /* ── Footer ── */
+  .report-footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: gap;
+  }
+
+  .footer-left {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .footer-badge {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid rgba(99,102,241,0.3);
+    border-radius: 20px;
+    padding: 4px 14px;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── Divider ── */
+  hr.section-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 36px 0;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .kpi-row { grid-template-columns: 1fr; }
+    .judgment-row { grid-template-columns: 1fr; }
+    .judgment-tag { display: inline-block; width: auto; }
+    body { padding: 24px 16px 60px; }
+    .report-title { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="report-header">
+    <div class="report-label">Brand Sentinel｜月報</div>
+    <h1 class="report-title">Canva <span>2026 / 04</span></h1>
+    <div class="report-meta">
+      <span><span class="dot"></span> 涵蓋期間：2026-03-30 ～ 2026-04-17</span>
+      <span><span class="dot"></span> 13 份日報｜268 筆採樣</span>
+      <span><span class="dot"></span> 追蹤：Canva · Adobe Express · Figma</span>
+    </div>
+  </div>
+
+  <!-- Section 1: Verdict -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <span class="section-title">月度定論</span>
+    </div>
+    <div class="verdict-card">
+      <div class="verdict-statement">
+        品牌聲量維持主導，但正在從「全面領先」走向<em>「局部承壓」</em>
+      </div>
+      <div class="kpi-row">
+        <div class="kpi-item kpi-yellow">
+          <div class="kpi-value yellow">52.9%</div>
+          <div class="kpi-label">月均正向率<br>W1–W2 均值 61%，W3 跌至 43%</div>
+        </div>
+        <div class="kpi-item kpi-red">
+          <div class="kpi-value red">44%</div>
+          <div class="kpi-label">單日最高負向（04-13）<br>本月唯一真正警戒事件</div>
+        </div>
+        <div class="kpi-item kpi-green">
+          <div class="kpi-value green">78%</div>
+          <div class="kpi-label">Canva 聲量占比<br>市場敘事主導權仍在</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2: Judgments -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <span class="section-title">三個關鍵判斷</span>
+    </div>
+
+    <!-- Judgment 01 -->
+    <div class="judgment-card card-red">
+      <div class="judgment-index red">判斷 01 ／ 品牌定位風險</div>
+      <div class="judgment-title">「易用性」正在特定族群中被重新詮釋為負標籤</div>
+      <div class="judgment-body">
+        <div class="judgment-row">
+          <span class="judgment-tag tag-event">事件</span>
+          <p class="judgment-text">04-13，台灣學生在 Dcard / Threads 大量討論備審資料「<strong>模板化、缺乏原創性</strong>」，單日負向率 44%，是本月情緒崩跌最深的一天。</p>
+        </div>
+        <div class="judgment-row">
+          <span class="judgment-tag tag-means">意味著</span>
+          <p class="judgment-text">這不是偶發，而是設計工具普及後的<strong>必然張力</strong>——「人人都能設計」的品牌優勢，正在創意型用戶眼中轉化為「作品看起來都一樣」的品牌劣勢。任其發展，Canva 將失去最具傳播力的年輕創意族群。</p>
+        </div>
+        <div class="judgment-row">
+          <span class="judgment-tag tag-action">行動</span>
+          <p class="judgment-text">建立「從模板到個人化」的內容敘事線，主動推廣進階自訂功能，讓品牌故事從<strong>「易用」升級為「有個性的易用」</strong>。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Judgment 02 -->
+    <div class="judgment-card card-yellow">
+      <div class="judgment-index yellow">判斷 02 ／ 產品溝通風險</div>
+      <div class="judgment-title">AI 聲量已超越 AI 實力，期望落差正在形成慣性</div>
+      <div class="judgment-body">
+        <div class="judgment-row">
+          <span class="judgment-tag tag-event">事件</span>
+          <p class="judgment-text">Magic Layers 於 04-16 帶來高關注（AI 議題占當日 27%），但同日輿情出現「<strong>AI 選項有限、圖生影片仍在實驗</strong>」的批評，正負聲量同步攀升。</p>
+        </div>
+        <div class="judgment-row">
+          <span class="judgment-tag tag-means">意味著</span>
+          <p class="judgment-text">Canva 的 AI 行銷已成功建立高期望值，但功能成熟度尚未跟上。若這種落差形成慣性，<strong>每次 AI 功能發布的負評比例都會結構性偏高</strong>——好的入場最終變成例行失望。</p>
+        </div>
+        <div class="judgment-row">
+          <span class="judgment-tag tag-action">行動</span>
+          <p class="judgment-text">溝通策略從「功能展示」轉向「<strong>進化歷程</strong>」，讓用戶參與 AI 成長，而非等待完成品，降低每次發布的期望落差幅度。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Judgment 03 -->
+    <div class="judgment-card card-green">
+      <div class="judgment-index green">判斷 03 ／ 商機切入口</div>
+      <div class="judgment-title">企業市場是本月最清晰、無爭議的成長機會</div>
+      <div class="judgment-body">
+        <div class="judgment-row">
+          <span class="judgment-tag tag-event">事件</span>
+          <p class="judgment-text">KPMG 企業版案例、大型慈善組織 AI 應用、企業資安協作功能，在本月均出現<strong>零負向的正面聲量</strong>，且自然形成背書效應。</p>
+        </div>
+        <div class="judgment-row">
+          <span class="judgment-tag tag-means">意味著</span>
+          <p class="judgment-text">企業用戶的體驗滿意度顯著高於個人用戶，且高知名度客戶案例已在輿論中形成信任積累。這是 Canva 從「設計工具」升格為<strong>「企業 SaaS」</strong>的最佳敘事時機，錯過則讓 Adobe 填補這個空間。</p>
+        </div>
+        <div class="judgment-row">
+          <span class="judgment-tag tag-action">行動</span>
+          <p class="judgment-text">主動擴大企業案例的觸及（PR、內容行銷），將零散的正向聲量<strong>轉化為有組織的品牌信任資產</strong>。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: Competitive -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <span class="section-title">競爭格局位移</span>
+    </div>
+    <table class="matrix-table">
+      <thead>
+        <tr>
+          <th>品牌</th>
+          <th>本月聲量占比</th>
+          <th>月末趨勢</th>
+          <th>對 Canva 威脅方向</th>
+          <th>本月最顯著動作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="brand-label">Canva</span></td>
+          <td>~78%，絕對主導</td>
+          <td><span class="trend-warn">W3 末段承壓</span></td>
+          <td><span class="threat-none">— 自身</span></td>
+          <td>Magic Layers 黑科技發布</td>
+        </tr>
+        <tr>
+          <td><span class="brand-label">Adobe Express</span></td>
+          <td>~15%，穩定活躍</td>
+          <td><span class="trend-up">↑ 攻勢加速</span></td>
+          <td><span class="threat-side">入門市場側翼</span></td>
+          <td>強化 AI 修圖 + 初學者課程生態</td>
+        </tr>
+        <tr>
+          <td><span class="brand-label">Figma</span></td>
+          <td>~7%，低調存在</td>
+          <td><span class="trend-flat">→ 專業定位穩固</span></td>
+          <td><span class="threat-slow">企業市場慢速滲透</span></td>
+          <td>Code Layers 鞏固開發設計整合</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="matrix-note">
+      <strong>本月格局小結：</strong>Canva 敘事主導權仍在。Adobe 是當前最需要防守的側翼，集中在入門市場與品牌行銷人員；Figma 屬長線觀察，短期對大眾市場無實質威脅，但其 AI 工作流程是進入企業市場的楔子。
+    </div>
+  </div>
+
+  <!-- Section 4: Anchors -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <span class="section-title">下月觀察錨點</span>
+    </div>
+
+    <div class="anchor-card">
+      <div class="anchor-num">01</div>
+      <p class="anchor-text">如果「<strong>模板化缺乏原創性</strong>」的討論在 5 月再次出現於學生或創意族群，代表這已從週期性爆發轉變為<em>固化的品牌認知</em>——公關介入的視窗正在收窄，需立即啟動。</p>
+    </div>
+
+    <div class="anchor-card">
+      <div class="anchor-num">02</div>
+      <p class="anchor-text">如果 Adobe Express 月度聲量占比突破 <strong>20%</strong>（本月 ~15%），代表競爭格局已開始<em>實質位移</em>，Canva 的輿論主導地位首次受到可測量的挑戰。</p>
+    </div>
+
+    <div class="anchor-card">
+      <div class="anchor-num">03</div>
+      <p class="anchor-text">如果下一次 AI 功能發布後，相關討論中的負向比例超過 <strong>20%</strong>（本月 AI 相關負向 ~15%），代表期望落差已成慣性，溝通策略需在<em>發布前重新設計</em>，而非事後補救。</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="report-footer">
+    <div class="footer-left">Brand Sentinel 自動化演算法｜精煉版月報 v2｜產出：2026-04-17</div>
+    <div class="footer-badge">SENTINEL ✦ MONTHLY</div>
+  </div>
+
+</div>
+</body>
+</html>
