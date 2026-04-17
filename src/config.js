@@ -115,7 +115,7 @@ const config = {
 
   // 排程設定
   schedule: {
-    cron_expression: '0 9 * * *', // 每日 09:00
+    cron_expression: '0 10 * * *', // 每日 10:00 (UTC+8 台北時間)
     timezone: 'Asia/Taipei'
   },
 

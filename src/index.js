@@ -8,7 +8,7 @@ import path from 'path';
 import cron from 'node-cron';
 import config from './config.js';
 import logger from './utils/logger.js';
-import { insert_raw_data_batch, close_db, get_stats } from './utils/db.js';
+import { insert_raw_data_batch, close_db } from './utils/db.js';
 
 // 蒐集器
 import ThreadsCollector from './collectors/threads_collector.js';
@@ -23,7 +23,7 @@ import { analyze_pending_data } from './analyzer/analyzer.js';
 // 報告
 import { generate_daily_report } from './reporter/daily_report.js';
 import { generate_promax_report } from './reporter/daily_report_promax.js';
-import { generate_weekly_report, should_send_weekly } from './reporter/weekly_report.js';
+import { generate_weekly_report, generate_monthly_report, should_send_periodic_report } from './reporter/weekly_report.js';
 
 // 通知
 import { send_line_message } from './notifier/line_notifier.js';
@@ -109,51 +109,32 @@ async function run_pipeline() {
 
     let report = await generate_daily_report(today);
 
-    // 判斷是否補償發送週報（補償機制：錯過週一也會在下次開機時補發）
-    const { should, trigger_date } = should_send_weekly(today);
-    let weekly_data = null;
-    if (should) {
-      logger.info('📅 週報機制觸發，計算週趨勢資料...');
-      const trigger_dt = new Date(trigger_date);
-      const dow = trigger_dt.getDay();
-      const days_to_sunday = dow === 0 ? 7 : dow;
-      const week_end = new Date(trigger_dt);
-      week_end.setDate(week_end.getDate() - days_to_sunday);
-      const week_start = new Date(week_end);
-      week_start.setDate(week_start.getDate() - 6);
-      const last_week_end = new Date(week_start);
-      last_week_end.setDate(last_week_end.getDate() - 1);
-      const last_week_start = new Date(last_week_end);
-      last_week_start.setDate(last_week_start.getDate() - 6);
-      const fmt = d => d.toISOString().split('T')[0];
-      const tw = get_stats(fmt(week_start), fmt(week_end));
-      const lw = get_stats(fmt(last_week_start), fmt(last_week_end));
-      const pct = (count, total) => total > 0 ? ((count / total) * 100).toFixed(1) : '0.0';
-      const tw_pos = tw.by_sentiment.find(s => s.sentiment === '正面')?.count || 0;
-      const tw_neu = tw.by_sentiment.find(s => s.sentiment === '中性')?.count || 0;
-      const tw_neg = tw.by_sentiment.find(s => s.sentiment === '負面')?.count || 0;
-      const lw_pos = lw.by_sentiment.find(s => s.sentiment === '正面')?.count || 0;
-      const lw_neu = lw.by_sentiment.find(s => s.sentiment === '中性')?.count || 0;
-      const lw_neg = lw.by_sentiment.find(s => s.sentiment === '負面')?.count || 0;
-      const vol_change = tw.total - lw.total;
-      weekly_data = {
-        range: `${fmt(week_start)} ~ ${fmt(week_end)}`,
-        this_total: tw.total, last_total: lw.total,
-        volume_change: vol_change,
-        volume_pct: lw.total > 0 ? ((vol_change / lw.total) * 100).toFixed(1) : 'N/A',
-        pos_pct: pct(tw_pos, tw.total), last_pos_pct: pct(lw_pos, lw.total), pos_diff: tw_pos - lw_pos,
-        neu_pct: pct(tw_neu, tw.total), last_neu_pct: pct(lw_neu, lw.total),
-        neg_pct: pct(tw_neg, tw.total), last_neg_pct: pct(lw_neg, lw.total), neg_diff: tw_neg - lw_neg,
-        topics: tw.by_topic.slice(0, 5)
-      };
-      // 存入 DB 以供下次補償判斷
-      generate_weekly_report(trigger_date);
+    // 判斷今天是否需發送週期性報告（週報 or 月報），含補償機制
+    const { should, type: periodic_type, trigger_date } = should_send_periodic_report(today);
+    let weekly_data = null;    // 供 Pro Max HTML 的週報區塊使用
+    let monthly_data = null;   // 供 Pro Max HTML 的月報區塊使用
+
+    if (should && periodic_type === 'weekly') {
+      logger.info('📅 週報機制觸發，生成週趨勢資料...');
+      const weekly_result = generate_weekly_report(trigger_date); // 儲存至 DB + 回傳結構化資料
+      weekly_data = weekly_result.data;
       logger.info('📅 週報資料已合併入 Pro Max 日報');
+
+    } else if (should && periodic_type === 'monthly') {
+      logger.info('📋 月報機制觸發（本月最後一次週期），生成月度彙整...');
+      const result = generate_monthly_report(trigger_date); // 儲存至 DB
+      monthly_data = {
+        year_month: result.year_month,
+        stats: result.stats,
+        report: result.report,
+        weeks: result.weeks   // 結構化週次資料，供 HTML 直接渲染
+      };
+      logger.info(`📋 月報已生成：${result.year_month}，共 ${result.stats.total} 筆資料`);
     }
 
-    // 生成 UI/UX Pro Max 版 HTML 報告（含週報區塊）
+    // 生成 UI/UX Pro Max 版 HTML 報告（週報或月報區塊擇一注入）
     logger.info('✨ 正在生成 UI/UX Pro Max 戰情面板網頁版...');
-    await generate_promax_report(today, weekly_data);
+    await generate_promax_report(today, weekly_data, monthly_data);
     logger.info('✨ Pro Max 報告生成完成');
 
     logger.info('📝 報告生成完成');
@@ -212,7 +193,14 @@ async function run_pipeline() {
     const preview_lines = report.split('\n').filter(line => line.trim().length > 0 && !line.includes('==='));
     const summary_preview = preview_lines.slice(2, 8).join('\n');
 
-    const notification_message = `✨ 你的 UI/UX Pro Max 戰情面板已上線 (${today})！\n\n通訊軟體本身無法直接顯示華麗的互動網頁，我為你打造了完全獨立的 HTML Dashboard 手機友好網頁版！\n支援玻璃材質 (Glassmorphism)、模塊化佈局與高級數據漸層視覺化。\n\n👉 請點擊下方專屬連結，在手機瀏覽器中開啟這份專屬你的戰情大屏👇\n🌐 ${github_html_url}\n\n---\n⚡ 今日速覽摘要：\n${summary_preview}\n\n(如果網頁一片空白，請多重新整理一兩次讓代理伺服器抓取最新檔案)`;
+    // 依報告類型調整通知標頭
+    const type_labels = {
+      weekly:  { emoji: '📅', title: '週報日', note: '\n\n📅 本週趨勢週報已合併於面板內，滾動至頁面底部可查閱。' },
+      monthly: { emoji: '📋', title: '月報日', note: '\n\n📋 本月月報已合併於面板內，滾動至頁面底部可查閱完整月度彙整。' }
+    };
+    const type_info = type_labels[periodic_type] || { emoji: '📊', title: '日報', note: '' };
+
+    const notification_message = `${type_info.emoji} 你的 Brand Sentinel Pro Max 戰情面板已上線！(${today} ・ ${type_info.title})${type_info.note}\n\n通訊軟體本身無法直接顯示華麗的互動網頁，為你打造了完全獨立的 HTML Dashboard 手機友好網頁版！\n支援玻璃材質 (Glassmorphism)、模塊化佈局與高級數據漸層視覺化。\n\n👉 請點擊下方專屬連結，在手機瀏覽器中開啟這份專屬你的戰情大屏👇\n🌐 ${github_html_url}\n\n---\n⚡ 今日速覽摘要：\n${summary_preview}\n\n(如果網頁一片空白，請多重新整理一兩次讓代理伺服器抓取最新檔案)`;
 
     // LINE 推送（主要）
     const line_ok = await send_line_message(notification_message);
@@ -260,7 +248,7 @@ if (args.includes('--now')) {
 
   logger.info(`⏰ Brand Sentinel 排程模式啟動`);
   logger.info(`   排程: ${cron_expression} (${timezone})`);
-  logger.info(`   下次執行: 每日 09:00 (UTC+8)`);
+  logger.info(`   下次執行: 每日 10:00 (UTC+8 台北時間)`);
   logger.info(`   按 Ctrl+C 停止`);
 
   cron.schedule(cron_expression, () => {

@@ -10,7 +10,7 @@ import { call_gemini_json } from '../analyzer/llm_client.js';
 import { build_insight_prompt } from '../analyzer/prompt_templates.js';
 import logger from '../utils/logger.js';
 
-export async function generate_promax_report(date, weekly_data = null) {
+export async function generate_promax_report(date, weekly_data = null, monthly_data = null) {
   logger.info(`開始生成 ${date} PRO MAX 報告`);
   const stats = get_stats(date, date);
   const analysis = get_analysis_by_date(date);
@@ -182,6 +182,35 @@ export async function generate_promax_report(date, weekly_data = null) {
     .weekly-topic-item:hover { background: rgba(255,255,255,0.08); }
     .weekly-topic-name { color: #cbd5e1; font-size: 0.8rem; font-weight: 500; }
     .weekly-topic-count { color: #a5b4fc; font-size: 0.75rem; font-weight: 700; background: rgba(99,102,241,0.2); padding: 0.15rem 0.5rem; border-radius: 9999px; }
+    /* ── Monthly Report Section ── */
+    .monthly-section { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,165,0,0.2); }
+    .monthly-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0.75rem; border-radius: 9999px; background: rgba(251,146,60,0.15); border: 1px solid rgba(251,146,60,0.3); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; color: #fb923c; text-transform: uppercase; margin-bottom: 1.5rem; }
+    .monthly-kpi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem; }
+    @media (min-width: 768px) { .monthly-kpi-grid { grid-template-columns: repeat(4, 1fr); } }
+    .monthly-kpi-card { border-radius: 1.25rem; padding: 1.25rem; background: rgba(251,146,60,0.06); border: 1px solid rgba(251,146,60,0.15); text-align: center; transition: transform 0.2s; }
+    .monthly-kpi-card:hover { transform: translateY(-3px); }
+    .monthly-kpi-label { color: #94a3b8; font-size: 0.75rem; margin-bottom: 0.5rem; }
+    .monthly-kpi-value { font-size: 1.75rem; font-weight: 800; background: linear-gradient(to right, #fb923c, #fbbf24); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .monthly-kpi-sub { color: #64748b; font-size: 0.7rem; margin-top: 0.25rem; }
+    .monthly-main-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+    @media (min-width: 768px) { .monthly-main-grid { grid-template-columns: 3fr 2fr; } }
+    .monthly-panel { border-radius: 1.5rem; padding: 2rem; }
+    .monthly-panel .panel-title { color: #fb923c; margin-bottom: 1.5rem; }
+    .monthly-panel .panel-title .icon { background: rgba(251,146,60,0.2); }
+    .monthly-brand-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .monthly-brand-row:last-child { border-bottom: none; }
+    .monthly-brand-name { color: #e2e8f0; font-weight: 600; font-size: 0.875rem; flex: 0 0 7rem; }
+    .monthly-brand-bar-wrap { flex: 1; height: 0.5rem; background: #1e293b; border-radius: 9999px; overflow: hidden; }
+    .monthly-brand-bar { height: 100%; border-radius: 9999px; background: linear-gradient(to right, #fb923c, #fbbf24); }
+    .monthly-brand-pct { color: #fbbf24; font-weight: 700; font-size: 0.8rem; flex: 0 0 3.5rem; text-align: right; }
+    .monthly-week-list { display: flex; flex-direction: column; gap: 0.5rem; }
+    .monthly-week-item { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; border-radius: 0.875rem; background: rgba(255,255,255,0.04); transition: background 0.2s; }
+    .monthly-week-item:hover { background: rgba(255,255,255,0.08); }
+    .monthly-week-label { color: #cbd5e1; font-size: 0.8rem; font-weight: 600; }
+    .monthly-week-stats { display: flex; gap: 0.75rem; }
+    .monthly-week-pos { color: #34d399; font-size: 0.75rem; font-weight: 700; }
+    .monthly-week-neg { color: #fb7185; font-size: 0.75rem; font-weight: 700; }
+    .monthly-week-total { color: #94a3b8; font-size: 0.75rem; }
   `;
 
   const html = `
@@ -284,11 +313,11 @@ export async function generate_promax_report(date, weekly_data = null) {
       </div>
     </div>
 
-    <!-- Weekly Report Section (conditional) -->
+    <!-- Weekly Report Section (weekly_data only) -->
     ${weekly_data ? `
     <div class="weekly-section">
       <h2 class="section-title">
-        <span class="icon-grad">📊</span> 本週趨勢週報
+        <span class="icon-grad">📅</span> 本週趨勢週報
         <span style="font-size:0.85rem;font-weight:500;color:#94a3b8;margin-left:0.5rem;">${weekly_data.range}</span>
       </h2>
       <div class="weekly-grid">
@@ -335,6 +364,87 @@ export async function generate_promax_report(date, weekly_data = null) {
       </div>
     </div>
     ` : ''}
+
+    <!-- Monthly Report Section (monthly_data only, replaces weekly) -->
+    ${monthly_data ? (() => {
+      const ms = monthly_data.stats;
+      const mt = ms.total || 1;
+      const mpos = ms.by_sentiment.find(s => s.sentiment === '正面')?.count || 0;
+      const mneu = ms.by_sentiment.find(s => s.sentiment === '中性')?.count || 0;
+      const mneg = ms.by_sentiment.find(s => s.sentiment === '負面')?.count || 0;
+      const mpos_pct = ((mpos / mt) * 100).toFixed(1);
+      const mneu_pct = ((mneu / mt) * 100).toFixed(1);
+      const mneg_pct = ((mneg / mt) * 100).toFixed(1);
+      const brand_max = ms.by_brand[0]?.count || 1;
+
+      const brandRowsHtml = ms.by_brand.map(b => {
+        const pct = ((b.count / mt) * 100).toFixed(0);
+        const bar_w = ((b.count / brand_max) * 100).toFixed(0);
+        return `
+          <div class="monthly-brand-row">
+            <span class="monthly-brand-name">${b.brand}</span>
+            <div class="monthly-brand-bar-wrap"><div class="monthly-brand-bar" style="width:${bar_w}%"></div></div>
+            <span class="monthly-brand-pct">${b.count}筆 ${pct}%</span>
+          </div>`;
+      }).join('');
+
+      // 直接使用結構化週次資料（不再 Regex 解析 Markdown）
+      const weekItemsHtml = (monthly_data.weeks || []).map(w => `
+          <div class="monthly-week-item">
+            <span class="monthly-week-label">第 ${w.week_num} 週 <span style="color:#64748b;font-weight:400;font-size:0.7rem;">${w.week_start} ～ ${w.week_end}</span></span>
+            <div class="monthly-week-stats">
+              <span class="monthly-week-total">${w.total} 筆</span>
+              <span class="monthly-week-pos">▲ ${w.pos_pct}%</span>
+              <span class="monthly-week-neg">▼ ${w.neg_pct}%</span>
+            </div>
+          </div>`).join('');
+
+      return `
+      <div class="monthly-section">
+        <div class="monthly-badge">📋 Monthly Report</div>
+        <h2 class="section-title">
+          <span class="icon-grad">📋</span> ${monthly_data.year_month} 月度品牌彙整
+        </h2>
+
+        <!-- KPI 四格 -->
+        <div class="monthly-kpi-grid">
+          <div class="monthly-kpi-card">
+            <div class="monthly-kpi-label">月度總聲量</div>
+            <div class="monthly-kpi-value">${ms.total}</div>
+            <div class="monthly-kpi-sub">筆有效資料</div>
+          </div>
+          <div class="monthly-kpi-card">
+            <div class="monthly-kpi-label">正向情緒均值</div>
+            <div class="monthly-kpi-value">${mpos_pct}%</div>
+            <div class="monthly-kpi-sub">${mpos} 筆正向</div>
+          </div>
+          <div class="monthly-kpi-card">
+            <div class="monthly-kpi-label">負向情緒均值</div>
+            <div class="monthly-kpi-value">${mneg_pct}%</div>
+            <div class="monthly-kpi-sub">${mneg} 筆負向</div>
+          </div>
+          <div class="monthly-kpi-card">
+            <div class="monthly-kpi-label">中立討論比率</div>
+            <div class="monthly-kpi-value">${mneu_pct}%</div>
+            <div class="monthly-kpi-sub">${mneu} 筆中立</div>
+          </div>
+        </div>
+
+        <!-- 品牌聲量 + 週次分段 -->
+        <div class="monthly-main-grid">
+          <div class="glass-panel monthly-panel">
+            <h3 class="panel-title"><span class="icon">🏷️</span> 品牌聲量分佈</h3>
+            ${brandRowsHtml || '<p style="color:#64748b">無資料</p>'}
+          </div>
+          <div class="glass-panel monthly-panel">
+            <h3 class="panel-title"><span class="icon">📅</span> 各週分段摘要</h3>
+            <div class="monthly-week-list">
+              ${weekItemsHtml || '<p style="color:#64748b">無資料</p>'}
+            </div>
+          </div>
+        </div>
+      </div>`;
+    })() : ''}
 
   </div>
 </body>

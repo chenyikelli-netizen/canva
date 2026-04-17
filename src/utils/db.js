@@ -316,6 +316,42 @@ export function get_last_weekly_report_date() {
 }
 
 /**
+ * 取得上次月報的發送日期
+ * @returns {string|null} YYYY-MM-DD 或 null
+ */
+export function get_last_monthly_report_date() {
+  const monthly_reports = db.reports
+    .filter(r => r.report_type === 'monthly')
+    .sort((a, b) => new Date(b.report_date) - new Date(a.report_date));
+
+  return monthly_reports.length > 0 ? monthly_reports[0].report_date : null;
+}
+
+/**
+ * 取得指定月份的所有分析結果（用於月報生成）
+ * @param {string} year_month - YYYY-MM 格式
+ * @returns {Object[]}
+ */
+export function get_analysis_by_month(year_month) {
+  return db.analysis_results
+    .filter(a => a.analyzed_at.startsWith(year_month))
+    .map(a => {
+      const raw = db.raw_data.find(r => r.id === a.raw_data_id) || {};
+      return {
+        ...a,
+        brand: a.brand || 'Canva',
+        platform: raw.platform,
+        url: raw.url,
+        title: raw.title,
+        content: raw.content,
+        author: raw.author,
+        published_at: raw.published_at
+      };
+    })
+    .sort((a, b) => new Date(b.analyzed_at) - new Date(a.analyzed_at));
+}
+
+/**
  * 關閉資料庫連線 (JSON 版本為空實作)
  */
 export function close_db() {
