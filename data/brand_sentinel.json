@@ -8142,6 +8142,248 @@
       "published_at": "2026-04-17T12:43:08.000Z",
       "collected_at": "2026-04-20T01:22:57.367Z",
       "metadata": "{\"keyword\":\"Canva AI\",\"source\":\"threads_search\"}"
+    },
+    {
+      "id": 705,
+      "platform": "tavily",
+      "url": "https://www.threads.com/@don_design520/post/DXTamLsgKQ0/%E4%BB%A5%E4%B8%8A-3-%E5%80%8B%E6%A0%B8%E5%BF%83%E7%94%A8%E6%B3%95%E5%B0%B1%E6%98%AF%E6%88%91%E5%9C%A8-canva-ai-20-%E4%B8%8A%E6%9C%80%E5%8F%97%E7%94%A8%E7%9A%84%E5%BF%83%E5%BE%97%E5%BE%9E%E6%AF%8F%E6%AC%A1%E8%A8%AD%E8%A8%88%E9%83%BD%E8%A6%81%E8%8A%B1%E5%8D%8A%E5%A4%A9%E5%8F%8D%E8%A6%86%E4%BF%AE%E6%94%B9%E5%88%B0%E6%87%B7%E7%96%91%E4%BA%BA%E7%94%9F%E5%88%B0%E7%8F%BE%E5%9C%A8-30-%E5%88%86%E9%90%98%E5%87%BA%E4%B8%80%E5%A5%97%E8%B7%A8%E9%A0%BB%E9%81%93%E7%B4%A0%E6%9D%90%E9%80%99%E4%BA%9B%E6%96%B9%E6%B3%95%E7%9C%9F%E7%9A%84%E5%B9%AB%E4%BA%86%E6%88%91%E5%BE%88",
+      "title": "以上3 個核心用法，就是我在Canva AI 2.0 上最受用的心得 ... - Threads",
+      "content": "對於AI 工具，老實說，重點不單單只是「省時間」，更是讓你把精力放在真正需要創意和判斷的地方，而不是卡在重複的執行細節上。",
+      "author": "threads.com",
+      "published_at": null,
+      "collected_at": "2026-04-22T02:00:57.475Z",
+      "metadata": "{\"search_query\":\"Canva AI 使用 心得\",\"score\":0.99999285,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 706,
+      "platform": "tavily",
+      "url": "https://www.gvm.com.tw/article/125511?srsltid=AfmBOorVTzkQqi0Yccw0gy0scBVryYJLFzsd0OCAXyVO6EoiSnqRQfpA",
+      "title": "AI 簡報是趨勢！Gamma 與Canva AI 怎麼用？ - 遠見雜誌",
+      "content": "在Canva AI中，能設定的選項不多，僅能選擇設計形式（簡報、社群貼文等）、分享對象（休閒、專業、教育）、視覺風格和長度。在本次實測中，選擇了內容專業、視覺",
+      "author": "gvm.com.tw",
+      "published_at": null,
+      "collected_at": "2026-04-22T02:00:57.496Z",
+      "metadata": "{\"search_query\":\"Canva AI 使用 心得\",\"score\":0.9999497,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 707,
+      "platform": "tavily",
+      "url": "https://www.youtube.com/watch?v=9ntGQXAFp3Q",
+      "title": "Canva AI 2.0 完整教學！對話式設計怎麼用？7天免費試用千萬別浪費 ...",
+      "content": "Canva 在Canva Create 2026 正式發布Canva AI 2.0，帶來全新「對話式設計」體驗！不再只是單一指令生成，而是透過持續對話與AI 協作，完成簡報、海報、",
+      "author": "youtube.com",
+      "published_at": null,
+      "collected_at": "2026-04-22T02:00:57.511Z",
+      "metadata": "{\"search_query\":\"Canva AI 使用 心得\",\"score\":0.9992022,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 708,
+      "platform": "tavily",
+      "url": "https://www.reddit.com/r/canva/comments/1aqa4nq/how_is_this_program_so_good_and_uxui_so_bad/?tl=zh-hant",
+      "title": "這個程式怎麼這麼好用，但UX/UI 卻這麼爛？ : r/canva - Reddit",
+      "content": "我每天都在用Canva，已經用了一年了，但還是很難找到專案、整理專案，甚至只是刪除一個專案都很困難。我看到的每個按鈕都是運作不良的AI 工具。在你們告訴我",
+      "author": "reddit.com",
+      "published_at": null,
+      "collected_at": "2026-04-22T02:00:57.526Z",
+      "metadata": "{\"search_query\":\"Canva AI 設計 使用者評論\",\"score\":0.999015,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 709,
+      "platform": "tavily",
+      "url": "https://www.youtube.com/watch?v=EVxf76_L6mY",
+      "title": "Canva vs Figma (2026) — Which is Better for YOU?",
+      "content": "In this video, Style Factory's Olivia Jannesson puts Canva and Figma head to head. Which one is right for your design project?",
+      "author": "youtube.com",
+      "published_at": null,
+      "collected_at": "2026-04-22T02:00:57.540Z",
+      "metadata": "{\"search_query\":\"Figma vs Canva 比較\",\"score\":0.99918956,\"brand\":\"Figma\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 710,
+      "platform": "tavily",
+      "url": "https://www.ragic.com/intl/zh-TW/blog/454/best-graphic-design-software-for-social-media-images",
+      "title": "沒設計專業也能用！5 款設計軟體小編實測心得 詳細規格比較一次看",
+      "content": "在這篇文章裡，我們將介紹幾款 Ragic 小編也在用或試用過的設計軟體，並和你分享這些軟體的選定標準和共通特點，幫助你選擇適合自己的設計軟體，快速產出圖片，並降低蒐集靈感和設計時的困頓感！. 這次介紹的設計軟體，不管是來自國際大廠或是本土公司，為了提供使用者更簡便的體驗，並迅速創造具有設計感的圖片，都具有以下的共通特點：**① 都是零設計背景就可以輕鬆上手的工具**（除了 Figma 稍有門檻，建議與設計師協作）。**② 都是 SaaS 軟體**，只需要一個網址就能連上，無須安裝更方便。**③ 提供免費版方案**，使用者可自行評估是否需要付費升級。**④ 直接點選所需的版面大小即可進行編輯**，省去記憶各平台圖片尺寸的困擾。**⑤ 支援複製貼上圖片**，不用上傳，小編作圖更迅速！. 和 Canva 相比，Adobe Express 提供的字型較為有限，尤其是在中文字型方面。如果找不到自己想用的免費字型，也可在使用付費方案後，使用字型清單中的付費字型，或是自行上傳需要的字型檔案。. 除此之外，Adobe Express 的讀取速度是肉眼可見的慢，特別是在圖檔上疊加兩個以上的素材時。雖然這不太影響最終輸出的圖片，但在剛進入編輯版面時，會較為明顯感受到卡頓，這時可能會需要耐心等候，或是嘗試刷新一下圖檔。. 因為 Vivipic 主打「專為台灣行銷人打造的設計工具」，在製作圖片時，除了能夠選取各種社群媒體的媒體格式之外，還在首頁下方提供了針對電商、IG 推出的各種範本，其中最特別的還包括 LINE 的圖文選單和多頁訊息，非常貼近小編們在社群推廣上的需求。. Vivipic 內建的中文字型相較於前幾個設計軟體來說多很多，而且如果需要其他國家的字型，例如日文或韓文，只要在搜尋框尋找，就可找到許多可用的字型。左側的文字功能選單下方也可選擇各種特殊效果或加圖的文字選項，光是在添加文字這塊就能創造很多變化。. ⭕最適合：需要進行產品 UI/UX、landing page 設計，或有跟設計師合作的使用者. 其實 Figma 算是以 UI/UX 設計協作為主的工具，沒有特別主打社群圖文製作，只是在特定情況下（例如團隊內有設計師可製作模板、行銷團隊也須協作製作行銷 landing page 或其他素材），用它來製作社群圖文其實也是合用的，這邊將我們的實測心得提供給你參考。. 在協作上，設計師只要設計好的畫布（Canvas）設定為團隊專案，小編便可以在該畫布的框架（Frame）中修改文字內容，完成後再進行圖片輸出。以 Ragic 圖卡製作的流程為例，設計師會先把圖卡中的素材、標題、內文的相對位置排列妥當，小編再把相關的文字內容貼上版面進行編輯，完成後設計師再進行最終排版和調整，就可以輸出圖片了。. Figma 的介面語言沒有中文，只有英文和日文，因此可能需要花點時間來熟悉其中的功能。此外，雖然Figma 內建了像思源黑體（Noto Sans TC）這樣的中文字型，但如果想要用字型清單以外的字型，使用者需要下載 Figma 的字型安裝程式「Font installer」，以便在 Figma 的字型選擇器中選取電腦中的字型。. 以上介紹的 5 款設計軟體各有各的優點，你認為哪一款最實用呢？這邊再幫你快速總結一下：如果你是設計新手，想要有豐富的素材和範本庫供你使用和參考，那麼免費版的 Canva 就非常好用。如果你已經付費使用其它 Adobe 產品，但覺得用 PS 或 AI 產圖太麻煩，那麼 Adobe Express 既可以符合你的使用習慣，又能更快幫你產出各種規格的圖片。如果你想要用設計軟體，但又有預算上的考量，那麼提供免費素材庫的 VistaCreate 會是絕佳選擇。如果你在製圖時會大量運用到中文字型，內建許多中文字型的 Vivipic 可以讓你不用額外搜尋，就能做出有設計感的圖片。如果需要進行 UI 或 landing page 設計，或是團隊裡有設計師或美術人員可以幫你設定好版面、產出素材，那麼 Figma 會是你在精準製圖排版上的好幫手。. | **軟體** | Canva | Adobe Express | VistaCreate(Crello) | Vivipic | Figma |. | **素材庫** | 稱為元素 有靜態圖片、動態貼圖、影片、形狀、照片  有分免費和付費 | 也稱為元素 靜態圖為主  也分付費和免費  （和 Canva 相比，免費比例較高） | 叫 Objects，完全免費而且很豐富 | 有 （但搜尋較不準確，素材也較少） | 沒有內建素材庫 需自行 google 或在 Figma Community 尋找  （Figma Community 素材有分付費和免費） |. | **排版** | 有對齊格線，可判斷素材是否置中，是否有和其他素材對齊 有多種素材時，也可顯示素材間距有多少，間距是否相等 | 有對齊格線，可判斷素材是否置中，是否有和其他素材對齊 有多種素材時，也可顯示素材間距是否相等，但無法顯示實際間距有多少 | 對齊格線較少，可判斷素材是否置中，是否和其他素材對齊，但無法判斷素材間距是否相等 | 對齊格線較多 可以調整任何物件（圖片、文字）的 X 軸或 Y 軸位置，  比 Canva 或 Adobe Express 更準確  排版是圖層的概念，和 Photoshop 和 Illustrator 比較像 |. ## 馬上註冊 免費試用 Ragic!",
+      "author": "ragic.com",
+      "published_at": null,
+      "collected_at": "2026-04-22T02:00:57.553Z",
+      "metadata": "{\"search_query\":\"Adobe Express 評價 使用心得\",\"score\":0.69099766,\"brand\":\"Adobe Express\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 711,
+      "platform": "tavily",
+      "url": "https://www.reddit.com/r/AdobeExpress/comments/17scytl/the_new_adobe_express_sucks_get_your_90_day_free/?tl=zh-hant",
+      "title": "新的Adobe Express 超爛- 快去拿你的90 天免費額度",
+      "content": "必須一直付費使用這服務，卻沒辦法同時在手機和電腦上編輯專案。 · 無法更改彎曲文字的角度。 · 組織得超爛，所有搜尋圖形/形狀/等等的搜尋框幾乎都不能用，只",
+      "author": "reddit.com",
+      "published_at": null,
+      "collected_at": "2026-04-22T02:00:57.562Z",
+      "metadata": "{\"search_query\":\"Adobe Express 評價 使用心得\",\"score\":0.63098115,\"brand\":\"Adobe Express\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 712,
+      "platform": "tavily",
+      "url": "https://www.adobe.com/tw/express/why-choose-express-video",
+      "title": "比較Adobe Express 和CapCut",
+      "content": "看看創作者為何選擇Adobe 這款快速上手的全方位創作應用程式。用影片、社群和設計工具，更快產出更多內容。運用優質素材保持品牌一致性，讓作品更出眾。",
+      "author": "adobe.com",
+      "published_at": null,
+      "collected_at": "2026-04-22T02:00:57.570Z",
+      "metadata": "{\"search_query\":\"Adobe Express 評價 使用心得\",\"score\":0.5151571,\"brand\":\"Adobe Express\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 713,
+      "platform": "tavily",
+      "url": "https://www.akindo2000.net/blog/adobe-express_canva/",
+      "title": "【Adobe Express vs Canva】UIや機能の違いではどちらがおすすめ？｜CMAブログ｜株式会社シーエムエー",
+      "content": "October 15, 2025 - Canvaは印刷機能が無料でも利用可能なので、名刺やポスター、グッズ制作など、実際の印刷物を作りたい人には特におすすめです。 · 一方、Adobe Expressは無料プランでもAI生成機能が使えたり、SNSへの予約投稿ができます。",
+      "author": "akindo2000.net",
+      "published_at": null,
+      "collected_at": "2026-04-22T02:00:57.579Z",
+      "metadata": "{\"search_query\":\"Adobe Express vs Canva 比較\",\"score\":0.9999918,\"brand\":\"Adobe Express\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 714,
+      "platform": "tavily",
+      "url": "https://slashwm.com/tracebound/canva-vs-adobe-express/",
+      "title": "Canva和Adobe Express怎麼選？5 面向設計工具大比拼",
+      "content": "# Canva 和 Adobe Express 怎麼選？5 面向設計工具大比拼. 當你準備開始設計 IG 限動、品牌貼文、Reels 封面，或是簡報時，你可能會在 Canva 和 Adobe Express（原 Adobe Spark）之間猶豫。. 本篇文章將從 5 個使用者最在意的面向，帶你完整比較 Canva 與 Adobe Express 的優缺點，幫助你選出最適合自己的那一個。. ## 設計工具簡介｜Canva vs Adobe Express. ### Canva 是什麼？. Canva 是一款以模板為核心、強調簡單拖拉操作的線上設計工具。支援圖像、影片、簡報、社群貼文、名片、履歷等多種格式。擁有大量可商業用途的素材與圖庫，深受創作者、品牌與中小企業喜愛。. ### Adobe Express 是什麼？. Adobe Express 是 Adobe 家族為一般使用者推出的簡化版設計工具，整合了圖像設計、社群排版、短影片、去背與品牌模板等功能，結合 Adobe Stock 素材資源，並與 Photoshop Express、Lightroom 手機版可互通。. ## Canva vs Adobe Express 比較表（快速總覽）. | 圖庫與素材 | Pexels／Pixabay／Canva 自家圖庫 | Adobe Stock（質感佳，但分類較少） |. | 商業授權 | Pro 素材可商用 | 限 Adobe Stock 授權內容 |. | 價格 | Pro：NT$390/月 起 | 免費＋進階需 Adobe 訂閱（約 NT$330/月） |. Canva 提供超過 60 萬種模板，從 IG 限動、名片、履歷、教學講義到電子書封面，分類極細、更新頻繁，適合需要快速找到對應版型的使用者。. Adobe Express 的模板偏向風格統一、精緻簡約，但類型較少、不易搜尋，適合少量高質感需求者。. Canva 介面較偏平面設計排版思維，左欄導覽＋右側拖曳編輯，符合大多數使用者習慣。. Adobe Express 操作類似手機 App，工具選單藏在下方或側邊，彈出式操作視窗較多，新手可能需要適應。. 📌 如果你習慣手機直覺操作，Adobe Express 較適合；習慣網頁拖拉與模板思維，Canva 更有優勢。. Adobe Express 影片功能偏向剪輯與字幕軌道處理，適合製作簡報動畫、教學剪輯，但風格較簡約，轉場少。. Canva Pro 提供完整的授權說明，素材可用於商業用途（除非另標明限制），並可搭配外部素材網站如 Unsplash、Pexels 等整合使用。. Adobe Express 素材主要來自 Adobe Stock，圖像質感極佳，但數量遠少於 Canva，且授權上需特別留意用途條件。. 已經使用 Adobe 系列產品者 Adobe Express（可無縫整合）. ## 結語：Canva 還是 Adobe Express？. 如果你重視「模板數量」「操作直覺」「社群設計效率」→ 選 Canva. 如果你偏好「高質感素材」「剪輯風格影片」「結合 Adobe 生態」→ 可考慮 Adobe Express. 1 組可即時開啟的 Canva 模板（含 3 頁 IG 語錄／限動結構）. 👉 Canva 免費與付費差在哪？一次比較 7 項關鍵功能. 👉 Canva Pro 值不值得升級？5 種用戶情境完整解析.",
+      "author": "slashwm.com",
+      "published_at": null,
+      "collected_at": "2026-04-22T02:00:57.587Z",
+      "metadata": "{\"search_query\":\"Adobe Express vs Canva 比較\",\"score\":0.9999355,\"brand\":\"Adobe Express\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 715,
+      "platform": "tavily",
+      "url": "https://www.capcut.com/zh-tw/resource/adobe-express-vs-canva-comparison",
+      "title": "Adobe Express vs Canva-您應該選擇哪一個？ - CapCut",
+      "content": "Apr 25, 2025 · Canva有一個更廣泛的可定製模板庫，並且是免費的。這使得Canva成為大多數使用者比Adobe Express更好的選擇。 Canva和Adobe Express",
+      "author": "capcut.com",
+      "published_at": null,
+      "collected_at": "2026-04-22T02:00:57.596Z",
+      "metadata": "{\"search_query\":\"Adobe Express vs Canva 比較\",\"score\":0.9999318,\"brand\":\"Adobe Express\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 716,
+      "platform": "tavily",
+      "url": "https://www.pippit.ai/zh-tw/blog/trends/adobe-express-vs-canva",
+      "title": "Adobe Express 與Canva：哪個設計工具更符合您的工作流程？ - Pippit AI",
+      "content": "Apr 2, 2026 · 對於完全的新手而言，Canva 的模板主導方法是最容易入門的選擇。Adobe Express 也適合初學者，但更適合那些追求更高品質素材並希望隨時間進入Adobe 工具環境",
+      "author": "pippit.ai",
+      "published_at": null,
+      "collected_at": "2026-04-22T02:00:57.605Z",
+      "metadata": "{\"search_query\":\"Adobe Express vs Canva 比較\",\"score\":0.9999145,\"brand\":\"Adobe Express\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 717,
+      "platform": "tavily",
+      "url": "https://paperlike.com/blogs/paperlikers-insights/adobe-express-vs-canva?srsltid=AfmBOorjnHFFPbFfesSP-xlp-2JOvXbdxEJ6TK5mtm6SCHqG8Jh318Ur",
+      "title": "Adobe Express vs. Canva (2025): Features, Pricing, AI, and Best Use Cases | Paperlike",
+      "content": "Both Express and Canva use a freemium model, offering limited features for free and premium tools if you upgrade. Canva is designed to be all you'll need to create beautiful designs, videos, and more in one experience. Because Canva doesn't have a suite of programs, its consolidation of so many high-value creative tools might be why its pricing is slightly higher than Express. To take advantage of its flagship programs, existing Adobe users in Photoshop and Illustrator can use linked assets to bring their files into Express. Similar to Adobe Express, Canva is a template graphic powerhouse. Both Express and Canva offer this for users, and a few other handy features, making it easy for you to find your files when you need them. Because of its connection with other Adobe programs, you'll also see other folders you've created appear in Express as well. Your Designs are any individual files you've created in Canva. #### How do Express and Canva use AI?",
+      "author": "paperlike.com",
+      "published_at": null,
+      "collected_at": "2026-04-22T02:00:57.614Z",
+      "metadata": "{\"search_query\":\"Adobe Express vs Canva 比較\",\"score\":0.9998822,\"brand\":\"Adobe Express\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 718,
+      "platform": "tavily",
+      "url": "https://www.threads.com/@ziyi.law/post/DMsB90bMUij/有用但是就覺得不好用adobe-出了一個adobe-express-跟canva-很像我反而用那個比較多當我不想做稿子的時候",
+      "title": "有用但是就覺得不好用Adobe 出了一個Adobe express 跟Canva 很像 ...",
+      "content": "Jul 29, 2025 · 雖然我用adobe做東西稱不上有質感，但是我要做醜圖醜東西還是會用Canva！",
+      "author": "threads.com",
+      "published_at": null,
+      "collected_at": "2026-04-22T02:00:57.622Z",
+      "metadata": "{\"search_query\":\"Adobe Express vs Canva 比較\",\"score\":0.9979652,\"brand\":\"Adobe Express\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 719,
+      "platform": "tavily",
+      "url": "https://twitter.com/diana_abeleven?lang=bn",
+      "title": "Diana Abeleven (@diana_abeleven) / Posts / X",
+      "content": "... Design Desk to answer all your questions. Limited spots: buff.ly/4e0XALm ... canva as an intuitive and effective tool for impact: bit.ly/3qjvc35 · Diana",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-22T02:00:57.631Z",
+      "metadata": "{\"search_query\":\"Canva business design tool site:twitter.com\",\"score\":0.99553156,\"brand\":\"Canva\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 720,
+      "platform": "tavily",
+      "url": "https://twitter.com/MetacanvasApp",
+      "title": "MetaCanvas App (@MetacanvasApp) / Posts / X - Twitter",
+      "content": "MetaCanvas App (@MetacanvasApp) - Posts - Business Model Design & Execution | X (formerly Twitter) ... business model canvas\" tool bit.ly/3nFAMpn",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-22T02:00:57.640Z",
+      "metadata": "{\"search_query\":\"Canva business design tool site:twitter.com\",\"score\":0.99361163,\"brand\":\"Canva\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 721,
+      "platform": "tavily",
+      "url": "https://www.linkedin.com/pulse/canva-figma-which-should-you-choose-2026-style-factory-ovoie",
+      "title": "Canva or Figma — Which Should You Choose in 2026? - LinkedIn",
+      "content": "This article compares two popular design apps, Canva and Figma, to help you decide which one is right for your needs.",
+      "author": "linkedin.com",
+      "published_at": null,
+      "collected_at": "2026-04-22T02:00:57.648Z",
+      "metadata": "{\"search_query\":\"Canva vs Figma site:linkedin.com\",\"score\":0.9999542,\"brand\":\"Figma\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 722,
+      "platform": "tavily",
+      "url": "https://twitter.com/greghuntoon?lang=eu",
+      "title": "Greg Huntoon (@GregHuntoon) / Posts / X - Twitter",
+      "content": "→ What's Figma's role when code is free? Two-thirds of Figma users are now non-designers and it was super interesting to hear Dylan talk about Figma's future.",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-22T02:00:57.657Z",
+      "metadata": "{\"search_query\":\"Figma business teams site:twitter.com\",\"score\":0.9875683,\"brand\":\"Figma\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 723,
+      "platform": "dcard",
+      "url": "https://www.dcard.tw/f/mcu/p/240067279",
+      "title": "Canva 教育版",
+      "content": "銘傳大學板銘傳大學22/9/22Canva 教育版大家好\n因為最近開始接觸到canva ... 想請問有銘傳的同學成功註冊了Canva教育版嗎😭1010264",
+      "author": "匿名",
+      "published_at": null,
+      "collected_at": "2026-04-22T02:01:39.776Z",
+      "metadata": "{\"keyword\":\"Canva\",\"forum\":null,\"like_count\":0,\"comment_count\":0,\"source\":\"dcard_search\"}"
+    },
+    {
+      "id": 724,
+      "platform": "dcard",
+      "url": "https://www.dcard.tw/f/teacher/p/258691288",
+      "title": "關於Canva教育版",
+      "content": "教師板國立臺灣師範大學25/4/30關於Canva教育版+聘書升級成Canva教育版的 ... 那麼Canva教育版會有影響嗎331",
+      "author": "匿名",
+      "published_at": null,
+      "collected_at": "2026-04-22T02:01:39.786Z",
+      "metadata": "{\"keyword\":\"Canva\",\"forum\":null,\"like_count\":0,\"comment_count\":0,\"source\":\"dcard_search\"}"
+    },
+    {
+      "id": 725,
+      "platform": "threads",
+      "url": "https://www.threads.net/@chiao_2007/post/DXYzaOJkpCZ",
+      "title": null,
+      "content": "chiao_2007canva17小時更多欸所以有人知道如果Canva字變成這樣要怎麼辦嗎？\n那個幹也太顯眼了吧⋯⋯有人知道要怎麼辦嗎？除了改字體以外🫠🫠  翻譯讚4,033留言98轉發22分享117",
+      "author": "chiao_2007",
+      "published_at": "2026-04-21T08:47:45.000Z",
+      "collected_at": "2026-04-22T02:02:33.712Z",
+      "metadata": "{\"keyword\":\"Canva\",\"source\":\"threads_search\"}"
+    },
+    {
+      "id": 726,
+      "platform": "threads",
+      "url": "https://www.threads.net/@owen_10.04/post/DXY-dXWkt1r",
+      "title": null,
+      "content": "owen_10.04canva15小時更多做了 3 年印前最無力的時刻不是改稿\n是跟客戶解釋他的 Canva 檔為什麼不能印出血\nCMYK\n刀模\n字體外框每個詞丟出去 客戶眼神就死一次我開始想\n如果一個工具門檻低到讓 10 萬人能做設計\n那下一個問題是\n為什麼沒有人做一個工具 讓這 10 萬人能無痛印刷  翻譯讚850留言71轉發36分享58",
+      "author": "owen_10.04",
+      "published_at": "2026-04-21T10:24:18.000Z",
+      "collected_at": "2026-04-22T02:02:33.727Z",
+      "metadata": "{\"keyword\":\"Canva\",\"source\":\"threads_search\"}"
     }
   ],
   "analysis_results": [
@@ -14435,6 +14677,204 @@
       "sentiment": "正面",
       "summary": "介紹Canva AI 2.0新功能，快速製作個人化設計。",
       "analyzed_at": "2026-04-20T01:23:35.923Z"
+    },
+    {
+      "id": 700,
+      "raw_data_id": 726,
+      "brand": "Canva",
+      "topic": "產品功能",
+      "sentiment": "負面",
+      "summary": "Canva檔案難以符合專業印刷需求。",
+      "analyzed_at": "2026-04-22T02:02:52.790Z"
+    },
+    {
+      "id": 701,
+      "raw_data_id": 725,
+      "brand": "Canva",
+      "topic": "使用者體驗",
+      "sentiment": "負面",
+      "summary": "Canva字體顯示異常，影響視覺。",
+      "analyzed_at": "2026-04-22T02:02:52.800Z"
+    },
+    {
+      "id": 702,
+      "raw_data_id": 724,
+      "brand": "Canva",
+      "topic": "教育與企業",
+      "sentiment": "中性",
+      "summary": "討論Canva教育版升級與影響。",
+      "analyzed_at": "2026-04-22T02:02:52.808Z"
+    },
+    {
+      "id": 703,
+      "raw_data_id": 723,
+      "brand": "Canva",
+      "topic": "教育與企業",
+      "sentiment": "中性",
+      "summary": "詢問Canva教育版註冊經驗。",
+      "analyzed_at": "2026-04-22T02:02:52.817Z"
+    },
+    {
+      "id": 704,
+      "raw_data_id": 722,
+      "brand": "Figma",
+      "topic": "市場動態",
+      "sentiment": "中性",
+      "summary": "Figma用戶擴展至非設計師，討論未來走向。",
+      "analyzed_at": "2026-04-22T02:02:52.827Z"
+    },
+    {
+      "id": 705,
+      "raw_data_id": 721,
+      "brand": "Figma",
+      "topic": "競品比較",
+      "sentiment": "中性",
+      "summary": "比較Canva與Figma的優劣，協助用戶選擇。",
+      "analyzed_at": "2026-04-22T02:02:52.841Z"
+    },
+    {
+      "id": 706,
+      "raw_data_id": 720,
+      "brand": "Canva",
+      "topic": "市場動態",
+      "sentiment": "中性",
+      "summary": "提及MetaCanvas App 及商業模式畫布工具。",
+      "analyzed_at": "2026-04-22T02:02:52.854Z"
+    },
+    {
+      "id": 707,
+      "raw_data_id": 719,
+      "brand": "Canva",
+      "topic": "品牌形象",
+      "sentiment": "正面",
+      "summary": "稱讚Canva為直觀有效的設計工具。",
+      "analyzed_at": "2026-04-22T02:02:52.867Z"
+    },
+    {
+      "id": 708,
+      "raw_data_id": 718,
+      "brand": "Adobe Express",
+      "topic": "競品比較",
+      "sentiment": "負面",
+      "summary": "Adobe Express 雖有用但不好用，與Canva比較。",
+      "analyzed_at": "2026-04-22T02:02:52.878Z"
+    },
+    {
+      "id": 709,
+      "raw_data_id": 717,
+      "brand": "Adobe Express",
+      "topic": "競品比較",
+      "sentiment": "中性",
+      "summary": "比較Adobe Express與Canva的功能與定價。",
+      "analyzed_at": "2026-04-22T02:02:52.886Z"
+    },
+    {
+      "id": 710,
+      "raw_data_id": 716,
+      "brand": "Adobe Express",
+      "topic": "競品比較",
+      "sentiment": "中性",
+      "summary": "比較Canva與Adobe Express，提供入門與進階選擇建議。",
+      "analyzed_at": "2026-04-22T02:03:12.488Z"
+    },
+    {
+      "id": 711,
+      "raw_data_id": 715,
+      "brand": "Adobe Express",
+      "topic": "競品比較",
+      "sentiment": "中性",
+      "summary": "比較Canva與Adobe Express，指出Canva模板庫廣且免費。",
+      "analyzed_at": "2026-04-22T02:03:12.501Z"
+    },
+    {
+      "id": 712,
+      "raw_data_id": 714,
+      "brand": "Adobe Express",
+      "topic": "競品比較",
+      "sentiment": "中性",
+      "summary": "深度比較Canva與Adobe Express五大面向優缺點。",
+      "analyzed_at": "2026-04-22T02:03:12.513Z"
+    },
+    {
+      "id": 713,
+      "raw_data_id": 713,
+      "brand": "Adobe Express",
+      "topic": "競品比較",
+      "sentiment": "中性",
+      "summary": "比較Canva與Adobe Express的免費功能如印刷與AI。",
+      "analyzed_at": "2026-04-22T02:03:12.524Z"
+    },
+    {
+      "id": 714,
+      "raw_data_id": 712,
+      "brand": "Adobe Express",
+      "topic": "產品功能",
+      "sentiment": "正面",
+      "summary": "讚揚Adobe Express易上手、功能全面，助創作者高效產出。",
+      "analyzed_at": "2026-04-22T02:03:12.535Z"
+    },
+    {
+      "id": 715,
+      "raw_data_id": 711,
+      "brand": "Adobe Express",
+      "topic": "使用者體驗",
+      "sentiment": "負面",
+      "summary": "批評Adobe Express使用者體驗差，功能受限且組織混亂。",
+      "analyzed_at": "2026-04-22T02:03:12.543Z"
+    },
+    {
+      "id": 716,
+      "raw_data_id": 710,
+      "brand": "Adobe Express",
+      "topic": "競品比較",
+      "sentiment": "負面",
+      "summary": "比較設計軟體，指Adobe Express字型與讀取速度遜於Canva。",
+      "analyzed_at": "2026-04-22T02:03:12.552Z"
+    },
+    {
+      "id": 717,
+      "raw_data_id": 709,
+      "brand": "Figma",
+      "topic": "競品比較",
+      "sentiment": "中性",
+      "summary": "影片比較Canva與Figma，協助選擇適合的設計工具。",
+      "analyzed_at": "2026-04-22T02:03:12.560Z"
+    },
+    {
+      "id": 718,
+      "raw_data_id": 708,
+      "brand": "Canva",
+      "topic": "使用者體驗",
+      "sentiment": "負面",
+      "summary": "批評Canva使用者體驗差，專案管理困難且AI工具不良。",
+      "analyzed_at": "2026-04-22T02:03:12.568Z"
+    },
+    {
+      "id": 719,
+      "raw_data_id": 707,
+      "brand": "Canva",
+      "topic": "AI 相關",
+      "sentiment": "正面",
+      "summary": "Canva發布AI 2.0，提供全新對話式設計體驗。",
+      "analyzed_at": "2026-04-22T02:03:12.577Z"
+    },
+    {
+      "id": 720,
+      "raw_data_id": 706,
+      "brand": "Canva",
+      "topic": "AI 相關",
+      "sentiment": "中性",
+      "summary": "Canva AI 簡報功能設定選項有限。",
+      "analyzed_at": "2026-04-22T02:03:22.557Z"
+    },
+    {
+      "id": 721,
+      "raw_data_id": 705,
+      "brand": "Canva",
+      "topic": "使用者體驗",
+      "sentiment": "正面",
+      "summary": "Canva AI 提升用戶效率，專注創意。",
+      "analyzed_at": "2026-04-22T02:03:22.569Z"
     }
   ],
   "reports": [
@@ -14584,6 +15024,13 @@
       "report_type": "weekly",
       "content": "\n📊 **Canva 品牌週報** — 2026-04-13 ~ 2026-04-19\n\n■ 聲量趨勢 📈\n  - 本週: **93** 筆 / 上週: **63** 筆\n  - 變化: +30 (47.6%)\n\n■ 情緒趨勢\n  正面: 39.8% (上週 61.9%) ↓22.1%\n  中性: 40.9% (上週 28.6%) ↑12.3%\n  負面: 19.4% (上週 9.5%) ↑9.9%\n\n■ 本週主題排行\n  1. 產品功能 (33 筆)\n  2. 競品比較 (16 筆)\n  3. AI 相關 (13 筆)\n  4. 使用者體驗 (9 筆)\n  5. 定價與方案 (8 筆)\n  6. 市場動態 (7 筆)\n  7. 教育與企業 (6 筆)\n  8. 品牌形象 (1 筆)\n\n---\n_Brand Sentinel 週報 | 產出時間: 2026/4/21 上午10:03:29_",
       "created_at": "2026-04-21T02:03:29.781Z"
+    },
+    {
+      "id": 22,
+      "report_date": "2026-04-22",
+      "report_type": "daily",
+      "content": "# 📊 Canva Brand Sentinel 每日戰報\n\n> **情報更新時間**：2026-04-22\n> **追蹤涵蓋範圍**：Canva, Figma, Adobe\n\n## 🎯 核心體驗指標 (KPI)\n\n*   **總採樣數據量**：`22 筆`\n*   **總體品牌防線**：🔴 **警戒**\n*   **資料來源佔比**：`Threads` (2), `Dcard` (2), `Tavily` (18)\n\n## 💬 輿情與市場動態 (Sentiment & Market)\n\n### 口碑情緒雷達\n\n> 🟢 **正向 (18.2%)** ｜ 共 4 筆\n> `████░░░░░░░░░░░░░░░░`\n> \n> 🟡 **中立 (54.5%)** ｜ 共 12 筆\n> `███████████░░░░░░░░░`\n> \n> 🔴 **負向 (27.3%)** ｜ 共 6 筆\n> `█████░░░░░░░░░░░░░░░`\n\n### 品牌聲量市佔分析\n\n*   **Canva**（10筆）：正向情感佔 **30%**\n*   **Adobe Express**（9筆）：正向情感佔 **11%**\n*   **Figma**（3筆）：正向情感佔 **0%**\n\n## 🔥 高熱度風向 (Trending Topics)\n\n> **01. 競品比較 (共 9 筆)**\n> ▍事件摘要：影片比較Canva與Figma，協助選擇適合的設計工具。\n> ▍代表原音：_In this video, Style Factory's Olivia Jannesson puts Canva and Figma head to head. Which one is right for your design pr…_\n>\n> **02. 使用者體驗 (共 4 筆)**\n> ▍事件摘要：Canva AI 提升用戶效率，專注創意。\n> ▍代表原音：_對於AI 工具，老實說，重點不單單只是「省時間」，更是讓你把精力放在真正需要創意和判斷的地方，而不是卡在重複的執行細節上。…_\n>\n> **03. 產品功能 (共 2 筆)**\n> ▍事件摘要：讚揚Adobe Express易上手、功能全面，助創作者高效產出。\n> ▍代表原音：_看看創作者為何選擇Adobe 這款快速上手的全方位創作應用程式。用影片、社群和設計工具，更快產出更多內容。運用優質素材保持品牌一致性，讓作品更出眾。…_\n\n## 🧠 決策洞察艙 (AI Deep Insights)\n\n### 💡 商業與產品洞察\n**01.** Canva的AI功能儘管持續創新（如AI 2.0對話式設計），但同時也面臨用戶體驗不佳、AI工具實際應用受限及專案管理困難的負面評價，顯示AI是其發展的雙面刃。\n\n**02.** 市場輿情高度集中於Canva與Adobe Express的直接競爭，兩者在易用性、免費功能、AI應用與模板庫等方面頻繁被比較，這反映了輕量級設計工具市場的激烈競爭格局。\n\n**03.** Figma在今日輿情中的聲量極低（僅3筆中性提及），且多為與Canva的選擇性比較，這暗示其市場定位或受眾可能與Canva存在顯著差異，並非Canva在大眾化設計領域的主要直接競爭者。\n\n### 🔭 競品戰略分析\n**01.** Canva與Adobe Express在輿情上各有優劣：Canva因其直觀有效和廣泛的模板庫獲得稱讚，但在使用者體驗和部分AI工具上遇到批評。Adobe Express則在易上手方面受肯定，但其字型、讀取速度慢、功能受限和組織混亂等問題引發負面聲量。這對投資人的意義是，兩者在追求廣大用戶基礎的策略上持續拉鋸，Canva的市場領導地位仍需透過持續改進用戶體驗來鞏固。\n\n**02.** Figma的輿情聲量顯著低於Canva和Adobe Express，且僅呈現中性比較。這表明Figma在當前大眾輿論中，並未被視為與Canva直接爭奪廣泛大眾用戶的對手，其目標市場可能更為專業或小眾，對投資人而言，Canva目前的主要競爭壓力來自於Adobe Express。\n\n### ⚠️ 發展風險預警\n**01.** Canva的用戶體驗與AI工具品質負面輿情正在抬頭。今日3筆Canva負面聲量中有2筆直接指出「使用者體驗差，專案管理困難」及「AI工具不良」，這可能損害其品牌核心的易用性形象，影響用戶滿意度和留存率。\n\n## 📌 投資人持膉訊號\n\n> 🟡 **出現値得追蹤的信號**\n> 今日Canva的負面聲量有3筆，其中2筆具體指出「使用者體驗差」和「AI工具不良」，且「競品比較」主題佔總輿情筆數近半（9/22），顯示市場對Canva的用戶體驗與AI功能有所質疑，同時競爭壓力持續。\n\n## 💡 今日應更新的認知\n\n**舊認知**：股東可能認為Canva在易用性和友善的用戶體驗方面具備核心競爭力，且AI創新將持續鞏固其市場領導地位。\n**今日影響**：挑戰舊認知\n**原因**：今日輿情資料顯示Canva有2筆負面聲量批評其「使用者體驗差」和「AI工具不良」，挑戰其在用戶體驗方面的固有優勢，並指出AI應用仍有待改進。\n\n---\n*Brand Sentinel 自動化演算法 ｜ 結構化純淨終端模板 UI/UX Pro Max ｜ 產生時間：2026/4/22 上午10:03:38*",
+      "created_at": "2026-04-22T02:03:38.598Z"
     }
   ],
   "failed_analysis": [
