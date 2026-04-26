@@ -8615,6 +8615,116 @@
       "published_at": "2026-04-20T14:30:16.000Z",
       "collected_at": "2026-04-23T02:02:31.160Z",
       "metadata": "{\"keyword\":\"Canva\",\"source\":\"threads_search\"}"
+    },
+    {
+      "id": 748,
+      "platform": "tavily",
+      "url": "https://www.gvm.com.tw/article/125511?srsltid=AfmBOoqQkHGnB8Yh04jwd6HX8ztBTbNoqjlRoURvYzkX88gxZWMxk10c",
+      "title": "AI 簡報是趨勢！Gamma 與Canva AI 怎麼用？ | 遠見雜誌",
+      "content": "在輸入指令後，Canva AI會先製作一份大綱讓使用者確認，當中會列出每個區塊的主題、重點與預計張數，使用者可直接修改大綱內容或調整呈現順序。",
+      "author": "gvm.com.tw",
+      "published_at": null,
+      "collected_at": "2026-04-24T02:31:02.865Z",
+      "metadata": "{\"search_query\":\"Canva AI 使用 心得\",\"score\":0.62934244,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 749,
+      "platform": "tavily",
+      "url": "https://www.canva.com/zh_tw/help/edit-designs-with-ask-canva/",
+      "title": "使用「問問Canva」進行AI設計編輯",
+      "content": "「詢問Canva」可讓你直接在設計中取得AI技術支援。 在編輯器工具列中選取「詢問Canva」，即可請求進行目標設計編輯、產生影像、重寫文字，以及接收設計建議。",
+      "author": "canva.com",
+      "published_at": null,
+      "collected_at": "2026-04-24T02:31:02.882Z",
+      "metadata": "{\"search_query\":\"Canva AI 設計 使用者評論\",\"score\":0.9997527,\"brand\":\"Canva\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 750,
+      "platform": "tavily",
+      "url": "https://paperlike.com/blogs/paperlikers-insights/adobe-express-vs-canva?srsltid=AfmBOorqXLMzNBDjd22w7B59xdhAQSKZhQMqe4E2zy-2d7qEKFsikBQ2",
+      "title": "Adobe Express vs. Canva (2025): Features, Pricing, AI, and Best Use Cases | Paperlike",
+      "content": "Both Express and Canva use a freemium model, offering limited features for free and premium tools if you upgrade. Canva is designed to be all you'll need to create beautiful designs, videos, and more in one experience. Because Canva doesn't have a suite of programs, its consolidation of so many high-value creative tools might be why its pricing is slightly higher than Express. To take advantage of its flagship programs, existing Adobe users in Photoshop and Illustrator can use linked assets to bring their files into Express. Similar to Adobe Express, Canva is a template graphic powerhouse. Both Express and Canva offer this for users, and a few other handy features, making it easy for you to find your files when you need them. Because of its connection with other Adobe programs, you'll also see other folders you've created appear in Express as well. Your Designs are any individual files you've created in Canva. #### How do Express and Canva use AI?",
+      "author": "paperlike.com",
+      "published_at": null,
+      "collected_at": "2026-04-24T02:31:02.894Z",
+      "metadata": "{\"search_query\":\"Adobe Express vs Canva 比較\",\"score\":0.9998822,\"brand\":\"Adobe Express\",\"source_type\":\"local\"}"
+    },
+    {
+      "id": 751,
+      "platform": "tavily",
+      "url": "https://www.linkedin.com/posts/donnamoritz_canvaverifiedexpert-canvaenterprise-canvateams-activity-7356471953731305473-Mwi3",
+      "title": "#canvaverifiedexpert #canvaenterprise #canvateams | Donna Moritz",
+      "content": "Day 2 of a Canva VIP design project with surprising hidden benefits. One of my fave projects so far, we're working on a suite of Canva templates for a company that creates banners and signs for school and college fundraising. At face value the end goal is to create a marketing toolkit in Canva that lets the clients/schools self-serve templates to promote their banner/sign/flag sales. Now they can hand them a toolkit in Canva and pour a margarita because we've moved all of the marketing content into Canva. It never gets old helping organisations set up on Canva Teams and seeing them push the software to it's tiime-saving limits. I love seeing clients who have never used collab tools in Canva realise how everything can be in one place ... This is why I love Canva Teams and Canva Enterprise. And yes, seeing clients’ faces light up when they realize how powerful Canva Teams can be? Empowering clients with tools like Canva truly transforms productivity.",
+      "author": "linkedin.com",
+      "published_at": null,
+      "collected_at": "2026-04-24T02:31:02.904Z",
+      "metadata": "{\"search_query\":\"Canva enterprise teams site:linkedin.com\",\"score\":0.6612456,\"brand\":\"Canva\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 752,
+      "platform": "tavily",
+      "url": "https://www.linkedin.com/posts/robgiglio_every-year-canva-create-gets-bigger-and-activity-7450931671698268160-wcLG",
+      "title": "Canva AI 2.0 Revolutionizes Creative Output for Enterprise Teams",
+      "content": "Canva AI 2.0 Revolutionizes Creative Output for Enterprise Teams ... Big things coming this year for enterprise with ai this powerful! So excited",
+      "author": "linkedin.com",
+      "published_at": null,
+      "collected_at": "2026-04-24T02:31:02.909Z",
+      "metadata": "{\"search_query\":\"Canva enterprise teams site:linkedin.com\",\"score\":0.6453216,\"brand\":\"Canva\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 753,
+      "platform": "tavily",
+      "url": "https://twitter.com/designerfund",
+      "title": "Designer Fund (@designerfund) / Posts / X - Twitter",
+      "content": "Canva vs. Figma vs. xxx but a “yes and” as millions more people are exposed to design and use this accessible tool to begin a journey into being better",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-24T02:31:02.914Z",
+      "metadata": "{\"search_query\":\"Canva business design tool site:twitter.com\",\"score\":0.53531766,\"brand\":\"Canva\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 754,
+      "platform": "tavily",
+      "url": "https://twitter.com/benblumenrose?lang=fi",
+      "title": "Ben Blumenrose (@benblumenrose) / Posts / X - Twitter",
+      "content": "Canva vs. Figma vs. xxx but a “yes and” as millions more people are exposed to design and use this accessible tool to begin a journey into being",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-24T02:31:02.918Z",
+      "metadata": "{\"search_query\":\"Canva business design tool site:twitter.com\",\"score\":0.47431523,\"brand\":\"Canva\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 755,
+      "platform": "tavily",
+      "url": "https://twitter.com/negativespaceca",
+      "title": "Tom Lowry (@negativespaceca) / Posts / X - Twitter",
+      "content": "We've opened a new Designer Advocate, Federal position (in DC) on our NAMER Advocacy team @figma. This role will work closely with government and public sector",
+      "author": "twitter.com",
+      "published_at": null,
+      "collected_at": "2026-04-24T02:31:02.923Z",
+      "metadata": "{\"search_query\":\"Figma business teams site:twitter.com\",\"score\":0.97754294,\"brand\":\"Figma\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 756,
+      "platform": "tavily",
+      "url": "https://www.linkedin.com/learning/social-media-content-creation-with-adobe-express-by-adobe/conclusion-video",
+      "title": "Conclusion video - Adobe Express Tutorial - LinkedIn",
+      "content": "Join Adobe Inc for an in-depth discussion in this video, Conclusion video, part of Social Media Content Creation with Adobe Express by",
+      "author": "linkedin.com",
+      "published_at": null,
+      "collected_at": "2026-04-24T02:31:02.927Z",
+      "metadata": "{\"search_query\":\"Adobe Express business site:linkedin.com\",\"score\":0.9994967,\"brand\":\"Adobe Express\",\"source_type\":\"international\"}"
+    },
+    {
+      "id": 757,
+      "platform": "dcard",
+      "url": null,
+      "title": "一起升級 Canva Pro",
+      "content": "個人牆奇芽子的學習筆記22/12/12一起升級 Canva ProCanva Pro免費升級分享 - Dcard ... 我做限動都用canva，像是這樣：1411816877",
+      "author": "匿名",
+      "published_at": null,
+      "collected_at": "2026-04-24T02:31:45.400Z",
+      "metadata": "{\"keyword\":\"Canva\",\"forum\":null,\"like_count\":0,\"comment_count\":0,\"source\":\"dcard_search\"}"
     }
   ],
   "analysis_results": [
