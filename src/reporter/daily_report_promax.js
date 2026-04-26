@@ -429,6 +429,34 @@ export async function generate_promax_report(date, weekly_data = null, monthly_d
         </div>
       </div>
     </div>
+
+    <!-- 週報：投資人信號回顧 -->
+    ${(() => {
+      const sd = weekly_data.signal_dist || {};
+      const total_days = (sd.green||0) + (sd.yellow||0) + (sd.red||0);
+      if (total_days === 0) return '';
+      const notable = weekly_data.notable_signals || [];
+      const sig_icons = { green: '🟢', yellow: '🟡', red: '🔴' };
+      return `
+      <div style="margin-top:2rem;padding:1.5rem 1.75rem;background:rgba(129,140,248,0.05);border:1px solid rgba(129,140,248,0.15);border-radius:1.25rem;">
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#a5b4fc;margin-bottom:1rem;">📌 本週持倉信號回顧</div>
+        <div style="display:flex;gap:1.25rem;margin-bottom:${notable.length?'1.25rem':'0'};">
+          <div style="text-align:center;"><div style="font-size:1.5rem;font-weight:800;color:#34d399;">${sd.green||0}</div><div style="font-size:0.7rem;color:#64748b;margin-top:0.15rem;">天無重大變化</div></div>
+          <div style="text-align:center;"><div style="font-size:1.5rem;font-weight:800;color:#fbbf24;">${sd.yellow||0}</div><div style="font-size:0.7rem;color:#64748b;margin-top:0.15rem;">天值得追蹤</div></div>
+          <div style="text-align:center;"><div style="font-size:1.5rem;font-weight:800;color:#fb7185;">${sd.red||0}</div><div style="font-size:0.7rem;color:#64748b;margin-top:0.15rem;">天需要評估</div></div>
+        </div>
+        ${notable.length ? `<div style="display:flex;flex-direction:column;gap:0.6rem;">
+          ${notable.map(n => `
+            <div style="padding:0.75rem 1rem;border-radius:0.75rem;background:rgba(255,255,255,0.03);border-left:3px solid ${n.level==='red'?'#fb7185':'#fbbf24'};">
+              <div style="font-size:0.7rem;color:#64748b;margin-bottom:0.25rem;">${n.date} ${sig_icons[n.level]}</div>
+              <div style="font-size:0.825rem;color:#e2e8f0;line-height:1.6;">${n.reason}</div>
+              ${n.belief_update ? `<div style="font-size:0.775rem;color:#94a3b8;margin-top:0.35rem;font-style:italic;">認知更新：${n.belief_update}</div>` : ''}
+            </div>`).join('')}
+        </div>` : ''}
+      </div>`;
+    })()}
+
+    </div>
     ` : ''}
 
     <!-- Monthly Report Section (monthly_data only, replaces weekly) -->
@@ -509,6 +537,35 @@ export async function generate_promax_report(date, weekly_data = null, monthly_d
             </div>
           </div>
         </div>
+
+        <!-- 月度投資人信號回顧 -->
+        ${(() => {
+          const sd = monthly_data.signal_dist || {};
+          const total_days = (sd.green||0) + (sd.yellow||0) + (sd.red||0);
+          if (total_days === 0) return '';
+          const notable = monthly_data.notable_signals || [];
+          const sig_icons = { green: '🟢', yellow: '🟡', red: '🔴' };
+          return `
+          <div style="margin-top:2rem;padding:1.5rem 1.75rem;background:rgba(251,146,60,0.05);border:1px solid rgba(251,146,60,0.2);border-radius:1.25rem;">
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#fb923c;margin-bottom:1rem;">📌 月度持倉信號分布</div>
+            <div style="display:flex;gap:2rem;margin-bottom:${notable.length?'1.5rem':'0'};">
+              <div style="text-align:center;"><div style="font-size:2rem;font-weight:800;color:#34d399;">${sd.green||0}</div><div style="font-size:0.7rem;color:#64748b;margin-top:0.2rem;">天無重大變化</div></div>
+              <div style="text-align:center;"><div style="font-size:2rem;font-weight:800;color:#fbbf24;">${sd.yellow||0}</div><div style="font-size:0.7rem;color:#64748b;margin-top:0.2rem;">天值得追蹤</div></div>
+              <div style="text-align:center;"><div style="font-size:2rem;font-weight:800;color:#fb7185;">${sd.red||0}</div><div style="font-size:0.7rem;color:#64748b;margin-top:0.2rem;">天需要評估</div></div>
+            </div>
+            ${notable.length ? `
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#64748b;margin-bottom:0.75rem;">各週代表性認知更新</div>
+            <div style="display:flex;flex-direction:column;gap:0.75rem;">
+              ${notable.map(n => `
+                <div style="padding:0.875rem 1rem;border-radius:0.875rem;background:rgba(255,255,255,0.03);border-left:3px solid ${n.level==='red'?'#fb7185':'#fbbf24'};">
+                  <div style="font-size:0.7rem;color:#64748b;margin-bottom:0.3rem;">${n.week_label} · ${n.date} ${sig_icons[n.level]}</div>
+                  <div style="font-size:0.825rem;color:#e2e8f0;line-height:1.65;">${n.reason}</div>
+                  ${n.belief_update ? `<div style="font-size:0.775rem;color:#94a3b8;margin-top:0.4rem;font-style:italic;">認知更新：${n.belief_update}</div>` : ''}
+                </div>`).join('')}
+            </div>` : ''}
+          </div>`;
+        })()}
+
       </div>`;
     })() : ''}
 

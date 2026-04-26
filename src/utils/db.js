@@ -358,4 +358,49 @@ export function close_db() {
   save_db();
 }
 
+// ========================================
+// Cognitive Log（投資人認知記錄）
+// 獨立檔案：data/cognitive_log.json
+// 保留最近 90 天，不影響主 DB
+// ========================================
+const COGNITIVE_LOG_PATH = resolve(config.data_dir, 'cognitive_log.json');
+
+function read_cognitive_log() {
+  try {
+    if (!existsSync(COGNITIVE_LOG_PATH)) return [];
+    return JSON.parse(readFileSync(COGNITIVE_LOG_PATH, 'utf8'));
+  } catch (e) {
+    return [];
+  }
+}
+
+function write_cognitive_log(log) {
+  writeFileSync(COGNITIVE_LOG_PATH, JSON.stringify(log, null, 2));
+}
+
+/**
+ * 儲存當日認知記錄
+ * @param {{ date: string, investor_signal: Object, cognitive_update: Object }} entry
+ */
+export function save_cognitive_log({ date, investor_signal, cognitive_update }) {
+  if (!investor_signal) return;
+  const log = read_cognitive_log();
+  const idx = log.findIndex(e => e.date === date);
+  const entry = { date, investor_signal, cognitive_update, saved_at: new Date().toISOString() };
+  if (idx >= 0) log[idx] = entry;
+  else log.push(entry);
+  log.sort((a, b) => a.date.localeCompare(b.date));
+  write_cognitive_log(log.slice(-90));   // 最多保留 90 天
+}
+
+/**
+ * 取得指定日期區間的認知記錄
+ * @param {string} start_date - YYYY-MM-DD
+ * @param {string} end_date   - YYYY-MM-DD
+ * @returns {Object[]}
+ */
+export function get_cognitive_log(start_date, end_date) {
+  return read_cognitive_log().filter(e => e.date >= start_date && e.date <= end_date);
+}
+
 export default db;

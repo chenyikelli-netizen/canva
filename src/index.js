@@ -127,7 +127,9 @@ async function run_pipeline() {
         year_month: result.year_month,
         stats: result.stats,
         report: result.report,
-        weeks: result.weeks   // 結構化週次資料，供 HTML 直接渲染
+        weeks: result.weeks,
+        signal_dist: result.signal_dist || { green: 0, yellow: 0, red: 0 },
+        notable_signals: result.notable_signals || []
       };
       logger.info(`📋 月報已生成：${result.year_month}，共 ${result.stats.total} 筆資料`);
     }

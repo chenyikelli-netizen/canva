@@ -5,7 +5,7 @@
 // 確保於 GitHub 環境呈現最高可讀性與現代感。
 // ========================================
 
-import { get_analysis_by_date, get_stats, save_report } from '../utils/db.js';
+import { get_analysis_by_date, get_stats, save_report, save_cognitive_log } from '../utils/db.js';
 import { call_gemini_json } from '../analyzer/llm_client.js';
 import { build_insight_prompt } from '../analyzer/prompt_templates.js';
 import logger from '../utils/logger.js';
@@ -57,6 +57,13 @@ export async function generate_daily_report(date) {
     logger.info(`日報已儲存: ${date}`);
   } catch (e) {
     logger.warn(`日報儲存失敗: ${e.message}`);
+  }
+
+  // 儲存投資人認知記錄（不影響主流程）
+  try {
+    save_cognitive_log({ date, investor_signal: insights.investor_signal, cognitive_update: insights.cognitive_update });
+  } catch (e) {
+    logger.warn(`認知記錄儲存失敗: ${e.message}`);
   }
 
   return report;

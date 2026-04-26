@@ -6,7 +6,7 @@
 //   則本次發月報（取代週報），否則發週報
 // ========================================
 
-import { get_stats, save_report, get_last_weekly_report_date, get_last_monthly_report_date } from '../utils/db.js';
+import { get_stats, save_report, get_last_weekly_report_date, get_last_monthly_report_date, get_cognitive_log } from '../utils/db.js';
 import logger from '../utils/logger.js';
 
 // ========================================
@@ -178,7 +178,20 @@ _Brand Sentinel 週報 | 產出時間: ${new Date().toLocaleString('zh-TW', { ti
     logger.warn(`週報儲存失敗: ${error.message}`);
   }
 
-  return { report, data };
+  // 從 cognitive log 取得本週的信號分佈
+  const log_entries = get_cognitive_log(format_date(this_week_start), format_date(this_week_end));
+  const signal_dist = { green: 0, yellow: 0, red: 0 };
+  log_entries.forEach(e => { const lv = e.investor_signal?.level; if (lv) signal_dist[lv]++; });
+  const notable_signals = log_entries
+    .filter(e => e.investor_signal?.level && e.investor_signal.level !== 'green')
+    .map(e => ({
+      date: e.date,
+      level: e.investor_signal.level,
+      reason: e.investor_signal.reason,
+      belief_update: e.cognitive_update?.reason || null
+    }));
+
+  return { report, data: { ...data, signal_dist, notable_signals } };
 }
 
 // ========================================
@@ -254,7 +267,27 @@ _Brand Sentinel 月報 | 產出時間: ${new Date().toLocaleString('zh-TW', { ti
     logger.warn(`月報儲存失敗: ${error.message}`);
   }
 
-  return { report, stats: monthly_stats, year_month, weeks };
+  // 從 cognitive log 取得本月信號分佈
+  const month_log = get_cognitive_log(month_start, month_end);
+  const month_signal_dist = { green: 0, yellow: 0, red: 0 };
+  month_log.forEach(e => { const lv = e.investor_signal?.level; if (lv) month_signal_dist[lv]++; });
+
+  // 取得各週最顯著的認知更新（優先取紅，其次黃）
+  const notable_monthly = [];
+  weeks.forEach(w => {
+    const week_log = month_log.filter(e => e.date >= w.week_start && e.date <= w.week_end);
+    const notable = week_log.find(e => e.investor_signal?.level === 'red')
+      || week_log.find(e => e.investor_signal?.level === 'yellow');
+    if (notable) notable_monthly.push({
+      week_label: `W${w.week_num}`,
+      date: notable.date,
+      level: notable.investor_signal.level,
+      reason: notable.investor_signal.reason,
+      belief_update: notable.cognitive_update?.reason || null
+    });
+  });
+
+  return { report, stats: monthly_stats, year_month, weeks, signal_dist: month_signal_dist, notable_signals: notable_monthly };
 }
 
 // ========================================
