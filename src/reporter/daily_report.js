@@ -20,14 +20,16 @@ export async function generate_daily_report(date) {
     return generate_empty_report(date);
   }
 
-  let insights = { insights: [], competitor_analysis: [], risks: [] };
+  let insights = { insights: [], competitor_analysis: [], risks: [], investor_signal: null, cognitive_update: null };
   try {
     const top_items = analysis.slice(0, 15);
     insights = await call_gemini_json(build_insight_prompt(stats, top_items));
     if (!insights.competitor_analysis) insights.competitor_analysis = [];
+    if (!insights.investor_signal) insights.investor_signal = null;
+    if (!insights.cognitive_update) insights.cognitive_update = null;
   } catch (error) {
     logger.warn(`LLM 洞察生成失敗: ${error.message}`);
-    insights = { insights: ['（洞察生成失敗）'], competitor_analysis: [], risks: [] };
+    insights = { insights: ['（洞察生成失敗）'], competitor_analysis: [], risks: [], investor_signal: null, cognitive_update: null };
   }
 
   const top_topics = stats.by_topic.slice(0, 3);
@@ -150,7 +152,26 @@ ${comp_content || '* 本期未探測到具體戰略信號。'}
 ### ⚠️ 發展風險預警
 ${risk_content || '* 本期未探測到重大危機信號。'}`;
 
-  // 5. Footer ─────────────────────────────────
+  // 5. Investor Block ──────────────────────────────
+  const signal = insights.investor_signal;
+  const cog = insights.cognitive_update;
+
+  const signal_icon = { green: '🟢', yellow: '🟡', red: '🔴' }[signal?.level] || '⚪';
+  const signal_label = { green: '今日無重大變化', yellow: '出現値得追蹤的信號', red: '需要重新評估的事件' }[signal?.level] || '無資料';
+  const impact_label = { strengthen: '支持舊認知', challenge: '挑戰舊認知', neutral: '未改變舊認知的有效性' }[cog?.impact] || '';
+
+  const investor_block = signal ? `## 📌 投資人持膉訊號
+
+> ${signal_icon} **${signal_label}**
+> ${signal?.reason || '(無資料)'}
+
+## 💡 今日應更新的認知
+
+**舊認知**：${cog?.prior_belief || '(無資料)'}
+**今日影響**：${impact_label}
+**原因**：${cog?.reason || '(無資料)'}` : '';
+
+  // 6. Footer ─────────────────────────────────
   const footer = `---
 *Brand Sentinel 自動化演算法 ｜ 結構化純淨終端模板 UI/UX Pro Max ｜ 產生時間：${new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' })}*`;
 
@@ -159,6 +180,7 @@ ${risk_content || '* 本期未探測到重大危機信號。'}`;
     sentiment_and_comp,
     topics,
     analysis_blocks,
+    investor_block,
     footer
   ].filter(s => s).join('\n\n');
 }

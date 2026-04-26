@@ -20,10 +20,12 @@ export async function generate_promax_report(date, weekly_data = null, monthly_d
     return;
   }
 
-  let insights = { insights: [], competitor_analysis: [], risks: [] };
+  let insights = { insights: [], competitor_analysis: [], risks: [], investor_signal: null, cognitive_update: null };
   try {
     const top_items = analysis.slice(0, 15);
     insights = await call_gemini_json(build_insight_prompt(stats, top_items));
+    if (!insights.investor_signal) insights.investor_signal = null;
+    if (!insights.cognitive_update) insights.cognitive_update = null;
   } catch (e) {
     logger.warn('Insights 失敗');
   }
@@ -163,6 +165,28 @@ export async function generate_promax_report(date, weekly_data = null, monthly_d
     .prose-sm { color: #cbd5e1; font-size: 0.875rem; line-height: 1.7; }
     .prose-sm p + p { margin-top: 1rem; }
     .risk-bullet { color: #f43f5e; margin-right: 0.5rem; }
+    /* ── Investor Signal Card ── */
+    .investor-section { margin-top: 2.5rem; }
+    .investor-card { border-radius: 1.5rem; padding: 1.75rem 2rem; display: grid; grid-template-columns: auto 1fr; gap: 1.25rem 1.5rem; align-items: start; }
+    .investor-card.sig-green { background: rgba(52,211,153,0.06); border: 1px solid rgba(52,211,153,0.2); }
+    .investor-card.sig-yellow { background: rgba(251,191,36,0.06); border: 1px solid rgba(251,191,36,0.2); }
+    .investor-card.sig-red { background: rgba(251,113,133,0.08); border: 1px solid rgba(251,113,133,0.25); }
+    .investor-signal-badge { font-size: 2rem; line-height: 1; padding-top: 0.15rem; }
+    .investor-signal-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.25rem; }
+    .investor-card.sig-green .investor-signal-label { color: #34d399; }
+    .investor-card.sig-yellow .investor-signal-label { color: #fbbf24; }
+    .investor-card.sig-red .investor-signal-label { color: #fb7185; }
+    .investor-signal-reason { color: #e2e8f0; font-size: 0.9rem; line-height: 1.65; }
+    .cognitive-card { margin-top: 1rem; border-radius: 1.25rem; padding: 1.5rem 1.75rem; background: rgba(129,140,248,0.05); border: 1px solid rgba(129,140,248,0.15); }
+    .cognitive-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; }
+    .cognitive-title { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #a5b4fc; }
+    .cognitive-row { display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.5rem 1rem; margin-bottom: 0.6rem; align-items: start; }
+    .cognitive-row:last-child { margin-bottom: 0; }
+    .cognitive-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #64748b; padding-top: 0.15rem; }
+    .cognitive-text { font-size: 0.875rem; color: #cbd5e1; line-height: 1.65; }
+    .impact-strengthen { color: #34d399; }
+    .impact-challenge { color: #fb7185; }
+    .impact-neutral { color: #94a3b8; }
     /* ── Weekly Report Section ── */
     .weekly-section { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
     .weekly-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 1.5rem; }
@@ -312,6 +336,48 @@ export async function generate_promax_report(date, weekly_data = null, monthly_d
         </div>
       </div>
     </div>
+
+    <!-- Investor Signal Section -->
+    ${(() => {
+      const sig = insights.investor_signal;
+      const cog = insights.cognitive_update;
+      if (!sig) return '';
+      const level = sig.level || 'green';
+      const icons = { green: '🟢', yellow: '🟡', red: '🔴' };
+      const labels = { green: '今日無重大變化', yellow: '出現値得追蹤的信號', red: '需要重新評估的事件' };
+      const impact_cls = { strengthen: 'impact-strengthen', challenge: 'impact-challenge', neutral: 'impact-neutral' };
+      const impact_text = { strengthen: '支持舊認知', challenge: '挑戰舊認知', neutral: '未改變舊認知的有效性' };
+      return `
+      <div class="investor-section">
+        <h2 class="section-title"><span class="icon-grad">📌</span> 投資人持膉訊號</h2>
+        <div class="investor-card sig-${level}">
+          <div class="investor-signal-badge">${icons[level]}</div>
+          <div>
+            <div class="investor-signal-label">${labels[level]}</div>
+            <div class="investor-signal-reason">${sig.reason || ''}</div>
+          </div>
+        </div>
+        ${cog ? `
+        <div class="cognitive-card">
+          <div class="cognitive-header">
+            <span style="font-size:1rem">💡</span>
+            <span class="cognitive-title">今日應更新的認知</span>
+          </div>
+          <div class="cognitive-row">
+            <span class="cognitive-tag">舊認知</span>
+            <span class="cognitive-text">${cog.prior_belief || ''}</span>
+          </div>
+          <div class="cognitive-row">
+            <span class="cognitive-tag">今日影響</span>
+            <span class="cognitive-text ${impact_cls[cog.impact] || 'impact-neutral'}">${impact_text[cog.impact] || ''}</span>
+          </div>
+          <div class="cognitive-row">
+            <span class="cognitive-tag">原因</span>
+            <span class="cognitive-text">${cog.reason || ''}</span>
+          </div>
+        </div>` : ''}
+      </div>`;
+    })()}
 
     <!-- Weekly Report Section (weekly_data only) -->
     ${weekly_data ? `
