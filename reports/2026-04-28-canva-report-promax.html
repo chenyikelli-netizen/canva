@@ -1,0 +1,466 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Sentinel - UI/UX Pro Max</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { background-color: #020617; }
+    body { font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif; background-color: #020617; color: #e2e8f0; min-height: 100vh; padding-bottom: 5rem; }
+    ::selection { background-color: #8B3CF7; color: #fff; }
+    .aurora-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 0; overflow: hidden; pointer-events: none; }
+    .blob { position: absolute; filter: blur(90px); border-radius: 50%; opacity: 0.5; animation: float 10s infinite ease-in-out alternate; }
+    .blob-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, #8B3CF7 0%, transparent 70%); }
+    .blob-2 { bottom: -20%; right: -10%; width: 60vw; height: 60vw; background: radial-gradient(circle, #00C4CC 0%, transparent 70%); animation-delay: -5s; }
+    @keyframes float { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(30px,-50px) scale(1.1); } }
+    .container { position: relative; z-index: 1; max-width: 72rem; margin: 0 auto; padding: 4rem 1.5rem 0; }
+    .glass-panel { background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); }
+    header { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 4rem; }
+    @media (min-width: 768px) { header { flex-direction: row; align-items: center; justify-content: space-between; } }
+    .live-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0.75rem; border-radius: 9999px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; color: #00C4CC; text-transform: uppercase; margin-bottom: 1rem; }
+    .live-dot { width: 0.5rem; height: 0.5rem; border-radius: 50%; background-color: #00C4CC; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+    h1.brand-title { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 0.5rem; background: linear-gradient(to right, #ffffff, #cbd5e1, #64748b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    @media (min-width: 768px) { h1.brand-title { font-size: 3.75rem; } }
+    .subtitle { color: #94a3b8; font-size: 1.125rem; }
+    .subtitle span { color: #fff; font-weight: 500; }
+    .stats-card { display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; border-radius: 1.5rem; flex-shrink: 0; }
+    .stat-label { color: #94a3b8; font-size: 0.875rem; margin-bottom: 0.25rem; }
+    .stat-number { font-size: 2.25rem; font-weight: 700; background: linear-gradient(to right, #8B3CF7, #00C4CC); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .stat-divider { width: 1px; height: 3rem; background: rgba(255,255,255,0.1); }
+    .stat-health-good { font-size: 1.25rem; font-weight: 700; color: #34d399; display: flex; align-items: center; gap: 0.5rem; }
+    .stat-health-warn { font-size: 1.25rem; font-weight: 700; color: #fbbf24; display: flex; align-items: center; gap: 0.5rem; }
+    .bento-top { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .bento-top { grid-template-columns: 2fr 1fr; } }
+    .sentiment-panel { border-radius: 1.5rem; padding: 2rem; position: relative; overflow: hidden; }
+    .sentiment-panel::before { content: ''; position: absolute; top: 0; right: 0; width: 16rem; height: 16rem; background: rgba(139,60,247,0.1); border-radius: 50%; filter: blur(48px); transform: translate(50%,-50%); }
+    .panel-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem; display: flex; align-items: center; gap: 0.75rem; }
+    .panel-title .icon { background: rgba(255,255,255,0.1); padding: 0.5rem; border-radius: 0.75rem; }
+    .bar-group { position: relative; z-index: 1; }
+    .bar-group + .bar-group { margin-top: 1.5rem; }
+    .bar-header { display: flex; justify-content: space-between; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .bar-track { height: 0.75rem; width: 100%; background: #1e293b; border-radius: 9999px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 9999px; }
+    .bar-fill.positive { background: linear-gradient(to right, #10b981, #6ee7b7); }
+    .bar-fill.neutral  { background: linear-gradient(to right, #f59e0b, #fcd34d); }
+    .bar-fill.negative { background: linear-gradient(to right, #f43f5e, #fda4af); }
+    .color-positive { color: #34d399; } .color-neutral  { color: #fbbf24; } .color-negative { color: #fb7185; } .color-white { color: #fff; }
+    .sources-panel { border-radius: 1.5rem; padding: 2rem; display: flex; flex-direction: column; }
+    .sources-panel .panel-title { font-size: 1.25rem; margin-bottom: 1.5rem; }
+    .sources-list { display: flex; flex-direction: column; gap: 0.75rem; flex: 1; justify-content: center; }
+    .source-row { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem; border-radius: 1rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s; }
+    .source-row:hover { background: rgba(255,255,255,0.1); }
+    .source-name { color: #cbd5e1; font-weight: 500; text-transform: capitalize; }
+    .source-badge { color: #fff; font-weight: 700; background: rgba(139,60,247,0.3); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; }
+    .section-title { font-size: 1.5rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+    .section-title .icon-grad { background: linear-gradient(135deg, #8B3CF7, #00C4CC); padding: 0.5rem; border-radius: 0.75rem; color: #fff; }
+    .topics-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 3rem; }
+    @media (min-width: 768px) { .topics-grid { grid-template-columns: repeat(3, 1fr); } }
+    .topic-card { padding: 1.25rem; border-radius: 1.5rem; background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent); border: 1px solid rgba(255,255,255,0.1); transition: transform 0.2s; cursor: pointer; }
+    .topic-card:hover { transform: translateY(-4px); }
+    .topic-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; }
+    .topic-title { font-size: 1.125rem; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 0.5rem; }
+    .topic-medal { font-size: 1.5rem; }
+    .topic-count { font-size: 0.75rem; font-weight: 600; color: #00C4CC; background: rgba(0,196,204,0.2); padding: 0.25rem 0.5rem; border-radius: 0.5rem; }
+    .topic-desc { color: #cbd5e1; font-size: 0.875rem; margin-bottom: 0.75rem; font-weight: 500; line-height: 1.6; }
+    .topic-quote { padding: 0.75rem; background: rgba(0,0,0,0.4); border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.05); }
+    .topic-quote p { color: #94a3b8; font-size: 0.75rem; font-style: italic; }
+    .insights-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .insights-grid { grid-template-columns: 1fr 1fr; } }
+    .insights-panel { border-radius: 1.5rem; padding: 2rem; }
+    .insights-panel .panel-title { color: #a5b4fc; margin-bottom: 1.5rem; font-size: 1.5rem; }
+    .insights-panel .panel-title .icon { background: rgba(99,102,241,0.2); }
+    .insight-item { display: flex; gap: 1rem; padding: 1rem; border-radius: 1rem; transition: background 0.2s; }
+    .insight-item:hover { background: rgba(255,255,255,0.05); }
+    .insight-item + .insight-item { margin-top: 0.5rem; }
+    .insight-num { flex-shrink: 0; width: 2rem; height: 2rem; border-radius: 50%; background: rgba(99,102,241,0.2); color: #a5b4fc; display: flex; align-items: center; justify-content: center; font-weight: 700; border: 1px solid rgba(99,102,241,0.3); font-size: 0.875rem; }
+    .insight-text { color: #e2e8f0; font-size: 0.875rem; line-height: 1.7; }
+    .right-col { display: flex; flex-direction: column; gap: 1.5rem; }
+    .competitor-panel { border-radius: 1.5rem; padding: 2rem; flex: 1; }
+    .competitor-panel .panel-title { color: #67e8f9; margin-bottom: 1rem; font-size: 1.25rem; }
+    .competitor-panel .panel-title .icon { background: rgba(6,182,212,0.2); }
+    .risk-panel { border-radius: 1.5rem; padding: 2rem; flex: 1; border-color: rgba(244,63,94,0.2) !important; background: rgba(244,63,94,0.05) !important; }
+    .risk-panel .panel-title { color: #fda4af; margin-bottom: 1rem; font-size: 1.25rem; }
+    .risk-panel .panel-title .icon { background: rgba(244,63,94,0.2); }
+    .prose-sm { color: #cbd5e1; font-size: 0.875rem; line-height: 1.7; }
+    .prose-sm p + p { margin-top: 1rem; }
+    .risk-bullet { color: #f43f5e; margin-right: 0.5rem; }
+    /* ── Investor Signal Card ── */
+    .investor-section { margin-top: 2.5rem; }
+    .investor-card { border-radius: 1.5rem; padding: 1.75rem 2rem; display: grid; grid-template-columns: auto 1fr; gap: 1.25rem 1.5rem; align-items: start; }
+    .investor-card.sig-green { background: rgba(52,211,153,0.06); border: 1px solid rgba(52,211,153,0.2); }
+    .investor-card.sig-yellow { background: rgba(251,191,36,0.06); border: 1px solid rgba(251,191,36,0.2); }
+    .investor-card.sig-red { background: rgba(251,113,133,0.08); border: 1px solid rgba(251,113,133,0.25); }
+    .investor-signal-badge { font-size: 2rem; line-height: 1; padding-top: 0.15rem; }
+    .investor-signal-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.25rem; }
+    .investor-card.sig-green .investor-signal-label { color: #34d399; }
+    .investor-card.sig-yellow .investor-signal-label { color: #fbbf24; }
+    .investor-card.sig-red .investor-signal-label { color: #fb7185; }
+    .investor-signal-reason { color: #e2e8f0; font-size: 0.9rem; line-height: 1.65; }
+    .cognitive-card { margin-top: 1rem; border-radius: 1.25rem; padding: 1.5rem 1.75rem; background: rgba(129,140,248,0.05); border: 1px solid rgba(129,140,248,0.15); }
+    .cognitive-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; }
+    .cognitive-title { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #a5b4fc; }
+    .cognitive-row { display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.5rem 1rem; margin-bottom: 0.6rem; align-items: start; }
+    .cognitive-row:last-child { margin-bottom: 0; }
+    .cognitive-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #64748b; padding-top: 0.15rem; }
+    .cognitive-text { font-size: 0.875rem; color: #cbd5e1; line-height: 1.65; }
+    .impact-strengthen { color: #34d399; }
+    .impact-challenge { color: #fb7185; }
+    .impact-neutral { color: #94a3b8; }
+    /* ── Weekly Report Section ── */
+    .weekly-section { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
+    .weekly-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+    @media (min-width: 768px) { .weekly-grid { grid-template-columns: 1fr 1fr; } }
+    .weekly-panel { border-radius: 1.5rem; padding: 2rem; }
+    .weekly-panel .panel-title { color: #c4b5fd; margin-bottom: 1.5rem; }
+    .weekly-panel .panel-title .icon { background: rgba(139,92,246,0.2); }
+    .weekly-stat-row { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .weekly-stat-row:last-child { border-bottom: none; }
+    .weekly-stat-label { color: #94a3b8; font-size: 0.875rem; }
+    .weekly-stat-value { font-weight: 700; font-size: 0.875rem; }
+    .weekly-stat-value.up { color: #34d399; }
+    .weekly-stat-value.down { color: #fb7185; }
+    .weekly-stat-value.neutral { color: #fbbf24; }
+    .weekly-topic-list { display: flex; flex-direction: column; gap: 0.5rem; }
+    .weekly-topic-item { display: flex; align-items: center; justify-content: space-between; padding: 0.6rem 0.75rem; border-radius: 0.75rem; background: rgba(255,255,255,0.04); }
+    .weekly-topic-item:hover { background: rgba(255,255,255,0.08); }
+    .weekly-topic-name { color: #cbd5e1; font-size: 0.8rem; font-weight: 500; }
+    .weekly-topic-count { color: #a5b4fc; font-size: 0.75rem; font-weight: 700; background: rgba(99,102,241,0.2); padding: 0.15rem 0.5rem; border-radius: 9999px; }
+    /* ── Monthly Report Section ── */
+    .monthly-section { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,165,0,0.2); }
+    .monthly-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0.75rem; border-radius: 9999px; background: rgba(251,146,60,0.15); border: 1px solid rgba(251,146,60,0.3); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; color: #fb923c; text-transform: uppercase; margin-bottom: 1.5rem; }
+    .monthly-kpi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem; }
+    @media (min-width: 768px) { .monthly-kpi-grid { grid-template-columns: repeat(4, 1fr); } }
+    .monthly-kpi-card { border-radius: 1.25rem; padding: 1.25rem; background: rgba(251,146,60,0.06); border: 1px solid rgba(251,146,60,0.15); text-align: center; transition: transform 0.2s; }
+    .monthly-kpi-card:hover { transform: translateY(-3px); }
+    .monthly-kpi-label { color: #94a3b8; font-size: 0.75rem; margin-bottom: 0.5rem; }
+    .monthly-kpi-value { font-size: 1.75rem; font-weight: 800; background: linear-gradient(to right, #fb923c, #fbbf24); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .monthly-kpi-sub { color: #64748b; font-size: 0.7rem; margin-top: 0.25rem; }
+    .monthly-main-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+    @media (min-width: 768px) { .monthly-main-grid { grid-template-columns: 3fr 2fr; } }
+    .monthly-panel { border-radius: 1.5rem; padding: 2rem; }
+    .monthly-panel .panel-title { color: #fb923c; margin-bottom: 1.5rem; }
+    .monthly-panel .panel-title .icon { background: rgba(251,146,60,0.2); }
+    .monthly-brand-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .monthly-brand-row:last-child { border-bottom: none; }
+    .monthly-brand-name { color: #e2e8f0; font-weight: 600; font-size: 0.875rem; flex: 0 0 7rem; }
+    .monthly-brand-bar-wrap { flex: 1; height: 0.5rem; background: #1e293b; border-radius: 9999px; overflow: hidden; }
+    .monthly-brand-bar { height: 100%; border-radius: 9999px; background: linear-gradient(to right, #fb923c, #fbbf24); }
+    .monthly-brand-pct { color: #fbbf24; font-weight: 700; font-size: 0.8rem; flex: 0 0 3.5rem; text-align: right; }
+    .monthly-week-list { display: flex; flex-direction: column; gap: 0.5rem; }
+    .monthly-week-item { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; border-radius: 0.875rem; background: rgba(255,255,255,0.04); transition: background 0.2s; }
+    .monthly-week-item:hover { background: rgba(255,255,255,0.08); }
+    .monthly-week-label { color: #cbd5e1; font-size: 0.8rem; font-weight: 600; }
+    .monthly-week-stats { display: flex; gap: 0.75rem; }
+    .monthly-week-pos { color: #34d399; font-size: 0.75rem; font-weight: 700; }
+    .monthly-week-neg { color: #fb7185; font-size: 0.75rem; font-weight: 700; }
+    .monthly-week-total { color: #94a3b8; font-size: 0.75rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Aurora Background Effects -->
+  <div class="aurora-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+  </div>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div>
+        <div class="live-badge">
+          <span class="live-dot"></span>
+          Live Monitoring Active
+        </div>
+        <h1 class="brand-title">Brand Sentinel</h1>
+        <p class="subtitle">Canva 品牌輿情分析戰情室 ｜ <span>2026-04-28</span></p>
+      </div>
+      <div class="glass-panel stats-card">
+        <div>
+          <p class="stat-label">今日總聲量</p>
+          <p class="stat-number">8</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div>
+          <p class="stat-label">品牌健康度</p>
+          <p class="stat-health-good">🟢 良好</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Bento Grid Top -->
+    <div class="bento-top">
+      <!-- Sentiment Overview -->
+      <div class="glass-panel sentiment-panel">
+        <h2 class="panel-title"><span class="icon">📊</span> 情緒健康矩陣</h2>
+        <div class="bar-group">
+          <div class="bar-header">
+            <span class="color-positive">正向輿情 (Positive)</span>
+            <span class="color-white">5 筆 / 62.5%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill positive" style="width:62.5%"></div></div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-header">
+            <span class="color-neutral">中立討論 (Neutral)</span>
+            <span class="color-white">3 筆 / 37.5%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill neutral" style="width:37.5%"></div></div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-header">
+            <span class="color-negative">負向警訊 (Negative)</span>
+            <span class="color-white">0 筆 / 0.0%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill negative" style="width:0.0%"></div></div>
+        </div>
+      </div>
+      <!-- Sources -->
+      <div class="glass-panel sources-panel">
+        <h2 class="panel-title"><span class="icon">🌐</span> 數據來源</h2>
+        <div class="sources-list">
+    <div class="source-row">
+      <span class="source-name">tavily</span>
+      <span class="source-badge">8</span>
+    </div>
+  </div>
+      </div>
+    </div>
+
+    <!-- Topics Section -->
+    <h2 class="section-title"><span class="icon-grad">🔥</span> 熱議主題風向標</h2>
+    <div class="topics-grid">
+    <div class="topic-card">
+      <div class="topic-header">
+        <h3 class="topic-title">
+          <span class="topic-medal">🥇</span> 競品比較
+        </h3>
+        <span class="topic-count">2 筆</span>
+      </div>
+      <p class="topic-desc">比較Adobe Express與Canva的定價與功能。</p>
+      <div class="topic-quote">
+        <p>「Both Express and Canva use a freemium model, offering limited features for free and premium tools if…」</p>
+      </div>
+    </div>
+  
+    <div class="topic-card">
+      <div class="topic-header">
+        <h3 class="topic-title">
+          <span class="topic-medal">🥈</span> 產品功能
+        </h3>
+        <span class="topic-count">2 筆</span>
+      </div>
+      <p class="topic-desc">Canva推出新功能，單圖也能改字動圖層。</p>
+      <div class="topic-quote">
+        <p>「好消息，Canva 這次真的開掛了！ 「只有一張圖」也能直接改字、動圖層？ 以前拿到一張美美的AI 生成圖或簡報截圖，如果要改裡面的錯字或移動物件，根本是地獄…」</p>
+      </div>
+    </div>
+  
+    <div class="topic-card">
+      <div class="topic-header">
+        <h3 class="topic-title">
+          <span class="topic-medal">🥉</span> 品牌形象
+        </h3>
+        <span class="topic-count">2 筆</span>
+      </div>
+      <p class="topic-desc">Canva讓設計普及，操作簡便且模板豐富。</p>
+      <div class="topic-quote">
+        <p>「因為Canva，讓設計不再是遙不可及的專業，它不像Illustrator、photoshop等專業軟體操作複雜，可以讓你簡單、輕鬆地做出漂亮的海報、簡報和影片，有超多的模板…」</p>
+      </div>
+    </div>
+  </div>
+
+    <!-- AI Insights Bento -->
+    <div class="insights-grid">
+      <!-- Key Insights -->
+      <div class="glass-panel insights-panel">
+        <h2 class="panel-title"><span class="icon">🧠</span> AI 深度洞察</h2>
+        <div>
+    <div class="insight-item">
+      <div class="insight-num">1</div>
+      <p class="insight-text">Canva 正積極透過 AI 整合（如：與 Claude AI 合作）和推出創新功能（如：單圖改字動圖層）來強化產品實力與市場競爭力，展現其在技術創新上的投入與前瞻性。</p>
+    </div>
+  
+    <div class="insight-item">
+      <div class="insight-num">2</div>
+      <p class="insight-text">Canva 持續擴大其品牌影響力與用戶基礎，不僅維持其易於上手、普及設計的形象，更透過結合 AI 強調其對「企業團隊工作方式」的改變，預示其在 B2B 市場的潛力。</p>
+    </div>
+  
+    <div class="insight-item">
+      <div class="insight-num">3</div>
+      <p class="insight-text">在今日輿情中，Canva 以絕對的聲量優勢（6筆）及全正面/中性情緒，主導了設計工具領域的討論，顯示其強勁的品牌動能與市場關注度。</p>
+    </div>
+  </div>
+      </div>
+      <!-- Right Column -->
+      <div class="right-col">
+        <div class="glass-panel competitor-panel">
+          <h2 class="panel-title"><span class="icon">🔭</span> 競品動態</h2>
+          <div class="prose-sm"><p>✧ Canva 在輿情聲量上（6筆）遠超競品 Figma（1筆）和 Adobe Express（1筆），且所有提及均為正面或中性，顯示其在今日資訊中的品牌影響力與市場熱度顯著領先。</p><p>✧ 輿情資料對競品呈現更專精的定位：Figma 被推薦用於原型設計，Adobe Express 則作為價格功能比較對象，而 Canva 則展現了廣泛的應用場景（行銷圖、企業團隊、普羅大眾），反映其更廣泛的市場潛力。</p></div>
+        </div>
+        <div class="glass-panel risk-panel">
+          <h2 class="panel-title"><span class="icon">⚠️</span> 風險預警</h2>
+          <div class="prose-sm"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Investor Signal Section -->
+    
+      <div class="investor-section">
+        <h2 class="section-title"><span class="icon-grad">📌</span> 投資人持膉訊號</h2>
+        <div class="investor-card sig-green">
+          <div class="investor-signal-badge">🟢</div>
+          <div>
+            <div class="investor-signal-label">今日無重大變化</div>
+            <div class="investor-signal-reason">Canva 今日獲得 6 筆提及，其中 5 筆為正面情緒，並展示了多項產品功能創新及AI整合，無負面輿情，遠超競品聲量，顯示其品牌發展趨勢積極穩健。</div>
+          </div>
+        </div>
+        
+        <div class="cognitive-card">
+          <div class="cognitive-header">
+            <span style="font-size:1rem">💡</span>
+            <span class="cognitive-title">今日應更新的認知</span>
+          </div>
+          <div class="cognitive-row">
+            <span class="cognitive-tag">舊認知</span>
+            <span class="cognitive-text">股東可能認為 Canva 雖然易用，但主要仍是一個面向個人用戶和中小企業的消費級設計工具，其在AI技術整合和大型企業市場的潛力仍有待觀察。</span>
+          </div>
+          <div class="cognitive-row">
+            <span class="cognitive-tag">今日影響</span>
+            <span class="cognitive-text impact-strengthen">支持舊認知</span>
+          </div>
+          <div class="cognitive-row">
+            <span class="cognitive-tag">原因</span>
+            <span class="cognitive-text">今日資料顯示 Canva 不僅持續強化其易用性，更積極整合 AI 技術（如：Claude AI）並強調其對「企業團隊工作方式」的改變，這強化了 Canva 不僅是消費級工具，更是具備企業級創新與AI前瞻性的平台之認知。</span>
+          </div>
+        </div>
+      </div>
+
+    <!-- Weekly Report Section (weekly_data only) -->
+    
+
+    <!-- Monthly Report Section (monthly_data only, replaces weekly) -->
+    
+      <div class="monthly-section">
+        <div class="monthly-badge">📋 Monthly Report</div>
+        <h2 class="section-title">
+          <span class="icon-grad">📋</span> 2026-04 月度品牌彙整
+        </h2>
+
+        <!-- KPI 四格 -->
+        <div class="monthly-kpi-grid">
+          <div class="monthly-kpi-card">
+            <div class="monthly-kpi-label">月度總聲量</div>
+            <div class="monthly-kpi-value">357</div>
+            <div class="monthly-kpi-sub">筆有效資料</div>
+          </div>
+          <div class="monthly-kpi-card">
+            <div class="monthly-kpi-label">正向情緒均值</div>
+            <div class="monthly-kpi-value">50.1%</div>
+            <div class="monthly-kpi-sub">179 筆正向</div>
+          </div>
+          <div class="monthly-kpi-card">
+            <div class="monthly-kpi-label">負向情緒均值</div>
+            <div class="monthly-kpi-value">13.7%</div>
+            <div class="monthly-kpi-sub">49 筆負向</div>
+          </div>
+          <div class="monthly-kpi-card">
+            <div class="monthly-kpi-label">中立討論比率</div>
+            <div class="monthly-kpi-value">36.1%</div>
+            <div class="monthly-kpi-sub">129 筆中立</div>
+          </div>
+        </div>
+
+        <!-- 品牌聲量 + 週次分段 -->
+        <div class="monthly-main-grid">
+          <div class="glass-panel monthly-panel">
+            <h3 class="panel-title"><span class="icon">🏷️</span> 品牌聲量分佈</h3>
+            
+          <div class="monthly-brand-row">
+            <span class="monthly-brand-name">Canva</span>
+            <div class="monthly-brand-bar-wrap"><div class="monthly-brand-bar" style="width:100%"></div></div>
+            <span class="monthly-brand-pct">234筆 66%</span>
+          </div>
+          <div class="monthly-brand-row">
+            <span class="monthly-brand-name">Figma</span>
+            <div class="monthly-brand-bar-wrap"><div class="monthly-brand-bar" style="width:31%"></div></div>
+            <span class="monthly-brand-pct">72筆 20%</span>
+          </div>
+          <div class="monthly-brand-row">
+            <span class="monthly-brand-name">Adobe Express</span>
+            <div class="monthly-brand-bar-wrap"><div class="monthly-brand-bar" style="width:22%"></div></div>
+            <span class="monthly-brand-pct">51筆 14%</span>
+          </div>
+          </div>
+          <div class="glass-panel monthly-panel">
+            <h3 class="panel-title"><span class="icon">📅</span> 各週分段摘要</h3>
+            <div class="monthly-week-list">
+              
+          <div class="monthly-week-item">
+            <span class="monthly-week-label">第 1 週 <span style="color:#64748b;font-weight:400;font-size:0.7rem;">2026-03-31 ～ 2026-04-06</span></span>
+            <div class="monthly-week-stats">
+              <span class="monthly-week-total">100 筆</span>
+              <span class="monthly-week-pos">▲ 61%</span>
+              <span class="monthly-week-neg">▼ 12%</span>
+            </div>
+          </div>
+          <div class="monthly-week-item">
+            <span class="monthly-week-label">第 2 週 <span style="color:#64748b;font-weight:400;font-size:0.7rem;">2026-04-07 ～ 2026-04-13</span></span>
+            <div class="monthly-week-stats">
+              <span class="monthly-week-total">88 筆</span>
+              <span class="monthly-week-pos">▲ 50%</span>
+              <span class="monthly-week-neg">▼ 19%</span>
+            </div>
+          </div>
+          <div class="monthly-week-item">
+            <span class="monthly-week-label">第 3 週 <span style="color:#64748b;font-weight:400;font-size:0.7rem;">2026-04-14 ～ 2026-04-20</span></span>
+            <div class="monthly-week-stats">
+              <span class="monthly-week-total">91 筆</span>
+              <span class="monthly-week-pos">▲ 52%</span>
+              <span class="monthly-week-neg">▼ 12%</span>
+            </div>
+          </div>
+          <div class="monthly-week-item">
+            <span class="monthly-week-label">第 4 週 <span style="color:#64748b;font-weight:400;font-size:0.7rem;">2026-04-21 ～ 2026-04-27</span></span>
+            <div class="monthly-week-stats">
+              <span class="monthly-week-total">85 筆</span>
+              <span class="monthly-week-pos">▲ 34%</span>
+              <span class="monthly-week-neg">▼ 15%</span>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 月度投資人信號回顧 -->
+        
+          <div style="margin-top:2rem;padding:1.5rem 1.75rem;background:rgba(251,146,60,0.05);border:1px solid rgba(251,146,60,0.2);border-radius:1.25rem;">
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#fb923c;margin-bottom:1rem;">📌 月度持倉信號分布</div>
+            <div style="display:flex;gap:2rem;margin-bottom:1.5rem;">
+              <div style="text-align:center;"><div style="font-size:2rem;font-weight:800;color:#34d399;">1</div><div style="font-size:0.7rem;color:#64748b;margin-top:0.2rem;">天無重大變化</div></div>
+              <div style="text-align:center;"><div style="font-size:2rem;font-weight:800;color:#fbbf24;">1</div><div style="font-size:0.7rem;color:#64748b;margin-top:0.2rem;">天值得追蹤</div></div>
+              <div style="text-align:center;"><div style="font-size:2rem;font-weight:800;color:#fb7185;">0</div><div style="font-size:0.7rem;color:#64748b;margin-top:0.2rem;">天需要評估</div></div>
+            </div>
+            
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#64748b;margin-bottom:0.75rem;">各週代表性認知更新</div>
+            <div style="display:flex;flex-direction:column;gap:0.75rem;">
+              
+                <div style="padding:0.875rem 1rem;border-radius:0.875rem;background:rgba(255,255,255,0.03);border-left:3px solid #fbbf24;">
+                  <div style="font-size:0.7rem;color:#64748b;margin-bottom:0.3rem;">W4 · 2026-04-27 🟡</div>
+                  <div style="font-size:0.825rem;color:#e2e8f0;line-height:1.65;">今日輿情中，Canva的「AI 2.0」、「AI魔法功能」及「Canva Create 2026」被頻繁提及（共計20筆AI相關討論），顯示Canva正積極深化AI戰略並預告未來發展，這是一個尚未完全確認影響但值得投資人高度關注的動態發展。</div>
+                  <div style="font-size:0.775rem;color:#94a3b8;margin-top:0.4rem;font-style:italic;">認知更新：今日資料顯示Canva正積極透過「企業方案」和「AI 2.0」等功能，服務學校與公司等「企業團隊」，並強調其對「創意產出」的革命性提升，挑戰了其市場定位僅限於個人用戶或小型團隊的舊認知。</div>
+                </div>
+            </div>
+          </div>
+
+      </div>
+
+  </div>
+</body>
+</html>
+  
